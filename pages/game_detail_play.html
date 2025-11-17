@@ -134,6 +134,44 @@
                 padding: 2rem 0 1rem;
             }
         }
+
+        /* Game Full Content Styling */
+        .game-full-content {
+            margin-bottom: 3rem;
+        }
+
+        .game-full-content .game-card {
+            background: var(--card-bg, #ffffff);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-full-content h2 {
+            color: var(--primary-color, #6366f1);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+        }
+
+        .game-full-content h3 {
+            color: var(--text-primary, #1e293b);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-full-content p {
+            color: var(--text-secondary, #64748b);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .game-full-content p:last-child {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 
@@ -255,6 +293,15 @@
 
 
 
+
+                <!-- Game Full Content -->
+                <section class="game-full-content mb-5" id="gameFullContentSection" style="display: none;">
+                    <div class="game-card p-4">
+                        <div id="gameFullContent">
+                            <!-- Full content will be added dynamically -->
+                        </div>
+                    </div>
+                </section>
 
                 <!-- Game Screenshots -->
                 <section class="game-screenshots mb-5">
@@ -503,6 +550,16 @@
                 document.getElementById('gameRating').textContent = game.stats.rating || 'N/A';
                 document.getElementById('gameDifficulty').textContent = game.stats.difficulty || 'N/A';
                 document.getElementById('ageRating').textContent = game.stats.ageRating || 'N/A';
+            }
+
+            // Update full content
+            const fullContentSection = document.getElementById('gameFullContentSection');
+            const fullContentDiv = document.getElementById('gameFullContent');
+            if (game.fullContent) {
+                fullContentDiv.innerHTML = game.fullContent;
+                fullContentSection.style.display = 'block';
+            } else {
+                fullContentSection.style.display = 'none';
             }
 
             // Update screenshots
