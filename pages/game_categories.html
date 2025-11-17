@@ -80,6 +80,8 @@
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/advertisements.css" rel="stylesheet">
+    <script src="../public/games-data.js?v=3"></script>
+    <script src="../public/game-loader.js"></script>
     <style>
         /* Container larger width - consistent for header, main, and footer */
         .container-fluid {
@@ -173,6 +175,14 @@
                 padding: 2rem 0 1rem;
             }
         }
+
+        /* 5-column grid for large screens - same as home page */
+        @media (min-width: 992px) {
+            .game-grid-5 > [class*="col-lg-3"] {
+                flex: 0 0 20% !important;
+                max-width: 20% !important;
+            }
+        }
     </style>
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhtml5game9047back.builtwithrocket.new&_v=0.1.2"></script>
 </head>
@@ -224,90 +234,9 @@
             <div class="col-12">
                 <h1 class="text-gradient text-center mb-5">Game Categories</h1>
                 
-                <div class="row g-4">
-                    <!-- Action Games -->
-                    <div class="col-12 col-md-6">
-                        <div class="game-card h-100">
-                            <img src="../public/images/gam-thumb.png" alt="Action Games" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Action Games</h5>
-                                <p class="card-text">Fast-paced games that test your reflexes and skills.</p>
-                                <a href="search_discovery.html?search=action" class="btn btn-primary w-100">
-                                    <i class="fas fa-gamepad me-2"></i>Browse Action Games
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Puzzle Games -->
-                    <div class="col-12 col-md-6">
-                        <div class="game-card h-100">
-                            <img src="../public/images/gam-thumb.png" alt="Puzzle Games" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Puzzle Games</h5>
-                                <p class="card-text">Challenge your mind with brain-teasing puzzles and riddles.</p>
-                                <a href="search_discovery.html?search=puzzle" class="btn btn-primary w-100">
-                                    <i class="fas fa-puzzle-piece me-2"></i>Browse Puzzle Games
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Strategy Games -->
-                    <div class="col-12 col-md-6">
-                        <div class="game-card h-100">
-                            <img src="../public/images/gam-thumb.png" alt="Strategy Games" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Strategy Games</h5>
-                                <p class="card-text">Plan your moves and outsmart your opponents.</p>
-                                <a href="search_discovery.html?search=strategy" class="btn btn-primary w-100">
-                                    <i class="fas fa-chess me-2"></i>Browse Strategy Games
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Adventure Games -->
-                    <div class="col-12 col-md-6">
-                        <div class="game-card h-100">
-                            <img src="../public/images/gam-thumb.png" alt="Adventure Games" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Adventure Games</h5>
-                                <p class="card-text">Embark on epic journeys and explore new worlds.</p>
-                                <a href="search_discovery.html?search=adventure" class="btn btn-primary w-100">
-                                    <i class="fas fa-map me-2"></i>Browse Adventure Games
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Racing Games -->
-                    <div class="col-12 col-md-6">
-                        <div class="game-card h-100">
-                            <img src="../public/images/gam-thumb.png" alt="Racing Games" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Racing Games</h5>
-                                <p class="card-text">Speed through tracks and compete for the top spot.</p>
-                                <a href="search_discovery.html?search=racing" class="btn btn-primary w-100">
-                                    <i class="fas fa-car me-2"></i>Browse Racing Games
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sports Games -->
-                    <div class="col-12 col-md-6">
-                        <div class="game-card h-100">
-                            <img src="../public/images/gam-thumb.png" alt="Sports Games" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Sports Games</h5>
-                                <p class="card-text">Play your favorite sports in virtual arenas.</p>
-                                <a href="search_discovery.html?search=sports" class="btn btn-primary w-100">
-                                    <i class="fas fa-futbol me-2"></i>Browse Sports Games
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Games by Category - Dynamically Loaded -->
+                <div class="row g-4 game-grid-5" id="categoryGamesContainer">
+                    <!-- Games will be loaded dynamically -->
                 </div>
             </div>
         </div>
@@ -404,6 +333,111 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Category Games Display -->
+    <script>
+        // Category configuration
+        const categories = [
+            { name: 'Action', search: 'action', icon: 'fa-gamepad' },
+            { name: 'Puzzle', search: 'puzzle', icon: 'fa-puzzle-piece' },
+            { name: 'Strategy', search: 'strategy', icon: 'fa-chess' },
+            { name: 'Adventure', search: 'adventure', icon: 'fa-map' },
+            { name: 'Racing', search: 'racing', icon: 'fa-car' },
+            { name: 'Sports', search: 'sports', icon: 'fa-futbol' }
+        ];
+
+        // Function to get a representative game for each category
+        function getCategoryGames() {
+            if (typeof gamesData === 'undefined' || typeof GameLoader === 'undefined') {
+                console.error('gamesData or GameLoader not loaded');
+                return [];
+            }
+
+            const allGames = GameLoader.getAllGames();
+            const categoryGames = [];
+
+            categories.forEach(category => {
+                // Find the first game that matches this category
+                const matchingGame = allGames.find(game => 
+                    game.categories && 
+                    game.categories.some(cat => 
+                        cat.toLowerCase().includes(category.search.toLowerCase())
+                    )
+                );
+
+                if (matchingGame) {
+                    categoryGames.push({
+                        ...matchingGame,
+                        categoryName: category.name,
+                        categorySearch: category.search,
+                        categoryIcon: category.icon
+                    });
+                }
+            });
+
+            return categoryGames;
+        }
+
+        // Display category games
+        function displayCategoryGames() {
+            const container = document.getElementById('categoryGamesContainer');
+            if (!container) return;
+
+            const categoryGames = getCategoryGames();
+
+            if (categoryGames.length === 0) {
+                container.innerHTML = '<div class="col-12 text-center"><p>Loading categories...</p></div>';
+                // Retry after a delay if gamesData isn't loaded yet
+                setTimeout(displayCategoryGames, 500);
+                return;
+            }
+
+            container.innerHTML = categoryGames.map(game => {
+                const thumbnail = GameLoader.getGameThumbnail(game);
+                return `
+                    <div class="col-6 col-md-3 col-lg-3">
+                        <div class="game-card position-relative h-100">
+                            <a href="search_discovery.html?search=${encodeURIComponent(game.categorySearch)}" class="stretched-link text-decoration-none" aria-label="Browse ${game.categoryName} Games">
+                                <img data-src="${thumbnail}" alt="${game.categoryName} Games" 
+                                    class="card-img-top lazy-load" 
+                                    loading="lazy"
+                                    onerror="this.src='../public/images/gam-thumb.png'; this.onerror=null;" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas ${game.categoryIcon} me-2"></i>${game.categoryName} Games
+                                    </h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Initialize lazy loading
+            setTimeout(() => {
+                if (typeof GameLoader !== 'undefined') {
+                    GameLoader.initLazyLoading();
+                }
+            }, 100);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait for gamesData to load
+            const checkGamesData = setInterval(() => {
+                if (typeof gamesData !== 'undefined' && typeof GameLoader !== 'undefined') {
+                    clearInterval(checkGamesData);
+                    displayCategoryGames();
+                }
+            }, 100);
+
+            // Timeout after 5 seconds
+            setTimeout(() => {
+                clearInterval(checkGamesData);
+                displayCategoryGames();
+            }, 5000);
+        });
+    </script>
 
     <!-- JavaScript for Interactivity -->
     <script>

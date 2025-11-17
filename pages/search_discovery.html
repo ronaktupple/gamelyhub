@@ -213,6 +213,14 @@
                 background-position: -200% 0;
             }
         }
+
+        /* 5-column grid for large screens - same as home page */
+        @media (min-width: 992px) {
+            .game-grid-5 > [class*="col-lg-3"] {
+                flex: 0 0 20% !important;
+                max-width: 20% !important;
+            }
+        }
     </style>
 </head>
 
@@ -277,7 +285,7 @@
                 <!-- Search Results -->
                 <section id="searchResults" class="mb-5" style="display: none;">
                     <h2 class="text-gradient text-center mb-4">Search Results</h2>
-                    <div class="row g-4" id="resultsContainer">
+                    <div class="row g-4 game-grid-5" id="resultsContainer">
                         <!-- Results will be added dynamically -->
                     </div>
                 </section>
@@ -467,29 +475,25 @@
                 (game.categories && game.categories.some(category => category.toLowerCase().includes(query)))
             );
 
-            // Display results with lazy loading
+            // Display results with lazy loading - matching home page card style
             if (filteredGames.length > 0) {
                 resultsContainer.innerHTML = filteredGames.map(game => {
-                    const thumbnail = getGameThumbnail(game);
+                    // Use GameLoader.getGameThumbnail if available, otherwise use local function
+                    const thumbnail = (typeof GameLoader !== 'undefined' && GameLoader.getGameThumbnail) 
+                        ? GameLoader.getGameThumbnail(game) 
+                        : getGameThumbnail(game);
                     return `
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="game-card h-100">
-                            <img data-src="${thumbnail}" alt="${game.title}" 
-                                class="card-img-top lazy-load" 
-                                loading="lazy"
-                                onerror="this.src='../public/images/gam-thumb.png'; this.onerror=null;">
-                            <div class="card-body">
-                                <h5 class="card-title">${game.title}</h5>
-                                <p class="card-text">${game.description || ''}</p>
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    ${(game.categories || []).map(category =>
-                        `<span class="category-tag">${category}</span>`
-                    ).join('')}
+                    <div class="col-6 col-md-3 col-lg-3">
+                        <div class="game-card position-relative h-100">
+                            <a href="game_detail_play.html?game=${encodeURIComponent(game.id)}" class="stretched-link text-decoration-none" aria-label="Open ${game.title}">
+                                <img data-src="${thumbnail}" alt="${game.title}" 
+                                    class="card-img-top lazy-load" 
+                                    loading="lazy"
+                                    onerror="this.src='../public/images/gam-thumb.png'; this.onerror=null;" />
+                                <div class="card-body">
+                                    <h5 class="card-title">${game.title}</h5>
                                 </div>
-                                <a href="game_detail_play.html?game=${game.id}" class="btn btn-primary w-100">
-                                    <i class="fas fa-play me-2"></i>Play Now
-                                </a>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 `;
