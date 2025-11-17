@@ -60,6 +60,14 @@
             margin: 0 auto;
         }
 
+        /* 5-column grid for large screens */
+        @media (min-width: 992px) {
+            .game-grid-5 > [class*="col-lg-3"] {
+                flex: 0 0 20% !important;
+                max-width: 20% !important;
+            }
+        }
+
         /* Enhanced Footer Styles - Light Theme */
         .footer {
             background: #F8FAFC;
@@ -267,7 +275,7 @@
                 <!-- Related Games -->
                 <section class="related-games">
                     <h2 class="text-gradient text-center mb-4">More Games to Play</h2>
-                    <div class="row g-4" id="relatedGamesContainer">
+                    <div class="row g-4 game-grid-5" id="relatedGamesContainer">
                         <!-- Related games will be added dynamically by JavaScript -->
                     </div>
                 </section>
@@ -438,21 +446,12 @@
                 const relatedGame = gamesData[relatedGameId];
                 if (relatedGame) {
                     const col = document.createElement('div');
-                    col.className = 'col-12 col-md-6';
+                    col.className = 'col-6 col-md-3 col-lg-3';
                     col.innerHTML = `
                         <div class="game-card position-relative h-100">
                             <img src="${getGameThumbnail(relatedGame)}" alt="${relatedGame.title}" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">${relatedGame.title}</h5>
-                                <p class="card-text">${relatedGame.description}</p>
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    ${relatedGame.categories.map(category =>
-                        `<span class="category-tag">${category}</span>`
-                    ).join('')}
-                                </div>
-                                <a href="game_detail_play.html?game=${relatedGame.id}" class="btn btn-primary w-100">
-                                    <i class="fas fa-play me-2"></i>Play Now
-                                </a>
                             </div>
                             <a href="game_detail_play.html?game=${relatedGame.id}" class="stretched-link" aria-label="Open ${relatedGame.title}"></a>
                         </div>
@@ -478,16 +477,13 @@
 
         // Function to generate game card HTML
         function generateGameCard(game) {
+            const thumbnail = (game.thumbnail && game.thumbnail.trim() !== "") ? game.thumbnail : '../public/images/gam-thumb.png';
             return `
-                <div class="col-12 col-md-6">
+                <div class="col-6 col-md-3 col-lg-3">
                     <div class="game-card position-relative h-100">
-                        <img src="${game.thumbnail || '../public/images/gam-thumb.png'}" alt="${game.title}" class="card-img-top">
+                        <img src="${thumbnail}" alt="${game.title}" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">${game.title}</h5>
-                            <p class="card-text">${game.description || 'No description available.'}</p>
-                            <a href="game_detail_play.html?game=${game.id}" class="btn btn-primary w-100">
-                                <i class="fas fa-play me-2"></i>Play Now
-                            </a>
                         </div>
                         <a href="game_detail_play.html?game=${game.id}" class="stretched-link" aria-label="Open ${game.title}"></a>
                     </div>
