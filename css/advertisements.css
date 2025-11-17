@@ -1,0 +1,43 @@
+/* Advertisement Styles */
+.advertisement-banner {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.ad-placeholder {
+    border: 1px dashed #ccc;
+    transition: all 0.3s ease;
+}
+
+.ad-placeholder:hover {
+    border-color: #666;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.advertisement-sidebar {
+    position: sticky;
+    top: 80px;
+}
+
+/* Responsive Advertisement Styles */
+@media (max-width: 768px) {
+    .advertisement-sidebar {
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .ad-placeholder {
+        margin-bottom: 15px;
+    }
+}
+
+/* Advertisement Animation */
+@keyframes adPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.ad-placeholder:hover {
+    animation: adPulse 1s infinite;
+} 

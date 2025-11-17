@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamely Hub - Your Ultimate Gaming Destination</title>
+
+
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTFC9DNWHW"></script> 
+    <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-BTFC9DNWHW'); </script>
+ 
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1403172463870891" crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/advertisements.css" rel="stylesheet">
+    <script src="../public/games-data.js"></script>
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        /* Carousel height responsive styles */
+        .carousel-item img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        @media (min-width: 768px) {
+            .carousel-item img {
+                height: 400px;
+            }
+        }
+
+        /* Carousel caption styles */
+        .carousel-caption {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+        }
+
+        .carousel-caption .btn {
+            margin: 5px auto;
+            display: block;
+            width: 80%;
+            max-width: 200px;
+        }
+
+        @media (min-width: 768px) {
+            .carousel-caption {
+                padding: 20px;
+            }
+        }
+
+        /* Make carousel items clickable with hover effect */
+        .carousel-item a {
+            display: block;
+            text-decoration: none;
+        }
+        
+        .carousel-item {
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .carousel-item:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+
+        .carousel-item img {
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body class="bg-background text-text-primary">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-gamepad me-2"></i>Gamely Hub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                title="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="game_library.html">
+                            <i class="fas fa-th-large me-1"></i>Games
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search_discovery.html">
+                            <i class="fas fa-search me-1"></i>Search
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="fas fa-info-circle me-1"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5 mt-5">
+        <!-- Top Advertisement Banner -->
+        <!-- <div class="advertisement-banner mb-4">
+            <div class="ad-placeholder bg-light p-3 text-center rounded">
+                <p class="mb-0">Advertisement Space</p>
+                <small>Premium gaming deals and offers</small>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-lg-2 d-none d-lg-block">
+                <!-- Left Side Advertisement -->
+                <div class="advertisement-sidebar">
+                    <div class="ad-placeholder bg-light p-3 text-center rounded mb-3">
+                        <p class="mb-0">Advertisement Space</p>
+                        <small>Sponsored Content</small>
+                    </div>
+                    <div class="ad-placeholder bg-light p-3 text-center rounded">
+                        <p class="mb-0">Advertisement Space</p>
+                        <small>Gaming Gear</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-8">
+                <!-- Image Slider -->
+                <div id="gameCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="2000"
+                    data-bs-touch="true">
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <a href="game_detail_play.html?game=subwaysurferssingapore">
+                                <img src="../public/images/banners/ssbaner.webp" class="d-block w-100" alt="Subway Surfers">
+                            <div class="carousel-caption">
+                                <div class="btn btn-primary mt-4">Play Now</div>
+                            </div>
+                            </a>
+                            
+                        </div>
+                        <div class="carousel-item ">
+                            <a href="game_detail_play.html?game=cookieclicker">
+                                <img src="../public/images/banners/CookieClicker.jpg" class="d-block w-100"
+                                alt="Cookie Clicker">
+                            <div class="carousel-caption">
+                                <div class="btn btn-primary mt-4">Play Now</div>
+                            </div>
+                            </a>
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <a href="game_detail_play.html?game=2048">
+                                <img src="../public/images/banners/2048_OG-logo.jpg" class="d-block w-100" alt="2048">
+                            <div class="carousel-caption">
+                                <div class="btn btn-primary mt-4">Play Now</div>
+                            </div>
+                            </a>
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <a href="game_detail_play.html?game=pacman">
+                                <img src="../public/images/banners/pmbanner.jpg" class="d-block w-100" alt="Pacman">
+                            <div class="carousel-caption">
+                                <div class="btn btn-primary mt-4">Play Now</div>
+                            </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+
+                <!-- Top Advertisement Banner -->
+                <!-- <div class="advertisement-banner mb-4">
+                    <div class="ad-placeholder bg-light p-3 text-center rounded">
+                        <p class="mb-0">Advertisement Space</p>
+                        <small>Premium gaming deals and offers</small>
+                    </div>
+                </div> -->
+
+                <!-- Featured Games Section -->
+                <section class="mb-5">
+                    <h2 class="text-gradient text-center mb-4">Featured Games</h2>
+                    <div class="row g-4">
+
+
+                        <!-- smashkarts -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/skbanner.jpeg" alt="minefun" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Smash Karts</h5>
+                                    <p class="card-text">Race, smash, and survive in chaotic kart battles!</p>
+                                    <a href="game_detail_play.html?game=smashkarts" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=smashkarts" class="stretched-link" aria-label="Open Smash Karts"></a>
+                            </div>
+                        </div>
+
+
+                        <!-- Subway Surfers -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/ssbaner.webp" alt="Subway Surfers"
+                                    class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Subway Surfers</h5>
+                                    <p class="card-text">Run, jump, and dodge through the subway!</p>
+                                    <a href="game_detail_play.html?game=subwaysurferssingapore"
+                                        class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=subwaysurferssingapore" class="stretched-link" aria-label="Open Subway Surfers"></a>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Top Advertisement Banner -->
+                        <!-- <div class="advertisement-banner mb-4">
+                            <div class="ad-placeholder bg-light p-3 text-center rounded">
+                                <p class="mb-0">Advertisement Space</p>
+                                <small>Premium gaming deals and offers</small>
+                            </div>
+                        </div> -->
+
+
+
+
+
+
+
+                        <!-- poper -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/popbanner.jpg" alt="minefun" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Poper</h5>
+                                    <p class="card-text">Conquer the map and outsmart your rivals in Paper.io 2!</p>
+                                    <a href="game_detail_play.html?game=poper" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=poper" class="stretched-link" aria-label="Open Poper"></a>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Cryzen -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/cryzenbanner.jpg" alt="minefun" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cryzen</h5>
+                                    <p class="card-text">Enter the cyber battlefield in Cryzen and fight for survival!
+                                    </p>
+                                    <a href="game_detail_play.html?game=cryzen" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=cryzen" class="stretched-link" aria-label="Open Cryzen"></a>
+                            </div>
+                        </div>
+
+                        <!-- Minefun -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/mfbannner.webp" alt="minefun" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mine fun</h5>
+                                    <p class="card-text">Dig, build, and explore in the blocky world of MineFun!</p>
+                                    <a href="game_detail_play.html?game=minefun" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=minefun" class="stretched-link" aria-label="Open Mine fun"></a>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- Pacman -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/pmbanner.jpg" alt="Pacman" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pacman</h5>
+                                    <p class="card-text">Navigate through the maze, eat dots, and avoid ghosts in this
+                                        classic arcade game!</p>
+                                    <a href="game_detail_play.html?game=pacman" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=pacman" class="stretched-link" aria-label="Open Pacman"></a>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!-- Top Advertisement Banner -->
+                        <!-- <div class="advertisement-banner mb-4">
+                            <div class="ad-placeholder bg-light p-3 text-center rounded">
+                                <p class="mb-0">Advertisement Space</p>
+                                <small>Premium gaming deals and offers</small>
+                            </div>
+                        </div> -->
+
+                        <!-- zombr -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/zrbanner.jpg" alt="minefun" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Zombs Royale</h5>
+                                    <p class="card-text">Drop in, gear up, and survive in Zombs Royale!</p>
+                                    <a href="game_detail_play.html?game=zombr" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=zombr" class="stretched-link" aria-label="Open Zombs Royale"></a>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <!-- Tribales -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/tribalsbanner.jpg" alt="minefun"
+                                    class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tribales</h5>
+                                    <p class="card-text">Survive, build, and thrive in the wild world of Tribals.io!</p>
+                                    <a href="game_detail_play.html?game=tribles" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=tribles" class="stretched-link" aria-label="Open Tribales"></a>
+                            </div>
+                        </div>
+
+                        <!-- battled -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/bdbannr.jpg" alt="minefun" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Battle Dudes</h5>
+                                    <p class="card-text">Gear up for all-out warfare in Battle Dudes!</p>
+                                    <a href="game_detail_play.html?game=battled" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=battled" class="stretched-link" aria-label="Open Battle Dudes"></a>
+                            </div>
+                        </div>
+
+
+                        <!-- buildr -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/buildrbanner.png" alt="minefun" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Build Royale</h5>
+                                    <p class="card-text">Build, battle, and survive in BuildRoyale.io!</p>
+                                    <a href="game_detail_play.html?game=buildr" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=buildr" class="stretched-link" aria-label="Open Build Royale"></a>
+                            </div>
+                        </div>
+
+                        <!-- Top Advertisement Banner -->
+                        <!-- <div class="advertisement-banner mb-4">
+                            <div class="ad-placeholder bg-light p-3 text-center rounded">
+                                <p class="mb-0">Advertisement Space</p>
+                                <small>Premium gaming deals and offers</small>
+                            </div>
+                        </div> -->
+
+
+
+
+
+
+                        <!-- Cookie Clicker -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/CookieClicker.jpg" alt="Cookie Clicker"
+                                    class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cookie Clicker</h5>
+                                    <p class="card-text">Click cookies, buy upgrades, and become a cookie tycoon!</p>
+                                    <a href="game_detail_play.html?game=cookieclicker" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=cookieclicker" class="stretched-link" aria-label="Open Cookie Clicker"></a>
+                            </div>
+                        </div>
+
+                        <!-- 2048 -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/2048_OG-logo.jpg" alt="2048" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">2048</h5>
+                                    <p class="card-text">Join the numbers and reach the 2048 tile!</p>
+                                    <a href="game_detail_play.html?game=2048" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=2048" class="stretched-link" aria-label="Open 2048"></a>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!-- hextris -->
+                        <div class="col-12 col-md-3">
+                            <div class="game-card position-relative h-100">
+                                <img src="../public/images/banners/hextrisbanner.jpg" alt="minefun"
+                                    class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hextris</h5>
+                                    <p class="card-text">Spin, stack, and score in the fast-paced puzzle game Hextris!
+                                    </p>
+                                    <a href="game_detail_play.html?game=hextris" class="btn btn-primary w-100">
+                                        <i class="fas fa-play me-2"></i>Play Now
+                                    </a>
+                                </div>
+                                <a href="game_detail_play.html?game=hextris" class="stretched-link" aria-label="Open Hextris"></a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </section>
+
+
+                <!-- Top Advertisement Banner -->
+                <!-- <div class="advertisement-banner mb-4">
+                    <div class="ad-placeholder bg-light p-3 text-center rounded">
+                        <p class="mb-0">Advertisement Space</p>
+                        <small>Premium gaming deals and offers</small>
+                    </div>
+                </div> -->
+
+                <!-- Popular Games Section -->
+                <section>
+                    <h2 class="text-gradient text-center mb-4">Popular Games</h2>
+                    <div class="row g-4">
+                        <!-- Pacman -->
+                        <div class="col-12 col-md-6">
+                            <div class="card-interactive bg-surface rounded-lg p-4">
+                                <div class="relative game-thumbnail rounded-lg overflow-hidden mb-3">
+                                    <img src="../public/images/banners/pmbanner.jpg" alt="Pacman"
+                                        class="w-full h-32 object-cover" />
+                                    <a href="game_detail_play.html?game=pacman"
+                                        class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <h3 class="font-semibold mb-2">Pacman</h3>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex text-accent text-sm">
+                                        <!-- Star rating can be dynamically generated here -->
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                        </svg>
+                                        <svg class="w-4 h-4 text-text-muted" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs text-text-secondary">2.5M plays</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+            <div class="col-lg-2 d-none d-lg-block">
+                <!-- Right Side Advertisement -->
+                <div class="advertisement-sidebar">
+                    <div class="ad-placeholder bg-light p-3 text-center rounded mb-3">
+                        <p class="mb-0">Advertisement Space</p>
+                        <small>Exclusive Deals</small>
+                    </div>
+                    <div class="ad-placeholder bg-light p-3 text-center rounded">
+                        <p class="mb-0">Advertisement Space</p>
+                        <small>New Releases</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Advertisement Banner -->
+        <!-- <div class="advertisement-banner mt-4">
+            <div class="ad-placeholder bg-light p-3 text-center rounded">
+                <p class="mb-0">Advertisement Space</p>
+                <small>Special gaming offers and promotions</small>
+            </div>
+        </div> -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <p class="footer-text mb-0">
+                        &copy; 2025 Gamely Hub. All rights reserved.
+                    </p>
+                    <div class="footer-links mt-2">
+                        <a href="privacy.html" class="text-primary me-3">Privacy Policy</a>
+                        <a href="terms.html" class="text-primary">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Function to generate star rating HTML
+        function generateStarRating(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '<svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>';
+                } else {
+                    stars += '<svg class="w-4 h-4 text-text-muted" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>';
+                }
+            }
+            return stars;
+        }
+
+        // Populate Featured Games
+        const featuredCarousel = document.getElementById('featuredCarousel');
+        gamesData.featured.forEach(game => {
+            featuredCarousel.innerHTML += `
+                <div class="flex-shrink-0 w-80 snap-start">
+                    <div class="relative game-thumbnail rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                        <img src="${game.image}" alt="${game.title}" class="w-full h-48 object-cover" onerror="this.src='https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white mb-2">${game.title}</h3>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <div class="flex text-accent">
+                                        ${generateStarRating(game.rating)}
+                                    </div>
+                                    <span class="text-sm text-text-secondary">${game.plays} plays</span>
+                                </div>
+                                <a href="${game.link}" class="bg-primary hover:bg-primary-600 text-white px-6 py-2 rounded-full font-medium transition-colors btn-feedback">
+                                    Play Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Populate Recent Games
+        const recentGames = document.getElementById('recentGames');
+        gamesData.recent.forEach(game => {
+            recentGames.innerHTML += `
+                <div class="flex-shrink-0 w-40">
+                    <div class="relative game-thumbnail rounded-lg overflow-hidden mb-3">
+                        <img src="${game.image}" alt="${game.title}" class="w-full h-24 object-cover" onerror="this.src='https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <a href="${game.link}" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <h3 class="font-medium text-sm mb-1">${game.title}</h3>
+                    <p class="text-xs text-text-secondary">Last played ${game.lastPlayed}</p>
+                </div>
+            `;
+        });
+
+        // Populate Popular Games
+        const popularGames = document.getElementById('popularGames');
+        gamesData.popular.forEach(game => {
+            popularGames.innerHTML += `
+                <div class="card-interactive bg-surface rounded-lg p-4">
+                    <div class="relative game-thumbnail rounded-lg overflow-hidden mb-3">
+                        <img src="${game.image}" alt="${game.title}" class="w-full h-32 object-cover" onerror="this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <a href="${game.link}" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <h3 class="font-semibold mb-2">${game.title}</h3>
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-accent text-sm">
+                            ${generateStarRating(game.rating)}
+                        </div>
+                        <span class="text-xs text-text-secondary">${game.plays} plays</span>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Menu Toggle Functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const sideMenu = document.getElementById('sideMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.remove('invisible');
+            menuOverlay.classList.add('opacity-100');
+            sideMenu.classList.remove('translate-x-full');
+        });
+
+        function hideMenu() {
+            menuOverlay.classList.add('invisible');
+            menuOverlay.classList.remove('opacity-100');
+            sideMenu.classList.add('translate-x-full');
+        }
+
+        closeMenu.addEventListener('click', hideMenu);
+        menuOverlay.addEventListener('click', hideMenu);
+
+        function getGameThumbnail(game) {
+            return (game.thumbnail && game.thumbnail.trim() !== "") ? game.thumbnail : '../public/images/gam-thumb.png';
+        }
+
+        // Make carousel items clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            carouselItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // Only trigger if clicked outside the button
+                    if (!e.target.closest('.btn')) {
+                        const link = item.querySelector('a');
+                        if (link) {
+                            window.location.href = link.href;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>
