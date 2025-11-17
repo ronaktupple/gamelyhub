@@ -172,6 +172,117 @@
         .game-full-content p:last-child {
             margin-bottom: 0;
         }
+
+        /* Sidebar game grids - Left and Right */
+        .main-content-wrapper {
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            gap: 2rem;
+            position: relative;
+            align-items: flex-start;
+        }
+
+        .sidebar-games {
+            width: 280px;
+            flex-shrink: 0;
+            padding: 1rem;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            background: transparent;
+        }
+
+        .sidebar-games::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar-games::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .sidebar-games::-webkit-scrollbar-thumb {
+            background: rgba(148, 163, 184, 0.3);
+            border-radius: 3px;
+        }
+
+        .sidebar-games::-webkit-scrollbar-thumb:hover {
+            background: rgba(148, 163, 184, 0.5);
+        }
+
+        .sidebar-games h3 {
+            color: var(--text-primary, #1e293b);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .sidebar-games-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .sidebar-game-card {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 16 / 9;
+            background: var(--card-bg, #ffffff);
+        }
+
+        .sidebar-game-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .sidebar-game-card a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .sidebar-game-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .sidebar-games-loading {
+            text-align: center;
+            padding: 1rem;
+            color: var(--text-secondary, #64748b);
+            font-size: 0.875rem;
+        }
+
+        /* Hide sidebars on smaller screens */
+        @media (max-width: 1400px) {
+            .sidebar-games {
+                display: none;
+            }
+            
+            .main-content-wrapper {
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 1401px) {
+            .main-content-wrapper {
+                justify-content: center;
+                padding: 0 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -243,10 +354,25 @@
 
 
 
-    <!-- Main Content -->
-    <main class="container-fluid mt-5" style="position: relative; z-index: 10; max-width: 1320px; margin: 0 auto;">
-        <div class="row">
-            <div class="col-12">
+    <!-- Main Content Wrapper with Sidebars -->
+    <div class="main-content-wrapper mt-5" style="position: relative; z-index: 10;">
+        <!-- Left Sidebar Games -->
+        <aside class="sidebar-games" id="leftSidebarGames">
+            <h3>More Games</h3>
+            <div class="sidebar-games-grid" id="leftSidebarGamesContainer">
+                <!-- Games will be loaded dynamically -->
+            </div>
+            <div class="sidebar-games-loading" id="leftSidebarGamesLoading" style="display: none;">
+                <div class="spinner-border spinner-border-sm text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="container-fluid" style="position: relative; z-index: 10; max-width: 1320px; margin: 0 auto; flex: 1;">
+            <div class="row">
+                <div class="col-12">
                 <!-- Game Stats -->
                 <section class="game-stats mb-5">
                     <div class="row g-4">
@@ -335,17 +461,31 @@
                         <p class="mt-2 text-muted">Loading more games...</p>
                     </div>
                 </section>
+                </div>
             </div>
-        </div>
 
-        <!-- Bottom Advertisement Banner -->
-        <!-- <div class="advertisement-banner mt-4">
-            <div class="ad-placeholder bg-light p-3 text-center rounded">
-                <p class="mb-0">Advertisement Space</p>
-                <small>Special gaming offers and promotions</small>
+            <!-- Bottom Advertisement Banner -->
+            <!-- <div class="advertisement-banner mt-4">
+                <div class="ad-placeholder bg-light p-3 text-center rounded">
+                    <p class="mb-0">Advertisement Space</p>
+                    <small>Special gaming offers and promotions</small>
+                </div>
+            </div> -->
+        </main>
+
+        <!-- Right Sidebar Games -->
+        <aside class="sidebar-games" id="rightSidebarGames">
+            <h3>Explore Games</h3>
+            <div class="sidebar-games-grid" id="rightSidebarGamesContainer">
+                <!-- Games will be loaded dynamically -->
             </div>
-        </div> -->
-    </main>
+            <div class="sidebar-games-loading" id="rightSidebarGamesLoading" style="display: none;">
+                <div class="spinner-border spinner-border-sm text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </aside>
+    </div>
 
     <!-- Sticky Play Button -->
     <div class="sticky-play-button d-none">
@@ -721,6 +861,217 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Wait a bit for gamesData to load
             setTimeout(loadMoreGames, 200);
+        });
+    </script>
+
+    <script>
+        // Function to generate image-only game card for sidebar
+        function generateSidebarGameCard(game) {
+            if (!game || !game.id) {
+                return '';
+            }
+
+            // Get thumbnail using GameLoader's helper
+            let thumbnail = '';
+            if (typeof GameLoader !== 'undefined' && GameLoader.getGameThumbnail) {
+                thumbnail = GameLoader.getGameThumbnail(game);
+            } else {
+                // Fallback thumbnail logic
+                if (!game.thumbnail || game.thumbnail.trim() === "") {
+                    const isInPages = window.location.pathname.includes('/pages/');
+                    thumbnail = isInPages ? '../public/images/gam-thumb.png' : 'public/images/gam-thumb.png';
+                } else {
+                    const isInPages = window.location.pathname.includes('/pages/');
+                    let path = game.thumbnail;
+                    if (path.startsWith('../public/')) {
+                        thumbnail = isInPages ? path : path.replace('../public/', 'public/');
+                    } else if (path.startsWith('public/')) {
+                        thumbnail = isInPages ? '../' + path : path;
+                    } else {
+                        if (!path.includes('public/')) {
+                            path = (isInPages ? '../' : '') + 'public/' + path;
+                        } else if (isInPages && !path.startsWith('../')) {
+                            path = '../' + path;
+                        }
+                        thumbnail = path;
+                    }
+                }
+            }
+
+            // Generate game URL
+            const isInPages = window.location.pathname.includes('/pages/');
+            const gameUrl = isInPages ? `game_detail_play.html?game=${encodeURIComponent(game.id)}` : `pages/game_detail_play.html?game=${encodeURIComponent(game.id)}`;
+
+            return `
+                <div class="sidebar-game-card">
+                    <a href="${gameUrl}" aria-label="Play ${game.title}">
+                        <img data-src="${thumbnail}" alt="${game.title}" 
+                            class="lazy-load" 
+                            loading="lazy"
+                            onerror="this.src='${isInPages ? '../public/images/gam-thumb.png' : 'public/images/gam-thumb.png'}'; this.onerror=null;" />
+                    </a>
+                </div>
+            `;
+        }
+
+        // Load sidebar games dynamically
+        function loadSidebarGames() {
+            function waitForDependencies(callback) {
+                let retryCount = 0;
+                const maxRetries = 50;
+                const retryDelay = 100;
+
+                function check() {
+                    if (typeof gamesData !== 'undefined' && typeof GameLoader !== 'undefined') {
+                        const keys = Object.keys(gamesData);
+                        if (keys.length >= 20 && GameLoader.getAllGames) {
+                            console.log(`✓ Dependencies loaded for sidebar games: ${keys.length} games`);
+                            callback();
+                            return;
+                        }
+                    }
+                    
+                    if (retryCount < maxRetries) {
+                        retryCount++;
+                        setTimeout(check, retryDelay);
+                    } else {
+                        console.error('✗ Failed to load dependencies for sidebar games');
+                    }
+                }
+                
+                setTimeout(check, 50);
+            }
+
+            waitForDependencies(function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const currentGameId = urlParams.get('game');
+                const leftContainer = document.getElementById('leftSidebarGamesContainer');
+                const rightContainer = document.getElementById('rightSidebarGamesContainer');
+                const leftLoading = document.getElementById('leftSidebarGamesLoading');
+                const rightLoading = document.getElementById('rightSidebarGamesLoading');
+                
+                if (!leftContainer || !rightContainer) {
+                    console.error('Sidebar containers not found');
+                    return;
+                }
+
+                // Get all games and filter out current game
+                const allGames = GameLoader.getAllGames();
+                const filteredGames = allGames.filter(game => game.id !== currentGameId);
+                
+                // Shuffle the filtered games
+                const shuffledGames = filteredGames.sort(() => 0.5 - Math.random());
+                
+                // Split games for left and right sidebars
+                const midPoint = Math.ceil(shuffledGames.length / 2);
+                const leftGames = shuffledGames.slice(0, midPoint);
+                const rightGames = shuffledGames.slice(midPoint);
+                
+                // Load games into left sidebar
+                function loadSidebar(container, games, loadingIndicator) {
+                    const gamesPerLoad = 20;
+                    let currentIndex = 0;
+                    
+                    function loadGames(startIndex, count) {
+                        const gamesToLoad = games.slice(startIndex, startIndex + count);
+                        
+                        gamesToLoad.forEach(game => {
+                            if (game && game.id) {
+                                const cardHTML = generateSidebarGameCard(game);
+                                if (cardHTML) {
+                                    container.insertAdjacentHTML('beforeend', cardHTML);
+                                }
+                            }
+                        });
+                        
+                        // Initialize lazy loading for new images
+                        setTimeout(() => {
+                            if (typeof GameLoader !== 'undefined' && GameLoader.initLazyLoading) {
+                                GameLoader.initLazyLoading();
+                            } else {
+                                // Fallback lazy loading
+                                const images = container.querySelectorAll('img.lazy-load');
+                                images.forEach(img => {
+                                    if (img.dataset.src) {
+                                        img.src = img.dataset.src;
+                                        img.removeAttribute('data-src');
+                                        img.classList.remove('lazy-load');
+                                    }
+                                });
+                            }
+                        }, 100);
+                        
+                        return {
+                            loaded: startIndex + gamesToLoad.length,
+                            total: games.length,
+                            hasMore: startIndex + gamesToLoad.length < games.length
+                        };
+                    }
+                    
+                    // Load initial games
+                    const result = loadGames(0, gamesPerLoad);
+                    currentIndex = result.loaded;
+                    
+                    // Setup infinite scroll if there are more games
+                    if (result.hasMore) {
+                        let isLoading = false;
+                        let hasMore = true;
+                        
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting && hasMore && !isLoading) {
+                                    isLoading = true;
+                                    if (loadingIndicator) {
+                                        loadingIndicator.style.display = 'block';
+                                    }
+                                    
+                                    observer.unobserve(entry.target);
+                                    
+                                    setTimeout(() => {
+                                        const loadResult = loadGames(currentIndex, gamesPerLoad);
+                                        currentIndex = loadResult.loaded;
+                                        hasMore = loadResult.hasMore;
+                                        isLoading = false;
+                                        
+                                        if (loadingIndicator) {
+                                            loadingIndicator.style.display = 'none';
+                                        }
+                                        
+                                        // Re-observe the new last element
+                                        if (hasMore) {
+                                            const lastCard = container.lastElementChild;
+                                            if (lastCard) {
+                                                setTimeout(() => observer.observe(lastCard), 100);
+                                            }
+                                        }
+                                    }, 300);
+                                }
+                            });
+                        }, {
+                            rootMargin: '200px'
+                        });
+                        
+                        // Start observing the last card
+                        setTimeout(() => {
+                            const lastCard = container.lastElementChild;
+                            if (lastCard) {
+                                observer.observe(lastCard);
+                            }
+                        }, 500);
+                    }
+                }
+                
+                // Load games into both sidebars
+                loadSidebar(leftContainer, leftGames, leftLoading);
+                loadSidebar(rightContainer, rightGames, rightLoading);
+                
+                console.log(`Loaded ${leftGames.length} games in left sidebar, ${rightGames.length} games in right sidebar`);
+            });
+        }
+
+        // Load sidebar games when page is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(loadSidebarGames, 300);
         });
     </script>
 </body>

@@ -407,6 +407,7 @@
         getAllGames,
         generateGameCard,
         setupInfiniteScroll,
+        getGameThumbnail,
         init
     };
 
