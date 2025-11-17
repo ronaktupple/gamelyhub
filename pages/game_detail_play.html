@@ -283,6 +283,51 @@
                 padding: 0 1rem;
             }
         }
+
+        /* Game Title - Medium Size */
+        #gameTitle {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            #gameTitle {
+                font-size: 2rem;
+            }
+        }
+
+        /* Category Tags - Chip Style */
+        #gameCategories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .category-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 
@@ -335,15 +380,12 @@
         </div> -->
         <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
             <div class="row align-items-center">
-                <div class="col-12 col-md-4 text-center">
+                <div class="col-12 text-center">
+                    <h1 id="gameTitle" class="text-white mb-3">Loading...</h1>
                     <img id="gameLogo" src="" alt="Game Logo" class="game-logo mb-3 mx-auto d-block">
                     <a href="#" id="playButtonTop" class="btn btn-light btn-lg w-75 d-block mx-auto mb-4 text-dark">
                         <i class="fas fa-play me-2"></i>Play Now
                     </a>
-                </div>
-                <div class="col-12 col-md-8">
-                    <h1 id="gameTitle" class="text-white mb-3">Loading...</h1>
-                    <p id="gameDescription" class="lead mb-4">Loading game description...</p>
                     <div id="gameCategories" class="mb-4">
                         <!-- Categories will be added dynamically -->
                     </div>
@@ -670,7 +712,6 @@
 
             // Update game header
             document.getElementById('gameTitle').textContent = game.title;
-            document.getElementById('gameDescription').textContent = game.longDescription;
             document.getElementById('gameLogo').src = game.logo;
             document.getElementById('gameLogo').alt = `${game.title} Logo`;
 
