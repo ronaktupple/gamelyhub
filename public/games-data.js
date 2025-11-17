@@ -500,7 +500,7 @@ const gamesData = {
         id: 'battled',
         title: 'Battle Dudes',
         description: 'Slither is a fun and competitive snake game where you eat orbs, grow longer, and try to trap other players',
-        longDescription: 'Slither is a massively multiplayer snake game where your goal is to become the longest and strongest on the field. Slither around the map, eat glowing orbs to grow, and dodge other players—or trap them to make them crash! It's simple to learn but takes skill and strategy to master. With smooth gameplay, colorful visuals, and fast-paced action, Slither is perfect for casual fun or intense leaderboard climbing',
+        longDescription: 'Slither is a massively multiplayer snake game where your goal is to become the longest and strongest on the field. Slither around the map, eat glowing orbs to grow, and dodge other players—or trap them to make them crash! It\'s simple to learn but takes skill and strategy to master. With smooth gameplay, colorful visuals, and fast-paced action, Slither is perfect for casual fun or intense leaderboard climbing',
         fullContent: `<h2>About Battle Dudes (Slither)</h2>
 <p>Battle Dudes, featuring Slither gameplay, is a fun and competitive snake game where you eat orbs, grow longer, and try to trap other players. This massively multiplayer snake game challenges you to become the longest and strongest on the field. Slither around the map, eat glowing orbs to grow, and dodge other players—or trap them to make them crash! It's simple to learn but takes skill and strategy to master. With smooth gameplay, colorful visuals, and fast-paced action, this game is perfect for casual fun or intense leaderboard climbing.</p>
 
