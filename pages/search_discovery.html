@@ -115,6 +115,41 @@
                 padding: 2rem 0 1rem;
             }
         }
+
+        /* Lazy Loading Styles */
+        img.lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+            background: #f0f0f0;
+            min-height: 200px;
+        }
+
+        img.lazy-load.loaded {
+            opacity: 1;
+        }
+
+        /* Loading placeholder */
+        .lazy-load::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
     </style>
 </head>
 
@@ -314,58 +349,80 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Game Loader Script for lazy loading -->
+    <script src="../public/game-loader.js"></script>
 
+    <!-- Games Data -->
+    <script src="../public/games-data.js"></script>
+    
     <!-- Search Script -->
     <script>
-        // Sample game data (in a real app, this would come from a database)
-        const games = [
-            {
-                id: 'cookieclicker',
-                title: 'Cookie Clicker',
-                description: 'Click cookies, buy upgrades, and become a cookie tycoon!',
-                thumbnail: '../games/cookieclicker/thumbnail.jpg',
-                categories: ['Idle', 'Clicker', 'Strategy']
-            },
-            {
-                id: '2048',
-                title: '2048',
-                description: 'Join the numbers and reach the 2048 tile!',
-                thumbnail: '../public/images/banners/2048_OG-logo.jpg',
-                categories: ['Puzzle', 'Strategy', 'Numbers']
-            },
-            // Add more games here
-        ];
-
         // Search functionality
         const searchInput = document.getElementById('searchInput');
         const searchButton = document.getElementById('searchButton');
         const searchResults = document.getElementById('searchResults');
         const resultsContainer = document.getElementById('resultsContainer');
 
+        function getGameThumbnail(game) {
+            if (!game.thumbnail || game.thumbnail.trim() === "") {
+                return '../public/images/gam-thumb.png';
+            }
+            // Normalize paths for pages directory
+            let path = game.thumbnail.replace(/^\.\.\//, '').replace(/^\.\//, '');
+            if (!path.startsWith('../public/') && !path.startsWith('public/')) {
+                path = '../public/' + path.replace(/^public\//, '');
+            }
+            return path;
+        }
+
         function performSearch() {
             const query = searchInput.value.toLowerCase();
             if (!query) return;
 
+            if (typeof gamesData === 'undefined') {
+                resultsContainer.innerHTML = `
+                    <div class="col-12 text-center">
+                        <p class="lead">Games data not loaded. Please refresh the page.</p>
+                    </div>
+                `;
+                searchResults.style.display = 'block';
+                return;
+            }
+
+            // Get all games from gamesData
+            const allGames = [];
+            for (const key in gamesData) {
+                if (gamesData.hasOwnProperty(key) && gamesData[key].id) {
+                    allGames.push(gamesData[key]);
+                }
+            }
+
             // Filter games based on search query
-            const filteredGames = games.filter(game =>
+            const filteredGames = allGames.filter(game =>
                 game.title.toLowerCase().includes(query) ||
                 game.description.toLowerCase().includes(query) ||
-                game.categories.some(category => category.toLowerCase().includes(query))
+                (game.categories && game.categories.some(category => category.toLowerCase().includes(query)))
             );
 
-            // Display results
+            // Display results with lazy loading
             if (filteredGames.length > 0) {
-                resultsContainer.innerHTML = filteredGames.map(game => `
+                resultsContainer.innerHTML = filteredGames.map(game => {
+                    const thumbnail = getGameThumbnail(game);
+                    return `
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="game-card h-100">
-                            <img src="${game.thumbnail}" alt="${game.title}" class="card-img-top">
+                            <img data-src="${thumbnail}" alt="${game.title}" 
+                                class="card-img-top lazy-load" 
+                                loading="lazy"
+                                onerror="this.src='../public/images/gam-thumb.png'; this.onerror=null;">
                             <div class="card-body">
                                 <h5 class="card-title">${game.title}</h5>
-                                <p class="card-text">${game.description}</p>
+                                <p class="card-text">${game.description || ''}</p>
                                 <div class="d-flex flex-wrap gap-2 mb-3">
-                                    ${game.categories.map(category =>
-                    `<span class="category-tag">${category}</span>`
-                ).join('')}
+                                    ${(game.categories || []).map(category =>
+                        `<span class="category-tag">${category}</span>`
+                    ).join('')}
                                 </div>
                                 <a href="game_detail_play.html?game=${game.id}" class="btn btn-primary w-100">
                                     <i class="fas fa-play me-2"></i>Play Now
@@ -373,8 +430,14 @@
                             </div>
                         </div>
                     </div>
-                `).join('');
+                `;
+                }).join('');
                 searchResults.style.display = 'block';
+                
+                // Initialize lazy loading for search results
+                if (typeof GameLoader !== 'undefined') {
+                    setTimeout(() => GameLoader.initLazyLoading(), 100);
+                }
             } else {
                 resultsContainer.innerHTML = `
                     <div class="col-12 text-center">

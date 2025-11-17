@@ -337,6 +337,1179 @@ const gamesData = {
             '../public/images/banners/buildrss3.jpg'
         ],
         relatedGames: ['2048', 'cookieclicker']
+    },
+    '8ballbilliards': {
+        id: '8ballbilliards',
+        title: '8 Ball Billiards',
+        description: 'Play classic 8-ball billiards! Master the art of pool and challenge yourself in this realistic billiards game.',
+        longDescription: '8 Ball Billiards brings the classic pool hall experience to your screen. Aim, shoot, and sink all your balls before your opponent. With realistic physics and smooth controls, this game captures the essence of billiards. Practice your shots, learn the angles, and become a pool master. Perfect for both casual players and billiards enthusiasts!',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Sports', 'Simulation', 'Classic'],
+        stats: {
+            players: '1M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['foosball', 'foosballfrenzy']
+    },
+    'alienlinkup': {
+        id: 'alienlinkup',
+        title: 'Alien Link Up',
+        description: 'Connect matching aliens in this fun puzzle game! Link them up and clear the board.',
+        longDescription: 'Alien Link Up is an engaging puzzle game where you connect matching alien characters to clear the board. Use your strategic thinking to plan your moves and create chain reactions. With colorful graphics and addictive gameplay, this game will keep you entertained for hours. Can you clear all the levels?',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Match-3', 'Strategy'],
+        stats: {
+            players: '800K+',
+            rating: '4.5',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['candycrushcraze', 'gemcandycrush']
+    },
+    'alienrun': {
+        id: 'alienrun',
+        title: 'Alien Run',
+        description: 'Run through alien worlds in this fast-paced endless runner! Dodge obstacles and collect power-ups.',
+        longDescription: 'Alien Run is an exciting endless runner set in a futuristic alien world. Jump, slide, and dash through challenging obstacles while collecting power-ups and coins. With multiple characters to unlock and endless levels, this game offers non-stop action. How far can you run?',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Runner', 'Arcade'],
+        stats: {
+            players: '1.2M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['subwaysurferssingapore', 'cuberun']
+    },
+    'angrybolls': {
+        id: 'angrybolls',
+        title: 'Angry Balls',
+        description: 'Launch balls and destroy structures in this physics-based puzzle game!',
+        longDescription: 'Angry Balls is a physics-based puzzle game where you launch balls to destroy structures and defeat enemies. Use strategy and precision to aim your shots and clear each level. With realistic physics and challenging puzzles, this game will test your skills and keep you coming back for more.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Physics', 'Strategy'],
+        stats: {
+            players: '900K+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['angrybolls', 'tilefusion2048']
+    },
+    'animaldash': {
+        id: 'animaldash',
+        title: 'Animal Dash',
+        description: 'Dash through the jungle with cute animals! Collect coins and avoid obstacles in this fun runner game.',
+        longDescription: 'Animal Dash is a delightful endless runner featuring adorable animals. Choose your favorite animal character and dash through vibrant jungle environments. Collect coins, power-ups, and unlock new animals as you progress. With charming graphics and smooth gameplay, Animal Dash is perfect for players of all ages.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Runner', 'Arcade', 'Casual'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.8',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['alienrun', 'subwaysurferssingapore']
+    },
+    'animalfusion': {
+        id: 'animalfusion',
+        title: 'Animal Fusion',
+        description: 'Merge animals to create new species! Combine and evolve in this addictive merge game.',
+        longDescription: 'Animal Fusion is a captivating merge game where you combine animals to create new and unique species. Start with basic animals and merge them to unlock rare and powerful creatures. With beautiful graphics and strategic gameplay, Animal Fusion offers hours of entertainment. Build your ultimate animal collection!',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Merge', 'Strategy'],
+        stats: {
+            players: '2M+',
+            rating: '4.7',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['fruitmerge', 'animalfusion']
+    },
+    'animalspuzzle': {
+        id: 'animalspuzzle',
+        title: 'Animals Puzzle',
+        description: 'Solve jigsaw puzzles featuring cute animals! Piece together beautiful animal pictures.',
+        longDescription: 'Animals Puzzle is a relaxing jigsaw puzzle game featuring adorable animals. Choose from various difficulty levels and piece together stunning animal photographs. With hundreds of puzzles and beautiful artwork, this game is perfect for puzzle enthusiasts and animal lovers alike.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Jigsaw', 'Casual'],
+        stats: {
+            players: '1.8M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['gangsterjigsaw', 'animalspuzzle']
+    },
+    'animatedslots': {
+        id: 'animatedslots',
+        title: 'Animated Slots',
+        description: 'Spin the reels and win big in this animated slot machine game!',
+        longDescription: 'Animated Slots brings the excitement of casino slot machines to your screen. Spin the reels, match symbols, and trigger exciting bonus rounds. With vibrant animations and multiple slot themes, this game offers endless entertainment. Try your luck and see if you can hit the jackpot!',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Casino', 'Slots', 'Arcade'],
+        stats: {
+            players: '1.3M+',
+            rating: '4.5',
+            difficulty: 'Easy',
+            ageRating: '13+'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['animatedslots', 'candycascade']
+    },
+    'aztecpuzzlequest': {
+        id: 'aztecpuzzlequest',
+        title: 'Aztec Puzzle Quest',
+        description: 'Embark on an adventure through ancient Aztec temples! Solve puzzles and discover treasures.',
+        longDescription: 'Aztec Puzzle Quest takes you on an epic journey through ancient Aztec civilization. Solve challenging puzzles, match gems, and unlock the secrets of the temples. With stunning visuals and engaging gameplay, this game combines adventure and puzzle-solving in one exciting experience.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Adventure', 'Match-3'],
+        stats: {
+            players: '1.1M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['candycrushcraze', 'gemcandycrush']
+    },
+    'birdnestquest': {
+        id: 'birdnestquest',
+        title: 'Bird Nest Quest',
+        description: 'Help birds build their nests! Collect materials and complete quests in this charming adventure.',
+        longDescription: 'Bird Nest Quest is a delightful adventure game where you help birds build their nests. Collect twigs, leaves, and other materials while completing quests and exploring beautiful environments. With cute characters and engaging gameplay, this game is perfect for nature lovers and casual gamers.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Adventure', 'Casual', 'Quest'],
+        stats: {
+            players: '950K+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['kittenquestchronicles', 'birdnestquest']
+    },
+    'boatrush': {
+        id: 'boatrush',
+        title: 'Boat Rush',
+        description: 'Race through waterways in fast boats! Compete in thrilling boat racing action.',
+        longDescription: 'Boat Rush is an exhilarating boat racing game where you speed through challenging waterways. Navigate obstacles, perform stunts, and compete against other racers. With multiple boats to unlock and various race tracks, this game offers endless racing excitement.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Racing', 'Action', 'Sports'],
+        stats: {
+            players: '1.4M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['formuladrage', 'turbotrucksoccer']
+    },
+    'bouncyflap': {
+        id: 'bouncyflap',
+        title: 'Bouncy Flap',
+        description: 'Flap and bounce through obstacles! Control your character in this fun arcade game.',
+        longDescription: 'Bouncy Flap is a fun and addictive arcade game where you control a bouncy character. Tap to flap and navigate through obstacles while collecting power-ups. With simple controls and challenging gameplay, this game is easy to learn but hard to master.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Arcade', 'Casual', 'Action'],
+        stats: {
+            players: '1.6M+',
+            rating: '4.8',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['flapcathalloween', 'flyghost']
+    },
+    'buildyourrobot': {
+        id: 'buildyourrobot',
+        title: 'Build Your Robot',
+        description: 'Design and build your own robot! Customize parts and create the ultimate machine.',
+        longDescription: 'Build Your Robot is a creative game where you design and build your own robot. Choose from various parts, customize colors, and create unique robots. Test your creations in challenges and battles. With endless customization options, this game lets your creativity run wild!',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Simulation', 'Creative', 'Strategy'],
+        stats: {
+            players: '1.2M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['buildr', 'buildyourrobot']
+    },
+    'candycascade': {
+        id: 'candycascade',
+        title: 'Candy Cascade',
+        description: 'Match candies and create cascades! Clear the board in this sweet puzzle game.',
+        longDescription: 'Candy Cascade is a delightful match-3 puzzle game filled with colorful candies. Match three or more candies to create cascading combos and clear the board. With hundreds of levels and special candies, this game offers sweet entertainment for puzzle lovers.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Match-3', 'Casual'],
+        stats: {
+            players: '2.3M+',
+            rating: '4.8',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['candycrushcraze', 'gemcandycrush']
+    },
+    'candycrushcraze': {
+        id: 'candycrushcraze',
+        title: 'Candy Crush Craze',
+        description: 'Match candies and crush levels! Enjoy this addictive match-3 puzzle game.',
+        longDescription: 'Candy Crush Craze is an addictive match-3 puzzle game where you match colorful candies to clear levels. With hundreds of challenging levels, special candies, and boosters, this game will keep you entertained for hours. Can you crush all the levels?',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Match-3', 'Casual'],
+        stats: {
+            players: '3M+',
+            rating: '4.9',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['candycascade', 'gemcandycrush']
+    },
+    'celestialwar': {
+        id: 'celestialwar',
+        title: 'Celestial War',
+        description: 'Battle in space! Command your fleet and conquer the galaxy in this strategic war game.',
+        longDescription: 'Celestial War is an epic space strategy game where you command fleets and battle across the galaxy. Build your empire, research technologies, and engage in tactical combat. With deep strategy and stunning space visuals, this game offers an immersive galactic warfare experience.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Strategy', 'War', 'Space'],
+        stats: {
+            players: '1.7M+',
+            rating: '4.7',
+            difficulty: 'Hard',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['galacticbattlefront', 'galaxyquest']
+    },
+    'citydefender': {
+        id: 'citydefender',
+        title: 'City Defender',
+        description: 'Defend your city from invaders! Build defenses and protect your citizens.',
+        longDescription: 'City Defender is an exciting tower defense game where you protect your city from waves of enemies. Build and upgrade towers, place traps, and use special abilities to defend your city. With multiple levels and enemy types, this game offers strategic challenges and intense action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Strategy', 'Tower Defense', 'Action'],
+        stats: {
+            players: '2.1M+',
+            rating: '4.8',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['rangersvsundead', 'killzombies']
+    },
+    'colorcascadesort': {
+        id: 'colorcascadesort',
+        title: 'Color Cascade Sort',
+        description: 'Sort colors and create cascades! Organize colored balls in this satisfying puzzle game.',
+        longDescription: 'Color Cascade Sort is a relaxing puzzle game where you sort colored balls into matching tubes. Create cascades by strategically moving balls and organizing them by color. With simple mechanics and satisfying gameplay, this game is perfect for unwinding.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Sorting', 'Casual'],
+        stats: {
+            players: '1.9M+',
+            rating: '4.7',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['colorcascadesort', 'tilefusion2048']
+    },
+    'colorcrafthomemakeover': {
+        id: 'colorcrafthomemakeover',
+        title: 'Color Craft Home Makeover',
+        description: 'Design and decorate homes! Use colors and creativity to transform spaces.',
+        longDescription: 'Color Craft Home Makeover is a creative design game where you decorate and transform homes. Choose colors, furniture, and decorations to create beautiful living spaces. With endless customization options and design challenges, this game lets you unleash your inner interior designer.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Creative', 'Simulation', 'Design'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['colorcrafthomemakeover', 'buildyourrobot']
+    },
+    'cuberun': {
+        id: 'cuberun',
+        title: 'Cube Run',
+        description: 'Run through cube-filled worlds! Jump and dash in this 3D endless runner.',
+        longDescription: 'Cube Run is a 3D endless runner where you navigate through colorful cube-filled worlds. Jump over obstacles, collect power-ups, and run as far as you can. With smooth controls and vibrant graphics, this game offers an exciting running experience.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Runner', '3D', 'Arcade'],
+        stats: {
+            players: '1.8M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['alienrun', 'subwaysurferssingapore']
+    },
+    'dogeadventure': {
+        id: 'dogeadventure',
+        title: 'Doge Adventure',
+        description: 'Join Doge on an epic adventure! Explore worlds and collect treasures.',
+        longDescription: 'Doge Adventure is a fun platformer featuring the beloved Doge character. Jump, run, and explore colorful worlds while collecting coins and power-ups. With charming graphics and engaging gameplay, this game is perfect for fans of classic platformers.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Platformer', 'Adventure', 'Casual'],
+        stats: {
+            players: '1.3M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['kittenquestchronicles', 'donkeysavior']
+    },
+    'donkeysavior': {
+        id: 'donkeysavior',
+        title: 'Donkey Savior',
+        description: 'Save the day as a heroic donkey! Rescue others in this action-packed adventure.',
+        longDescription: 'Donkey Savior is an action-adventure game where you play as a heroic donkey on a mission to save others. Jump, run, and use special abilities to rescue characters and defeat enemies. With fun gameplay and charming characters, this game offers an entertaining adventure.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Adventure', 'Action', 'Platformer'],
+        stats: {
+            players: '1.1M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['dogeadventure', 'kittenquestchronicles']
+    },
+    'feedthefarm': {
+        id: 'feedthefarm',
+        title: 'Feed The Farm',
+        description: 'Manage your farm and feed the animals! Build the perfect farm in this simulation game.',
+        longDescription: 'Feed The Farm is a delightful farm management game where you care for animals, grow crops, and build your dream farm. Feed animals, collect resources, and expand your farm. With cute graphics and engaging gameplay, this game is perfect for farming enthusiasts.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Simulation', 'Farm', 'Management'],
+        stats: {
+            players: '1.6M+',
+            rating: '4.7',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['feedthefarm', 'animalfusion']
+    },
+    'flapcathalloween': {
+        id: 'flapcathalloween',
+        title: 'Flap Cat Halloween',
+        description: 'Flap through spooky Halloween scenes! Control a cat in this Halloween-themed flapper game.',
+        longDescription: 'Flap Cat Halloween is a festive flapper game with a Halloween twist. Control a cute cat as you flap through spooky Halloween environments. Avoid obstacles, collect treats, and enjoy the Halloween atmosphere. Perfect for the spooky season!',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Arcade', 'Flapper', 'Halloween'],
+        stats: {
+            players: '1.4M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['bouncyflap', 'flyghost']
+    },
+    'flyghost': {
+        id: 'flyghost',
+        title: 'Fly Ghost',
+        description: 'Fly as a ghost through haunted worlds! Navigate spooky environments in this flying game.',
+        longDescription: 'Fly Ghost is a spooky flying game where you control a ghost through haunted worlds. Fly through obstacles, collect items, and explore eerie environments. With atmospheric graphics and smooth controls, this game offers a ghostly flying experience.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Flying', 'Arcade', 'Halloween'],
+        stats: {
+            players: '1.2M+',
+            rating: '4.5',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['flapcathalloween', 'spookytrails']
+    },
+    'foosball': {
+        id: 'foosball',
+        title: 'Foosball',
+        description: 'Play classic foosball! Control your team and score goals in this table soccer game.',
+        longDescription: 'Foosball brings the classic table soccer game to your screen. Control your team, pass the ball, and score goals against your opponent. With realistic physics and smooth controls, this game captures the excitement of foosball. Challenge yourself and become a foosball champion!',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Sports', 'Soccer', 'Arcade'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['foosballfrenzy', '8ballbilliards']
+    },
+    'foosballfrenzy': {
+        id: 'foosballfrenzy',
+        title: 'Foosball Frenzy',
+        description: 'Experience foosball madness! Fast-paced table soccer action with power-ups and special moves.',
+        longDescription: 'Foosball Frenzy is an action-packed foosball game with exciting power-ups and special moves. Play fast-paced matches, unlock new teams, and master advanced techniques. With multiple game modes and competitive gameplay, this game takes foosball to the next level.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Sports', 'Soccer', 'Action'],
+        stats: {
+            players: '1.3M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['foosball', 'penaltyshootout']
+    },
+    'formuladrage': {
+        id: 'formuladrage',
+        title: 'Formula Drag',
+        description: 'Race in high-speed drag races! Compete in intense Formula-style drag racing.',
+        longDescription: 'Formula Drag is an adrenaline-pumping drag racing game featuring Formula-style cars. Race against opponents in high-speed drag races, upgrade your car, and become the ultimate drag racing champion. With realistic physics and customization options, this game delivers thrilling racing action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Racing', 'Sports', 'Action'],
+        stats: {
+            players: '1.7M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['boatrush', 'turbotrucksoccer']
+    },
+    'fruitmerge': {
+        id: 'fruitmerge',
+        title: 'Fruit Merge',
+        description: 'Merge fruits to create new ones! Combine and evolve fruits in this merge puzzle game.',
+        longDescription: 'Fruit Merge is a delightful merge game where you combine fruits to create new and exotic varieties. Start with basic fruits and merge them to unlock rare and delicious combinations. With colorful graphics and satisfying merge mechanics, this game offers fruity fun for everyone.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Merge', 'Casual'],
+        stats: {
+            players: '2.2M+',
+            rating: '4.8',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['animalfusion', 'fruitmerge']
+    },
+    'fruitninjamaster': {
+        id: 'fruitninjamaster',
+        title: 'Fruit Ninja Master',
+        description: 'Slice fruits like a ninja master! Cut fruits and avoid bombs in this action-packed game.',
+        longDescription: 'Fruit Ninja Master is an action-packed fruit slicing game where you slash fruits with ninja precision. Swipe to slice fruits, avoid bombs, and create combos for high scores. With multiple game modes and power-ups, this game offers endless fruit-slicing fun.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Arcade', 'Slicing'],
+        stats: {
+            players: '2.5M+',
+            rating: '4.8',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['fruitninjamaster', 'punchmaster']
+    },
+    'galacticbattlefront': {
+        id: 'galacticbattlefront',
+        title: 'Galactic Battlefront',
+        description: 'Battle across the galaxy! Command your forces in epic space battles.',
+        longDescription: 'Galactic Battlefront is an epic space strategy game where you command fleets in massive galactic battles. Build your empire, research technologies, and engage in tactical warfare. With stunning visuals and deep strategy, this game offers an immersive space combat experience.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Strategy', 'Space', 'War'],
+        stats: {
+            players: '1.9M+',
+            rating: '4.7',
+            difficulty: 'Hard',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['celestialwar', 'galaxyquest']
+    },
+    'galaxyquest': {
+        id: 'galaxyquest',
+        title: 'Galaxy Quest',
+        description: 'Embark on a quest across the galaxy! Explore planets and complete missions.',
+        longDescription: 'Galaxy Quest is an adventure game set in space where you explore planets, complete missions, and discover the secrets of the galaxy. With multiple planets to visit and quests to complete, this game offers an exciting space exploration experience.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Adventure', 'Space', 'Quest'],
+        stats: {
+            players: '1.6M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['celestialwar', 'galacticbattlefront']
+    },
+    'gangsterjigsaw': {
+        id: 'gangsterjigsaw',
+        title: 'Gangster Jigsaw',
+        description: 'Solve jigsaw puzzles with a gangster theme! Piece together crime scene puzzles.',
+        longDescription: 'Gangster Jigsaw is a unique jigsaw puzzle game with a gangster theme. Piece together puzzles featuring crime scenes, vintage cars, and classic gangster imagery. With multiple difficulty levels and hundreds of puzzles, this game offers a twist on classic jigsaw puzzles.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Jigsaw', 'Casual'],
+        stats: {
+            players: '1.4M+',
+            rating: '4.5',
+            difficulty: 'Easy',
+            ageRating: '13+'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['animalspuzzle', 'gangsterjigsaw']
+    },
+    'gemcandycrush': {
+        id: 'gemcandycrush',
+        title: 'Gem Candy Crush',
+        description: 'Match gems and candies! Crush levels in this gem-filled match-3 puzzle game.',
+        longDescription: 'Gem Candy Crush combines the best of gem matching and candy crushing. Match colorful gems and candies to clear levels and unlock special powers. With hundreds of levels and beautiful graphics, this game offers sweet gem-matching fun.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Match-3', 'Casual'],
+        stats: {
+            players: '2.4M+',
+            rating: '4.8',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['candycrushcraze', 'candycascade']
+    },
+    'icecreamcraze': {
+        id: 'icecreamcraze',
+        title: 'Ice Cream Craze',
+        description: 'Serve delicious ice cream! Run your ice cream shop in this fun management game.',
+        longDescription: 'Ice Cream Craze is a fun management game where you run your own ice cream shop. Serve customers, create new flavors, and expand your business. With cute graphics and engaging gameplay, this game is perfect for ice cream lovers and management game fans.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Simulation', 'Management', 'Casual'],
+        stats: {
+            players: '1.8M+',
+            rating: '4.7',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['icecreamcraze', 'feedthefarm']
+    },
+    'icehockeyhero': {
+        id: 'icehockeyhero',
+        title: 'Ice Hockey Hero',
+        description: 'Become an ice hockey hero! Score goals and win matches in this sports game.',
+        longDescription: 'Ice Hockey Hero is an exciting ice hockey game where you control your team and compete in matches. Score goals, make saves, and lead your team to victory. With realistic gameplay and multiple game modes, this game delivers thrilling hockey action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Sports', 'Hockey', 'Action'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['penaltyshootout', 'foosball']
+    },
+    'killzombies': {
+        id: 'killzombies',
+        title: 'Kill Zombies',
+        description: 'Survive the zombie apocalypse! Fight hordes of zombies in this action shooter.',
+        longDescription: 'Kill Zombies is an intense action shooter where you fight against hordes of zombies. Use various weapons, upgrade your arsenal, and survive wave after wave of undead enemies. With fast-paced action and multiple weapons, this game offers thrilling zombie survival gameplay.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Shooter', 'Zombie'],
+        stats: {
+            players: '2.3M+',
+            rating: '4.7',
+            difficulty: 'Hard',
+            ageRating: '13+'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['zombiegunner', 'rangersvsundead']
+    },
+    'kingblox': {
+        id: 'kingblox',
+        title: 'King Blox',
+        description: 'Stack blocks and become the king! Build towers and reach new heights.',
+        longDescription: 'King Blox is a stacking puzzle game where you build towers by stacking blocks. Balance blocks carefully, create combos, and reach new heights. With simple mechanics and challenging gameplay, this game tests your precision and timing.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Stacking', 'Arcade'],
+        stats: {
+            players: '1.7M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['tilefusion2048', 'kingblox']
+    },
+    'kittenquestchronicles': {
+        id: 'kittenquestchronicles',
+        title: 'Kitten Quest Chronicles',
+        description: 'Join kittens on epic quests! Explore worlds and complete adventures.',
+        longDescription: 'Kitten Quest Chronicles is an adorable adventure game featuring cute kittens on epic quests. Explore colorful worlds, solve puzzles, and help kittens complete their missions. With charming graphics and engaging gameplay, this game is perfect for cat lovers and adventure fans.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Adventure', 'Quest', 'Casual'],
+        stats: {
+            players: '1.9M+',
+            rating: '4.8',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['dogeadventure', 'birdnestquest']
+    },
+    'kobyjumpescape': {
+        id: 'kobyjumpescape',
+        title: 'Koby Jump Escape',
+        description: 'Jump and escape through challenging levels! Master platforming in this action game.',
+        longDescription: 'Koby Jump Escape is an action platformer where you jump and escape through challenging levels. Time your jumps perfectly, avoid obstacles, and reach the exit. With precise controls and increasing difficulty, this game tests your platforming skills.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Platformer', 'Action', 'Arcade'],
+        stats: {
+            players: '1.6M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['cuberun', 'mountainrush']
+    },
+    'ludorivals': {
+        id: 'ludorivals',
+        title: 'Ludo Rivals',
+        description: 'Play classic Ludo with friends! Roll dice and race to victory in this board game.',
+        longDescription: 'Ludo Rivals brings the classic board game Ludo to your screen. Roll dice, move your pieces, and race to get all your pieces home first. Play against friends or AI opponents in this timeless board game. With smooth gameplay and classic rules, this game captures the fun of Ludo.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Board Game', 'Strategy', 'Classic'],
+        stats: {
+            players: '1.8M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['trztictactoe', 'ludorivals']
+    },
+    'machinecarnage': {
+        id: 'machinecarnage',
+        title: 'Machine Carnage',
+        description: 'Destroy machines in epic battles! Fight robotic enemies in this action shooter.',
+        longDescription: 'Machine Carnage is an intense action shooter where you battle against robotic enemies. Use powerful weapons, upgrade your arsenal, and destroy machines in epic combat. With fast-paced action and multiple enemy types, this game offers thrilling robotic warfare.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Shooter', 'Sci-Fi'],
+        stats: {
+            players: '2.1M+',
+            rating: '4.7',
+            difficulty: 'Hard',
+            ageRating: '13+'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['tinycrashfighter', 'cryzen']
+    },
+    'madrunner': {
+        id: 'madrunner',
+        title: 'Mad Runner',
+        description: 'Run like crazy through obstacles! Dash through challenging courses in this runner game.',
+        longDescription: 'Mad Runner is an intense endless runner where you dash through challenging obstacle courses. Jump, slide, and dodge obstacles while running at high speeds. With fast-paced action and increasing difficulty, this game tests your reflexes and timing.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Runner', 'Action', 'Arcade'],
+        stats: {
+            players: '1.9M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['alienrun', 'subwaysurferssingapore']
+    },
+    'mountainrush': {
+        id: 'mountainrush',
+        title: 'Mountain Rush',
+        description: 'Race down mountains! Speed through challenging mountain courses in this racing game.',
+        longDescription: 'Mountain Rush is an exhilarating racing game where you speed down challenging mountain courses. Navigate sharp turns, avoid obstacles, and race to the finish. With multiple vehicles and courses, this game offers thrilling mountain racing action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Racing', 'Sports', 'Action'],
+        stats: {
+            players: '1.4M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['formuladrage', 'boatrush']
+    },
+    'ninjablock': {
+        id: 'ninjablock',
+        title: 'Ninja Block',
+        description: 'Play as a ninja and break blocks! Use ninja skills to clear levels in this puzzle game.',
+        longDescription: 'Ninja Block is a puzzle game where you play as a ninja breaking blocks. Use your ninja skills to strategically break blocks and clear levels. With multiple levels and ninja powers, this game combines puzzle-solving with ninja action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Action', 'Arcade'],
+        stats: {
+            players: '1.6M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['ninjapumpkin', 'kingblox']
+    },
+    'ninjapumpkin': {
+        id: 'ninjapumpkin',
+        title: 'Ninja Pumpkin',
+        description: 'Play as a ninja pumpkin! Use ninja skills in this Halloween-themed action game.',
+        longDescription: 'Ninja Pumpkin is a fun action game featuring a ninja pumpkin character. Use ninja skills to defeat enemies and complete levels. With Halloween-themed graphics and engaging gameplay, this game offers seasonal ninja fun.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Halloween', 'Arcade'],
+        stats: {
+            players: '1.3M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['ninjablock', 'flapcathalloween']
+    },
+    'olympicchampion': {
+        id: 'olympicchampion',
+        title: 'Olympic Champion',
+        description: 'Compete in Olympic events! Win gold medals in various sports competitions.',
+        longDescription: 'Olympic Champion lets you compete in various Olympic events. Participate in track and field, swimming, gymnastics, and more. Win gold medals and become an Olympic champion. With multiple events and realistic gameplay, this game offers Olympic excitement.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Sports', 'Olympics', 'Action'],
+        stats: {
+            players: '1.7M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['olympicchampion', 'penaltyshootout']
+    },
+    'penaltyshootout': {
+        id: 'penaltyshootout',
+        title: 'Penalty Shootout',
+        description: 'Score penalty kicks! Test your accuracy in this soccer penalty shootout game.',
+        longDescription: 'Penalty Shootout is an exciting soccer game focused on penalty kicks. Aim carefully, choose your shot direction, and score goals. With realistic physics and challenging goalkeepers, this game tests your penalty-taking skills.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Sports', 'Soccer', 'Arcade'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['foosball', 'icehockeyhero']
+    },
+    'punchmaster': {
+        id: 'punchmaster',
+        title: 'Punch Master',
+        description: 'Master the art of punching! Fight opponents in this action-packed boxing game.',
+        longDescription: 'Punch Master is an action-packed boxing game where you master the art of punching. Fight opponents, learn combos, and become a boxing champion. With multiple fighters and challenging opponents, this game offers intense boxing action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Sports', 'Boxing', 'Action'],
+        stats: {
+            players: '1.8M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['punchmaster', 'fruitninjamaster']
+    },
+    'racketchampions': {
+        id: 'racketchampions',
+        title: 'Racket Champions',
+        description: 'Become a racket sports champion! Play tennis and other racket sports.',
+        longDescription: 'Racket Champions is a sports game featuring various racket sports. Play tennis, badminton, and other racket games. Master different techniques and become a racket sports champion. With realistic gameplay and multiple sports, this game offers racket sports excitement.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Sports', 'Tennis', 'Action'],
+        stats: {
+            players: '1.4M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['penaltyshootout', 'foosball']
+    },
+    'rangersvsundead': {
+        id: 'rangersvsundead',
+        title: 'Rangers vs Undead',
+        description: 'Fight undead enemies as rangers! Defend against zombie hordes in this action game.',
+        longDescription: 'Rangers vs Undead is an action game where you play as rangers fighting against undead enemies. Use weapons and special abilities to defend against zombie hordes. With multiple rangers to choose from and various enemies, this game offers intense zombie-fighting action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Zombie', 'Shooter'],
+        stats: {
+            players: '2.2M+',
+            rating: '4.7',
+            difficulty: 'Hard',
+            ageRating: '13+'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['killzombies', 'zombiegunner']
+    },
+    'robberhunter': {
+        id: 'robberhunter',
+        title: 'Robber Hunter',
+        description: 'Hunt down robbers! Catch criminals in this action-packed police game.',
+        longDescription: 'Robber Hunter is an action game where you play as a police officer hunting down robbers. Chase criminals, use weapons, and bring them to justice. With multiple missions and challenging criminals, this game offers exciting police action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Police', 'Shooter'],
+        stats: {
+            players: '1.6M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: '13+'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['robberhunter', 'citydefender']
+    },
+    'runwayrush': {
+        id: 'runwayrush',
+        title: 'Runway Rush',
+        description: 'Race on airport runways! Speed through runways in this unique racing game.',
+        longDescription: 'Runway Rush is a unique racing game set on airport runways. Race against opponents, avoid obstacles, and speed through challenging runway courses. With multiple vehicles and exciting races, this game offers thrilling runway racing action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Racing', 'Action', 'Arcade'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['formuladrage', 'boatrush']
+    },
+    'savethesanta': {
+        id: 'savethesanta',
+        title: 'Save The Santa',
+        description: 'Help save Santa! Rescue Santa Claus in this Christmas-themed adventure game.',
+        longDescription: 'Save The Santa is a Christmas-themed adventure game where you help rescue Santa Claus. Navigate through winter landscapes, solve puzzles, and save Christmas. With festive graphics and engaging gameplay, this game is perfect for the holiday season.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Adventure', 'Christmas', 'Puzzle'],
+        stats: {
+            players: '1.4M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['snowballchristmas', 'savethesanta']
+    },
+    'searaiders': {
+        id: 'searaiders',
+        title: 'Sea Raiders',
+        description: 'Command your pirate ship! Raid the seas and become a pirate legend.',
+        longDescription: 'Sea Raiders is an adventure game where you command a pirate ship and raid the seas. Battle enemy ships, collect treasure, and become a legendary pirate. With naval combat and exploration, this game offers exciting pirate adventures.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Adventure', 'Pirate', 'Action'],
+        stats: {
+            players: '1.3M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['searaiders', 'vikingway']
+    },
+    'skycombatfury': {
+        id: 'skycombatfury',
+        title: 'Sky Combat Fury',
+        description: 'Engage in aerial combat! Dogfight in the skies in this flight combat game.',
+        longDescription: 'Sky Combat Fury is an intense flight combat game where you engage in aerial dogfights. Pilot fighter jets, use weapons, and defeat enemy aircraft. With realistic flight physics and multiple aircraft, this game offers thrilling sky combat action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Flight', 'Combat'],
+        stats: {
+            players: '1.8M+',
+            rating: '4.7',
+            difficulty: 'Hard',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['skycombatfury', 'galacticbattlefront']
+    },
+    'snowballchristmas': {
+        id: 'snowballchristmas',
+        title: 'Snowball Christmas',
+        description: 'Throw snowballs in this Christmas game! Have fun in winter wonderland.',
+        longDescription: 'Snowball Christmas is a fun Christmas game where you throw snowballs at targets. Enjoy winter wonderland settings and festive gameplay. With multiple levels and Christmas themes, this game is perfect for holiday fun.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Arcade', 'Christmas', 'Casual'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['savethesanta', 'snowballchristmas']
+    },
+    'soldierpath': {
+        id: 'soldierpath',
+        title: 'Soldier Path',
+        description: 'Follow the path of a soldier! Complete missions in this military action game.',
+        longDescription: 'Soldier Path is a military action game where you play as a soldier completing missions. Use weapons, tactics, and strategy to overcome enemies. With multiple missions and challenging combat, this game offers intense military action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Military', 'Shooter'],
+        stats: {
+            players: '1.7M+',
+            rating: '4.6',
+            difficulty: 'Hard',
+            ageRating: '13+'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['rangersvsundead', 'killzombies']
+    },
+    'spookytrails': {
+        id: 'spookytrails',
+        title: 'Spooky Trails',
+        description: 'Navigate spooky trails! Explore haunted paths in this Halloween adventure game.',
+        longDescription: 'Spooky Trails is a Halloween adventure game where you navigate through spooky trails. Explore haunted paths, solve puzzles, and discover secrets. With atmospheric graphics and Halloween themes, this game offers spooky fun.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Adventure', 'Halloween', 'Puzzle'],
+        stats: {
+            players: '1.3M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['flapcathalloween', 'flyghost']
+    },
+    'strikethepinball': {
+        id: 'strikethepinball',
+        title: 'Strike The Pinball',
+        description: 'Play classic pinball! Strike the ball and score points in this pinball game.',
+        longDescription: 'Strike The Pinball is a classic pinball game where you strike the ball and score points. Use flippers to keep the ball in play and hit targets for high scores. With realistic physics and multiple tables, this game captures the excitement of pinball.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Arcade', 'Pinball', 'Classic'],
+        stats: {
+            players: '1.4M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['strikethepinball', '8ballbilliards']
+    },
+    'tilefusion2048': {
+        id: 'tilefusion2048',
+        title: 'Tile Fusion 2048',
+        description: 'Fuse tiles to reach 2048! Combine numbers in this fusion puzzle game.',
+        longDescription: 'Tile Fusion 2048 is a fusion puzzle game where you combine numbered tiles to reach 2048. Slide tiles, create matches, and fuse them to higher numbers. With strategic gameplay and increasing difficulty, this game offers addictive puzzle fun.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Fusion', 'Strategy'],
+        stats: {
+            players: '2M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['2048', 'tilefusion2048']
+    },
+    'tinycrashfighter': {
+        id: 'tinycrashfighter',
+        title: 'Tiny Crash Fighter',
+        description: 'Fight in tiny arenas! Battle opponents in this compact fighting game.',
+        longDescription: 'Tiny Crash Fighter is a fighting game featuring tiny characters in compact arenas. Use combos, special moves, and strategy to defeat opponents. With multiple fighters and fast-paced combat, this game offers exciting fighting action.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Fighting', 'Action', 'Arcade'],
+        stats: {
+            players: '2.4M+',
+            rating: '4.8',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['punchmaster', 'machinecarnage']
+    },
+    'trztictactoe': {
+        id: 'trztictactoe',
+        title: 'Tic Tac Toe',
+        description: 'Play classic Tic Tac Toe! Challenge friends in this timeless board game.',
+        longDescription: 'Tic Tac Toe is the classic board game where you try to get three in a row. Play against friends or AI opponents in this timeless game. With simple rules and strategic gameplay, this game is perfect for quick gaming sessions.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Board Game', 'Strategy', 'Classic'],
+        stats: {
+            players: '1.2M+',
+            rating: '4.5',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['ludorivals', 'trztictactoe']
+    },
+    'tumblebeans': {
+        id: 'tumblebeans',
+        title: 'Tumble Beans',
+        description: 'Tumble and match beans! Clear the board in this bean-matching puzzle game.',
+        longDescription: 'Tumble Beans is a puzzle game where you tumble and match colorful beans. Clear the board by matching beans of the same color. With satisfying physics and colorful graphics, this game offers bean-tumbling fun.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Puzzle', 'Match-3', 'Casual'],
+        stats: {
+            players: '1.6M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['candycrushcraze', 'tumblebeans']
+    },
+    'turbotrucksoccer': {
+        id: 'turbotrucksoccer',
+        title: 'Turbo Truck Soccer',
+        description: 'Play soccer with trucks! Score goals in this unique truck soccer game.',
+        longDescription: 'Turbo Truck Soccer is a unique soccer game where you play with trucks instead of players. Drive trucks, score goals, and compete in matches. With fun physics and exciting gameplay, this game offers a twist on classic soccer.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Sports', 'Soccer', 'Racing'],
+        stats: {
+            players: '1.7M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['formuladrage', 'boatrush']
+    },
+    'turboturtletrek': {
+        id: 'turboturtletrek',
+        title: 'Turbo Turtle Trek',
+        description: 'Race as a turbo turtle! Speed through courses in this racing game.',
+        longDescription: 'Turbo Turtle Trek is a fun racing game where you play as a turbo turtle. Race through courses, collect power-ups, and compete against other turtles. With cute graphics and exciting races, this game offers turtle racing fun.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Racing', 'Arcade', 'Casual'],
+        stats: {
+            players: '1.4M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['turbotrucksoccer', 'boatrush']
+    },
+    'valentineshooter': {
+        id: 'valentineshooter',
+        title: 'Valentine Shooter',
+        description: 'Shoot hearts and love! Celebrate Valentine\'s Day in this themed shooter game.',
+        longDescription: 'Valentine Shooter is a themed shooter game perfect for Valentine\'s Day. Shoot hearts, collect love items, and enjoy romantic gameplay. With Valentine-themed graphics and fun mechanics, this game offers seasonal shooting fun.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Shooter', 'Valentine', 'Arcade'],
+        stats: {
+            players: '1.2M+',
+            rating: '4.5',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['valentineshooter', 'fruitninjamaster']
+    },
+    'vikingway': {
+        id: 'vikingway',
+        title: 'Viking Way',
+        description: 'Embark on a Viking adventure! Explore and conquer in this Viking-themed game.',
+        longDescription: 'Viking Way is an adventure game where you play as a Viking exploring and conquering. Battle enemies, collect resources, and build your Viking empire. With Viking-themed graphics and engaging gameplay, this game offers epic Viking adventures.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Adventure', 'Viking', 'Action'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['searaiders', 'vikingway']
+    },
+    'zombiegunner': {
+        id: 'zombiegunner',
+        title: 'Zombie Gunner',
+        description: 'Gun down zombies! Survive the zombie apocalypse in this action shooter.',
+        longDescription: 'Zombie Gunner is an intense action shooter where you gun down zombies to survive the apocalypse. Use various weapons, upgrade your arsenal, and fight hordes of undead. With fast-paced action and multiple weapons, this game offers thrilling zombie survival.',
+        thumbnail: '../public/images/gam-thumb.png',
+        logo: '../public/images/gam-thumb.png',
+        categories: ['Action', 'Shooter', 'Zombie'],
+        stats: {
+            players: '2.5M+',
+            rating: '4.8',
+            difficulty: 'Hard',
+            ageRating: '13+'
+        },
+        screenshots: ['../public/images/gam-thumb.png'],
+        relatedGames: ['killzombies', 'rangersvsundead']
     }
 
 }; 

@@ -1,0 +1,138 @@
+<!DOCTYPE html><html manifest="offline.appcache"><head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Kill Zombies</title>
+	<link rel="icon" type="image/x-icon" href="../../Assets/images/favicon_white.png">
+	<!-- Standardised web app manifest -->
+	<link rel="manifest" href="app.manifest">
+	
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png">
+	<meta name="HandheldFriendly" content="true">
+	<script src="../../Assets/js/draggingbutton.js"></script>
+	<!-- Chrome for Android web app tags -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" sizes="256x256" href="icon-256.png">
+	<!-- <style>
+		#draggableButton {
+			position: absolute;
+			background-color: black;
+			top: 10px;
+			/* left: 815px; */
+			height: 50px;
+			width: 100px;
+			transform: translate(-50%, -50%);
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: move;
+			z-index: 9999;
+		}
+		#draggableButton img {
+			width: 100%;
+			height: 100%;
+		}
+	</style> -->
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		html, body {
+			background: #000;
+			color: #fff;
+			overflow: hidden;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+		canvas {
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+    </style>
+	
+
+</head> 
+ 
+<body style=""> 
+	<!-- <button id="draggableButton">
+		<img src="../../Assets/images/favicon_white.png" alt="" class="h-100 w-100">
+	</button> -->
+	<div id="fb-root"></div>
+	
+	<script>
+	// Issue a warning if trying to preview an exported project on disk.
+	(function(){
+		// Check for running exported on file protocol
+		if (window.location.protocol.substr(0, 4) === "file")
+		{
+			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
+		}
+	})();
+	</script>
+	
+	<!-- The canvas must be inside a div called c2canvasdiv -->
+	<div id="c2canvasdiv" style="width: 800px; height: 450px; margin-left: 0px; margin-top: 75px;">
+	
+		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
+		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
+		<canvas id="c2canvas" width="800" height="450" style="width: 800px; height: 450px; cursor: url(&quot;data:image/png;base64,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&quot;) 10 1, auto;">
+			<!-- This text is displayed if the visitor's browser does not support HTML5.
+			You can change it, but it is a good idea to link to a description of a browser
+			and provide some links to download some popular HTML5-compatible browsers. -->
+			<h1>Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
+			<br><br><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br>
+			<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br>
+			<a href="http://www.google.com/chrome/">Google Chrome</a><br>
+			<a href="http://www.apple.com/safari/download/">Apple Safari</a><br>
+			<a href="http://www.google.com/chromeframe">Google Chrome Frame for Internet Explorer</a><br></h1>
+		</canvas>
+		
+	</div>
+	
+	<!-- Pages load faster with scripts at the bottom -->
+	
+	<!-- Construct 2 exported games require jQuery. -->
+	<script src="jquery-2.0.0.min.js"></script>
+
+
+	
+
+	
+    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
+    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
+	<script src="c2runtime.js"></script>
+
+    <script>
+		// Size the canvas to fill the browser viewport.
+		jQuery(window).resize(function() {
+			cr_sizeCanvas(jQuery(window).width(), jQuery(window).height());
+		});
+		
+		// Start the Construct 2 project running on window load.
+		jQuery(document).ready(function ()
+		{			
+			// Create new runtime using the c2canvas
+			cr_createRuntime("c2canvas");
+		});
+		
+		// Pause and resume on page becoming visible/invisible
+		function onVisibilityChanged() {
+			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+				cr_setSuspended(true);
+			else
+				cr_setSuspended(false);
+		};
+		
+		document.addEventListener("visibilitychange", onVisibilityChanged, false);
+		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+		
+    </script>
+ 
+ </body></html>

@@ -195,6 +195,41 @@
                 padding: 2rem 0 1rem;
             }
         }
+
+        /* Lazy Loading Styles */
+        img.lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+            background: #f0f0f0;
+            min-height: 200px;
+        }
+
+        img.lazy-load.loaded {
+            opacity: 1;
+        }
+
+        /* Loading placeholder */
+        .lazy-load::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
     </style>
 
 </head>
@@ -331,211 +366,18 @@
                     </div>
                 </div> -->
 
-                <!-- Featured Games Section -->
+                <!-- All Games Section -->
                 <section class="mb-5">
-                    <h2 class="text-gradient text-center mb-4">Featured Games</h2>
-                    <div class="row g-4 game-grid-5">
-
-
-                        <!-- smashkarts -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/skbanner.jpeg" alt="minefun" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Smash Karts</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=smashkarts" class="stretched-link" aria-label="Open Smash Karts"></a>
-                            </div>
+                    <h2 class="text-gradient text-center mb-4">All Games</h2>
+                    <div class="row g-4 game-grid-5" id="featuredGamesContainer">
+                        <!-- Games will be loaded dynamically -->
+                    </div>
+                    <!-- Loading indicator for infinite scroll -->
+                    <div class="text-center mt-4" id="loadingIndicator" style="display: none;">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
                         </div>
-
-
-                        <!-- Subway Surfers -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/ssbaner.webp" alt="Subway Surfers"
-                                    class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Subway Surfers</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=subwaysurferssingapore" class="stretched-link" aria-label="Open Subway Surfers"></a>
-                            </div>
-                        </div>
-
-
-
-                        <!-- Top Advertisement Banner -->
-                        <!-- <div class="advertisement-banner mb-4">
-                            <div class="ad-placeholder bg-light p-3 text-center rounded">
-                                <p class="mb-0">Advertisement Space</p>
-                                <small>Premium gaming deals and offers</small>
-                            </div>
-                        </div> -->
-
-
-
-
-
-                        <!-- poper -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/popbanner.jpg" alt="minefun" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Poper</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=poper" class="stretched-link" aria-label="Open Poper"></a>
-                            </div>
-                        </div>
-
-
-
-                        <!-- Cryzen -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/cryzenbanner.jpg" alt="minefun" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cryzen</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=cryzen" class="stretched-link" aria-label="Open Cryzen"></a>
-                            </div>
-                        </div>
-
-                        <!-- Minefun -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/mfbannner.webp" alt="minefun" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Mine fun</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=minefun" class="stretched-link" aria-label="Open Mine fun"></a>
-                            </div>
-                        </div>
-
-
-
-
-                        <!-- Pacman -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/pmbanner.jpg" alt="Pacman" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pacman</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=pacman" class="stretched-link" aria-label="Open Pacman"></a>
-                            </div>
-                        </div>
-
-
-
-
-                        <!-- Top Advertisement Banner -->
-                        <!-- <div class="advertisement-banner mb-4">
-                            <div class="ad-placeholder bg-light p-3 text-center rounded">
-                                <p class="mb-0">Advertisement Space</p>
-                                <small>Premium gaming deals and offers</small>
-                            </div>
-                        </div> -->
-
-                        <!-- zombr -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/zrbanner.jpg" alt="minefun" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Zombs Royale</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=zombr" class="stretched-link" aria-label="Open Zombs Royale"></a>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <!-- Tribales -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/tribalsbanner.jpg" alt="minefun"
-                                    class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tribales</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=tribles" class="stretched-link" aria-label="Open Tribales"></a>
-                            </div>
-                        </div>
-
-                        <!-- battled -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/bdbannr.jpg" alt="minefun" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Battle Dudes</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=battled" class="stretched-link" aria-label="Open Battle Dudes"></a>
-                            </div>
-                        </div>
-
-
-                        <!-- buildr -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/buildrbanner.png" alt="minefun" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Build Royale</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=buildr" class="stretched-link" aria-label="Open Build Royale"></a>
-                            </div>
-                        </div>
-
-                        <!-- Top Advertisement Banner -->
-                        <!-- <div class="advertisement-banner mb-4">
-                            <div class="ad-placeholder bg-light p-3 text-center rounded">
-                                <p class="mb-0">Advertisement Space</p>
-                                <small>Premium gaming deals and offers</small>
-                            </div>
-                        </div> -->
-
-
-
-
-                        <!-- Cookie Clicker -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/CookieClicker.jpg" alt="Cookie Clicker"
-                                    class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cookie Clicker</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=cookieclicker" class="stretched-link" aria-label="Open Cookie Clicker"></a>
-                            </div>
-                        </div>
-
-                        <!-- 2048 -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/2048_OG-logo.jpg" alt="2048" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">2048</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=2048" class="stretched-link" aria-label="Open 2048"></a>
-                            </div>
-                        </div>
-
-
-
-
-                        <!-- hextris -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="game-card position-relative h-100">
-                                <img src="public/images/banners/hextrisbanner.jpg" alt="minefun"
-                                    class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Hextris</h5>
-                                </div>
-                                <a href="pages/game_detail_play.html?game=hextris" class="stretched-link" aria-label="Open Hextris"></a>
-                            </div>
-                        </div>
-
-
-
+                        <p class="mt-2 text-muted">Loading more games...</p>
                     </div>
                 </section>
 
@@ -548,55 +390,6 @@
                     </div>
                 </div> -->
 
-                <!-- Popular Games Section -->
-                <section>
-                    <h2 class="text-gradient text-center mb-4">Popular Games</h2>
-                    <div class="row g-4 game-grid-5">
-                        <!-- Pacman -->
-                        <div class="col-6 col-md-3 col-lg-3">
-                            <div class="card-interactive bg-surface rounded-lg p-4">
-                                <div class="relative game-thumbnail rounded-lg overflow-hidden mb-3">
-                                    <img src="public/images/banners/pmbanner.jpg" alt="Pacman"
-                                        class="w-full h-32 object-cover" />
-                                    <a href="pages/game_detail_play.html?game=pacman"
-                                        class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <h3 class="font-semibold mb-2">Pacman</h3>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex text-accent text-sm">
-                                        <!-- Star rating can be dynamically generated here -->
-                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-text-muted" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-xs text-text-secondary">2.5M plays</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
 
             </div>
@@ -696,123 +489,26 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Game Loader Script -->
     <script>
-        // Function to generate star rating HTML
-        function generateStarRating(rating) {
-            let stars = '';
-            for (let i = 1; i <= 5; i++) {
-                if (i <= rating) {
-                    stars += '<svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>';
-                } else {
-                    stars += '<svg class="w-4 h-4 text-text-muted" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>';
+        // Wait for games-data.js to fully load
+        window.addEventListener('load', function() {
+            // Check gamesData after page load
+            if (typeof gamesData !== 'undefined') {
+                const keys = Object.keys(gamesData);
+                console.log('After page load - gamesData keys:', keys.length);
+                if (keys.length < 50) {
+                    console.warn('WARNING: Only', keys.length, 'games found. Expected ~80 games.');
+                    console.log('Available keys:', keys);
                 }
+            } else {
+                console.error('gamesData is not defined after page load!');
             }
-            return stars;
-        }
-
-        // Populate Featured Games
-        const featuredCarousel = document.getElementById('featuredCarousel');
-        if (featuredCarousel && gamesData && gamesData.featured) {
-            gamesData.featured.forEach(game => {
-                featuredCarousel.innerHTML += `
-                    <div class="flex-shrink-0 w-80 snap-start">
-                        <div class="relative game-thumbnail rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
-                            <img src="${game.image}" alt="${game.title}" class="w-full h-48 object-cover" onerror="this.src='https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'; this.onerror=null;" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <h3 class="text-xl font-bold text-white mb-2">${game.title}</h3>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-2">
-                                        <div class="flex text-accent">
-                                            ${generateStarRating(game.rating)}
-                                        </div>
-                                        <span class="text-sm text-text-secondary">${game.plays} plays</span>
-                                    </div>
-                                    <a href="${game.link}" class="bg-primary hover:bg-primary-600 text-white px-6 py-2 rounded-full font-medium transition-colors btn-feedback">
-                                        Play Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        // Populate Recent Games
-        const recentGames = document.getElementById('recentGames');
-        if (recentGames && gamesData && gamesData.recent) {
-            gamesData.recent.forEach(game => {
-                recentGames.innerHTML += `
-                    <div class="flex-shrink-0 w-40">
-                        <div class="relative game-thumbnail rounded-lg overflow-hidden mb-3">
-                            <img src="${game.image}" alt="${game.title}" class="w-full h-24 object-cover" onerror="this.src='https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
-                            <a href="${game.link}" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <h3 class="font-medium text-sm mb-1">${game.title}</h3>
-                        <p class="text-xs text-text-secondary">Last played ${game.lastPlayed}</p>
-                    </div>
-                `;
-            });
-        }
-
-        // Populate Popular Games
-        const popularGames = document.getElementById('popularGames');
-        if (popularGames && gamesData && gamesData.popular) {
-            gamesData.popular.forEach(game => {
-                popularGames.innerHTML += `
-                    <div class="card-interactive bg-surface rounded-lg p-4">
-                        <div class="relative game-thumbnail rounded-lg overflow-hidden mb-3">
-                            <img src="${game.image}" alt="${game.title}" class="w-full h-32 object-cover" onerror="this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
-                            <a href="${game.link}" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <h3 class="font-semibold mb-2">${game.title}</h3>
-                        <div class="flex items-center justify-between">
-                            <div class="flex text-accent text-sm">
-                                ${generateStarRating(game.rating)}
-                            </div>
-                            <span class="text-xs text-text-secondary">${game.plays} plays</span>
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        // Menu Toggle Functionality
-        const menuToggle = document.getElementById('menuToggle');
-        const menuOverlay = document.getElementById('menuOverlay');
-        const sideMenu = document.getElementById('sideMenu');
-        const closeMenu = document.getElementById('closeMenu');
-
-        if (menuToggle && menuOverlay && sideMenu && closeMenu) {
-            menuToggle.addEventListener('click', () => {
-                menuOverlay.classList.remove('invisible');
-                menuOverlay.classList.add('opacity-100');
-                sideMenu.classList.remove('translate-x-full');
-            });
-
-            function hideMenu() {
-                menuOverlay.classList.add('invisible');
-                menuOverlay.classList.remove('opacity-100');
-                sideMenu.classList.add('translate-x-full');
-            }
-
-            closeMenu.addEventListener('click', hideMenu);
-            menuOverlay.addEventListener('click', hideMenu);
-        }
-
-        function getGameThumbnail(game) {
-            return (game.thumbnail && game.thumbnail.trim() !== "") ? game.thumbnail : 'public/images/gam-thumb.png';
-        }
-
+        });
+    </script>
+    <script src="public/game-loader.js"></script>
+    
+    <script>
         // Make carousel items clickable
         document.addEventListener('DOMContentLoaded', function() {
             const carouselItems = document.querySelectorAll('.carousel-item');

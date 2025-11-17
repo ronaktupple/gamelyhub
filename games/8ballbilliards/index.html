@@ -1,0 +1,134 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>8 Ball Billiards</title>
+	<link rel="icon" type="image/x-icon" href="../../Assets/images/favicon_white.png">
+	<!-- Standardised web app manifest -->
+	<link rel="manifest" href="appmanifest.json">
+	
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png">
+	<meta name="HandheldFriendly" content="true">
+	
+	<!-- Chrome for Android web app tags -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" sizes="256x256" href="icon-256.png">
+
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		html, body {
+			background: #000;
+			color: #fff;
+			overflow: hidden;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+		canvas {
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+    </style>
+	
+
+<script src="offlineClient.js"></script></head> 
+ 
+<body style="cursor: url(&quot;data:image/png;base64,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&quot;) 5 5, auto;"> 
+	<div id="fb-root"></div>
+	
+	<script>
+	// Issue a warning if trying to preview an exported project on disk.
+	(function(){
+		// Check for running exported on file protocol
+		if (window.location.protocol.substr(0, 4) === "file")
+		{
+			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
+		}
+	})();
+	</script>
+	
+	<!-- The canvas must be inside a div called c2canvasdiv -->
+	<div id="c2canvasdiv" style="width: 800px; height: 450px; margin-left: 0px; margin-top: 75px;">
+	
+		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
+		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
+		<canvas id="c2canvas" width="800" height="450" style="width: 800px; height: 450px;">
+			<!-- This text is displayed if the visitor's browser does not support HTML5.
+			You can change it, but it is a good idea to link to a description of a browser
+			and provide some links to download some popular HTML5-compatible browsers. -->
+			<h1>Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
+			<br><br><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br>
+			<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br>
+			<a href="http://www.google.com/chrome/">Google Chrome</a><br>
+			<a href="http://www.apple.com/safari/download/">Apple Safari</a></h1>
+		</canvas>
+		
+	</div>
+	
+	<!-- Pages load faster with scripts at the bottom -->
+	
+	<!-- Construct 2 exported games require jQuery. -->
+	<script src="jquery-3.4.1.min.js"></script>
+
+
+	
+    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
+    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
+	<script src="c2runtime.js"></script>
+
+    <script>
+		// Start the Construct 2 project running on window load.
+		jQuery(document).ready(function ()
+		{			
+			// Create new runtime using the c2canvas
+			cr_createRuntime("c2canvas");
+		});
+		
+		// Pause and resume on page becoming visible/invisible
+		function onVisibilityChanged() {
+			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+				cr_setSuspended(true);
+			else
+				cr_setSuspended(false);
+		};
+		
+		document.addEventListener("visibilitychange", onVisibilityChanged, false);
+		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+		
+		function OnRegisterSWError(e)
+		{
+			console.warn("Failed to register service worker: ", e);
+		};
+		
+		// Runtime calls this global method when ready to start caching (i.e. after startup).
+		// This registers the service worker which caches resources for offline support.
+		window.C2_RegisterSW = function C2_RegisterSW()
+		{
+			if (!navigator.serviceWorker)
+				return;		// no SW support, ignore call
+			
+			try {
+				navigator.serviceWorker.register("sw.js", { scope: "./" })
+				.then(function (reg)
+				{
+					console.log("Registered service worker on " + reg.scope);
+				})
+				.catch(OnRegisterSWError);
+			}
+			catch (e)
+			{
+				OnRegisterSWError(e);
+			}
+		};
+    </script>
+ 
+ </body></html>

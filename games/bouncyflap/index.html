@@ -1,0 +1,99 @@
+<!DOCTYPE html><html manifest="offline.appcache"><head>
+    <meta charset="UTF-8">
+	
+	<!-- This ensures the canvas works on IE9+.  Don't remove it! -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" type="image/x-icon" href="../../Assets/images/favicon_white.png">
+	<!-- Standardised web app manifest -->
+	<link rel="manifest" href="app.manifest">
+	
+	<title>Bouncy Flap</title>
+	<!-- Note: running this exported project from disk may not work exactly like preview, since browsers block some features on the file:// protocol.  Once you've uploaded it to a server, it should work OK. -->
+	
+    <!-- This outlines the canvas with a black border and makes the page background black. -->
+	<style type="text/css">
+		body { background-color: black; color: white; }
+		canvas { -ms-touch-action: none; }
+	</style>
+
+
+</head> 
+ 
+<body> 
+	<div id="fb-root"></div>
+	<div style="text-align: center;">
+
+	<script>
+	// Issue a warning if trying to preview an exported project on disk.
+	(function(){
+		// Check for running exported on file protocol
+		if (window.location.protocol.substr(0, 4) === "file")
+		{
+			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
+		}
+	})();
+	</script>
+
+		<!-- The canvas must be inside a div called c2canvasdiv -->
+		<div id="c2canvasdiv" style="margin: 0 auto; width: 1280px; height: 720px;">
+		
+			<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
+			ID the runtime looks for in the jQuery ready event (above). -->
+			<canvas id="c2canvas" width="1280" height="720" style="cursor: url(&quot;data:image/png;base64,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&quot;) 3 3, auto;">
+				<!-- This text is displayed if the visitor's browser does not support HTML5.
+				You can change it, but it is a good idea to link to a description of a browser
+				and provide some links to download some popular HTML5-compatible browsers. -->
+				Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
+				<br><br><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br>
+				<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br>
+				<a href="http://www.google.com/chrome/">Google Chrome</a><br>
+				<a href="http://www.apple.com/safari/download/">Apple Safari</a><br>
+				<a href="http://www.google.com/chromeframe">Google Chrome Frame for Internet Explorer</a><br>
+			</canvas>
+			
+		</div>
+
+        <br>
+		
+
+	</div>
+	
+	<!-- Pages load faster with scripts at the bottom -->
+	
+	<!-- Construct 2 exported games require jQuery. -->
+	<script src="jquery-2.1.1.min.js"></script>
+
+
+	
+    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
+    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
+	<script src="c2runtime.js"></script>
+
+    <script>
+		// Size the canvas to fill the browser viewport.
+		jQuery(window).resize(function() {
+			cr_sizeCanvas(jQuery(window).width(), jQuery(window).height());
+		});
+		
+		// Start the Construct 2 project running on window load.
+		jQuery(document).ready(function ()
+		{
+			// Create new runtime using the c2canvas
+			cr_createRuntime("c2canvas");
+		});
+		
+		// Pause and resume on page becoming visible/invisible
+		function onVisibilityChanged() {
+			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+				cr_setSuspended(true);
+			else
+				cr_setSuspended(false);
+		};
+		
+		document.addEventListener("visibilitychange", onVisibilityChanged, false);
+		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+    </script>
+ 
+ </body></html>
