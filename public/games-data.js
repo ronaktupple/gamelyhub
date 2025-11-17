@@ -965,7 +965,7 @@ const gamesData = {
             ageRating: '13+'
         },
         screenshots: ['../public/images/gam-thumb.png'],
-        relatedGames: ['zombiegunner', 'rangersvsundead']
+        relatedGames: ['rangersvsundead']
     },
     'kingblox': {
         id: 'kingblox',
@@ -1203,7 +1203,7 @@ const gamesData = {
             ageRating: '13+'
         },
         screenshots: ['../public/images/gam-thumb.png'],
-        relatedGames: ['killzombies', 'zombiegunner']
+        relatedGames: ['killzombies']
     },
     'robberhunter': {
         id: 'robberhunter',
@@ -1493,23 +1493,6 @@ const gamesData = {
         },
         screenshots: ['../public/images/gam-thumb.png'],
         relatedGames: ['searaiders', 'vikingway']
-    },
-    'zombiegunner': {
-        id: 'zombiegunner',
-        title: 'Zombie Gunner',
-        description: 'Gun down zombies! Survive the zombie apocalypse in this action shooter.',
-        longDescription: 'Zombie Gunner is an intense action shooter where you gun down zombies to survive the apocalypse. Use various weapons, upgrade your arsenal, and fight hordes of undead. With fast-paced action and multiple weapons, this game offers thrilling zombie survival.',
-        thumbnail: '../public/images/gam-thumb.png',
-        logo: '../public/images/gam-thumb.png',
-        categories: ['Action', 'Shooter', 'Zombie'],
-        stats: {
-            players: '2.5M+',
-            rating: '4.8',
-            difficulty: 'Hard',
-            ageRating: '13+'
-        },
-        screenshots: ['../public/images/gam-thumb.png'],
-        relatedGames: ['killzombies', 'rangersvsundead']
     }
 
 }; 

@@ -23,7 +23,33 @@
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
     <link href="css/advertisements.css" rel="stylesheet">
-    <script src="public/games-data.js"></script>
+    <script src="public/games-data.js?v=3"></script>
+    <script>
+        // Verify gamesData loaded correctly with error handling
+        (function() {
+            try {
+                if (typeof gamesData !== 'undefined') {
+                    const keys = Object.keys(gamesData);
+                    console.log('✓ games-data.js loaded: ' + keys.length + ' games found');
+                    if (keys.length < 50) {
+                        console.error('✗ ERROR: Only ' + keys.length + ' games loaded! Expected ~80 games.');
+                        console.error('Available keys:', keys);
+                        console.error('This is likely a browser caching issue.');
+                        console.error('SOLUTION: Do a hard refresh:');
+                        console.error('  - Windows/Linux: Ctrl + Shift + R or Ctrl + F5');
+                        console.error('  - Mac: Cmd + Shift + R');
+                        console.error('  - Or clear browser cache and reload');
+                    } else {
+                        console.log('✓ All games loaded successfully!');
+                    }
+                } else {
+                    console.error('✗ gamesData is not defined! Check if games-data.js loaded correctly.');
+                }
+            } catch (e) {
+                console.error('✗ Error checking gamesData:', e);
+            }
+        })();
+    </script>
     <style>
         /* Hide scrollbar for Chrome, Safari and Opera */
         .scrollbar-hide::-webkit-scrollbar {
@@ -371,7 +397,7 @@
                     <h2 class="text-gradient text-center mb-4">All Games</h2>
                     <div class="row g-4 game-grid-5" id="featuredGamesContainer">
                         <!-- Games will be loaded dynamically -->
-                    </div>
+                                </div>
                     <!-- Loading indicator for infinite scroll -->
                     <div class="text-center mt-4" id="loadingIndicator" style="display: none;">
                         <div class="spinner-border text-primary" role="status">
@@ -429,7 +455,6 @@
                         <h6 class="mb-3">Pages</h6>
                         <ul class="list-unstyled footer-links-list">
                             <li><a href="/" class="footer-link">Home</a></li>
-                            <li><a href="pages/game_library.html" class="footer-link">Game Library</a></li>
                             <li><a href="pages/game_categories.html" class="footer-link">Categories</a></li>
                             <li><a href="pages/search_discovery.html" class="footer-link">Search & Discovery</a></li>
                             <li><a href="pages/about.html" class="footer-link">About Us</a></li>
@@ -491,9 +516,27 @@
 
     <!-- Game Loader Script -->
     <script>
-        // Wait for games-data.js to fully load
+        // Wait for games-data.js to fully load and check immediately
+        (function checkGamesData() {
+            if (typeof gamesData !== 'undefined') {
+                const keys = Object.keys(gamesData);
+                console.log('Immediate check - gamesData keys:', keys.length);
+                if (keys.length < 50) {
+                    console.warn('WARNING: Only', keys.length, 'games found. Expected ~80 games.');
+                    console.log('Available keys:', keys);
+                    console.log('Sample game:', gamesData[keys[0]]);
+                    // Check if there's a script error by trying to access a later game
+                    console.log('Checking for game at index 13:', keys[13]);
+                    console.log('Checking for game at index 20:', keys[20]);
+                }
+            } else {
+                console.log('gamesData not yet defined, will retry...');
+                setTimeout(checkGamesData, 100);
+            }
+        })();
+        
+        // Also check after page load
         window.addEventListener('load', function() {
-            // Check gamesData after page load
             if (typeof gamesData !== 'undefined') {
                 const keys = Object.keys(gamesData);
                 console.log('After page load - gamesData keys:', keys.length);

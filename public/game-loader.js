@@ -44,10 +44,16 @@
 
     // Generate game card HTML with lazy loading
     function generateGameCard(game, isPopular = false) {
+        // Ensure game has a valid ID
+        if (!game || !game.id) {
+            console.error('Invalid game object or missing ID:', game);
+            return ''; // Return empty string for invalid games
+        }
+        
         const thumbnail = getGameThumbnail(game);
         // Detect if we're in pages/ directory or root
         const isInPages = window.location.pathname.includes('/pages/');
-        const gameUrl = isInPages ? `game_detail_play.html?game=${game.id}` : `pages/game_detail_play.html?game=${game.id}`;
+        const gameUrl = isInPages ? `game_detail_play.html?game=${encodeURIComponent(game.id)}` : `pages/game_detail_play.html?game=${encodeURIComponent(game.id)}`;
         
         if (isPopular) {
             // Popular games style
@@ -81,14 +87,15 @@
             return `
                 <div class="col-6 col-md-3 col-lg-3">
                     <div class="game-card position-relative h-100">
-                        <img data-src="${thumbnail}" alt="${game.title}" 
-                            class="card-img-top lazy-load" 
-                            loading="lazy"
-                            onerror="this.src='${getGameThumbnail({thumbnail: ''})}'; this.onerror=null;" />
-                        <div class="card-body">
-                            <h5 class="card-title">${game.title}</h5>
-                        </div>
-                        <a href="${gameUrl}" class="stretched-link" aria-label="Open ${game.title}"></a>
+                        <a href="${gameUrl}" class="stretched-link text-decoration-none" aria-label="Open ${game.title}">
+                            <img data-src="${thumbnail}" alt="${game.title}" 
+                                class="card-img-top lazy-load" 
+                                loading="lazy"
+                                onerror="this.src='${getGameThumbnail({thumbnail: ''})}'; this.onerror=null;" />
+                            <div class="card-body">
+                                <h5 class="card-title">${game.title}</h5>
+                            </div>
+                        </a>
                     </div>
                 </div>
             `;
@@ -166,11 +173,16 @@
             const game = gamesData[key];
             // Check if it's a game object (has id or title property)
             if (game && typeof game === 'object' && !Array.isArray(game) && (game.id || game.title)) {
-                // If no id, use the key as id
-                if (!game.id && game.title) {
+                // Ensure game has an id - use key if id is missing or empty
+                if (!game.id || game.id === '') {
                     game.id = key;
                 }
-                games.push(game);
+                // Validate that id is a non-empty string
+                if (game.id && typeof game.id === 'string' && game.id.trim() !== '') {
+                    games.push(game);
+                } else {
+                    console.warn(`Game with key "${key}" has invalid ID:`, game.id);
+                }
             }
         });
         
@@ -224,9 +236,28 @@
         const gamesToLoad = shuffledGames.slice(startIndex, startIndex + count);
         console.log(`Loading games ${startIndex} to ${startIndex + gamesToLoad.length} (${gamesToLoad.length} games)`);
         
+        let validCards = 0;
         gamesToLoad.forEach(game => {
+            // Validate game before generating card
+            if (!game || !game.id) {
+                console.warn(`Skipping invalid game:`, game);
+                return;
+            }
+            
             const cardHTML = generateGameCard(game, isPopular);
-            container.insertAdjacentHTML('beforeend', cardHTML);
+            if (cardHTML) {
+                container.insertAdjacentHTML('beforeend', cardHTML);
+                validCards++;
+                
+                // Log first few game URLs for debugging
+                if (validCards <= 3) {
+                    const isInPages = window.location.pathname.includes('/pages/');
+                    const gameUrl = isInPages ? `game_detail_play.html?game=${encodeURIComponent(game.id)}` : `pages/game_detail_play.html?game=${encodeURIComponent(game.id)}`;
+                    console.log(`Game "${game.title}" (${game.id}) -> ${gameUrl}`);
+                }
+            } else {
+                console.warn(`Failed to generate card for game:`, game);
+            }
         });
 
         // Initialize lazy loading for new images

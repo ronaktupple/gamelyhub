@@ -278,6 +278,13 @@
                     <div class="row g-4 game-grid-5" id="relatedGamesContainer">
                         <!-- Related games will be added dynamically by JavaScript -->
                     </div>
+                    <!-- Loading indicator for infinite scroll -->
+                    <div class="text-center mt-4" id="relatedGamesLoadingIndicator" style="display: none;">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2 text-muted">Loading more games...</p>
+                    </div>
                 </section>
             </div>
         </div>
@@ -323,7 +330,6 @@
                     <h6 class="mb-3">Pages</h6>
                     <ul class="list-unstyled footer-links-list">
                         <li><a href="../" class="footer-link">Home</a></li>
-                        <li><a href="game_library.html" class="footer-link">Game Library</a></li>
                         <li><a href="game_categories.html" class="footer-link">Categories</a></li>
                         <li><a href="search_discovery.html" class="footer-link">Search & Discovery</a></li>
                         <li><a href="about.html" class="footer-link">About Us</a></li>
@@ -384,22 +390,92 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Games Data -->
-    <script src="../public/games-data.js"></script>
+    <script src="../public/games-data.js?v=3"></script>
+    
+    <!-- Game Loader Script -->
+    <script src="../public/game-loader.js"></script>
 
     <!-- Game Detail Script -->
     <script>
+        // Wait for both DOM and gamesData to be ready
+        function waitForGamesData(callback) {
+            let retryCount = 0;
+            const maxRetries = 50; // Increased retries
+            const retryDelay = 100;
+
+            function check() {
+                // Check if gamesData is defined and has content
+                if (typeof gamesData !== 'undefined') {
+                    const keys = Object.keys(gamesData);
+                    // Make sure we have a reasonable number of games loaded (at least 20)
+                    if (keys.length >= 20) {
+                        console.log(`✓ gamesData loaded successfully with ${keys.length} games`);
+                        callback();
+                        return;
+                    } else if (retryCount < maxRetries) {
+                        console.log(`Waiting for gamesData to fully load... (${keys.length} keys found, retry ${retryCount + 1}/${maxRetries})`);
+                        retryCount++;
+                        setTimeout(check, retryDelay);
+                        return;
+                    }
+                } else if (retryCount < maxRetries) {
+                    console.log(`Waiting for gamesData to be defined... (retry ${retryCount + 1}/${maxRetries})`);
+                    retryCount++;
+                    setTimeout(check, retryDelay);
+                    return;
+                }
+                
+                // Failed to load
+                console.error('✗ gamesData failed to load after multiple retries');
+                if (typeof gamesData !== 'undefined') {
+                    console.error(`gamesData exists but only has ${Object.keys(gamesData).length} keys`);
+                }
+                window.location.href = '../index.html';
+            }
+
+            // Start checking after a small delay
+            setTimeout(check, 50);
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             // Get game ID from URL
             const urlParams = new URLSearchParams(window.location.search);
             const gameId = urlParams.get('game');
 
-            // Get game data
-            const game = gamesData[gameId];
-            if (!game) {
-                window.location.href = 'game_library.html';
+            if (!gameId) {
+                console.error('✗ No game ID provided in URL');
+                window.location.href = '../index.html';
                 return;
             }
 
+            console.log(`Looking for game: "${gameId}"`);
+
+            // Wait for gamesData to be fully loaded
+            waitForGamesData(function() {
+                // Get game data
+                const game = gamesData[gameId];
+                if (!game) {
+                    const availableGames = Object.keys(gamesData).slice(0, 20);
+                    console.error(`✗ Game "${gameId}" not found in gamesData.`);
+                    console.error(`Available games (first 20):`, availableGames);
+                    console.error(`Total games in gamesData: ${Object.keys(gamesData).length}`);
+                    // Check if it's a case sensitivity issue
+                    const lowerGameId = gameId.toLowerCase();
+                    const foundGame = Object.keys(gamesData).find(key => key.toLowerCase() === lowerGameId);
+                    if (foundGame) {
+                        console.log(`Found similar game with different case: "${foundGame}"`);
+                    }
+                    window.location.href = '../index.html';
+                    return;
+                }
+
+                console.log(`✓ Game "${gameId}" found: "${game.title}"`);
+                // Game found, proceed with loading
+                loadGameDetails(game);
+            });
+        });
+
+        function loadGameDetails(game) {
             // Update page title
             document.title = `${game.title} - Gamely Hub`;
 
@@ -411,113 +487,182 @@
 
             // Update categories
             const categoriesContainer = document.getElementById('gameCategories');
-            game.categories.forEach(category => {
-                const categoryTag = document.createElement('span');
-                categoryTag.className = 'category-tag';
-                categoryTag.textContent = category;
-                categoriesContainer.appendChild(categoryTag);
-            });
+            categoriesContainer.innerHTML = ''; // Clear existing categories
+            if (game.categories && Array.isArray(game.categories)) {
+                game.categories.forEach(category => {
+                    const categoryTag = document.createElement('span');
+                    categoryTag.className = 'category-tag';
+                    categoryTag.textContent = category;
+                    categoriesContainer.appendChild(categoryTag);
+                });
+            }
 
             // Update stats
-            document.getElementById('playerCount').textContent = game.stats.players;
-            document.getElementById('gameRating').textContent = game.stats.rating;
-            document.getElementById('gameDifficulty').textContent = game.stats.difficulty;
-            document.getElementById('ageRating').textContent = game.stats.ageRating;
+            if (game.stats) {
+                document.getElementById('playerCount').textContent = game.stats.players || 'N/A';
+                document.getElementById('gameRating').textContent = game.stats.rating || 'N/A';
+                document.getElementById('gameDifficulty').textContent = game.stats.difficulty || 'N/A';
+                document.getElementById('ageRating').textContent = game.stats.ageRating || 'N/A';
+            }
 
             // Update screenshots
             const screenshotsContainer = document.getElementById('screenshotsContainer');
-            game.screenshots.forEach(screenshot => {
-                const col = document.createElement('div');
-                col.className = 'col-12 col-md-6';
-                col.innerHTML = `
-                    <div class="screenshot-card">
-                        <img src="${screenshot}" alt="${game.title} Screenshot" class="img-fluid rounded">
-                    </div>
-                `;
-                screenshotsContainer.appendChild(col);
-            });
-
-            // Update related games
-            const relatedGamesContainer = document.getElementById('relatedGamesContainer');
-            function getGameThumbnail(game) {
-                return (game.thumbnail && game.thumbnail.trim() !== "") ? game.thumbnail : '../public/images/gam-thumb.png';
-            }
-            game.relatedGames.forEach(relatedGameId => {
-                const relatedGame = gamesData[relatedGameId];
-                if (relatedGame) {
+            screenshotsContainer.innerHTML = ''; // Clear existing screenshots
+            if (game.screenshots && Array.isArray(game.screenshots)) {
+                game.screenshots.forEach(screenshot => {
                     const col = document.createElement('div');
-                    col.className = 'col-6 col-md-3 col-lg-3';
+                    col.className = 'col-12 col-md-6';
                     col.innerHTML = `
-                        <div class="game-card position-relative h-100">
-                            <img src="${getGameThumbnail(relatedGame)}" alt="${relatedGame.title}" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">${relatedGame.title}</h5>
-                            </div>
-                            <a href="game_detail_play.html?game=${relatedGame.id}" class="stretched-link" aria-label="Open ${relatedGame.title}"></a>
+                        <div class="screenshot-card">
+                            <img src="${screenshot}" alt="${game.title} Screenshot" class="img-fluid rounded">
                         </div>
                     `;
-                    relatedGamesContainer.appendChild(col);
-                }
-            });
+                    screenshotsContainer.appendChild(col);
+                });
+            }
+
+            // Related games will be loaded dynamically using GameLoader
 
             // Update play button
             const playButton = document.getElementById('playButtonTop');
             playButton.href = `../games/${game.id}/index.html`;
-        });
+        }
     </script>
 
     <script>
-        // Function to get URL parameters
-        function getUrlParameter(name) {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        }
+        // Load more games dynamically using GameLoader
+        function loadMoreGames() {
+            // Wait for both gamesData and GameLoader to be ready
+            function waitForDependencies(callback) {
+                let retryCount = 0;
+                const maxRetries = 50;
+                const retryDelay = 100;
 
-        // Function to generate game card HTML
-        function generateGameCard(game) {
-            const thumbnail = (game.thumbnail && game.thumbnail.trim() !== "") ? game.thumbnail : '../public/images/gam-thumb.png';
-            return `
-                <div class="col-6 col-md-3 col-lg-3">
-                    <div class="game-card position-relative h-100">
-                        <img src="${thumbnail}" alt="${game.title}" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">${game.title}</h5>
-                        </div>
-                        <a href="game_detail_play.html?game=${game.id}" class="stretched-link" aria-label="Open ${game.title}"></a>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Function to load related games
-        function loadRelatedGames() {
-            const currentGameId = getUrlParameter('game');
-            const relatedGamesContainer = document.getElementById('relatedGamesContainer');
-
-            // Get all detailed game objects
-            const allDetailedGames = [];
-            for (const key in gamesData) {
-                if (gamesData.hasOwnProperty(key) && gamesData[key].id) {
-                    allDetailedGames.push(gamesData[key]);
+                function check() {
+                    if (typeof gamesData !== 'undefined' && typeof GameLoader !== 'undefined') {
+                        const keys = Object.keys(gamesData);
+                        if (keys.length >= 20 && GameLoader.loadGames) {
+                            console.log(`✓ Dependencies loaded: ${keys.length} games, GameLoader ready`);
+                            callback();
+                            return;
+                        }
+                    }
+                    
+                    if (retryCount < maxRetries) {
+                        retryCount++;
+                        setTimeout(check, retryDelay);
+                    } else {
+                        console.error('✗ Failed to load dependencies');
+                    }
                 }
+                
+                setTimeout(check, 50);
             }
 
-            // Filter out current game and get 4 random related games
-            const relatedGames = allDetailedGames
-                .filter(game => game.id !== currentGameId)
-                .sort(() => 0.5 - Math.random())
-                .slice(0, 8);
+            waitForDependencies(function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const currentGameId = urlParams.get('game');
+                const relatedGamesContainer = document.getElementById('relatedGamesContainer');
+                
+                if (!relatedGamesContainer) {
+                    console.error('relatedGamesContainer not found');
+                    return;
+                }
 
-            // Generate and insert game cards
-            relatedGamesContainer.innerHTML = relatedGames
-                .map(game => generateGameCard(game))
-                .join('');
+                // Get all games and filter out current game
+                const allGames = GameLoader.getAllGames();
+                const filteredGames = allGames.filter(game => game.id !== currentGameId);
+                
+                // Shuffle the filtered games
+                const shuffledGames = filteredGames.sort(() => 0.5 - Math.random());
+                
+                // Create a custom loadGames function that uses filtered games
+                function loadFilteredGames(startIndex = 0, count = 20) {
+                    const gamesToLoad = shuffledGames.slice(startIndex, startIndex + count);
+                    
+                    gamesToLoad.forEach(game => {
+                        if (game && game.id) {
+                            const cardHTML = GameLoader.generateGameCard(game, false);
+                            if (cardHTML) {
+                                relatedGamesContainer.insertAdjacentHTML('beforeend', cardHTML);
+                            }
+                        }
+                    });
+                    
+                    // Initialize lazy loading for new images
+                    setTimeout(() => {
+                        GameLoader.initLazyLoading();
+                    }, 100);
+                    
+                    const newIndex = startIndex + gamesToLoad.length;
+                    return {
+                        loaded: newIndex,
+                        total: shuffledGames.length,
+                        hasMore: newIndex < shuffledGames.length
+                    };
+                }
+                
+                // Load initial games
+                const result = loadFilteredGames(0, 20);
+                console.log(`Loaded ${result.loaded} games in "More Games to Play" section`);
+                
+                // Setup infinite scroll if there are more games
+                if (result.hasMore) {
+                    let currentIndex = 20;
+                    let isLoading = false;
+                    let hasMore = true;
+                    const loadingIndicator = document.getElementById('relatedGamesLoadingIndicator');
+                    
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && hasMore && !isLoading) {
+                                isLoading = true;
+                                if (loadingIndicator) {
+                                    loadingIndicator.style.display = 'block';
+                                }
+                                
+                                observer.unobserve(entry.target);
+                                
+                                setTimeout(() => {
+                                    const loadResult = loadFilteredGames(currentIndex, 20);
+                                    currentIndex = loadResult.loaded;
+                                    hasMore = loadResult.hasMore;
+                                    isLoading = false;
+                                    
+                                    if (loadingIndicator) {
+                                        loadingIndicator.style.display = 'none';
+                                    }
+                                    
+                                    // Re-observe the new last element
+                                    if (hasMore) {
+                                        const lastCard = relatedGamesContainer.lastElementChild;
+                                        if (lastCard) {
+                                            setTimeout(() => observer.observe(lastCard), 100);
+                                        }
+                                    }
+                                }, 300);
+                            }
+                        });
+                    }, {
+                        rootMargin: '200px'
+                    });
+                    
+                    // Start observing the last card
+                    setTimeout(() => {
+                        const lastCard = relatedGamesContainer.lastElementChild;
+                        if (lastCard) {
+                            observer.observe(lastCard);
+                        }
+                    }, 500);
+                }
+            });
         }
 
-        // Load related games when the page loads
-        document.addEventListener('DOMContentLoaded', loadRelatedGames);
+        // Load games when page is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit for gamesData to load
+            setTimeout(loadMoreGames, 200);
+        });
     </script>
 </body>
 
