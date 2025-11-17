@@ -304,12 +304,14 @@
                 </section>
 
                 <!-- Game Screenshots -->
+                <!-- Temporarily commented out
                 <section class="game-screenshots mb-5">
                     <h2 class="text-gradient text-center mb-4">Screenshots</h2>
                     <div class="row g-4" id="screenshotsContainer">
-                        <!-- Screenshots will be added dynamically -->
+                        Screenshots will be added dynamically
                     </div>
                 </section>
+                -->
 
                 <!-- Top Advertisement Banner -->
                 <!-- <div class="advertisement-banner mb-4">
@@ -563,20 +565,20 @@
             }
 
             // Update screenshots
-            const screenshotsContainer = document.getElementById('screenshotsContainer');
-            screenshotsContainer.innerHTML = ''; // Clear existing screenshots
-            if (game.screenshots && Array.isArray(game.screenshots)) {
-                game.screenshots.forEach(screenshot => {
-                    const col = document.createElement('div');
-                    col.className = 'col-12 col-md-6';
-                    col.innerHTML = `
-                        <div class="screenshot-card">
-                            <img src="${screenshot}" alt="${game.title} Screenshot" class="img-fluid rounded">
-                        </div>
-                    `;
-                    screenshotsContainer.appendChild(col);
-                });
-            }
+            // const screenshotsContainer = document.getElementById('screenshotsContainer');
+            // screenshotsContainer.innerHTML = ''; // Clear existing screenshots
+            // if (game.screenshots && Array.isArray(game.screenshots)) {
+            //     game.screenshots.forEach(screenshot => {
+            //         const col = document.createElement('div');
+            //         col.className = 'col-12 col-md-6';
+            //         col.innerHTML = `
+            //             <div class="screenshot-card">
+            //                 <img src="${screenshot}" alt="${game.title} Screenshot" class="img-fluid rounded">
+            //             </div>
+            //         `;
+            //         screenshotsContainer.appendChild(col);
+            //     });
+            // }
 
             // Related games will be loaded dynamically using GameLoader
 
