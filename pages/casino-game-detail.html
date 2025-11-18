@@ -71,7 +71,7 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/advertisements.css" rel="stylesheet">
@@ -89,37 +89,23 @@
         }
 
         body.casino-theme {
-            background: linear-gradient(135deg, #0D0D0D 0%, #1a1a1a 50%, #0D0D0D 100%);
-            color: #fff;
+            background: var(--background, #F8FAFC);
+            color: var(--text-primary, #1e293b);
             min-height: 100vh;
             position: relative;
         }
 
-        body.casino-theme::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(196, 30, 58, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
         /* Navigation Styling */
         .navbar.casino-nav {
-            background: rgba(13, 13, 13, 0.95) !important;
+            background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--casino-gold);
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .navbar.casino-nav .navbar-brand,
         .navbar.casino-nav .nav-link {
-            color: var(--casino-gold-light) !important;
+            color: var(--text-primary, #1e293b) !important;
         }
 
         .navbar.casino-nav .nav-link:hover,
@@ -129,22 +115,22 @@
 
         /* Game Header */
         .game-header {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(196, 30, 58, 0.1) 100%);
-            border: 2px solid var(--casino-gold);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+            border: 2px solid rgba(212, 175, 55, 0.3);
             border-radius: 20px;
             padding: 3rem 2rem;
             margin: 6rem auto 3rem;
             text-align: center;
             position: relative;
             max-width: 1320px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .game-header h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 3rem;
             font-weight: 700;
             color: var(--casino-gold);
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
             margin-bottom: 1.5rem;
         }
 
@@ -182,11 +168,10 @@
         .category-tag {
             display: inline-block;
             padding: 0.5rem 1.25rem;
-            background: rgba(212, 175, 55, 0.2);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--casino-gold);
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 50px;
-            color: var(--casino-gold-light);
+            color: var(--casino-gold);
             font-size: 0.875rem;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -195,7 +180,7 @@
         }
 
         .category-tag:hover {
-            background: rgba(212, 175, 55, 0.3);
+            background: rgba(212, 175, 55, 0.2);
             border-color: var(--casino-gold);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
@@ -203,17 +188,19 @@
 
         /* Stats Cards */
         .stat-card {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(13, 13, 13, 0.9) 100%);
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 15px;
+            background: #FFFFFF;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-radius: 1rem;
             padding: 1.5rem;
             text-align: center;
             transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .stat-card:hover {
-            border-color: var(--casino-gold);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
         }
 
         .stat-card i {
@@ -230,29 +217,30 @@
         }
 
         .stat-card p {
-            color: var(--casino-gold-light);
+            color: var(--text-secondary, #64748b);
             margin: 0;
         }
 
         /* Game Content */
         .game-full-content {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(13, 13, 13, 0.9) 100%);
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 15px;
+            background: #FFFFFF;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-radius: 1rem;
             padding: 2rem;
             margin-bottom: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .game-full-content h2 {
             color: var(--casino-gold);
-            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
         }
 
         .game-full-content h3 {
-            color: var(--casino-gold-light);
+            color: var(--text-primary, #1e293b);
             font-size: 1.5rem;
             font-weight: 600;
             margin-top: 2rem;
@@ -260,42 +248,47 @@
         }
 
         .game-full-content p {
-            color: var(--casino-gold-light);
+            color: var(--text-secondary, #64748b);
             line-height: 1.8;
             margin-bottom: 1rem;
         }
 
         /* Related Games */
         .related-game-card {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(13, 13, 13, 0.9) 100%);
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 15px;
+            background: #FFFFFF;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-radius: 1rem;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .related-game-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--casino-gold);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border-color: rgba(212, 175, 55, 0.5);
         }
 
         .related-game-card img {
             width: 100%;
-            height: 200px;
+            height: auto;
+            aspect-ratio: 1;
             object-fit: cover;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
         }
 
         .related-game-card-body {
-            padding: 1.5rem;
+            padding: 0.8rem;
         }
 
         .related-game-card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
             font-weight: 600;
-            color: var(--casino-gold);
+            color: var(--text-primary, #1e293b);
             margin: 0;
             text-align: center;
         }
@@ -317,19 +310,19 @@
 
         /* Footer */
         .footer.casino-footer {
-            background: rgba(13, 13, 13, 0.95) !important;
-            border-top: 2px solid var(--casino-gold);
-            color: var(--casino-gold-light);
+            background: #F8FAFC !important;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+            color: var(--text-primary, #1e293b);
             margin-top: 4rem;
         }
 
         .footer.casino-footer h5,
         .footer.casino-footer h6 {
-            color: var(--casino-gold);
+            color: var(--text-primary, #1e293b);
         }
 
         .footer.casino-footer .footer-link {
-            color: var(--casino-gold-light);
+            color: var(--text-secondary, #64748b);
         }
 
         .footer.casino-footer .footer-link:hover {
@@ -337,13 +330,13 @@
         }
 
         .footer.casino-footer .footer-social a {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--casino-gold);
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary-color, #6366f1);
         }
 
         .footer.casino-footer .footer-social a:hover {
-            background: var(--casino-gold);
-            color: var(--casino-dark);
+            background: var(--primary-color, #6366f1);
+            color: #fff;
         }
 
         @media (max-width: 768px) {
@@ -357,7 +350,7 @@
         }
     </style>
 </head>
-<body class="casino-theme">
+<body class="bg-background text-text-primary svg-background casino-theme" style="position: relative; min-height: 100vh;">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top casino-nav" style="z-index: 100;">
         <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
@@ -375,7 +368,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="casino-games.html">
+                        <a class="nav-link" href="casino-games.html">
                             <i class="fas fa-dice me-1"></i>Casino Games
                         </a>
                     </li>
@@ -469,7 +462,7 @@
 
                 <!-- Related Games -->
                 <section class="related-games">
-                    <h2 class="casino-section-title" style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--casino-gold); text-align: center; margin-bottom: 2rem;">More Casino Games</h2>
+                    <h2 class="casino-section-title">More Casino Games</h2>
                     <div class="row g-4" id="relatedGamesContainer">
                         <!-- Related games will be added dynamically -->
                     </div>
@@ -706,6 +699,8 @@
     </script>
 
     <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+    <!-- Navigation Highlight Script -->
+    <script src="../public/nav-highlight.js"></script>
     <!-- Cookie Consent Banner - Must be loaded last -->
     <script src="../public/cookie-consent.js"></script>
 </body>

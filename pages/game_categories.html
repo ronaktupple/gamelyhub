@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>Game Categories - Gamely Hub | Browse by Genre</title>
     <meta name="title" content="Game Categories - Gamely Hub | Browse by Genre">
-    <meta name="description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, and more. Find your favorite game genre!">
-    <meta name="keywords" content="game categories, game genres, action games, puzzle games, strategy games, adventure games, racing games, sports games, browse games by category, game types">
+    <meta name="description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, casino games, and more. Find your favorite game genre!">
+    <meta name="keywords" content="game categories, game genres, action games, puzzle games, strategy games, adventure games, racing games, sports games, casino games, browse games by category, game types">
     <meta name="author" content="Gamely Hub">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="English">
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gamelyhub.com/pages/game_categories.html">
     <meta property="og:title" content="Game Categories - Gamely Hub | Browse by Genre">
-    <meta property="og:description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, and more.">
+    <meta property="og:description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, casino games, and more.">
     <meta property="og:image" content="https://gamelyhub.com/public/images/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -34,7 +34,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gamelyhub.com/pages/game_categories.html">
     <meta name="twitter:title" content="Game Categories - Gamely Hub | Browse by Genre">
-    <meta name="twitter:description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, and more.">
+    <meta name="twitter:description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, casino games, and more.">
     <meta name="twitter:image" content="https://gamelyhub.com/public/images/og-image.jpg">
     <meta name="twitter:image:alt" content="Game Categories - Gamely Hub">
     
@@ -58,7 +58,7 @@
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": "Game Categories",
-      "description": "Browse games by category at Gamely Hub - action, puzzle, strategy, adventure, racing, and sports games",
+      "description": "Browse games by category at Gamely Hub - action, puzzle, strategy, adventure, racing, sports, and casino games",
       "url": "https://gamelyhub.com/pages/game_categories.html"
     }
     </script>
@@ -78,6 +78,7 @@
     <link href="../css/advertisements.css" rel="stylesheet">
     <script src="../public/games-data.js?v=3"></script>
     <script src="../public/game-loader.js"></script>
+    <script src="../public/casino-games-data.js"></script>
     <style>
         /* Container larger width - consistent for header, main, and footer */
         .container-fluid {
@@ -205,7 +206,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="game_categories.html">
+                        <a class="nav-link" href="game_categories.html">
                             <i class="fas fa-tags me-1"></i>Categories
                         </a>
                     </li>
@@ -347,7 +348,8 @@
             { name: 'Strategy', search: 'strategy', icon: 'fa-chess' },
             { name: 'Adventure', search: 'adventure', icon: 'fa-map' },
             { name: 'Racing', search: 'racing', icon: 'fa-car' },
-            { name: 'Sports', search: 'sports', icon: 'fa-futbol' }
+            { name: 'Sports', search: 'sports', icon: 'fa-futbol' },
+            { name: 'Casino', search: 'casino', icon: 'fa-dice', isCasino: true }
         ];
 
         // Function to get a representative game for each category
@@ -361,21 +363,42 @@
             const categoryGames = [];
 
             categories.forEach(category => {
-                // Find the first game that matches this category
-                const matchingGame = allGames.find(game => 
-                    game.categories && 
-                    game.categories.some(cat => 
-                        cat.toLowerCase().includes(category.search.toLowerCase())
-                    )
-                );
+                // Special handling for Casino category
+                if (category.isCasino) {
+                    // Check if casino games data is available
+                    if (typeof casinoGamesData !== 'undefined') {
+                        const casinoGameKeys = Object.keys(casinoGamesData);
+                        if (casinoGameKeys.length > 0) {
+                            // Get the first casino game as representative
+                            const firstCasinoGame = casinoGamesData[casinoGameKeys[0]];
+                            categoryGames.push({
+                                id: firstCasinoGame.id,
+                                title: firstCasinoGame.title,
+                                thumbnail: firstCasinoGame.thumbnail || firstCasinoGame.logo,
+                                categoryName: category.name,
+                                categorySearch: category.search,
+                                categoryIcon: category.icon,
+                                isCasino: true
+                            });
+                        }
+                    }
+                } else {
+                    // Find the first game that matches this category
+                    const matchingGame = allGames.find(game => 
+                        game.categories && 
+                        game.categories.some(cat => 
+                            cat.toLowerCase().includes(category.search.toLowerCase())
+                        )
+                    );
 
-                if (matchingGame) {
-                    categoryGames.push({
-                        ...matchingGame,
-                        categoryName: category.name,
-                        categorySearch: category.search,
-                        categoryIcon: category.icon
-                    });
+                    if (matchingGame) {
+                        categoryGames.push({
+                            ...matchingGame,
+                            categoryName: category.name,
+                            categorySearch: category.search,
+                            categoryIcon: category.icon
+                        });
+                    }
                 }
             });
 
@@ -397,11 +420,25 @@
             }
 
             container.innerHTML = categoryGames.map(game => {
-                const thumbnail = GameLoader.getGameThumbnail(game);
+                // Use appropriate thumbnail source based on game type
+                let thumbnail;
+                if (game.isCasino) {
+                    // For casino games, use the thumbnail directly
+                    thumbnail = game.thumbnail || game.logo || '../public/images/gam-thumb.png';
+                } else {
+                    // For regular games, use GameLoader
+                    thumbnail = GameLoader.getGameThumbnail(game);
+                }
+                
+                // Determine the link URL - casino games go to casino-games.html, others to search
+                const linkUrl = game.isCasino 
+                    ? 'casino-games.html' 
+                    : `search_discovery.html?search=${encodeURIComponent(game.categorySearch)}`;
+                
                 return `
                     <div class="col-6 col-md-3 col-lg-3">
                         <div class="game-card position-relative h-100">
-                            <a href="search_discovery.html?search=${encodeURIComponent(game.categorySearch)}" class="stretched-link text-decoration-none" aria-label="Browse ${game.categoryName} Games">
+                            <a href="${linkUrl}" class="stretched-link text-decoration-none" aria-label="Browse ${game.categoryName} Games">
                                 <img data-src="${thumbnail}" alt="${game.categoryName} Games" 
                                     class="card-img-top lazy-load" 
                                     loading="lazy"
@@ -427,9 +464,10 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            // Wait for gamesData to load
+            // Wait for gamesData and optionally casinoGamesData to load
             const checkGamesData = setInterval(() => {
                 if (typeof gamesData !== 'undefined' && typeof GameLoader !== 'undefined') {
+                    // Casino games data is optional, but check if it exists
                     clearInterval(checkGamesData);
                     displayCategoryGames();
                 }
@@ -621,6 +659,8 @@
         });
     </script>
 <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+    <!-- Navigation Highlight Script -->
+    <script src="../public/nav-highlight.js"></script>
     <!-- Cookie Consent Banner - Must be loaded last -->
     <script src="../public/cookie-consent.js"></script>
 </body>
