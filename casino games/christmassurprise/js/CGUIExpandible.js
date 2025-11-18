@@ -27,9 +27,7 @@ function CGUIExpandible(iX, iY, oSprite, oParentContainer){
         
         _oBackContainer = new createjs.Container();
         _oGUIContainer.addChild(_oBackContainer);
-        
-        
-        
+
         _oFrontContainer = new createjs.Container();
         _oGUIContainer.addChild(_oFrontContainer);
         
@@ -64,7 +62,6 @@ function CGUIExpandible(iX, iY, oSprite, oParentContainer){
         oButton.y = 0;
         oButton.visible = 0;
         _oBackContainer.addChildAt(oButton, 0);
-        
 
         _aButtons.push(oButton);       
     };
@@ -101,5 +98,4 @@ function CGUIExpandible(iX, iY, oSprite, oParentContainer){
     _oParent = this;
     this._init(iX, iY, oSprite, oParentContainer);
 }
-
 

@@ -106,7 +106,6 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
     };
 

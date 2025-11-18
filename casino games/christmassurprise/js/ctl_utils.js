@@ -14,11 +14,8 @@ $(window).resize(function() {
 	sizeHandler();
 });
 
-
 function trace(szMsg){
-    console.log(szMsg);
 }
-
 
 function isChrome(){
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
@@ -87,9 +84,7 @@ function getSize(Name) {
        return size;
 };
 
-
 window.addEventListener("orientationchange", onOrientationChange );
-
 
 function onOrientationChange(){
     if (window.matchMedia("(orientation: portrait)").matches) {
@@ -200,7 +195,6 @@ function sizeHandler() {
             s_oMenu.refreshButtonPos();
         }
 
-        
 	if(s_bIsIphone && s_oStage){
             canvas = document.getElementById('canvas');
             s_oStage.canvas.width = destW*2;
@@ -251,7 +245,6 @@ function isMobile(){
     return jQuery.browser.mobile;
 }
 
-
 function createBitmap(oSprite, iWidth, iHeight){
 	var oBmp = new createjs.Bitmap(oSprite);
 	var hitObject = new createjs.Shape();
@@ -281,7 +274,6 @@ function createSprite(oSpriteSheet, szState, iRegX,iRegY,iWidth, iHeight){
 	
 	return oRetSprite;
 }
-
 
 function randomFloatBetween(minValue,maxValue,precision){
     if(typeof(precision) === 'undefined'){
@@ -399,13 +391,10 @@ function easeInQuad (t, b, c, d){
 function easeInSine (t, b, c, d) {
 			return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
 		}
-                
-                
-                
+
 function easeInCubic (t, b, c, d) {
 			return c*(t/=d)*t*t + b;
 		};                
-
 
 function getTrajectoryPoint(t,p){
     var result = new createjs.Point();
@@ -671,7 +660,6 @@ function getParamValue(paramName){
     }
 }
 
-
 function playSound(szSound,iVolume,bLoop){
     if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
 
@@ -716,7 +704,6 @@ function getItem(szItem){
     return null;
 }
 
-
 function fullscreenHandler(){
     if (!ENABLE_FULLSCREEN || !screenfull.isEnabled){
        return;
@@ -733,7 +720,6 @@ function fullscreenHandler(){
     }
 
 }
-
 
 if (screenfull.isEnabled) {
     screenfull.on('change', function(){

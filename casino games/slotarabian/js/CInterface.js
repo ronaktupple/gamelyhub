@@ -94,7 +94,6 @@ function CInterface(iCurBet,iTotBet,iMoney){
                     true, true, true,
                     false );
 
-        
         _oNumLinesText = new CTLText(s_oAttachSection, 
                     460, CANVAS_HEIGHT - 118, 134, 30, 
                     30, "center", "#ffffff", FONT_GAME, 1,
@@ -112,8 +111,6 @@ function CInterface(iCurBet,iTotBet,iMoney){
                     true, true, false,
                     false );
         _oCoinText.setShadow("#000",1,1,2);
-        
-
 
         _oTotalBetText = new CTLText(s_oAttachSection, 
                     827, CANVAS_HEIGHT - 118, 174, 30, 
@@ -148,8 +145,7 @@ function CInterface(iCurBet,iTotBet,iMoney){
         var iPadding = 11;
         var iSpriteHeight = 32;
         var iYOffset = 84 + iHalfButHeight;
-        
-        
+
         //LINE 4
         var oBut = new CBetBut( 319 + oSprite.width/2, iYOffset,oSprite,true);
         oBut.addEventListenerWithParams(ON_MOUSE_UP, this._onBetLineClicked, this,4);
@@ -505,7 +501,6 @@ function CInterface(iCurBet,iTotBet,iMoney){
 		_oButFullscreen.setActive(s_bFullscreen);
 	}
     };
-
 
     this._onFullscreenRelease = function(){
 	if(s_bFullscreen) { 

@@ -27,8 +27,7 @@ function CGfxButton(iXPos,iYPos,oSprite,oParentContainer){
         _oButton.regY = oSprite.height/2;
        
         _oParentContainer.addChild(_oButton);
-        
-        
+
         this._initListener();
     };
     
@@ -114,8 +113,7 @@ function CGfxButton(iXPos,iYPos,oSprite,oParentContainer){
     this.getButtonImage = function(){
         return _oButton;
     };
-    
-    
+
     this.getX = function(){
         return _oButton.x;
     };

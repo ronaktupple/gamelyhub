@@ -27,8 +27,7 @@ function CGfxButton(iXPos,iYPos,oSprite,oParentContainer){
         _oButton.regY = oSprite.height/2;
         _oButton.cursor = "pointer";
         _oParentContainer.addChild(_oButton);
-        
-        
+
         this._initListener();
     };
     
@@ -65,7 +64,6 @@ function CGfxButton(iXPos,iYPos,oSprite,oParentContainer){
         }
 
         playSound("press_but", 1,false);
-        
 
         if(_aCbCompleted[ON_MOUSE_UP]){
             _aCbCompleted[ON_MOUSE_UP].call(_aCbOwner[ON_MOUSE_UP],_aParams);
@@ -116,8 +114,7 @@ function CGfxButton(iXPos,iYPos,oSprite,oParentContainer){
     this.getButtonImage = function(){
         return _oButton;
     };
-    
-    
+
     this.getX = function(){
         return _oButton.x;
     };

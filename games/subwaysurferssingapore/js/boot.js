@@ -76,17 +76,14 @@ function registerServiceWorker(onComplete)
 {
     if (navigator.serviceWorker && !window.NOSW)
     {
-        console.log('Service worker available');
         navigator.serviceWorker.register('./sw.js', { scope: './' })
             .then(function ()
             {
-                console.log('Service worker registered');
                 if (onComplete) onComplete();
             })
             .catch(function (error)
             {
                 // eslint-disable-next-line prefer-template
-                console.log('Service worker registration failed - ' + error);
                 if (onComplete) onComplete();
             });
     }

@@ -256,7 +256,6 @@ function CBonusPanel(){
                    _aItemAnim[_aItemAnim.length-1].visible = false;
                    this.endBonus();
 
-                   
                     playSound("reveal_prize",1,false);
                      
                 }

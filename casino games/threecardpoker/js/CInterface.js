@@ -114,9 +114,7 @@ function CInterface(iMoney){
                     " ",
                     true, true, true,
                     false );
-                    
 
-        
         _oDisplayText2 = new CTLText(s_oStage, 
                     412, 63, 190, 40, 
                     19, "left", "#ffde00", FONT_GAME_2, 1,
@@ -124,8 +122,6 @@ function CInterface(iMoney){
                     " ",
                     true, true, true,
                     false );
-                    
-
 
         _oCurDealerCardValueText = new createjs.Text("","21px "+FONT_GAME_1, "#fff");
         _oCurDealerCardValueText.x = CANVAS_WIDTH/2;
@@ -146,9 +142,7 @@ function CInterface(iMoney){
                     TEXT_MONEY+":",
                     true, true, false,
                     false );
-                    
 
-        
         _oMoneyText = new CTLText(s_oStage, 
                     460, CANVAS_HEIGHT - 84, 155, 30, 
                     30, "right", "#ffde00", FONT_GAME_2, 1,
@@ -156,8 +150,6 @@ function CInterface(iMoney){
                     TEXT_CURRENCY+iMoney.toFixed(3),
                     true, true, false,
                     false );
-                    
-
 
         //SET FICHES BUTTON
         var aPos = [{x:337,y:CANVAS_HEIGHT - 24},{x:417,y:CANVAS_HEIGHT - 24},{x:497,y:CANVAS_HEIGHT - 24},{x:577,y:CANVAS_HEIGHT - 24},{x:657,y:CANVAS_HEIGHT - 24},{x:737,y:CANVAS_HEIGHT - 24}];
@@ -167,7 +159,6 @@ function CInterface(iMoney){
             _aFiches[i] = new CFiche(aPos[i].x,aPos[i].y,i,FICHES_VALUE[i],1,true,s_oStage);
             _aFiches[i].addEventListenerWithParams(ON_MOUSE_UP, this._onFicheClicked, this,[FICHES_VALUE[i],i]);
         }
-        
 
         _iFicheIndex = 0;
         _aFiches[_iFicheIndex].select(true);

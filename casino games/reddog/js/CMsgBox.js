@@ -21,8 +21,6 @@ function CMsgBox(){
                     true, true, true,
                     false );
 
-        
-        
     };
     
     this.unload = function(){

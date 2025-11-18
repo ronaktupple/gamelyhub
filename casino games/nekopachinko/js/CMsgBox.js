@@ -13,9 +13,7 @@ function CMsgBox() {
         _oFade.alpha = 0;
         _oListener = _oFade.on("mousedown",function(){});
         s_oStage.addChild(_oFade);
-        
-        
-        
+
         _oPanelContainer = new createjs.Container();        
         s_oStage.addChild(_oPanelContainer);
         
@@ -28,8 +26,7 @@ function CMsgBox() {
         _oPanelContainer.x = CANVAS_WIDTH/2;
         _oPanelContainer.y = CANVAS_HEIGHT + oSprite.height/2;  
         _pStartPanelPos = {x: _oPanelContainer.x, y: _oPanelContainer.y};
-        
-        
+
         var iWidth = oSprite.width-100;
         var iHeight = 200;
         var iX = 0;

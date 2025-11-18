@@ -154,10 +154,9 @@ function CBallsPool(oParentContainer){
                 }
             }
         }
-        //console.log(iCont);
+        //
     };
     
     this._init(oParentContainer);
 }
-
 

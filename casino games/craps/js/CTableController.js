@@ -169,9 +169,7 @@ function CTableController(){
             oBut.addEventListener(ON_MOUSE_OUT,this._onBetNumberOut,this);
         }
         _aButs["field"] = oBut;
-        
-        
-        
+
         oBut = new CBetTableButton(304,480,s_oSpriteLibrary.getSprite('hit_area_big_8'),"big_8",_oContainer);
         oBut.addEventListener(ON_MOUSE_DOWN, this._onBetPress, this);
         if(s_bMobile === false){

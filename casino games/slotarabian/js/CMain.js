@@ -17,15 +17,13 @@ function CMain(oData){
         s_oAttachSection = new createjs.Container();
         s_oStage.addChild(s_oAttachSection);
 
-        
         s_bMobile = isMobile();
         if(s_bMobile === false){
             s_oStage.enableMouseOver(20);  
         }else{
             createjs.Touch.enable(s_oStage,true);
         }
-        
-        
+
         s_iPrevTime = new Date().getTime();
 
         createjs.Ticker.setFPS(30);
@@ -59,7 +57,6 @@ function CMain(oData){
     
     this._initSounds = function(){
         Howler.mute(!s_bAudioActive);
-
 
         s_aSoundsInfo = new Array();
         s_aSoundsInfo.push({path: './sounds/',filename:'press_but',loop:false,volume:1, ingamename: 'press_but'});
@@ -106,7 +103,6 @@ function CMain(oData){
                                                                                      if ( szId === s_aSounds[s_aSoundsInfo[i].ingamename]._sounds[0]._id){
                                                                                           s_aSounds[s_aSoundsInfo[i].ingamename].once('unlock', function() {
                                                                                             s_aSounds[s_aSoundsInfo[i].ingamename].play();
-                                                                                            
 
                                                                                           });
                                                                                          break;
@@ -116,12 +112,9 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
-        
-        
-    };
 
+    };
 
     this._loadImages = function(){
         s_oSpriteLibrary.init( this._onImagesLoaded,this._onAllImagesLoaded, this );
@@ -192,7 +185,6 @@ function CMain(oData){
         s_oMsgBox = new CMsgBox();
         _oPreloader.unload();
 
-        
         WIN_OCCURRENCE = _oData.win_occurrence;
         MIN_REEL_LOOPS = _oData.min_reel_loop;
         REEL_DELAY = _oData.reel_delay;

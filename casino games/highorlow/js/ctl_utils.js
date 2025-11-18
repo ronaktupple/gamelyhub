@@ -3,7 +3,6 @@ var s_bIsIphone = false;
 var s_iOffsetX;
 var s_iOffsetY;
 
-
 /**
  * jQuery.browser.mobile (http://detectmobilebrowser.com/)
  * jQuery.browser.mobile will be true if the browser is a mobile device
@@ -15,7 +14,6 @@ $(window).resize(function() {
 });
 
 function trace(szMsg){
-    console.log(szMsg);
 }
 
 function getSize(Name) {
@@ -96,8 +94,7 @@ function isIOS() {
            
    while (iDevices.length) {
        if (navigator.platform === iDevices.pop()){
-           
-               
+
            return true; 
        } 
    } 
@@ -190,8 +187,7 @@ function sizeHandler() {
         if(s_oMenu !== null){
             s_oMenu.refreshButtonPos( s_iOffsetX,s_iOffsetY);
         }
-        
-        
+
 	if(s_bIsIphone){
             canvas = document.getElementById('canvas');
             s_oStage.canvas.width = destW*2;
@@ -255,7 +251,6 @@ function _checkOrientation(iWidth,iHeight){
     }
 }
 
-
 function createBitmap(oSprite, iWidth, iHeight){
 	var oBmp = new createjs.Bitmap(oSprite);
 	var hitObject = new createjs.Shape();
@@ -285,7 +280,6 @@ function createSprite(oSpriteSheet, szState, iRegX,iRegY,iWidth, iHeight){
 	
 	return oRetSprite;
 }
-
 
 function randomFloatBetween(minValue,maxValue,precision){
     if(typeof(precision) === 'undefined'){
@@ -398,13 +392,10 @@ function easeInQuad (t, b, c, d){
 function easeInSine (t, b, c, d) {
 			return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
 		}
-                
-                
-                
+
 function easeInCubic (t, b, c, d) {
 			return c*(t/=d)*t*t + b;
 		};                
-
 
 function getTrajectoryPoint(t,p){
     var result = new createjs.Point();
@@ -665,7 +656,6 @@ function getParamValue(paramName){
         }
 }
 
-
 function playSound(szSound,iVolume,bLoop){
     if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
 
@@ -697,7 +687,6 @@ function setMute(szSound, bMute){
     }
 }
 
-
 function fullscreenHandler(){
     if (!ENABLE_FULLSCREEN || !screenfull.isEnabled){
        return;
@@ -713,7 +702,6 @@ function fullscreenHandler(){
         s_oMenu.resetFullscreenBut();
     }
 }
-
 
 if (screenfull.isEnabled) {
     screenfull.on('change', function(){

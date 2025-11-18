@@ -30,8 +30,7 @@ function CCreditsPanel(){
         _pStartPosExit = {x: 615 , y: 270};
         _oButExit = new CGfxButton(_pStartPosExit.x, _pStartPosExit.y, oSprite, _oContainer);
         _oButExit.addEventListener(ON_MOUSE_UP, this.unload, this);
-       
-       
+
         oSprite = s_oSpriteLibrary.getSprite('logo_ctl');
         _oButLogo = createBitmap(oSprite);
         _oButLogo.regX = oSprite.width/2;
@@ -48,7 +47,6 @@ function CCreditsPanel(){
         _oContainer.addChild(_oLink);
     };
 
-    
     this.unload = function(){
         _oHitArea.off("click", _oListener);
         
@@ -63,8 +61,6 @@ function CCreditsPanel(){
     };
     
     this._init();
-    
-    
-};
 
+};
 

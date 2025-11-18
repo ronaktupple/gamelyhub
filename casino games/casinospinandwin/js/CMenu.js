@@ -36,8 +36,7 @@ function CMenu(){
             _oButCredits = new CGfxButton(_pStartPosCredits.x,_pStartPosCredits.y,oSprite, s_oStage);
             _oButCredits.addEventListener(ON_MOUSE_UP, this._onButCreditsRelease, this);
         }
-        
-        
+
 	var doc = window.document;
         var docEl = doc.documentElement;
         _fRequestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
@@ -55,7 +54,6 @@ function CMenu(){
             } else {
                 _pStartPosFullscreen = pFirstPos;
             }
-            
 
             _oButFullscreen = new CToggle(_pStartPosFullscreen.x,_pStartPosFullscreen.y,oSprite,s_bFullscreen,true);
             _oButFullscreen.addEventListener(ON_MOUSE_UP, this._onFullscreenRelease, this);
@@ -122,7 +120,6 @@ function CMenu(){
 	}
     };
 
-        
     this._onFullscreenRelease = function(){
 	if(s_bFullscreen) { 
 		_fCancelFullScreen.call(window.document);

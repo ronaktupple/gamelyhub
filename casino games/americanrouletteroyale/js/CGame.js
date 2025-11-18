@@ -26,8 +26,7 @@ function CGame(oData){
     var _oFinalBet;
     var _oNeighborsPanel;
     var _oGameOverPanel;
-    
-    
+
     this._init = function(){
         s_oTweenController = new CTweenController();
         s_oGameSettings = new CRouletteSettings();
@@ -59,8 +58,7 @@ function CGame(oData){
         _oGameOverPanel = new CGameOver();
 
         _oMsgBox = new CMsgBox();
-        
-		
+
         _aNumExtractedHistory=new Array();
 
         _iTimeElaps=0;
@@ -81,9 +79,7 @@ function CGame(oData){
 
         s_oStage.removeAllChildren();
     };
-    
-    
-    
+
     this._setState = function(iState){
         _iState=iState;
 
@@ -154,8 +150,7 @@ function CGame(oData){
         var iWin = aNumbersBetted[aTmpNumbers[0][0]].win;
         var iWinOccurence;
         var iRand;
-        
-        
+
         _iCasinoCash += _oMySeat.getCurBet();
         _iCasinoCash = parseFloat(_iCasinoCash.toFixed(2));
 
@@ -338,7 +333,6 @@ function CGame(oData){
         var aNumbers = oParams.numbers;
         _iBetMult -= oParams.bet_mult;
         _aBetMultHistory.push(oParams.bet_mult);
-        
 
         var iBetWin = oParams.bet_win;
         var iNumFiches = oParams.num_fiches;
@@ -361,8 +355,7 @@ function CGame(oData){
         iFicheValue=s_oGameSettings.getFicheValues(iIndexFicheSelected);
         _aBetWinHistory.push(iBetWin);
         _aNumFicheHistory.push(iNumFiches);
-        
-        
+
         var iCurBet=_oMySeat.getCurBet();
         if( (_oMySeat.getCredit() - (iFicheValue * iNumFiches)) < 0){
             //SHOW MSG BOX
@@ -421,7 +414,6 @@ function CGame(oData){
             _oNeighborsPanel.reset();
             return;
         }
-
 
         _oMySeat.createPileForMultipleNumbers(iFicheValue,oParams.value,aNumbers,iBetWin,iNumFiches);
         
@@ -532,8 +524,7 @@ function CGame(oData){
                     this.onSpin();
             }
         }
-        
-        
+
     };
     
     this._updateSpinning = function(){/*

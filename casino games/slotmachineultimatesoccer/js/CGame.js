@@ -194,8 +194,7 @@ function CGame(oData){
                             _aMovingColumns[iReelIndex].restart(new Array(_aFinalSymbolCombo[0][iNewReelInd],
                                                                           _aFinalSymbolCombo[1][iNewReelInd],
                                                                           _aFinalSymbolCombo[2][iNewReelInd]), true);
-                            
-                            
+
                     }
                     
                 }
@@ -296,8 +295,7 @@ function CGame(oData){
         var iLineIndex;
         if(_iCurWinShown>0){ 
             stopSound(_oCurSymbolWinSound);
-            
-            
+
             iLineIndex = _aWinningLine[_iCurWinShown-1].line;
             _oInterface.hideLine(iLineIndex);
             
@@ -318,7 +316,6 @@ function CGame(oData){
         for(var k=0;k<aList.length;k++){
             _aStaticSymbols[aList[k].row][aList[k].col].show(aList[k].value);
         }
-            
 
         _iCurWinShown++;
         
@@ -349,8 +346,7 @@ function CGame(oData){
 		_iTotBet = iNewTotalBet;
 		_oInterface.refreshTotalBet(_iTotBet);
 		_oInterface.refreshNumLines(_iLastLineActive);
-		
-		
+
 		if(iNewTotalBet>_iMoney){
 			_oInterface.disableSpin();
 		}else{
@@ -370,8 +366,7 @@ function CGame(oData){
 		_iTotBet = iNewTotalBet;
 		_oInterface.refreshTotalBet(_iTotBet);
 		_oInterface.refreshNumLines(_iLastLineActive);
-		
-		
+
 		if(iNewTotalBet>_iMoney){
 			_oInterface.disableSpin();
 		}else{
@@ -453,8 +448,7 @@ function CGame(oData){
             }
             _oReelSound = playSound("reels", 1,0);
         }
-        
-        
+
         _oInterface.disableBetBut(true);
         this.removeWinShowing();
         
@@ -499,12 +493,10 @@ function CGame(oData){
                 }while(bRet === false || (_iTotWin*_iCurBet) > SLOT_CASH);
             }
         }
-        
 
         _oInterface.hideAllLines();
         _oInterface.disableGuiButtons();
-        
-        
+
         _iCurState = GAME_STATE_SPINNING;
     };
     
@@ -561,8 +553,7 @@ function CGame(oData){
                 break;
             }
         }
-        
-	
+
     };
     
     s_oGame = this;

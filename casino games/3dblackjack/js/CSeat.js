@@ -326,8 +326,7 @@ function CSeat(){
             }else{
                 _oResultText_1.text=szWinner+": "+iTotalWin;
             }
-                
-            
+
             playSound("win", 1, false);
             
         }else{
@@ -336,8 +335,7 @@ function CSeat(){
             }else{
                 _oResultText_1.text=szWinner;
             }
-               
-            
+
             playSound("lose", 1, false);
             
         }
@@ -502,8 +500,6 @@ function CSeat(){
                 
         }else{
                 var iXPos=_oGroup.x+_oSplitOffset.getX()+((CARD_WIDTH/2)*_aHands[_iCurHand].getNumCards());	
-                
-
 
                 var iYPos=_oGroup.y+_oSplitOffset.getY()-(CARD_HEIGHT/2)*_aHands[_iCurHand].getNumCards();
 
@@ -560,6 +556,5 @@ function CSeat(){
         return _oMainFichesController.getValue();
     };
 
-    
     this._init();
 }

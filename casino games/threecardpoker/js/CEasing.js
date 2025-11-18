@@ -3,8 +3,7 @@ var TYPE_OUT_CUBIC = 1;
 var TYPE_IN_CUBIC  = 2;
 var TYPE_OUT_BACK  = 3;				
 var TYPE_IN_BACK   = 4;				
-		
-		
+
 function ease( iTypeFunc, t, b, c, d, s){
     var fLerp;
     switch(iTypeFunc){

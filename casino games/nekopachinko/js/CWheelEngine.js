@@ -62,7 +62,6 @@ function CWheelEngine(oParentContainer){
                                                                 (SYMBOL_WIDTH*NUM_REELS) + (SPACE_BETWEEN_SYMBOLS*NUM_REELS),
                                                                 (SYMBOL_HEIGHT * NUM_ROWS) + (SPACE_HEIGHT_BETWEEN_SYMBOLS * NUM_ROWS));
 
-
         var iCont = 0;
         var iCurDelay = 0;
         var iXPos = REEL_OFFSET_X;
@@ -128,13 +127,11 @@ function CWheelEngine(oParentContainer){
     this.stopNextReel = function() {
 	//INCREASE INDEX OF THE NEXT REEL TO STOP
         _iNumReelsStopped++;        
-        
-        
+
         if(_iNumReelsStopped%2 === 0){
            
             _iNextColToStop = _aReelSequence[_iNumReelsStopped/2];
-            
-            
+
             if (_iNumReelsStopped === (NUM_REELS*2) ) {
                 this._endReelAnimation();
             }
@@ -197,7 +194,6 @@ function CWheelEngine(oParentContainer){
 
         return aRandSymbols;
     };
-    
 
     this.generateWheelCombo = function(aCombo){
         playSound("reels", 0.5, true);

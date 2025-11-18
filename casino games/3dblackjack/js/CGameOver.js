@@ -19,7 +19,6 @@ function CGameOver(){
                     TEXT_NO_MONEY,
                     true, true, true,
                     false );
-                    
 
         _oTextTitle.setShadow("#000000", 2, 2, 2);
         

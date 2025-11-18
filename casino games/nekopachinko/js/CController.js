@@ -32,7 +32,6 @@ function CController(iX, iY, oParentContainer){
         _iLimit = 80 +_iStartRotation;
         _vOriginVector = new CVector2(0,-1);
 
-        
         _oContainer.on("mousedown", this._onClick);
         _oContainer.on("pressmove", this._onMove);
         _oContainer.on("pressup", this._onRelease);
@@ -76,7 +75,6 @@ function CController(iX, iY, oParentContainer){
 
         _iCurRotation = _oParent._calculateRotation(e.localX, e.localY);
 
-
         var iCurPercent = _oParent.getPercent();
 
         _iCurValue = iCurPercent/100;
@@ -118,5 +116,4 @@ function CController(iX, iY, oParentContainer){
     _oParent = this;
     this._init(iX, iY, oParentContainer);
 }
-
 

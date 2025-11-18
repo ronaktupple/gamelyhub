@@ -15,7 +15,6 @@ $(window).resize(function() {
 });
 
 function trace(szMsg){
-    console.log(szMsg);
 }
 
 function getSize(Name) {
@@ -82,7 +81,6 @@ function isIpad() {
     return isTouchDevice && isMacLike;
 }
 
-    
 function isMobile(){
     if(isIpad()){
         return true;
@@ -96,8 +94,6 @@ function isMobile(){
         return false;
     }  
 };
-
-
 
 function isChrome(){
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
@@ -121,7 +117,6 @@ function isIOS() {
         let platform = navigator?.userAgentData?.platform || navigator?.platform
         platform = platform.toLowerCase();
         var szDevice = aDevices.pop();
-        console.log(szDevice)
 
         if (platform && platform.includes( szDevice.toLowerCase())){
             if(szDevice === 'iPhone'){
@@ -133,7 +128,6 @@ function isIOS() {
 
     return false; 
 }
-
 
 function getIOSWindowHeight() {
     // Get zoom level of mobile Safari
@@ -179,7 +173,6 @@ function sizeHandler() {
 	var destW = Math.round(CANVAS_WIDTH * multiplier);
         var destH = Math.round(CANVAS_HEIGHT * multiplier);
 
-        
         var iAdd = 0;
         if (destH < h){
             iAdd = h-destH;
@@ -242,7 +235,6 @@ function sizeHandler() {
             s_oStage.canvas.width = destW;
             s_oStage.canvas.height = destH;
 
-            
             s_oStage.scaleX = s_oStage.scaleY = s_iScaleFactor; 
         }
         
@@ -280,7 +272,6 @@ function _checkOrientation(iWidth,iHeight){
         }
     }
 }
-
 
 function createBitmap(oSprite, iWidth, iHeight){
 	var oBmp = new createjs.Bitmap(oSprite);
@@ -520,7 +511,6 @@ function ctlArcadePause(){
     }
 }
 
-
 function getParamValue(paramName){
     var url = window.location.search.substring(1);
     var qArray = url.split('&'); 
@@ -531,7 +521,6 @@ function getParamValue(paramName){
                     return pArr[1];
     }
 }
-
 
 function fullscreenHandler(){
     if (!ENABLE_FULLSCREEN || screenfull.isEnabled === false){
@@ -548,7 +537,6 @@ function fullscreenHandler(){
         s_oMenu.resetFullscreenBut();
     }
 }
-
 
 if (screenfull.isEnabled) {
     screenfull.on('change', function(){

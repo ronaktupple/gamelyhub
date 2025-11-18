@@ -80,11 +80,9 @@ function CGfxButton(iXPos,iYPos,oSprite,bAttach){
         if(_bDisable){
             return;
         }
-        
-        
+
         playSound("press_but",1,false);
-        
-        
+
         _oButton.scaleX = 1;
         _oButton.scaleY = 1;
 
@@ -121,8 +119,7 @@ function CGfxButton(iXPos,iYPos,oSprite,bAttach){
     this.getButtonImage = function(){
         return _oButton;
     };
-    
-    
+
     this.getX = function(){
         return _oButton.x;
     };

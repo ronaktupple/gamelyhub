@@ -20,8 +20,7 @@ if (typeof Object.getPrototypeOf !== "function")
 (function(){
 	cr.logexport = function (msg)
 	{
-		if (window.console && window.console.log)
-			window.console.log(msg);
+			window.
 	};
 	cr.logerror = function (msg)
 	{
@@ -1736,7 +1735,6 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	{
 		if (!lose_ext)
 		{
-			console.log("WEBGL_lose_context not supported");
 			return;
 		}
 		lose_ext.loseContext();
@@ -1745,7 +1743,6 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	{
 		if (!lose_ext)
 		{
-			console.log("WEBGL_lose_context not supported");
 			return;
 		}
 		lose_ext.restoreContext();
@@ -3870,7 +3867,6 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		if (typeof cr_is_preview !== "undefined")
 		{
 			if (this.isCocoonJs)
-				console.log("[Construct 2] In preview-over-wifi via CocoonJS mode");
 			if (window.location.search.indexOf("continuous") > -1)
 			{
 				cr.logexport("Reloading for continuous preview");
@@ -8114,7 +8110,6 @@ window["cr_setSuspended"] = function(s)
 		/*
 		if (this.runtime.glwrap)
 		{
-			console.log("Estimated VRAM at layout start: " + this.runtime.glwrap.textureCount() + " textures, approx. " + Math.round(this.runtime.glwrap.estimateVRAM() / 1024) + " kb");
 		}
 		*/
 		if (this.runtime.isLoadingState)
@@ -8164,7 +8159,6 @@ window["cr_setSuspended"] = function(s)
 		/*
 		if (this.runtime.glwrap)
 		{
-			console.log("Estimated VRAM at layout end: " + this.runtime.glwrap.textureCount() + " textures, approx. " + Math.round(this.runtime.glwrap.estimateVRAM() / 1024) + " kb");
 		}
 		*/
 		if (!this.runtime.isLoadingState)
@@ -19167,8 +19161,6 @@ cr.plugins_.Browser = function(runtime)
 	{
 		if (typeof console === "undefined")
 			return;
-		if (type_ === 0 && console.log)
-			console.log(msg_.toString());
 		if (type_ === 1 && console.warn)
 			console.warn(msg_.toString());
 		if (type_ === 2 && console.error)
@@ -23841,7 +23833,7 @@ var Box2D = (function () {
 function c(a){throw a;}var d=void 0,aa=!0,ba=null,ca=!1,e;e||(e=eval("(function() { try { return Module || {} } catch(e) { return {} } })()"));var da={},ea;for(ea in e)e.hasOwnProperty(ea)&&(da[ea]=e[ea]);var fa="object"===typeof process&&"function"===typeof require,ga="object"===typeof window,ia="function"===typeof importScripts,ja=!ga&&!fa&&!ia;
 if(fa){e.print||(e.print=function(a){process.stdout.write(a+"\n")});e.printErr||(e.printErr=function(a){process.stderr.write(a+"\n")});var ka=require("fs"),la=require("path");e.read=function(a,b){var a=la.normalize(a),f=ka.readFileSync(a);!f&&a!=la.resolve(a)&&(a=path.join(__dirname,"..","src",a),f=ka.readFileSync(a));f&&!b&&(f=f.toString());return f};e.readBinary=function(a){return e.read(a,aa)};e.load=function(a){ma(read(a))};e.thisProgram=1<process.argv.length?process.argv[1].replace(/\\/g,"/"):
 "unknown-program";e.arguments=process.argv.slice(2);"undefined"!==typeof module&&(module.exports=e);process.on("uncaughtException",function(a){a instanceof na||c(a)})}else ja?(e.print||(e.print=print),"undefined"!=typeof printErr&&(e.printErr=printErr),e.read="undefined"!=typeof read?read:function(){c("no read() available (jsc?)")},e.readBinary=function(a){if("function"===typeof readbuffer)return new Uint8Array(readbuffer(a));a=read(a,"binary");oa("object"===typeof a);return a},"undefined"!=typeof scriptArgs?
-e.arguments=scriptArgs:"undefined"!=typeof arguments&&(e.arguments=arguments),this.Module=e,eval("if (typeof gc === 'function' && gc.toString().indexOf('[native code]') > 0) var gc = undefined")):ga||ia?(e.read=function(a){var b=new XMLHttpRequest;b.open("GET",a,ca);b.send(ba);return b.responseText},"undefined"!=typeof arguments&&(e.arguments=arguments),"undefined"!==typeof console?(e.print||(e.print=function(a){console.log(a)}),e.printErr||(e.printErr=function(a){console.log(a)})):e.print||(e.print=
+e.arguments=scriptArgs:"undefined"!=typeof arguments&&(e.arguments=arguments),this.Module=e,eval("if (typeof gc === 'function' && gc.toString().indexOf('[native code]') > 0) var gc = undefined")):ga||ia?(e.read=function(a){var b=new XMLHttpRequest;b.open("GET",a,ca);b.send(ba);return b.responseText},"undefined"!=typeof arguments&&(e.arguments=arguments),"undefined"!==typeof console?(e.print||(e.print=function(a){}),e.printErr||(e.printErr=function(a){})):e.print||(e.print=
 function(){}),ga?window.Module=e:e.load=importScripts):c("Unknown runtime environment. Where are we?");function ma(a){eval.call(ba,a)}!e.load&&e.read&&(e.load=function(a){ma(e.read(a))});e.print||(e.print=function(){});e.printErr||(e.printErr=e.print);e.arguments||(e.arguments=[]);e.thisProgram||(e.thisProgram="./this.program");e.print=e.print;e.n=e.printErr;e.preRun=[];e.postRun=[];for(ea in da)da.hasOwnProperty(ea)&&(e[ea]=da[ea]);
 var h={ga:function(a){qa=a},aa:function(){return qa},A:function(){return ra},J:function(a){ra=a},Q:function(a){switch(a){case "i1":case "i8":return 1;case "i16":return 2;case "i32":return 4;case "i64":return 8;case "float":return 4;case "double":return 8;default:return"*"===a[a.length-1]?h.B:"i"===a[0]?(a=parseInt(a.substr(1)),oa(0===a%8),a/8):0}},P:function(a){return Math.max(h.Q(a),h.B)},ha:16,ua:function(a,b,f){return!f&&("i64"==a||"double"==a)?8:!a?Math.min(b,8):Math.min(b||(a?h.P(a):0),h.B)},
 r:function(a,b,f){return f&&f.length?(f.splice||(f=Array.prototype.slice.call(f)),f.splice(0,0,b),e["dynCall_"+a].apply(ba,f)):e["dynCall_"+a].call(ba,b)},p:[ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba],V:function(a){for(var b=0;b<h.p.length;b++)if(!h.p[b])return h.p[b]=a,2*(1+b);c("Finished up all reserved function pointers. Use a higher value for RESERVED_FUNCTION_POINTERS.")},fa:function(a){h.p[(a-2)/2]=ba},O:function(a,b){h.F||(h.F={});var f=h.F[a];if(f)return f;for(var f=[],g=
@@ -24228,7 +24220,7 @@ function na(a){this.name="ExitStatus";this.message="Program terminated with exit
 e.callMain=e.pa=function(a){function b(){for(var a=0;3>a;a++)g.push(0)}oa(0==Ib,"cannot call main when async dependencies remain! (listen on __ATMAIN__)");oa(0==rb.length,"cannot call main when preRun functions remain to be called");a=a||[];wb||(wb=aa,qb(sb));var f=a.length+1,g=[$a(Ab(e.thisProgram),"i8",0)];b();for(var k=0;k<f-1;k+=1)g.push($a(Ab(a[k]),"i8",0)),b();g.push(0);g=$a(g,"i32",0);fx=ra;try{var n=e._main(f,g,0);kx(n)}catch(m){m instanceof na||("SimulateInfiniteLoop"==m?e.noExitRuntime=
 aa:(m&&("object"===typeof m&&m.stack)&&e.n("exception thrown: "+[m,m.stack]),c(m)))}finally{}};
 function jx(a){function b(){if(!e.calledRun&&(e.calledRun=aa,!za)){wb||(wb=aa,qb(sb));qb(tb);ga&&gx!==ba&&e.n("pre-main prep time: "+(Date.now()-gx)+" ms");e._main&&ix&&e.callMain(a);if(e.postRun)for("function"==typeof e.postRun&&(e.postRun=[e.postRun]);e.postRun.length;)zb(e.postRun.shift());qb(vb)}}a=a||e.arguments;gx===ba&&(gx=Date.now());if(!(0<Ib)){if(e.preRun)for("function"==typeof e.preRun&&(e.preRun=[e.preRun]);e.preRun.length;)yb(e.preRun.shift());qb(rb);!(0<Ib)&&!e.calledRun&&(e.setStatus?
-(e.setStatus("Running..."),setTimeout(function(){setTimeout(function(){e.setStatus("")},1);b()},1)):b())}}e.run=e.Aa=jx;function kx(a){e.noExitRuntime||(za=aa,ra=fx,qb(ub),fa?(process.stdout.once("drain",function(){process.exit(a)}),console.log(" "),setTimeout(function(){process.exit(a)},500)):ja&&"function"===typeof quit&&quit(a),c(new na(a)))}e.exit=e.ra=kx;
+(e.setStatus("Running..."),setTimeout(function(){setTimeout(function(){e.setStatus("")},1);b()},1)):b())}}e.run=e.Aa=jx;function kx(a){e.noExitRuntime||(za=aa,ra=fx,qb(ub),fa?(process.stdout.once("drain",function(){process.exit(a)}),,setTimeout(function(){process.exit(a)},500)):ja&&"function"===typeof quit&&quit(a),c(new na(a)))}e.exit=e.ra=kx;
 function ua(a){a&&(e.print(a),e.n(a));za=aa;c("abort() at "+fb()+"\nIf this abort() is unexpected, build with -s ASSERTIONS=1 which can give more information.")}e.abort=e.abort=ua;if(e.preInit)for("function"==typeof e.preInit&&(e.preInit=[e.preInit]);0<e.preInit.length;)e.preInit.pop()();var ix=aa;e.noInitialRun&&(ix=ca);e.noExitRuntime=aa;jx();function j(){}j.prototype=Object.create(j.prototype);j.prototype.g=j;j.k={};e.WrapperObject=j;function p(a){return(a||j).k}e.getCache=p;
 function q(a,b){var f=p(b),g=f[a];if(g)return g;g=Object.create((b||j).prototype);g.e=a;return f[a]=g}e.wrapPointer=q;function lx(a,b){return q(a.e,b)}e.castObject=lx;e.NULL=q(0);function mx(a){a.__destroy__||c("Error: Cannot destroy object. (Did you create it yourself?)");a.__destroy__();delete p(a.g)[a.e]}e.destroy=mx;function nx(a,b){return a.e===b.e}e.compare=nx;function ox(a){return a.e}e.getPointer=ox;function px(a){return a.g}e.getClass=px;
 function r(a){return"string"==typeof a?$a(Ab(a),"i8",Wa):a}function qx(){this.e=yf();p(qx)[this.e]=this}qx.prototype=Object.create(rx.prototype);qx.prototype.g=qx;qx.k={};e.JSDestructionListener=qx;qx.prototype.SayGoodbyeJoint=function(a){var b=this.e,a=a&&"object"===typeof a?a.e:r(a);ym(b,a)};qx.prototype.SayGoodbyeFixture=function(a){var b=this.e,a=a&&"object"===typeof a?a.e:r(a);vq(b,a)};qx.prototype.__destroy__=function(){Mr(this.e)};

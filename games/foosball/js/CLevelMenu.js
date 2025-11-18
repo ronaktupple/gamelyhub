@@ -168,7 +168,6 @@ function CLevelMenu() {
             NUM_ROWS_PAGE_LEVEL = iNumRows;
         }
 
-
         var iNumCols = 0;
         var iX = 0;
         var iWidthBounds = CANVAS_WIDTH - (EDGEBOARD_X * 2);

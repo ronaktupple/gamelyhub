@@ -27,8 +27,7 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oParent
 	if (!s_bMobile){
             _oButton.cursor = "pointer";
 	}
-        
-        
+
         _oButtonBg = createBitmap( oSprite);
         _oButton.addChild(_oButtonBg);
         
@@ -43,7 +42,6 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oParent
                     true, true, true,
                     false );
 
-        
         this._initListener();
     };
     

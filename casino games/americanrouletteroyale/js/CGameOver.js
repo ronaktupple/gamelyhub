@@ -20,7 +20,6 @@ function CGameOver(){
                     true, true, true,
                     false );
 
-        
         _oTextMsg = new CTLText(_oContainer, 
                     CANVAS_WIDTH/2-250, 380, 500, 90, 
                     30, "center", "#fff", FONT1, 1,
@@ -29,15 +28,12 @@ function CGameOver(){
                     true, true, true,
                     false );
 
-        
         _ButRecharge = new CTextButton(CANVAS_WIDTH/2 + 170,510,s_oSpriteLibrary.getSprite('but_bg'),TEXT_RECHARGE,FONT1,"#fff",14,_oContainer);
         _ButRecharge.addEventListener(ON_MOUSE_UP, this._onRecharge, this);
-       
-        
+
         _oButExit = new CTextButton(CANVAS_WIDTH/2 - 170,510,s_oSpriteLibrary.getSprite('but_bg'),TEXT_EXIT,FONT1,"#fff",14,_oContainer);
         _oButExit.addEventListener(ON_MOUSE_UP, this._onExit, this);
 
-        
         this.hide();
     };
 	

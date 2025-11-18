@@ -32,7 +32,6 @@ function CHelpPanel(){
                     true, true, true,
                     false );
 
-  
         _oText1 = new CTLText(_oGroup, 
                     oText1Pos.x, oText1Pos.y, 600, 44, 
                     22, "center", "#fff", PRIMARY_FONT, 1,
@@ -51,7 +50,6 @@ function CHelpPanel(){
                     true, true, true,
                     false );
 
-  
         _oText2 = new CTLText(_oGroup, 
                     oText2Pos.x, oText2Pos.y, 320, 80, 
                     18, "right", "#fff", PRIMARY_FONT, 1,
@@ -70,7 +68,6 @@ function CHelpPanel(){
                     true, true, true,
                     false );
 
-  
         _oText3 = new CTLText(_oGroup, 
                     oText3Pos.x, oText3Pos.y, 360, 80, 
                     18, "left", "#fff", PRIMARY_FONT, 1,
@@ -88,9 +85,7 @@ function CHelpPanel(){
                     TEXT_HELP4,
                     true, true, true,
                     false );
-                    
-       
-  
+
         _oText4 = new CTLText(_oGroup, 
                     oText4Pos.x, oText4Pos.y, 400, 80, 
                     18, "left", "#fff", PRIMARY_FONT, 1,
@@ -98,14 +93,11 @@ function CHelpPanel(){
                     TEXT_HELP4,
                     true, true, true,
                     false );
-        
-        
 
         createjs.Tween.get(_oGroup).to({alpha:1}, 700);        
         
         _oGroup.on("pressup",function(){oParent._onExitHelp();});
-        
-        
+
     };
 
     this.unload = function(){

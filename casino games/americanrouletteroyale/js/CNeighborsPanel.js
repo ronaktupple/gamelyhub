@@ -45,9 +45,7 @@ function CNeighborsPanel(){
                     _iTotMoney+TEXT_CURRENCY,
                     true, true, false,
                     false );
-                    
 
-        
         //ADD ENLIGHTS
         _aEnlights = new Array();
 
@@ -427,8 +425,7 @@ function CNeighborsPanel(){
         oBut.addEventListenerWithParams(ON_MOUSE_UP, this._onNeighborRelease, this,{index:13});
         oBut.addEventListenerWithParams(ON_MOUSE_OVER, this._onNeighborOver, this,{index:13});
         oBut.addEventListenerWithParams(ON_MOUSE_OUT, this._onNeighborOut, this,{index:13});
-        
-        
+
         oBut = new CGfxButton(338,76,oSprite,_oContainerWheel);
         oBut.rotate(-9);
         oBut.addEventListenerWithParams(ON_MOUSE_UP, this._onNeighborRelease, this,{index:1});
@@ -554,8 +551,6 @@ function CNeighborsPanel(){
         _aAttachOffset["oAttach_37"] = new createjs.Point(377,70);
     };
 
-    
-
     this.reset = function(){
         _aValueFichesInPos=new Array();
         for(var i=0;i<NUMBERS_TO_BET;i++){
@@ -595,9 +590,7 @@ function CNeighborsPanel(){
             _aTotNumClicked = new Array();
             _aValueFichesInPos[iNumberSelected]=0;
         }
-        
-        
-        
+
         _aFichesAttached.pop();
         _aMcFichesAttached[iNumberSelected].pop();
         
@@ -634,10 +627,8 @@ function CNeighborsPanel(){
             _oMoneyText.refreshText(iAmount + TEXT_CURRENCY);
         }
 
-        
         playSound("chip",1,false);
-        
-        
+
         _aValueFichesInPos[_iNumberClicked] += iFicheValue;
         _aValueFichesInPos[_iNumberClicked] = roundDecimal(_aValueFichesInPos[_iNumberClicked],1);
 
@@ -659,7 +650,6 @@ function CNeighborsPanel(){
          s_oGame._onShowBetOnTableFromNeighbors({button:"oBetNeighbors",numbers:aBets,bet_mult:5,bet_win:7.2,
                                                                      value:_iIndexFicheSelected,num_fiches:5,num_clicked:_iNumberClicked},false);
 
-        
         _aTotNumClicked.push(_iNumberClicked);
         _bFichesOnTable = true;
     };

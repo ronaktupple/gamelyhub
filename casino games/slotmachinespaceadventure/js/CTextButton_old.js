@@ -85,11 +85,9 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oParent
         if(_bDisable){
             return;
         }
-        
-        
+
         playSound("press_but",1,false);
-        
-        
+
         _oButton.scaleX = 1;
         _oButton.scaleY = 1;
 

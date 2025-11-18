@@ -6,7 +6,6 @@ function CBetTableButton(iXPos,iYPos,oSprite,szName,oContainer){
     var _szName;
     var _oContainer;
 
-    
     this._init =function(iXPos,iYPos,oSprite,szName,oContainer){
         _szName =szName;
 

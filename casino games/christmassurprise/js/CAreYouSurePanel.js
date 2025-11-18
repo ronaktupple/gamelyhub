@@ -52,10 +52,6 @@ function CAreYouSurePanel(iStartX,iStartY,oEaseIn,oEaseOut,oParentContainer) {
                     true, true, true,
                     false );
 
-
-        
-        
-
         _oButYes = new CGfxButton(250, 130, s_oSpriteLibrary.getSprite('but_yes'), _oPanelContainer);
         _oButYes.addEventListener(ON_MOUSE_UP, this._onButYes, this);
 
@@ -87,8 +83,7 @@ function CAreYouSurePanel(iStartX,iStartY,oEaseIn,oEaseOut,oParentContainer) {
     
     this.hide = function(bExit){
         _oContainer.visible = false;
-        
-        
+
         if (bExit && _aCbCompleted[ON_EXIT_FROM_GAME]) {
             _aCbCompleted[ON_EXIT_FROM_GAME].call(_aCbOwner[ON_EXIT_FROM_GAME]);
         }
@@ -102,8 +97,7 @@ function CAreYouSurePanel(iStartX,iStartY,oEaseIn,oEaseOut,oParentContainer) {
 
     this._onButYes = function () {
         _oThis._playHideAnim(true);
-        
-        
+
     };
 
     this._onButNo = function () {

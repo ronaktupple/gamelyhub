@@ -86,7 +86,6 @@ var ba, ca, da, fa, ga, ha, ia, ja, ka, la, oa, pa, qa, ra, sa, ta, ua, va, wa, 
         return a.xd - e.xd
     }
     fa = function(a) {
-        window.console && window.console.log && window.console.log(a)
     };
     ga = function(a) {
         window.console && window.console.error && window.console.error(a)
@@ -2092,7 +2091,7 @@ function mc(h, m, q, p) {
         }, !0), document.addEventListener("touchstart", function() {
             window.focus()
         }, !0));
-        "undefined" !== typeof cr_is_preview && (this.Jc && console.log("[Construct 2] In preview-over-wifi via CocoonJS mode"), -1 < window.location.search.indexOf("continuous") && (fa("Reloading for continuous preview"), this.Ok = "__c2_continuouspreview", this.pj = !0), this.ey && !this.Qf && (jQuery(window).focus(function() {
+        "undefined" !== typeof cr_is_preview && (this.Jc && , -1 < window.location.search.indexOf("continuous") && (fa("Reloading for continuous preview"), this.Ok = "__c2_continuouspreview", this.pj = !0), this.ey && !this.Qf && (jQuery(window).focus(function() {
                 a.setSuspended(!1)
             }),
             jQuery(window).blur(function() {

@@ -145,7 +145,6 @@ function CGame(oData){
         var iStartIndex = 1;
         aCellList.push({row:aCombos[0].row,col:aCombos[0].col,value:_aFinalSymbolCombo[aCombos[0].row][aCombos[0].col]});
 
-
         for(var t=iStartIndex;t<aCombos.length;t++){
             if(_aFinalSymbolCombo[aCombos[t].row][aCombos[t].col] === iValue){
                 iNumEqualSymbol++;
@@ -196,8 +195,7 @@ function CGame(oData){
                             _aMovingColumns[iReelIndex].restart(new Array(_aFinalSymbolCombo[0][iNewReelInd],
                                                                           _aFinalSymbolCombo[1][iNewReelInd],
                                                                           _aFinalSymbolCombo[2][iNewReelInd]), true);
-                            
-                            
+
                     }
                     
                 }
@@ -255,8 +253,6 @@ function CGame(oData){
                 }
             }
 
-            
-            
             if(_iTotWin>0){
                     _oInterface.refreshMoney(_iMoney);
                     _oInterface.refreshWinText(_iTotWin);
@@ -312,7 +308,6 @@ function CGame(oData){
         for(var k=0;k<aList.length;k++){
             _aStaticSymbols[aList[k].row][aList[k].col].show(aList[k].value);
         }
-        
 
         _iCurWinShown++;
         
@@ -344,7 +339,6 @@ function CGame(oData){
         _oInterface.refreshTotalBet(_iTotBet);
         _oPayTable.highlightColBg(_iLastLineActive-1);
 
-
         if(iNewTotalBet>_iMoney){
                 _oInterface.disableSpin();
         }else{
@@ -364,7 +358,6 @@ function CGame(oData){
         _iTotBet = iNewTotalBet;
         _oInterface.refreshTotalBet(_iTotBet);
         _oPayTable.highlightColBg(_iLastLineActive-1);
-
 
         if(iNewTotalBet>_iMoney){
                 _oInterface.disableSpin();
@@ -497,8 +490,7 @@ function CGame(oData){
         $(s_oMain).trigger("save_score",[_iMoney]); 
         
         _oInterface.disableGuiButtons();
-        
-        
+
         _iCurState = GAME_STATE_SPINNING;
         
         this.tryShowAd();
@@ -559,8 +551,7 @@ function CGame(oData){
             }
 
         }
-        
-	
+
     };
     
     s_oGame = this;

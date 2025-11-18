@@ -25,8 +25,7 @@ function CWinDisplay(iX,iY,oParentContainer){
                     " ",
                     true, true, false,
                     false );
-          
-        
+
         _oWinText =  new CTLText(_oContainer, 
                     oSpriteBg.width/2 -90, oSpriteBg.height/2 +6, 180, 33, 
                     29, "center", "#ffffff", FONT_GAME_1, 1,
@@ -34,9 +33,7 @@ function CWinDisplay(iX,iY,oParentContainer){
                     " ",
                     true, true, false,
                     false );
-          
-        
-     
+
     };
     
     this.show = function(szDesc,iWin,szTextWin){

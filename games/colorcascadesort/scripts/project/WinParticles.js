@@ -50,7 +50,6 @@ export default class WinParticles extends ISpriteInstance {
             particle.height *= size;
             particle.size = size;
 
-
             const color = [
                 randFloat(this.colors[0][0], this.colors[1][0]),
                 randFloat(this.colors[0][1], this.colors[1][1]),
@@ -58,10 +57,6 @@ export default class WinParticles extends ISpriteInstance {
             ];
 
             particle.colorRgb = color;
-
-
-
-
 
             const angularVelocity = this.angularVelocity + randFloat(-this.angularVelocityRandomizer, this.angularVelocityRandomizer);
             particle.angularVelocity = angularVelocity;
@@ -75,7 +70,6 @@ export default class WinParticles extends ISpriteInstance {
             particle.velY = direction.y * speed;
 
             this.particles.push(particle);
-
 
         }
 
@@ -98,7 +92,6 @@ export default class WinParticles extends ISpriteInstance {
             return;
 
         this.timeLeft -= dt;
-
 
         this.particles.forEach(p => {
             p.y += dt * p.velY;

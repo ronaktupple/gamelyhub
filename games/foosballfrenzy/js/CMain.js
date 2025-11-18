@@ -38,7 +38,6 @@ function CMain(oData) {
         //ADD PRELOADER
         _oPreloader = new CPreloader();
 
-
     };
 
     this.preloaderReady = function() {
@@ -61,7 +60,6 @@ function CMain(oData) {
             s_oMain._initSounds();
         }
     };
-
 
     this.soundLoaded = function() {
         _iCurResource++;
@@ -167,7 +165,6 @@ function CMain(oData) {
                 onload: s_oMain.soundLoaded()
             });
 
-
         }
     };
 
@@ -216,9 +213,6 @@ function CMain(oData) {
         s_oSpriteLibrary.addSprite("but_help", "./sprites/but_help.png");
         s_oSpriteLibrary.addSprite("but_pause", "./sprites/but_pause.png");
 
-
-
-
         RESOURCE_TO_LOAD += s_oSpriteLibrary.getNumSprites();
         s_oSpriteLibrary.loadSprites();
     };
@@ -226,7 +220,7 @@ function CMain(oData) {
     this._onImagesLoaded = function() {
         _iCurResource++;
         var iPerc = Math.floor(_iCurResource / RESOURCE_TO_LOAD * 100);
-        //console.log("PERC: "+iPerc);
+        //
         _oPreloader.refreshLoader(iPerc);
 
         if (_iCurResource === RESOURCE_TO_LOAD) {

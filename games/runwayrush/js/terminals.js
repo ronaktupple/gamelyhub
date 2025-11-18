@@ -51,7 +51,6 @@ var planes_arr = [{
     }
 ];
 
-
 //TERMINALS
 var terminals_arr = [{
         name: 'Terminal 1',

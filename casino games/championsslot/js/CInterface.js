@@ -89,7 +89,6 @@ function CInterface(iCurBet,iTotBet,iMoney){
         var iY = pCurBetPos.y-40;
         this.setLabel(iX, pCurBetPos.y-30, iWidth, iHeight, 36, TEXT_CURRENT_BET, s_oStage);
 
-                    
         var pCoinControl = {x:720,y:574};
         var oSprite = s_oSpriteLibrary.getSprite('but_left');
         _oButLeft = new CGfxButton(pCoinControl.x - 113,pCoinControl.y+24,oSprite,s_oStage);
@@ -178,8 +177,7 @@ function CInterface(iCurBet,iTotBet,iMoney){
         _oLine.x = 410;
         _oLine.y = 363;
         s_oStage.addChild(_oLine);
-        
-        
+
         this.refreshButtonPos (s_iOffsetX,s_iOffsetY);
     };
     
@@ -233,7 +231,6 @@ function CInterface(iCurBet,iTotBet,iMoney){
         createjs.Tween.get(_oWinText.getText(), {loop:true}).to({alpha:0}, 200).to({alpha:1}, 200);
     };
 
-   
     this.setLabel = function(iX, iY, iWidth, iHeight, iSize, szText, oContainer){
         var oStrokeLabel = new CTLText(oContainer, 
                     iX-iWidth/2, iY-iHeight/2, iWidth, iHeight, 

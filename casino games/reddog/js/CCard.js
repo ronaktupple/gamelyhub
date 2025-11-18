@@ -196,8 +196,7 @@ function CCard(iX,iY,oContainer){
                 break;
             }
         }
-        
-        
+
     };
     
     s_oCard = this;

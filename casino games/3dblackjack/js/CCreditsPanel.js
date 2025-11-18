@@ -35,7 +35,6 @@ function CCreditsPanel(){
         _oButExit = new CTextButton(_pStartPosExit.x,_pStartPosExit.y,oSprite,TEXT_EXIT,FONT_GAME_1,"#ffffff",40,s_oStage);
         _oButExit.addEventListener(ON_MOUSE_UP, this.unload, this);
 
-		
         oSprite = s_oSpriteLibrary.getSprite('logo_ctl');
         _oButLogo = createBitmap(oSprite);
         _oButLogo.regX = oSprite.width/2;
@@ -44,7 +43,6 @@ function CCreditsPanel(){
         _oButLogo.y = CANVAS_HEIGHT/2;
         _oContainer.addChild(_oButLogo);
 
-        
         _oLink = new createjs.Text("www.codethislab.com", "30px " + FONT_GAME_1, "#fff");
         _oLink.textAlign = "center";
         _oLink.textBaseline = "alphabetic";
@@ -74,8 +72,6 @@ function CCreditsPanel(){
     };
     
     this._init();
-    
-    
-};
 
+};
 

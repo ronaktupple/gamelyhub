@@ -55,7 +55,6 @@ function CCreditsPanel(){
         _oContainer.addChild(_oLink);
     };
 
-    
     this.unload = function(){
         _oHitArea.off("click", _oListener);
         
@@ -70,8 +69,6 @@ function CCreditsPanel(){
     };
     
     this._init();
-    
-    
-};
 
+};
 

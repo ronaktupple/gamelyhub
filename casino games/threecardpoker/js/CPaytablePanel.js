@@ -24,7 +24,6 @@ function CPaytablePanel(iX,iY,oParentContainer){
                     true, true, false,
                     false );
 
-        
         var szText1 = "";
         var szText2 = "";
         for(var i=0;i<PAYOUT_ANTE.length;i++){
@@ -42,9 +41,7 @@ function CPaytablePanel(iX,iY,oParentContainer){
                     szText1,
                     true, true, true,
                     false );
-                    
-   
-        
+
         _oTextMult = new CTLText(_oContainer, 
                     oSpriteBg.width - 50, oTextTileAnte.getY()+35, 40, 60, 
                     20, "right", "#ffde00", FONT_GAME_1, 1,
@@ -52,8 +49,7 @@ function CPaytablePanel(iX,iY,oParentContainer){
                     szText2,
                     true, true, true,
                     false );
-   
-        
+
         //ATTACH PAIR PLUS PAYOUTS
         var oBg = createBitmap(s_oSpriteLibrary.getSprite("paytable_pair_plus_bg"));
         oBg.y = oSpriteBg.height +10;
@@ -66,9 +62,7 @@ function CPaytablePanel(iX,iY,oParentContainer){
                     TEXT_PAIR_PLUS,
                     true, true, false,
                     false );
-                    
 
-        
         var szText1 = "";
         var szText2 = "";
         for(var i=0;i<PAYOUT_PLUS.length;i++){
@@ -86,9 +80,7 @@ function CPaytablePanel(iX,iY,oParentContainer){
                     szText1,
                     true, true, true,
                     false );
-                    
-        
-        
+
         _oTextMult = new CTLText(_oContainer, 
                     oSpriteBg.width - 50, oTextTileAnte.getY()+32, 40, 110, 
                     20, "right", "#ffde00", FONT_GAME_1, 1,

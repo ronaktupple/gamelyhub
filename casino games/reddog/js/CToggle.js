@@ -26,7 +26,6 @@ function CToggle(iXPos, iYPos, oSprite, bActive, bAutomatic,oParentContainer) {
             animations: {state_true: [0], state_false: [1]}
         };
 
-
         var oSpriteSheet = new createjs.SpriteSheet(oData);
 
         _bActive = bActive;

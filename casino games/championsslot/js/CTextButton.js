@@ -25,8 +25,6 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oParent
 	_iWidth = oSprite.width;
         _iHeight = oSprite.height;
 
-        
-
         _oButton = new createjs.Container();
         _oButton.x = iXPos;
         _oButton.y = iYPos;
@@ -81,8 +79,7 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oParent
 
         _oButton.cache(0,0,_iWidth,_iHeight);
     };
-    
-    
+
     this.disable = function(){
         _bDisable = true;
         
@@ -93,7 +90,7 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oParent
             ];
             _oButton.cache(0,0,_iWidth,_iHeight); 
         }catch(e){
-            //console.log(e)
+            //
         }
     };
     

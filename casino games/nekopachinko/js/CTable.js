@@ -6,7 +6,6 @@ var RECOVER_BASKET = "recover_basket";
 var SENSOR_BONUS = "sensor_bonus";
 var BONUS_FRAME = "bonus_frame";
 
-
 function CTable(oBackGroundContainer, oForeGroundContainer){
     
     var _iWidth;
@@ -19,8 +18,7 @@ function CTable(oBackGroundContainer, oForeGroundContainer){
     
     var _oTable;
     var _oArrowsStart;
-    
-    
+
     this._init = function(oBackGroundContainer, oForeGroundContainer){
         
         _aCbCompleted=new Array();
@@ -136,7 +134,6 @@ function CTable(oBackGroundContainer, oForeGroundContainer){
         var oPin = new CLightIndicator(oSprite, iX, iY, oForeGroundContainer, 0, iOffset);
         oPin.setSpecialType(iType);
 
-        
         var oUserData = {contacttype: CONTACT_BEGIN, callback: this._onPinCollision, params: oPin};
         var oPhysicPin = s_oObjectBuilder.addStaticCircle(iRad, iX, iY, 0, 0, GENERAL_RESTITUTION, oUserData);
 
@@ -179,7 +176,6 @@ function CTable(oBackGroundContainer, oForeGroundContainer){
             var aPoints = s_oTable.getAdjustedPoints(0, 0, [{x:oGeometry.x, y:oGeometry.y}] );
             var iIndex = i;
 
-            
             var oUserData = {contacttype: CONTACT_BEGIN, callback: this._onRecoverSensor, params: iIndex};
             var oSensor = s_oObjectBuilder.addButton(8, 8, aPoints[0].x, aPoints[0].y, 0, 0, 0, 0, oUserData);
             oSensor.GetFixtureList().SetSensor(true);
@@ -305,6 +301,5 @@ function CTable(oBackGroundContainer, oForeGroundContainer){
     s_oTable = this;
     this._init(oBackGroundContainer, oForeGroundContainer);
 }
-
 
 var s_oTable;

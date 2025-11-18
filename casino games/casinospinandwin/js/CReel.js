@@ -22,11 +22,9 @@ function CReel (iX, iY, aInfo, iWindowHeight, oParentContainer, iIndex){
         
         _aText = new Array();
         _aColors = new Array();
-        
-        
+
         this._initColors();
-  
-        
+
         _oReelContainer = new createjs.Container();
         this.setVisible(false);
 

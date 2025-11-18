@@ -127,7 +127,6 @@ function CMenu(){
 	}
     };
 
-    
     this._onFullscreenRelease = function(){
 	if(s_bFullscreen) { 
 		_fCancelFullScreen.call(window.document);
@@ -138,7 +137,6 @@ function CMenu(){
 	sizeHandler();
     };
 
-    
     s_oMenu = this;
     
     this._init();

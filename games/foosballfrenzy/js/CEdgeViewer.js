@@ -1,7 +1,6 @@
 function CEdgeViewer(iX1, iY1, iX2, iY2, iLength, iHeight) {
     var _oRect;
 
-
     this.init = function(iX1, iY1, iX2, iY2, iLength, iHeight) {
         var graphics;
         if (iX1 > iX2 || iY1 > iY2) {

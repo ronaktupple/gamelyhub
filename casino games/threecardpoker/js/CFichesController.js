@@ -83,8 +83,7 @@ function CFichesController(){
         }
         
         playSound("chip", 1, false);
-        
-        
+
         _oBetAmountText.x = iXPos;
         _oBetAmountText.y = iYPos + 35;
         _oBetAmountText.text = _iValue.toFixed(2) + TEXT_CURRENCY;

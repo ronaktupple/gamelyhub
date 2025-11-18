@@ -625,7 +625,6 @@
                     if (typeof casinoGamesData !== 'undefined') {
                         const keys = Object.keys(casinoGamesData);
                         if (keys.length > 0) {
-                            console.log(`✓ casinoGamesData loaded successfully with ${keys.length} games`);
                             callback();
                             return;
                         }
@@ -652,7 +651,6 @@
                     return;
                 }
 
-                console.log(`✓ Game "${gameId}" found: "${game.title}"`);
                 loadGameDetails(game);
             });
         });

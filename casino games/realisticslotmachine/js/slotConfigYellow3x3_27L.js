@@ -487,7 +487,6 @@ var slotConfigYellow3x3_27L = {
         slotControls.buttons.push(slotControls.settingsButton);
         slotControls.settingsButton.create(760, -570, 0.5, 0.5);
         slotControls.settingsButton.addClickEvent(()=>{ 
-            console.log('settings click');
             scene.soundController.playClip('button_click');}, this);
         slotControls.settingsButton.button.setVisible(false);  
 

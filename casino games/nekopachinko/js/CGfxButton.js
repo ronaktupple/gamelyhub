@@ -14,9 +14,7 @@ function CGfxButton(iXPos,iYPos,oSprite, oParentContainer){
     var _oButton;
     var _oTween;
     var _oParent;
-    
-    
-    
+
     this._init =function(iXPos,iYPos,oSprite, oParentContainer){
         _bDisabled = false;
         

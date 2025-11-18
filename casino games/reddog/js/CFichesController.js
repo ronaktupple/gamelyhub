@@ -28,7 +28,6 @@ function CFichesController(){
         _oBetAmountText.textAlign = "center";
         _oBetAmountText.shadow = new createjs.Shadow("#000000", 2, 2, 2);
         _oTextAttach.addChild(_oBetAmountText);
-        
 
         _iTimeElaps=0;
         _iValue = _iPrevValue = 0;
@@ -92,8 +91,7 @@ function CFichesController(){
         }
         
         playSound("chip", 1, 0);
-        
-        
+
         _oBetAmountText.x = iXPos;
         _oBetAmountText.y = iYPos + 35;
         _oBetAmountText.text = _iValue.toFixed(2) + TEXT_CURRENCY;

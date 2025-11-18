@@ -59,7 +59,6 @@ function CCreditsPanel(){
         _oButLogo.y = CANVAS_HEIGHT/2;
         _oContainer.addChild(_oButLogo);
 
-        
         _oLink = new createjs.Text("www.codethislab.com", "30px " + SECONDARY_FONT, "#fff");
         _oLink.textAlign = "center";
         _oLink.textBaseline = "alphabetic";
@@ -89,8 +88,6 @@ function CCreditsPanel(){
     };
     
     this._init();
-    
-    
-};
 
+};
 

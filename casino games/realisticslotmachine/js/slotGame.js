@@ -50,18 +50,18 @@ class SlotGame extends Phaser.Scene{
          progressBox.fillRect((slotGame.config.width / 2) - 10 - 160, (slotGame.config.height / 2) - 10, 320, 50);
  
          this.load.on('progress', function (value) {
-             //console.log(value);
+             //
              progressBar.clear();
              progressBar.fillStyle(0xA16AF7, 1);
              progressBar.fillRect((slotGame.config.width / 2) -160, (slotGame.config.height / 2), 300 * value, 30);
          });
                      
          this.load.on('fileprogress', function (file) {
-             //console.log('fileprogress: '+ file.src);
+             //
          });
  
          this.load.on('complete', function () {
-             //console.log('complete');
+             //
              progressBar.destroy();
              progressBox.destroy();
          });
@@ -139,7 +139,6 @@ class SlotGame extends Phaser.Scene{
         this.payTable = [];
         slotConfig.payLines.forEach((pLine)=>{ this.payTable.push(new PayLine(this, pLine.line, pLine.pay, pLine.freeSpins, slotConfig.wild)); });
         this.payTableFull = createFullPaytable(this.payTable, this.useWild);
-        console.log('paytable full length: ' + this.payTableFull.length);  // this.payTableFull.forEach((pLine)=>{console.log(pLine);});
         this.scatterPayTable = [];
         
         // 3) create slot graphic
@@ -230,7 +229,6 @@ class SlotGame extends Phaser.Scene{
         var sA = new SequencedActions();
         sA.add((callBack) =>{spinReels(this.reels, slotConfig, callBack);}, this);
         sA.add((callBack) =>{
-            console.log('spin complete');
             this.soundController.stopAll(); 
             callBack();
         }, this);
@@ -283,7 +281,7 @@ class SlotGame extends Phaser.Scene{
         var timeTarget = this.cTime + ms;
         while (timeTarget > this.cTime)
         {
-          //  console.log('wait_ms: ' + (-this.cTime + timeTarget));
+          //  
             yield (timeTarget - this.cTime);
         }
     }
@@ -299,11 +297,9 @@ class SlotGame extends Phaser.Scene{
     // win show coroutine
     *winShowC(completeCallBack)
     {
-        console.log("win show start: " + this.spinCount);
         //3a ------ any win show event -------
         while(this.miniGame !== null || !this.guiController.hasNoPopUp())
         {
-            console.log("wait: this.miniGame and popups:  " + this.miniGame  + " : " + this.guiController.hasNoPopUp());
             yield null;
         }
 
@@ -338,13 +334,11 @@ class SlotGame extends Phaser.Scene{
         let bigWin = (winCoins > 0 && winCoins >= this.slotPlayer.minWin && this.slotPlayer.useBigWinCongratulation);
         if(bigWin)
         { 
-            console.log('big win congratulation : ' + winCoins);
             this.showBigWinMessage(winCoins);
             this.soundController.playClip('wincoins_clip', false);         
         }
         else if(winCoins > 0 )
         { 
-            console.log('win coins congratulation : ' + winCoins);
             this.showWinCoinsMessage(winCoins, slotConfig.winMessageTime);
             this.soundController.playClip('wincoins_clip', false);
         }
@@ -357,7 +351,6 @@ class SlotGame extends Phaser.Scene{
         if (winSpins > 0) 
         {
             if(winCoins > 0) yield* this.wait_ms(1000);   // delay between messages
-            console.log('win free spins congratulation : ' + winSpins);
             this.showWinFreeSpinsMessage(winSpins);
             setTimeout(()=>
             { 
@@ -433,7 +426,6 @@ class SlotGame extends Phaser.Scene{
 
         //if (logStatistic) SlotStatistic.PrintStatistic();
         completeCallBack();
-        console.log('win show end: ' + this.spinCount);
     }
 
     // start win show coroutine while waiting for player action
@@ -452,7 +444,7 @@ class SlotGame extends Phaser.Scene{
 
         while (!winShowEnd )
         {
-          //  console.log('wait win symbols show');
+          //  
             yield null;
         }
         completeCallBack(this.slotControls.auto || this.playFreeSpins);
@@ -469,13 +461,11 @@ class SlotGame extends Phaser.Scene{
     *loseShowC(completeCallBack)
     {
         this.soundController.playClip('lose_clip', false);
-        console.log('lose show, spinCount: ' + this.spinCount);
-        console.log('play lose sound');  // play sound loseSound
+        // play sound loseSound
         this.slotPlayer.addLevelProgress(this.loseSpinLevelProgress);
         this.playFreeSpins = (this.slotControls.autoPlayFreeSpins && this.slotControls.hasFreeSpin());
         this.reelSpin = false;
-        console.log('enable background music');  // restore background music
-        console.log('wait for popups'); 
+        // restore background music
         /*
         if (this.slotControls.auto && this.slotControls.autoSpinsCounter >= this.slotControls.autoSpinCount)
         {

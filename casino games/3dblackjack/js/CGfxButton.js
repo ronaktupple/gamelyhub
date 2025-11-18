@@ -26,8 +26,7 @@ function CGfxButton(iXPos,iYPos,oSprite){
         _oButton.regY = oSprite.height/2;
         _oButton.cursor = "pointer";
         s_oStage.addChild(_oButton);
-        
-        
+
         this._initListener();
     };
     
@@ -62,11 +61,9 @@ function CGfxButton(iXPos,iYPos,oSprite){
         if(_bDisable){
             return;
         }
-        
-        
+
         playSound("press_but", 1, false);
-        
-        
+
         _oButton.scaleX = 1;
         _oButton.scaleY = 1;
 
@@ -121,8 +118,7 @@ function CGfxButton(iXPos,iYPos,oSprite){
     this.getButtonImage = function(){
         return _oButton;
     };
-    
-    
+
     this.getX = function(){
         return _oButton.x;
     };

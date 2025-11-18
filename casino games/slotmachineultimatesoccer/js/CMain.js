@@ -19,8 +19,7 @@ function CMain(oData){
         if(s_bMobile === false){
             s_oStage.enableMouseOver(20);  
         }
-        
-        
+
         s_iPrevTime = new Date().getTime();
 
         createjs.Ticker.setFPS(30);

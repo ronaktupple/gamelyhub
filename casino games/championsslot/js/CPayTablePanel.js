@@ -12,8 +12,7 @@ function CPayTablePanel(){
         _oContainer = new createjs.Container();
         
         _pGenericTableOffset = {x:95, y:40.5};
-        
-        
+
         //LIST OF COMBO TEXT
         _pTable1Pos = {x:397, y:36}; 
         
@@ -47,7 +46,6 @@ function CPayTablePanel(){
                     false );
                 _aNumSymbolComboText[i][j] = oText;
 
-                
                 var szTag = 'paytable_symbol_'+(i+1);
                 var oSprite = s_oSpriteLibrary.getSprite(szTag);
                 _aIconSymbol[i+1][j] = createBitmap(oSprite);
@@ -61,7 +59,6 @@ function CPayTablePanel(){
         }
         
         _pTable2Pos = {x:745, y:36}; 
-        
 
         for(var i=0; i<4; i++){
             _aNumSymbolComboText[i+4] = new Array();
@@ -90,7 +87,6 @@ function CPayTablePanel(){
                     false );
                 _aNumSymbolComboText[i+4][j] = oText;
 
-               
                 var szTag = 'paytable_symbol_'+(i+5);
                 var oSprite = s_oSpriteLibrary.getSprite(szTag);
                 _aIconSymbol[i+5][j] = createBitmap(oSprite);

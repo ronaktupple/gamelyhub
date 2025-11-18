@@ -27,9 +27,7 @@ function CAlertPanel(){
                     " ",
                     true, true, false,
                     false );
-                    
-   
-        
+
         _oButRecharge = new CTextButton(CANVAS_WIDTH/2 -100,450,s_oSpriteLibrary.getSprite('but_game_bg'),TEXT_RECHARGE,FONT1,"#fff",20,0,_oContainer);
         _oButRecharge.addEventListener(ON_MOUSE_UP, this._onRecharge, this);
         

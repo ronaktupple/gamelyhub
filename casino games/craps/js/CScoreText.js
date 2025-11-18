@@ -1,8 +1,7 @@
 function CScoreText (iScore,x,y){
     
     var _oScoreText;
-    
-    
+
     this._init = function(iScore,x,y){
 
         _oScoreText = new createjs.Text("+"+iScore," 30px "+FONT1, "#ffffff");

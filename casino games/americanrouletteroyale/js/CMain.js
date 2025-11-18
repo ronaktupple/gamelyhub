@@ -21,8 +21,7 @@ function CMain(oData){
         }else{
             createjs.Touch.enable(s_oStage,true);
         }
-        
-        
+
         s_iPrevTime = new Date().getTime();
 
         createjs.Ticker.framerate = FPS;
@@ -49,7 +48,6 @@ function CMain(oData){
     this._initSounds = function(){
         Howler.mute(!s_bAudioActive);
 
-
         s_aSoundsInfo = new Array();
         s_aSoundsInfo.push({path: './sounds/',filename:'chip',loop:false,volume:1, ingamename: 'chip'});
         s_aSoundsInfo.push({path: './sounds/',filename:'click',loop:false,volume:1, ingamename: 'click'});
@@ -65,7 +63,6 @@ function CMain(oData){
             this.tryToLoadSound(s_aSoundsInfo[i], false);
         }
 
-        
     };  
     
     this.tryToLoadSound = function(oSoundInfo, bDelay){
@@ -102,12 +99,9 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
-        
-        
-    };
 
+    };
 
     this._loadImages = function(){
         s_oSpriteLibrary.init( this._onImagesLoaded,this._onAllImagesLoaded, this );

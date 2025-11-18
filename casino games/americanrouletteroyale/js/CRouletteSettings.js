@@ -17,7 +17,6 @@ function CRouletteSettings(){
         _aBlackNumbers=new Array(2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35);
         _aRedNumbers=new Array(1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36);
 
-
         _aFrameForBallSpin=new Array();
 
         _aFrameForBallSpin[0]=new Array();
@@ -146,8 +145,7 @@ function CRouletteSettings(){
                 iCont++;
             }
         }
-        
-        
+
         var iCurX = 158;
         var iCurY = 232;
         var iCont = 1;
@@ -158,7 +156,6 @@ function CRouletteSettings(){
             iCurX += WIDTH_CELL_NUMBER + 3;
         }
 
-        
         _aAttachFiches["col1"] = {x:872,y:194};
         _aAttachFiches["col2"] = {x:872,y:120};
         _aAttachFiches["col3"] = {x:872,y:46};

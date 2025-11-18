@@ -20,8 +20,7 @@ if (typeof Object.getPrototypeOf !== "function")
 (function(){
 	cr.logexport = function (msg)
 	{
-		if (window.console && window.console.log)
-			window.console.log(msg);
+			window.
 	};
 	cr.seal = function(x)
 	{
@@ -2904,7 +2903,6 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			this.canvas.addEventListener("webglcontextlost", function (ev) {
 				ev.preventDefault();
 				self.onContextLost();
-				console.log("[Construct 2] WebGL context lost");
 				window["cr_setSuspended"](true);		// stop rendering
 			}, false);
 			this.canvas.addEventListener("webglcontextrestored", function (ev) {
@@ -2916,7 +2914,6 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 				self.fx_tex[1] = null;
 				self.onContextRestored();
 				self.redraw = true;
-				console.log("[Construct 2] WebGL context restored");
 				window["cr_setSuspended"](false);		// resume rendering
 			}, false);
 			var i, len, j, lenj, k, lenk, t, s, l, y;
@@ -3010,7 +3007,6 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		if (typeof cr_is_preview !== "undefined")
 		{
 			if (this.isCocoonJs)
-				console.log("[Construct 2] In preview-over-wifi via CocoonJS mode");
 			if (window.location.search.indexOf("continuous") > -1)
 			{
 				cr.logexport("Reloading for continuous preview");
@@ -6555,7 +6551,6 @@ window["cr_setSuspended"] = function(s)
 		/*
 		if (this.runtime.glwrap)
 		{
-			console.log("Estimated VRAM at layout start: " + this.runtime.glwrap.textureCount() + " textures, approx. " + Math.round(this.runtime.glwrap.estimateVRAM() / 1024) + " kb");
 		}
 		*/
 		for (i = 0, len = created_instances.length; i < len; i++)
@@ -6590,7 +6585,6 @@ window["cr_setSuspended"] = function(s)
 		/*
 		if (this.runtime.glwrap)
 		{
-			console.log("Estimated VRAM at layout end: " + this.runtime.glwrap.textureCount() + " textures, approx. " + Math.round(this.runtime.glwrap.estimateVRAM() / 1024) + " kb");
 		}
 		*/
 		this.runtime.trigger(cr.system_object.prototype.cnds.OnLayoutEnd, null);
@@ -16141,8 +16135,6 @@ cr.plugins_.Browser = function(runtime)
 	{
 		if (typeof console === "undefined")
 			return;
-		if (type_ === 0 && console.log)
-			console.log(msg_.toString());
 		if (type_ === 1 && console.warn)
 			console.warn(msg_.toString());
 		if (type_ === 2 && console.error)

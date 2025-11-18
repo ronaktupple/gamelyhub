@@ -63,8 +63,7 @@ function CGame(oData){
     
         _oFichesContainer = new createjs.Container();
         s_oStage.addChild(_oFichesContainer);
-        
-        
+
         _oStartPoint = {x: CANVAS_WIDTH/2, y: CANVAS_HEIGHT/2 - 30};                      
         
         this._setCards();
@@ -225,8 +224,7 @@ function CGame(oData){
         }
      
         _oCurCard.showCard();
-        
-        
+
         _iCurMoney += _iAmount;
         _iCurCash -= _iAmount;
         
@@ -297,9 +295,7 @@ function CGame(oData){
         this._calculateStats();
 
         _oInterface.refreshMoney(_iCurMoney);
-        
-        
-        
+
         _iCurBet = 0;
         _oFiches.reset();
         
@@ -345,7 +341,6 @@ function CGame(oData){
         _oEndPanel.show();
     };
 
-    
     this.update = function(){
         
     };

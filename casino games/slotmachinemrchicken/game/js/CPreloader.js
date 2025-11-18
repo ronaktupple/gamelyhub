@@ -78,8 +78,7 @@ function CPreloader() {
         _oLoadingText.textBaseline = "alphabetic";
         _oLoadingText.textAlign = "center";
         _oContainer.addChild(_oLoadingText);
-        
-        
+
         _oFade = new createjs.Shape();
         _oFade.graphics.beginFill("black").drawRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
         _oContainer.addChild(_oFade);
@@ -88,8 +87,7 @@ function CPreloader() {
             createjs.Tween.removeTweens(_oFade);
             _oContainer.removeChild(_oFade);
         });        
-        
-        
+
     };
 
     this.refreshLoader = function (iPerc) {

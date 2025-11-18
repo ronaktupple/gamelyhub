@@ -17,8 +17,7 @@ function CWheel(){
     var _iMouseStartY;
     var _iMouseCurY;
     var _iStrenght;
-    
-    
+
     var _aReels;
     
     var _oWheel;
@@ -132,7 +131,6 @@ function CWheel(){
     this.attachWheel = function(iX, iY, oParentContainer){
 
         _iCurReelVisualized = 0;
-
 
         _oWheel.x = iX;
         _oWheel.y = iY;
@@ -263,7 +261,6 @@ function CWheel(){
         var iTrueRotation = iWheelHeight - (iFrameToReach * iFrameHeight + iOffsetFrame);
         var iRotValue = iWheelHeight*iNumSpinFake + iTrueRotation;
         _iFinalRotationToAdd = -iRotValue;      /// BACKWARD ROTATION 
-        
 
         _iState = WHEEL_MOVEMENT;
         _iStartRotationToAdd = _iCurRotation;   
@@ -282,15 +279,12 @@ function CWheel(){
     };
     
     this.update = function(){
-        
-        
 
         for(var i=0; i<_aReels.length;i++){
             _aReels[i].element.update(_iCurRotation);
         }
 
         _aReels[_iCurReelVisualized].element.render();
-        
 
     };
     

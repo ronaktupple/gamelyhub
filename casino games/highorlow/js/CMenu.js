@@ -50,7 +50,6 @@ function CMenu(){
         }
         
         if (_fRequestFullScreen && screenfull.isEnabled){
-           
 
             _oButFullscreen = new CToggle(_pStartPosFullscreen.x,_pStartPosFullscreen.y,oSprite,s_bFullscreen,true);
             _oButFullscreen.addEventListener(ON_MOUSE_UP, this._onFullscreenRelease, this);
@@ -102,8 +101,7 @@ function CMenu(){
         
         s_oMenu = null;
     };
-    
-    
+
     this._onAudioToggle = function(){
         Howler.mute(s_bAudioActive);
         s_bAudioActive = !s_bAudioActive;
@@ -134,7 +132,6 @@ function CMenu(){
 	sizeHandler();
     };
 
-    
     this._onCredits = function(){
         new CCreditsPanel();
     };

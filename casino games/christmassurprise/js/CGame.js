@@ -19,8 +19,7 @@ function CGame(oData){
     var _oPayTable;
     var _oBlock;
     var _oParent;
-    
-    
+
     this._init = function(){
 
         _iNumCards = NUM_CARDS;
@@ -78,8 +77,7 @@ function CGame(oData){
         
         this.refreshButtonPos();
     };
-    
-    
+
     this.unload = function(){
         _oInterface.unload();
         if(_oEndPanel !== null){

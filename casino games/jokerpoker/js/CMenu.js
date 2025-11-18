@@ -37,8 +37,7 @@ function CMenu(){
         }else{
              _pStartPosFullscreen = {x:(oSprite.height/2) + 10,y:(oSprite.height/2) + 10};
         }
-        
-        
+
         var doc = window.document;
         var docEl = doc.documentElement;
         _fRequestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
@@ -50,7 +49,6 @@ function CMenu(){
         
         if (_fRequestFullScreen && screenfull.isEnabled){
             oSprite = s_oSpriteLibrary.getSprite('but_fullscreen');
-           
 
             _oButFullscreen = new CToggle(_pStartPosFullscreen.x,_pStartPosFullscreen.y,oSprite,s_bFullscreen,true);
             _oButFullscreen.addEventListener(ON_MOUSE_UP, this._onFullscreenRelease, this);
@@ -73,8 +71,7 @@ function CMenu(){
         if(SHOW_CREDITS){
             _oButCredits.unload();
         }
-         
-        
+
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             _oAudioToggle.unload();
             _oAudioToggle = null;

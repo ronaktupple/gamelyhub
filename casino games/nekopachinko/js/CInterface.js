@@ -7,7 +7,6 @@ function CInterface(oForeGroundContainer){
     var _oPausePanel;
     var _oGUIExpandible;
     var _oBottomPanel;
-    
 
     var _fRequestFullScreen = null;
     var _fCancelFullScreen = null;

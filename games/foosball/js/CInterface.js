@@ -287,7 +287,6 @@ function CInterface() {
         _oButFullscreen.setActive(s_bFullscreen);
     };
 
-
     this._onFullscreen = function() {
         if (s_bFullscreen) {
             _fCancelFullScreen.call(window.document);

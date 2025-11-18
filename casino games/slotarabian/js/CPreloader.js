@@ -87,8 +87,7 @@ function CPreloader() {
             createjs.Tween.removeTweens(_oFade);
             _oContainer.removeChild(_oFade);
         });        
-        
-        
+
     };
 
     this.refreshLoader = function (iPerc) {

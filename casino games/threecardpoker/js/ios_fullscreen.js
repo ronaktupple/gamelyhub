@@ -60,27 +60,27 @@ function __iosResize(){
             case 2:{
                 switch(window.innerWidth){
                     case 568:{
-                        //console.log("landscape");    
-                        //console.log("iPhone 5/5s/5c/se"); 
+                        //
+                        //
 
                         if( window.innerHeight === 320 ){
-                            //console.log("fullscreen");   
+                            //
                             //this.hideIOSFullscreenPanel();
                         }else{                         
                             jQuery(".xxx-game-iframe-full").addClass("xxx-game-iframe-iphone-se");
-                            //console.log("windowed"); 
+                            //
                            // this.showIOSFullscreenPanel();
                         } 
                     }break;
                     case 667:{
-                        //console.log("landscape");    
-                        //console.log("iPhone 6/6s/7/8"); 
+                        //
+                        //
 
                         if( window.innerHeight === 375 ){
-                          //  console.log("fullscreen");   
+                          //  
                             hideIOSFullscreenPanel();
                         }else{
-                            //console.log("windowed"); 
+                            //
                             showIOSFullscreenPanel();
                         }                      
                     }break;
@@ -92,11 +92,11 @@ function __iosResize(){
             case 3:{
                 switch(window.innerWidth){
                     case 736:{
-                        //console.log("landscape");    
-                        //console.log("iPhone 6/6s/7/8 plus");    
+                        //
+                        //
 
                         if( window.innerHeight === 414 ){
-                          //  console.log("fullscreen");   
+                          //  
                             hideIOSFullscreenPanel();
                         }else{
                             showIOSFullscreenPanel();
@@ -104,8 +104,8 @@ function __iosResize(){
                     }break;
                     // iphone X
                     case 724:{
-                      //  console.log("landscape");    
-                      //  console.log("iPhone X"); 
+                      //  
+                      //  
 
                         if( window.innerHeight === 375 ){
                             hideIOSFullscreenPanel();
@@ -140,8 +140,7 @@ function iosInIframe() {
        return true;
    }
 }
-    
-    
+
 $(document).ready(function () {
     if(platform && platform.product === "iPhone" && !iosInIframe()){
         buildIOSFullscreenPanel();

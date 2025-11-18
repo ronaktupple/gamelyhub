@@ -19,11 +19,9 @@ function CMain(oData){
         if(s_bMobile === false){
             s_oStage.enableMouseOver(20);  
         }
-        
-        
+
         s_iPrevTime = new Date().getTime();
 
-        
 	createjs.Ticker.addEventListener("tick", this._update);
         createjs.Ticker.framerate = FPS;
 	
@@ -104,10 +102,8 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
-        
-        
+
     };
     
     this._loadImages = function(){
@@ -126,8 +122,7 @@ function CMain(oData){
         s_oSpriteLibrary.addSprite("spin","./sprites/spin.png");
         s_oSpriteLibrary.addSprite("audio_icon","./sprites/audio_icon.png");
         s_oSpriteLibrary.addSprite("highlight","./sprites/highlight.png");
-        
-        
+
         for(var i=1;i<NUM_SYMBOLS+1;i++){
             s_oSpriteLibrary.addSprite("symbol_"+i,"./sprites/symbol_"+i+".png");
             s_oSpriteLibrary.addSprite("symbol_"+i+"_anim","./sprites/symbol_"+i+"_anim.png");

@@ -21,8 +21,7 @@ function CCard(iX,iY,oSpriteSheet,oContainer,szFotogram,iRank,iSuit){
         _szFotogram = szFotogram;
         _iRank = iRank;
         _iSuit = iSuit;
-        
-        
+
         _oCardSprite = createSprite(oSpriteSheet,"back",CARD_WIDTH/2,CARD_HEIGHT/2,CARD_WIDTH,CARD_HEIGHT);
         _oCardSprite.x = iX;
         _oCardSprite.y = iY;

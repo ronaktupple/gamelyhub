@@ -116,7 +116,6 @@ function CFichesController(oContainer){
                 }
         }
 
-
         return iFicheValue*iNumIteration;
     };
 		

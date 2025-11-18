@@ -45,7 +45,6 @@ function CBonusPanel(){
                     true, true, false,
                     false );
 
-        
         var oTextHelp = new CTLText(_oContainer, 
                     350, 70, 310, 50, 
                     56, "left", "#fff", FONT_GAME, 1,

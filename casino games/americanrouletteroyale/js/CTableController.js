@@ -55,8 +55,7 @@ function CTableController(){
             oBut.addEventListener(ON_MOUSE_OVER, this._onBetNumberOver, this);
             oBut.addEventListener(ON_MOUSE_OUT,this._onBetNumberOut,this);
         }
-        
-        
+
         var oSprite = s_oSpriteLibrary.getSprite('hit_area_number');
 
         var iCurX = 128;
@@ -116,9 +115,7 @@ function CTableController(){
                 iCurY -= HEIGHT_CELL_NUMBER + 3;
             }
         }
-        
-        
-        
+
 	/********************COUPLE BET HORIZONTAL***********************/
         var iCurX = 128;
         var iCurY = 157;
@@ -180,8 +177,7 @@ function CTableController(){
         }
 
         /******************QUADRUPLE BET******************/
-        
-        
+
         oBut = new CBetTableButton(96,232,s_oSpriteLibrary.getSprite('hit_area_small'),"bet_0_1_2_3_37",_oContainer,false);
         oBut.addEventListener(ON_MOUSE_DOWN, this._onBetPress, this);
         if(s_bMobile === false){
@@ -226,8 +222,7 @@ function CTableController(){
             iCont += 3;
             iCurX += WIDTH_CELL_NUMBER + 3;
         }
-        
-       
+
         /****************COL BET*****************/
         
         oBut = new CBetTableButton(872,194,s_oSpriteLibrary.getSprite('hit_area_number'),"col1",_oContainer,true);
@@ -323,8 +318,7 @@ function CTableController(){
             }else{
                 iCurY -= oSprite.height + 3;
             }
-            
-            
+
         }
 
         /*********************OTHER ENLIGHTS*****************/

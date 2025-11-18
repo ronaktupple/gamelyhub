@@ -191,8 +191,7 @@ function CReelColumn(iIndex,iXPos,iYPos,iDelay){
             var iValue = s_oTweenController.tweenValue( _iCurStartY, _iFinalY, fLerpY);
             _oContainer.y = iValue;	
         }
-        
-        
+
     };
 
     this.update = function(iCurIndexToStop) {

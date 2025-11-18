@@ -6,8 +6,7 @@ function CManekinekoAnim(oParentContainer){
     var _oContainer;
     var _oHead;
     var _oArm;
-    
-    
+
     this._init = function(oParentContainer){
         _iHeadAnimationFrequency = 8000;
         
@@ -48,8 +47,7 @@ function CManekinekoAnim(oParentContainer){
                         26,26,26,26,26,26,26,26,26,26,26,27,28,29,30,31,32];
         oOpenedWaryAndClose.frames = aFrames;
         ////////////////////////////
-        
-        
+
         /////FROM CLOSED STATE
         var oStraightLeft = {frames:[15], next:"state_close", speed:0.01};
         
@@ -97,8 +95,7 @@ function CManekinekoAnim(oParentContainer){
                                         straight_left: oStraightLeft,
                                         straight_right: oStraightRight,
                                         furtively: oFurtively
-                                        
-                                        
+
                                     }
                    };
                    
@@ -107,7 +104,6 @@ function CManekinekoAnim(oParentContainer){
         _oHead.on("animationend", this._onAnimationHeadEnd, this);
         _oHead.y = -9;
         _oContainer.addChild(_oHead);
-
 
         var oSprite = s_oSpriteLibrary.getSprite('arm');
         var iWidth = oSprite.width/10;
@@ -195,5 +191,4 @@ function CManekinekoAnim(oParentContainer){
     _oParent = this;
     this._init(oParentContainer);
 }
-
 

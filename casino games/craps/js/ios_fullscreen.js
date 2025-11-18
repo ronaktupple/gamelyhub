@@ -54,35 +54,31 @@ function __iosResize(){
 
     window.scrollTo(0, 0);
 
-	console.log(window.devicePixelRatio);
-	console.log(window.innerWidth);
-	console.log(window.innerHeight);
-
     if( platform.product === "iPhone" ){
         switch(window.devicePixelRatio){
             case 2:{
                 switch(window.innerWidth){
                     case 568:{
-                        //console.log("iPhone 5/5s/5c/se"); 
+                        //
                         if( window.innerHeight === 320 ){
-                            //console.log("fullscreen");   
+                            //
                             //this.hideIOSFullscreenPanel();
                         }else{         
                             document.querySelector(".xxx-game-iframe-full").classList.add('xxx-game-iframe-iphone-se');                           
                         } 
                     }break;
                     case 667:{
-                        //console.log("iPhone 6/6s/7/8"); 
+                        //
                         if( window.innerHeight === 375 ){
-                          //  console.log("fullscreen");   
+                          //  
                             hideIOSFullscreenPanel();
                         }else{
-                            //console.log("windowed"); 
+                            //
                             showIOSFullscreenPanel();
                         }                      
                     }break;
                     case 808:{
-                         //console.log("iPhone Xr"); 
+                         //
                         if( window.innerHeight === 414 ){
                             hideIOSFullscreenPanel();
                         }else{
@@ -97,9 +93,9 @@ function __iosResize(){
             case 3:{
                 switch(window.innerWidth){
                     case 736:{ 
-                        //console.log("iPhone 6/6s/7/8 plus");    
+                        //
                         if( window.innerHeight === 414 ){
-                          //  console.log("fullscreen");   
+                          //  
                             hideIOSFullscreenPanel();
                         }else{
                             showIOSFullscreenPanel();
@@ -107,7 +103,7 @@ function __iosResize(){
                     }break;
                     // iphone X
                     case 724:{    
-                      //  console.log("iPhone X/Xs"); 
+                      //  
                         if( window.innerHeight === 375 ){
                             hideIOSFullscreenPanel();
                         }else{
@@ -115,7 +111,7 @@ function __iosResize(){
                         }                          
                     }break; 
                     case 808:{
-                         //console.log("iPhone Xs Max"); 
+                         //
                         if( window.innerHeight === 414 ){
                             hideIOSFullscreenPanel();
                         }else{

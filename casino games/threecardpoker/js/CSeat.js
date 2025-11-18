@@ -67,7 +67,6 @@ function CSeat(){
 
     };
 
-    
     this.clearBet = function(){
         _iBetAnte = 0;
         _iBetPlay = 0;

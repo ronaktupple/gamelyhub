@@ -115,8 +115,7 @@ function CInterface(iCurBet,iTotBet,iMoney){
         var iPadding = 11;
         var iSpriteHeight = 32;
         var iYOffset = 84 + iHalfButHeight;
-        
-        
+
         //LINE 4
         var oBut = new CBetBut( 319 + oSprite.width/2, iYOffset,oSprite,true);
         oBut.addEventListenerWithParams(ON_MOUSE_UP, this._onBetLineClicked, this,4);

@@ -33,9 +33,7 @@ function CPayTablePanel(){
                     10, 5,
                     TEXT_HELP_WILD,
                     true, true, true,false );        
-                    
 
-        
         _aPages[0] = oContainerPage;
         
         //ATTACH PAGE 2
@@ -52,18 +50,14 @@ function CPayTablePanel(){
                     15, 5,
                     TEXT_HELP_BONUS1,
                     true, true, true, false );    
-                    
-              
-        
+
         var oText2 = new CTLText(oContainerPage, 
                     280, 270, 460, 122, 
                     40, "center", "#ffff00", FONT_GAME, 1,
                     15, 5,
                     TEXT_HELP_BONUS2,
                     true, true, true, false );    
-                
 
-        
         _aPages[1] = oContainerPage;
         
         //ATTACH PAGE 3
@@ -80,14 +74,11 @@ function CPayTablePanel(){
                     15, 5,
                     TEXT_HELP_FREESPIN,
                     true, true, true, false );   
-                
 
-        
         _aPages[2] = oContainerPage;
         
         _oCurPage = _aPages[_iCurPage];
-        
-        
+
         //ATTACH HIT AREA
         _oHitArea = new createjs.Shape();
         _oHitArea.graphics.beginFill("rgba(0,0,0,0.01)").drawRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
@@ -125,7 +116,6 @@ function CPayTablePanel(){
         
         var iFontSize = 125;        
 
-
         var aPos = [{x:435,y:158},
                     {x:765,y:158},
                     {x:1087,y:158},
@@ -133,8 +123,7 @@ function CPayTablePanel(){
                     {x:765,y:340},
                     {x:1087,y:340},
                     {x:435,y:524}];
-        
-        
+
         for(var i=0; i < (s_aSymbolWin.length-3); i++){
             var aMultipliers = s_aSymbolWin[i];
 
@@ -145,14 +134,12 @@ function CPayTablePanel(){
             oContainerGroup.x = aPos[i].x;
             oContainerGroup.y =  aPos[i].y;
             _oContainer.addChild(oContainerGroup)
-            
 
             var iY = 0;
             for( var j = aMultipliers.length-1; j >=0 ; j-- ){                       
                 if( aMultipliers[j] === 0 ){
                     continue;
                 }                
-                
 
                 var oTextMult = new CTLText(oContainerGroup, 
                     0,iY , 50, 30, 
@@ -174,8 +161,7 @@ function CPayTablePanel(){
 
                 _aWinComboText[i][j] = oText;
             }
-            
-            
+
             oContainerGroup.regY = oContainerGroup.getBounds().height/2;
         }
         
@@ -187,8 +173,7 @@ function CPayTablePanel(){
         }else{
             _iCurPage++;
         }
-        
-        
+
         _oCurPage.visible = false;
         _aPages[_iCurPage].visible = true;
         _oCurPage = _aPages[_iCurPage];
@@ -200,8 +185,7 @@ function CPayTablePanel(){
         }else{
             _iCurPage--;
         }
-        
-        
+
         _oCurPage.visible = false;
         _aPages[_iCurPage].visible = true;
         _oCurPage = _aPages[_iCurPage];
@@ -244,7 +228,6 @@ function CPayTablePanel(){
            iSymbolValue === FREESPINS_SYMBOL ){
             return;
         }     
-
 
         _aWinComboText[iSymbolValue][iNumCombo-1].setColor("#ff0000");
         

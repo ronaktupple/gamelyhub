@@ -22,7 +22,6 @@ function CPayTablePanel(){
                     true, true, true,
                     false);
 
-        
         _oBonusText = new CTLText(_oContainer, 
                     908, 286, 210, 130, 
                     21, "center", "#ffde00", FONT_GAME, 1,
@@ -30,9 +29,7 @@ function CPayTablePanel(){
                     TEXT_HELP_BONUS,
                     true, true, true,
                     false);
-                    
- 
-        
+
         _oContainer.visible = false;
         s_oStage.addChild(_oContainer);
         
@@ -68,8 +65,7 @@ function CPayTablePanel(){
             for(var k=0;k<s_aSymbolWin[i].length;k++){
                 aSymbolPayouts[k] = s_aSymbolWin[i][k];
             }
-                    
-            
+
             do{
                 var iIndex = aSymbolPayouts.indexOf(0);
                 if(iIndex !== -1){

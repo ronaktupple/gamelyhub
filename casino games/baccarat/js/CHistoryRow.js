@@ -35,8 +35,7 @@ function CHistoryRow(iX,iY,iValue1,iValue2,iWinner,oSpriteCell,oParentContainer)
         if(iWinner > 0){
             aCell[iWinner-1].gotoAndStop("state_win");
         }
-        
-        
+
         var oText1 = new createjs.Text(iValue1,"24px "+FONT_GAME_1, "#fff");
         oText1.x = aCell[0].x + oSpriteCell.width/4;
         oText1.y = aCell[0].y + oSpriteCell.height/2;

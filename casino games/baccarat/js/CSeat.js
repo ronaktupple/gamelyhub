@@ -66,7 +66,6 @@ function CSeat(){
 
     };
 
-    
     this.clearBet = function(){
         _iBetTie = 0;
         _iBetBanker = 0;
@@ -87,7 +86,6 @@ function CSeat(){
         _iCredit += iCreditToAdd;
     };
 
-    
     this.bet = function(iFicheValue,iTypeBet,iFicheIndex){
         var iValue = 0;
         switch(iTypeBet){

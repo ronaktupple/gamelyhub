@@ -34,8 +34,7 @@ function CMain(oData){
 
         //ADD PRELOADER
         _oPreloader = new CPreloader();
-		
-	
+
     };
     
     this.preloaderReady = function(){
@@ -57,7 +56,6 @@ function CMain(oData){
     
     this._initSounds = function(){
         Howler.mute(!s_bAudioActive);
-
 
         s_aSoundsInfo = new Array();
         s_aSoundsInfo.push({path: './sounds/',filename:'card',loop:false,volume:1, ingamename: 'card'});
@@ -112,12 +110,9 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
-        
-        
-    };
 
+    };
 
     this._loadImages = function(){
         s_oSpriteLibrary.init( this._onImagesLoaded,this._onAllImagesLoaded, this );

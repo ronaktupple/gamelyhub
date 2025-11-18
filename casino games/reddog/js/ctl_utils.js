@@ -14,7 +14,6 @@ $(window).resize(function() {
 });
 
 function trace(szMsg){
-    console.log(szMsg);
 }
 
 function getSize(Name) {
@@ -98,7 +97,6 @@ function isMobile(){
     }  
 };
 
-
 function isIOS() {
     if(isIpad()){
         return true;
@@ -122,7 +120,6 @@ function isIOS() {
     s_bIsIphone = false;
     return false; 
 }
-
 
 function getIOSWindowHeight() {
     // Get zoom level of mobile Safari
@@ -456,7 +453,6 @@ function ctlArcadePause(){
     }
 }
 
-
 function getParamValue(paramName){
     var url = window.location.search.substring(1);
     var qArray = url.split('&'); 
@@ -528,7 +524,6 @@ function fullscreenHandler(){
         s_oMenu.resetFullscreenBut();
     }
 }
-
 
 if (screenfull.isEnabled) {
     screenfull.on('change', function(){

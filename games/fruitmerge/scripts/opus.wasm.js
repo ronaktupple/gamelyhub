@@ -257,7 +257,6 @@ if (Module["ENVIRONMENT"]) {
     ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIRONMENT_IS_WORKER
 }
 if (ENVIRONMENT_IS_NODE) {
-    if (!Module["print"]) Module["print"] = console.log;
     if (!Module["printErr"]) Module["printErr"] = console.warn;
     var nodeFS;
     var nodePath;
@@ -361,7 +360,6 @@ if (ENVIRONMENT_IS_NODE) {
     }
     if (typeof console !== "undefined") {
         if (!Module["print"]) Module["print"] = function shell_print(x) {
-            console.log(x)
         };
         if (!Module["printErr"]) Module["printErr"] = function shell_printErr(x) {
             console.warn(x)

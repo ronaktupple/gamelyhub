@@ -13,7 +13,6 @@ function CMsgBox(){
         _oBg = createBitmap(s_oSpriteLibrary.getSprite('msg_box'));
         _oGroup.addChild(_oBg);
 
-
         _oMsgText = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-210, 280, 400, 200, 
                     34, "center", "#ffffff", FONT_GAME_1, 1,
@@ -22,8 +21,6 @@ function CMsgBox(){
                     true, true, true,
                     false );
 
-        
-        
     };
     
     this.unload = function(){

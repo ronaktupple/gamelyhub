@@ -48,7 +48,6 @@ function CGame(oData){
         _iTimeElaps = 0;
         _iAdsCounter = 0;
         _iCurIndexDeck = 0;
-        
 
         s_oTweenController = new CTweenController();
         
@@ -212,8 +211,7 @@ function CGame(oData){
         _oSeat.increaseCredit(iWinAmount);
         _iGameCash -= iWinAmount;
         _oInterface.displayMsg(TEXT_DISPLAY_MSG_SHOWDOWN,TEXT_DISPLAY_MSG_PLAYER_WIN + " " + iWinAmount + TEXT_CURRENCY);
-        
-       
+
         _oSeat.initMovement(BET_ANTE,_oReceiveWinOffset.getX(),_oReceiveWinOffset.getY());
         _oSeat.initMovement(BET_PLAY,_oReceiveWinOffset.getX(),_oReceiveWinOffset.getY());
         
@@ -232,8 +230,7 @@ function CGame(oData){
         }else{
             _oSeat.initMovement(BET_ANTE,_oFichesDealerOffset.getX(),_oFichesDealerOffset.getY());
         }
-        
-        
+
         if(!bFold){
             _oSeat.initMovement(BET_PLAY,_oFichesDealerOffset.getX(),_oFichesDealerOffset.getY());
         }
@@ -357,7 +354,6 @@ function CGame(oData){
             return;
         }
 
-
         var iFicheValue = FICHES_VALUE[iFicheIndex];
         
         var iTotBet;
@@ -405,7 +401,6 @@ function CGame(oData){
             this._onEndHand();
             return;
         }
-        
 
         var iFicheValue = FICHES_VALUE[iFicheIndex];
         
@@ -422,9 +417,7 @@ function CGame(oData){
             _oInterface.displayMsg(TEXT_NO_MONEY);     
             return;
         }
-        
-        
-        
+
         _oSeat.decreaseCredit(iFicheValue);
         _iGameCash += iTotBet;
         _oSeat.betPairPlus(iFicheValue);
@@ -528,8 +521,7 @@ function CGame(oData){
         _oSeat.setPrevBet();
         
         playSound("card",1,false);
-        
-        
+
 	_bFold = false;
         this.changeState(STATE_GAME_DEALING);
     };
@@ -578,7 +570,6 @@ function CGame(oData){
         return aPlayerCards;
     };
 
-    
     this._checkDeckLength = function(){
         if(_iCurIndexDeck >= _aCardDeck.length){
             _aCardDeck = s_oGameSettings.getShuffledCardDeck();
@@ -704,8 +695,7 @@ function CGame(oData){
                     break;
             }
         }
-        
-	
+
     };
     
     s_oGame = this;

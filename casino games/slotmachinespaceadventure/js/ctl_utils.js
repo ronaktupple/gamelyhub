@@ -14,7 +14,6 @@ $(window).resize(function() {
 });
 
 function trace(szMsg){
-    console.log(szMsg);
 }
 
 function isIOS() {
@@ -34,8 +33,7 @@ function isIOS() {
             
     while (iDevices.length) {
         if (navigator.platform === iDevices.pop()){
-            
-                
+
             return true; 
         } 
     } 
@@ -61,8 +59,6 @@ function isMobile(){
     
     return jQuery.browser.mobile;
 }
-
-
 
 function getSize(Name) {
        var size;
@@ -482,12 +478,9 @@ function getParamValue(paramName){
                                 s_bFocus = true;
 			}
 		}
-        
-        
-                
+
     }
 })();
-
 
 function fullscreenHandler(){
     if (!ENABLE_FULLSCREEN || !screenfull.isEnabled){
@@ -504,9 +497,6 @@ function fullscreenHandler(){
         s_oMenu.resetFullscreenBut();
     }
 }
-
-
-
 
 if (screenfull.isEnabled) {
     screenfull.on('change', function(){

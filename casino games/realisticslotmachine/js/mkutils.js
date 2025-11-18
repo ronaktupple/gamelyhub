@@ -198,7 +198,7 @@ class Coroutiner{
     {
         this.complete = true;
         this.scene.updateEvent.remove(this.update);
-       // console.log('stop generator');
+       // 
     }
 
     update(time, delta)
@@ -390,7 +390,7 @@ class SceneButton
         if(this.isSwitch) this.pressed = !this.pressed;  
         this.button.setTexture(this.spriteHover);
         this.pointerDownEvent.invoke();
-         // console.log('button down', arguments);
+         // 
     }
 
     pointerOver() 
@@ -432,7 +432,6 @@ class SceneButton
         this.button.depth = depth;
     }
 
-  
 }
 
 class StateMachine
@@ -440,13 +439,11 @@ class StateMachine
     initialize(startingState)
     {
         this.currentState = startingState;
-        console.log(this.currentState.toString());
         this.currentState.enterFrom(null);
     }
 
     changeState(newState)
     {
-        console.log('ChangeState; oldstate: ' + ((this.currentState === null) ? 'null': this.currentState.toString()) + '; newState: ' + ((newState === null) ? 'null' : newState.toString()));
         var old = this.currentState;
         this.currentState.exitTo(newState);
         this.currentState = newState;
@@ -512,8 +509,7 @@ class SoundController
     }
 
     stopSounds(){
-        console.log('this.sounds.length: ' + this.sounds.length)
-        this.sounds.forEach((s)=>{console.log('sound: ' + s); this.scene[s].stop();});
+        this.sounds.forEach((s)=>{this.scene[s].stop();});
     }
 
     _refreshSoundSources()
@@ -619,7 +615,7 @@ class GuiController
 
     closePopUp(popUp)
     {
-        // console.log('this.popups.length before close: ' + this.popups.length)
+        // 
         for(var i = 0; i < this.popups.length; i++)
         {
             if(this.popups[i] == popUp)
@@ -628,7 +624,7 @@ class GuiController
             }
         }
         popUp.wCont.destroy();
-        // console.log('this.popups.length after close: ' + this.popups.length)
+        // 
     }
 
     setInteractable(interactable)
@@ -679,5 +675,4 @@ class PopUpController
         this.wCont.add(guiObject);
     }
 }
-
 

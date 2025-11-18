@@ -28,7 +28,6 @@ function CGameOver(){
                     true, true, true,
                     false );
 
-        
         _ButRecharge = new CTextButton(CANVAS_WIDTH/2 + 170,510,s_oSpriteLibrary.getSprite('but_bg'),TEXT_RECHARGE,FONT1,"#fff",18,"center",s_oStage);
         _ButRecharge.addEventListener(ON_MOUSE_UP, this._onRecharge, this);
         _oContainer.addChild(_ButRecharge.getSprite());

@@ -147,8 +147,7 @@ function CFicheBut(iXPos,iYPos,oSprite){
     this.getButtonImage = function(){
         return _oButton;
     };
-    
-    
+
     this.getX = function(){
         return _oButton.x;
     };

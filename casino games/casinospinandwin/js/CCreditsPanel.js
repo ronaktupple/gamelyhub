@@ -37,7 +37,6 @@ function CCreditsPanel(){
         _oPanelContainer.y = CANVAS_HEIGHT + oSprite.height/2;  
         _pStartPanelPos = {x: _oPanelContainer.x, y: _oPanelContainer.y};
         new createjs.Tween.get(_oPanelContainer).to({y:CANVAS_HEIGHT/2 - 40},500, createjs.Ease.quartIn);
-        
 
         var iWidth = oSprite.width-230;
         var iHeight = 70;
@@ -116,8 +115,6 @@ function CCreditsPanel(){
     };
     
     this._init();
-    
-    
-};
 
+};
 

@@ -53,7 +53,6 @@ function CMain(oData){
     this._initSounds = function(){
         Howler.mute(!s_bAudioActive);
 
-
         s_aSoundsInfo = new Array();
         s_aSoundsInfo.push({path: './sounds/',filename:'win',loop:false,volume:1, ingamename: 'win'});
         s_aSoundsInfo.push({path: './sounds/',filename:'press_but',loop:false,volume:1, ingamename: 'press_but'});
@@ -111,12 +110,9 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
-        
-        
-    };
 
+    };
 
     this._loadImages = function(){
         s_oSpriteLibrary.init( this._onImagesLoaded,this._onAllImagesLoaded, this );
@@ -165,7 +161,7 @@ function CMain(oData){
     this._onImagesLoaded = function(){
         _iCurResource++;
         var iPerc = Math.floor(_iCurResource/RESOURCE_TO_LOAD *100);
-        //console.log("PERC: "+iPerc);
+        //
         _oPreloader.refreshLoader(iPerc);
     };
     
@@ -254,7 +250,6 @@ function CMain(oData){
             s_iCntFps = 0;
         }
 
-        
         if(_iState === STATE_GAME){
             _oGame.update();
         }

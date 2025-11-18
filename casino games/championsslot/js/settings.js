@@ -40,7 +40,6 @@ var REEL_OFFSET_Y = 100;
 var ON_RELEASE_YES = 0;
 var ON_RELEASE_NO = 1;
 
-
 var NUM_REELS = 3;
 var NUM_ROWS = 3;
 var NUM_SYMBOLS = 8;

@@ -33,8 +33,7 @@ function CCreditsPanel(oEaseInInfos,oEaseOutInfos){
         _oPanelContainer.x = CANVAS_WIDTH/2;
         _oPanelContainer.y = -oSprite.height/2;  
         _pStartPanelPos = {x: _oPanelContainer.x, y: _oPanelContainer.y};
-        
-        
+
         var iWidth = oSprite.width;
         var iHeight = 42;
         var iX = 0;
@@ -57,7 +56,6 @@ function CCreditsPanel(oEaseInInfos,oEaseOutInfos){
                     true, true, false,
                     false );
 
-        
         var oSprite = s_oSpriteLibrary.getSprite('ctl_logo');
         _oLogo = createBitmap(oSprite);
         
@@ -90,8 +88,6 @@ function CCreditsPanel(oEaseInInfos,oEaseOutInfos){
     };
     
     this._init();
-    
-    
-};
 
+};
 

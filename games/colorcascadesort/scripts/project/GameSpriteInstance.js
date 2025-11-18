@@ -8,7 +8,6 @@ class GameSpriteInstance extends ISpriteInstance {
         this.updatables.forEach(u => u.update());
     }
 
-
     addToUpdatables(updatable) {
         this.updatables.push(updatable);
     }
@@ -31,7 +30,6 @@ class GameSpriteInstance extends ISpriteInstance {
             this.addToUpdatables(anim);
         });
     }
-
 
     lerpAnim(speed, start, end, updateCallback, finished) {
         return new Promise((resolve, _) => {

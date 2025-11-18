@@ -110,8 +110,7 @@ function CWheelBonus(iX, iY,oParentContainer){
     this.spin = function(iValue,iTimeMult){
            playSound("start_reel_bonus",1,false);
            playSound("reel_bonus",1,true);
-        
-		
+
         createjs.Tween.get(_oWheelContainer).to({rotation:_oWheelContainer.rotation + iValue}, WHEEL_SPIN_TIMESPEED*iTimeMult, createjs.Ease.quartOut)//cubicOut
                 .call(function(){_oWheelContainer.rotation %= 360; s_oBonusPanel.wheelArrived(); if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){stopSound("reel_bonus")}});
     };

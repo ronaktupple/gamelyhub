@@ -13,16 +13,14 @@ function CMain(oData){
     this.initContainer = function(){
         var canvas = document.getElementById("canvas");
         s_oStage = new createjs.Stage(canvas);       
-        
-        
+
         s_bMobile = isMobile();
         if(s_bMobile === false){
             s_oStage.enableMouseOver(20);  
         }else{
             createjs.Touch.enable(s_oStage,true);
         }
-        
-        
+
         s_iPrevTime = new Date().getTime();
 
         createjs.Ticker.setFPS(FPS);
@@ -108,12 +106,9 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
-        
-        
-    };
 
+    };
 
     this._loadImages = function(){
         s_oSpriteLibrary.init( this._onImagesLoaded,this._onAllImagesLoaded, this );

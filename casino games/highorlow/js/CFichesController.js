@@ -12,7 +12,6 @@ function CFichesController(iX, iY, oParentContainer){
     var _oBetNumBack;
     var _oBetNum;
 
-    
     var _aCbCompleted;
     var _aCbOwner;
     
@@ -94,8 +93,6 @@ function CFichesController(iX, iY, oParentContainer){
         
         var aFichesValue = s_oGameSettings.getFichesValues();
         var aFichesPile = new Array();
-
-        
 
         do{
             var iMinValue=aFichesValue[aFichesValue.length-1];

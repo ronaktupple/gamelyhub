@@ -15,9 +15,7 @@ function CEndPanel(oSpriteBg){
         _oFade.alpha = 0;
         _oListener = _oFade.on("mousedown",function(){});
         s_oStage.addChild(_oFade);
-        
-        
-        
+
         _oPanelContainer = new createjs.Container();        
         s_oStage.addChild(_oPanelContainer);
 
@@ -30,8 +28,7 @@ function CEndPanel(oSpriteBg){
         _oPanelContainer.x = CANVAS_WIDTH/2;
         _oPanelContainer.y = CANVAS_HEIGHT + oSprite.height/2;  
         _pStartPanelPos = {x: _oPanelContainer.x, y: _oPanelContainer.y};
-        
-        
+
         var oText1Pos = {x: 0, y: -110};
 
         var iWidth = 400;
@@ -46,15 +43,12 @@ function CEndPanel(oSpriteBg){
                     true, true, true,
                     false );
 
-        
-
         _oButRestart = new CGfxButton(110, 80, s_oSpriteLibrary.getSprite('but_yes'), _oPanelContainer);
         _oButRestart.addEventListener(ON_MOUSE_UP, this._onRestart, this);
         _oButRestart.pulseAnimation();
 
         _oButHome = new CGfxButton(-110, 80, s_oSpriteLibrary.getSprite('but_no'), _oPanelContainer);
         _oButHome.addEventListener(ON_MOUSE_UP, this._onExit, this);
-        
 
     };
     
@@ -65,7 +59,6 @@ function CEndPanel(oSpriteBg){
         s_oStage.removeChild(_oFade);
     };
 
-    
     this.show = function(iScore){
         _oButRestart.setClickable(true);
         _oButHome.setClickable(true);

@@ -96,8 +96,7 @@ function CMenu(){
             _oButInfo.unload();
             _oButInfo = null;
         }
-        
-        
+
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             _oAudioToggle.unload();
             _oAudioToggle = null;

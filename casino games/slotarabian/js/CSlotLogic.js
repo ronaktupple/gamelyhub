@@ -41,7 +41,6 @@ function checkLogin(){
 function callSpin(iNumBettingLines,iCoin,iCurBet){
     return _onSpin(iNumBettingLines,iCoin,iCurBet);
 }
-    
 
 function _tryToCheckLogin(){
     //THIS FUNCTION PASS USER MONEY AND BONUS PRIZES FOR THE WHEEL
@@ -123,7 +122,6 @@ function _onSpin(iNumBettingLines,iCoin,iCurBet){
                     }
             }
 
-
             var iPrizeReceived = -1;
             var iBonusWin = 0;
             var iCont = 0;
@@ -150,8 +148,6 @@ function _onSpin(iNumBettingLines,iCoin,iCurBet){
                             }
                     }
 
-                    
-                    
                     var iRandIndex = Math.floor(Math.random()*(aPrizeLength.length));
                     iPrizeReceived = aPrizeLength[iRandIndex];
                     iBonusWin = (s_aSession["bonus_prize"][iPrizeReceived]*iCoin);
@@ -179,8 +175,6 @@ trace("win "+s_aSession["iSlotCash"])
 
             return "res=true&win=true&pattern="+JSON.stringify(_aFinalSymbols)+"&win_lines="+JSON.stringify(aRet)+"&money="+s_aSession["iMoney"]+
                     "&tot_win="+iTotWin+"&freespin="+s_aSession["iTotFreeSpin"]+"&bonus="+s_aSession["bBonus"]+"&bonus_prize="+iPrizeReceived+"&bonus_win="+iBonusWin+"&cash="+s_aSession["iSlotCash"] ;
-
-            
 
     }else{
             //LOSE
@@ -302,8 +296,7 @@ function _initSymbolWin(){
     
     return _aSymbolWin;
 };
-    
-	
+
 function generLosingPattern(){
     var aFirstCol = new Array();
     for(var i=0;i<NUM_ROWS;i++){
@@ -402,8 +395,7 @@ function generateRandomSymbols(bFreespin,bBonus){
                 if(_aFinalSymbols[aCombos[t]['row']][aCombos[t]['col']] === iValue || 
                                             _aFinalSymbols[aCombos[t]['row']][aCombos[t]['col']] === 8){
                     iNumEqualSymbol++;
-                    
-                    
+
                     aCellList.push({row:aCombos[t]['row'],col:aCombos[t]['col'],value:_aFinalSymbols[aCombos[t]['row']][aCombos[t]['col']]} );
                 }else{
                     break;
@@ -439,8 +431,7 @@ function generateRandomSymbols(bFreespin,bBonus){
 
             _aWinningLine.push({line:0,amount:0,num_win:aCellList.length,value:9,list:aCellList});
 	}
-        
-        
+
         return _aWinningLine;
     }
 

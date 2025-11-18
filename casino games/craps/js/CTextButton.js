@@ -25,8 +25,6 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,szAlign
 	_iWidth = oSprite.width;
         _iHeight = oSprite.height;
 
-        
-
         _oButton = new createjs.Container();
         _oButton.x = iXPos;
         _oButton.y = iYPos;

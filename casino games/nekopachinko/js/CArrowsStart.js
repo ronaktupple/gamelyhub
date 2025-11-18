@@ -36,7 +36,6 @@ function CArrowsStart(iX, iY, oParentContainer){
         var oArrow = new CLightIndicator(oSprite, oPos.x - 14, oPos.y + 90, _oContainer,0,0);
         oArrow.rotate(-22);
         _aArrows.unshift(oArrow);
-        
 
         this.startLighting();
     };
@@ -74,11 +73,8 @@ function CArrowsStart(iX, iY, oParentContainer){
             _aArrows[i].slowOff(1000, 0);
         }
     };
-    
-    
-    
+
     _oParent = this;
     this._init(iX, iY, oParentContainer);
 };
-
 

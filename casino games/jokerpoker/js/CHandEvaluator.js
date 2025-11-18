@@ -9,8 +9,7 @@ function CHandEvaluator(){
         }
         
         _aSortedHand.sort(this.compareRank);
-	
-        
+
         var iRet = this.rankHand();
 
         return iRet;
@@ -44,9 +43,7 @@ function CHandEvaluator(){
             return HIGH_CARD;
         }
     };
-    
-    
-    
+
     this._checkForNaturalRoyalFlush = function(){
         if(this._isRoyalStraight() && this._isFlush()){
             for(var i=0;i<_aSortedHand.length;i++){
@@ -110,8 +107,6 @@ function CHandEvaluator(){
         }
         
     };
-    
-    
 
     this._checkForFullHouse = function(){
         var bJoker = this.isJokerInHand();
@@ -127,7 +122,6 @@ function CHandEvaluator(){
         
         return false;
     };
-
 
     this._checkForFlush = function(){
         if(this._isFlush()){
@@ -224,7 +218,6 @@ function CHandEvaluator(){
                 }
             }
         }
-        
 
         return false;
     };
@@ -279,8 +272,7 @@ function CHandEvaluator(){
         
         return false;
     };
-	
-    
+
     this._isStraight = function() {
         var iNumJoker = this.isJokerInHand()?1:0;
 

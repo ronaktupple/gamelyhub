@@ -49,7 +49,6 @@ function CGameSettings(){
         var iCont=_aFichesValue.length-1;
         var iCurMaxFicheStake=_aFichesValue[iCont];
 
-
         do{
                 iValueRest=iFichesValue%iCurMaxFicheStake;
                 iValueRest=CMath.roundDecimal(iValueRest,1);
@@ -114,7 +113,6 @@ function CGameSettings(){
     this.getRandDealerPattern = function(){
         var iTotValue;
         var aTmpCards;
-
 
         do{
             aTmpCards = new Array();

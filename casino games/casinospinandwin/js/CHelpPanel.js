@@ -15,8 +15,7 @@ function CHelpPanel(){
         _oFade.graphics.beginFill("rgba(0,0,0,1)").drawRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
         createjs.Tween.get(_oFade).to({alpha:0.7}, 500);
         _oGroup.addChild(_oFade);
-        
-        
+
         var oSprite = s_oSpriteLibrary.getSprite('msg_box');
         _oHelpBg = createBitmap(oSprite);
         _oHelpBg.x = CANVAS_WIDTH/2;
@@ -45,8 +44,7 @@ function CHelpPanel(){
                     TEXT_HELP1,
                     true, true, true,
                     false );
-                    
-  
+
         //////////////////////// BET CONTROLLER /////////////////////////
         var oControllerContainer = new createjs.Container();
         oControllerContainer.x = CANVAS_WIDTH/2;
@@ -126,9 +124,6 @@ function CHelpPanel(){
         
         createjs.Tween.get(oSwipe, {loop:true}).to({y:iStartingPos +30}, 1000, createjs.Ease.cubicOut);
 
-        
- 
-        
         _oListener = _oGroup.on("pressup",function(){oParent._onExitHelp();});
      
     };

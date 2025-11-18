@@ -43,7 +43,6 @@ var REEL_STATE_STOP    = 2;
 var ON_REEL_ARRIVED = 0;
 var ON_REEL_STOP = 1;
 
-
 var ON_WHEEL_READY_TO_SPIN = 0;
 var ON_WHEEL_STOP = 1;
 var ON_WHEEL_CLOSED = 2;
@@ -120,13 +119,6 @@ var WHEEL_WINNING_COMBO = [
     [2,2,2]
 ];
 
-
-
 var ENABLE_FULLSCREEN;
 var ENABLE_CHECK_ORIENTATION;
 
-
-
-
-
- 

@@ -1,8 +1,7 @@
 function CAnimText (iScore,x,y,oParentContainer, szColor){
     
     var _oScoreHit;
-    
-    
+
     this._init = function(iScore,x,y,oParentContainer,szColor){
         _oScoreHit = new createjs.Text("0"," 30px "+PRIMARY_FONT, szColor);
         _oScoreHit.textAlign="center";

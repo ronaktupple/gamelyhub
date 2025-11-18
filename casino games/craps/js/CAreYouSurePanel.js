@@ -37,7 +37,6 @@ function CAreYouSurePanel(oParentContainer) {
         _oButNo.addEventListener(ON_MOUSE_UP, this._onButNo, this);
     };
 
-
     this.show = function () {
         _oContainer.visible = true;
     };

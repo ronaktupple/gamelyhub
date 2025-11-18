@@ -8,7 +8,6 @@ import LinearMoveAnim from './LinearAnim.js';
 
 export default class Holder extends ISpriteInstance {
 
-
     constructor() {
         super();
         this.maxValue = 4;
@@ -65,7 +64,6 @@ export default class Holder extends ISpriteInstance {
         return Math.round(this.liquids.reduce((s, l) => s + l.value, 0)) >= this.maxValue;
     }
 
-
     tap() {
         if (this.pending) {
             this.startPending();
@@ -80,7 +78,6 @@ export default class Holder extends ISpriteInstance {
         this.pendingPoint = this.originalPoint.add(new Vector(0, -50));
 
     }
-
 
     startPending() {
         if (this.pending)
@@ -110,7 +107,6 @@ export default class Holder extends ISpriteInstance {
     async moveAndTransferLiquid(holder, onTransfered) {
         this.pending = false;
 
-
         if (holder.isFull() || !this.liquids.length || holder.liquids.length && holder.liquids[holder.liquids.length - 1].groupId !== this.liquids[this.liquids.length - 1].groupId)
             return;
 
@@ -129,7 +125,6 @@ export default class Holder extends ISpriteInstance {
 
             this.angle = lerp(startAngle, targetPositionAndAngle.angle, n);
         });
-
 
         const thisLiquidStartValue = thisLiquid.value;
         const transferValue = Math.min(thisLiquid.value, holder.maxValue - holder.currentTotalValue());
@@ -190,10 +185,8 @@ export default class Holder extends ISpriteInstance {
 
         const deliverAngle = isRightSide ? deliverAbsAngle : -deliverAbsAngle;
 
-
         const relativePoint = new Vector(this.x, this.y).sub(sidePoint);
         const rotatedRelativePoint = relativePoint.getRotateVector(deliverAngle);
-
 
         const targetHolderPoint = rotatedRelativePoint.add(deliverTopPoint);
 
@@ -208,7 +201,6 @@ export default class Holder extends ISpriteInstance {
         const speed = this.getSpeedForDistance(new Vector(this.x, this.y).sub(targetPoint).mag());
 
         await this.moveTo(targetPoint, speed);
-
 
     }
 
@@ -270,7 +262,6 @@ export default class Holder extends ISpriteInstance {
             this.addToUpdatables(anim);
         });
     }
-
 
     lerpAnim(speed, start, end, updateCallback, finished) {
         return new Promise((resolve, _) => {

@@ -23,7 +23,6 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize, bStand
         _oButton.regX = oSprite.width/2;
         _oButton.regY = oSprite.height/2;        
         oParentContainer.addChild(_oButton);
-        
 
         if(!bStandard){
             var oData = {   
@@ -53,7 +52,6 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize, bStand
                     true, true, false,
                     false );
 
-
         _oText = new CTLText(_oButton, 
                     -oSprite.width/4, -oSprite.height/2, oSprite.width/2-10, oSprite.height-10, 
                     iFontSize, "center", szColor, szFont, 1,
@@ -61,7 +59,6 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize, bStand
                     szText,
                     true, true, false,
                     false );
-
 
         this._initListener();
     };
@@ -118,7 +115,6 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize, bStand
         if(!bStandard){
             _oButtonBg.gotoAndStop("state_true");
         }
-        
 
     };
     

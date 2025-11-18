@@ -21,7 +21,6 @@ function CHistory(iX,iY,oParentContainer){
                     true, true, false,
                     false );
 
-        
         this._initNumExtracted();
     };
     
@@ -53,8 +52,7 @@ function CHistory(iX,iY,oParentContainer){
     this.showGreen = function(iIndex,iNumber){
         _aHistoryRows[iIndex].showGreen(iNumber);
     };
-    
-    
+
     _oParentContainer = oParentContainer;
     this._init(iX,iY);
 }

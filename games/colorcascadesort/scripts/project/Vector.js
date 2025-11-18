@@ -17,7 +17,6 @@ export default class Vector {
         return Math.sqrt(this.x * this.x + this.y * this.y);
     }
 
-
     sub(item) {
         return new Vector(this.x - item.x, this.y - item.y);
     }

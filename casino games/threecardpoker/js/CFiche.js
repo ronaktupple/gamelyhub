@@ -30,8 +30,7 @@ function CFiche(iX,iY,iIndex,szValue,iScale,bClickable,oParentContainer){
         var oSpriteFiche = s_oSpriteLibrary.getSprite('fiche_'+iIndex);
         _oSprite = createBitmap(oSpriteFiche);
         _oContainer.addChild(_oSprite);
-        
-        
+
         _oTextValue = new CTLText(_oContainer, 
                     8, 8, oSpriteFiche.width-21, 20, 
                     20, "center",  COLOR_FICHE_PER_VALUE[iIndex], FONT_GAME_1, 1,
@@ -39,9 +38,7 @@ function CFiche(iX,iY,iIndex,szValue,iScale,bClickable,oParentContainer){
                     szValue,
                     true, true, false,
                     false );
-                    
-       
-        
+
         if(bClickable){
             _bDisable = false;
             _iWidth = oSpriteFiche.width;
@@ -83,14 +80,11 @@ function CFiche(iX,iY,iIndex,szValue,iScale,bClickable,oParentContainer){
 
     };
 
-    
     this.buttonRelease = function(){
         if(_bDisable){
             return;
         }
 
-        
-        
         _oContainer.scaleX = _iCurScale;
         _oContainer.scaleY = _iCurScale;
 

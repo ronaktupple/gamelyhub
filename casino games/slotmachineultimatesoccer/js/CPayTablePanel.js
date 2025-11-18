@@ -56,8 +56,7 @@ function CPayTablePanel(){
             for(var k=0;k<s_aSymbolWin[i].length;k++){
                 aSymbolPayouts[k] = s_aSymbolWin[i][k];
             }
-                    
-            
+
             do{
                 var iIndex = aSymbolPayouts.indexOf(0);
                 if(iIndex !== -1){

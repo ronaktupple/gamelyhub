@@ -21,7 +21,6 @@ function CGameSettings(){
         FICHES_VALUE=new Array(0.1,1,5,10,25,100);
     };
 
-	
     this.getIndexForFiches = function(iValue){
         var iRes=0;
         for(var i=0;i<FICHES_VALUE.length;i++){
@@ -37,7 +36,6 @@ function CGameSettings(){
         var iValueRest;
         var iCont=FICHES_VALUE.length-1;
         var iCurMaxFicheStake=FICHES_VALUE[iCont];
-
 
         do{
                 iValueRest=iFichesValue%iCurMaxFicheStake;

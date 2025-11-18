@@ -80,7 +80,6 @@ function CPreloader() {
     this.refreshLoader = function(iPerc) {
         _oLoadingText.text = iPerc + "%";
 
-
         _oMaskPreloader.graphics.clear();
         var iNewMaskWidth = Math.floor((iPerc * _iMaskWidth) / 100);
         _oMaskPreloader.graphics.beginFill("rgba(255,255,255,0.01)").drawRect(_oProgressBar.x, _oProgressBar.y, iNewMaskWidth, _iMaskHeight);

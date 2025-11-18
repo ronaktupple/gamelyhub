@@ -68,8 +68,7 @@ CTLText.prototype = {
         this._oText.textBaseline = "middle";
         this._oText.lineHeight = Math.round(this._iFontSize*this._fLineHeightFactor);
         this._oText.textAlign = this._szAlign;
-        
-        
+
         if ( this._bMultiline ){
             this._oText.lineWidth = this._iWidth - (this._iPaddingH*2);
         }else{

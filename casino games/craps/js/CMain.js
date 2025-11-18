@@ -96,13 +96,9 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
-        
-        
+
     };
-
-
 
     this._loadImages = function(){
         s_oSpriteLibrary.init( this._onImagesLoaded,this._onAllImagesLoaded, this );
@@ -179,7 +175,6 @@ function CMain(oData){
             s_oSpriteLibrary.addSprite("launch_dices_"+j,"./sprites/launch_dice_anim/launch_dices_"+j+".png");
         }
 
-        
         RESOURCE_TO_LOAD += s_oSpriteLibrary.getNumSprites();
 
         s_oSpriteLibrary.loadSprites();

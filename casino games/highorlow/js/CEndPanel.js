@@ -15,13 +15,11 @@ function CEndPanel(oSpriteBg){
         _oGroup.alpha = 0;
         _oGroup.visible=false;
         s_oStage.addChild(_oGroup);
-        
-        
+
         _oBg = createBitmap(oSpriteBg);
         _oListener = _oBg.on("click",function(){});
         _oGroup.addChild(_oBg);
-        
-        
+
 	_oMsgTextBack = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-248, (CANVAS_HEIGHT/2)-198, 500, 300, 
                     50, "center", "#000", PRIMARY_FONT, 1,
@@ -29,7 +27,6 @@ function CEndPanel(oSpriteBg){
                     " ",
                     true, true, false,
                     false );
-                    
 
         _oMsgText = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2-250, (CANVAS_HEIGHT/2)-200, 500, 300, 
@@ -52,11 +49,9 @@ function CEndPanel(oSpriteBg){
         _oButRecharge.unload();
     };
 
-    
     this.show = function(){
 	playSound("game_over",1,false);
-        
-        
+
         _oMsgTextBack.refreshText(TEXT_GAMEOVER);
         _oMsgText.refreshText(TEXT_GAMEOVER);
         

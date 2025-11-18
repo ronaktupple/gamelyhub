@@ -25,7 +25,6 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize, bStand
 
         var iStepShadow = Math.ceil(iFontSize/20);
 
-
         _oButton = new createjs.Container();
         _oButton.x = iXPos;
         _oButton.y = iYPos;
@@ -34,8 +33,7 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize, bStand
         _oButton.cursor = "pointer";
         
         var iWidth = oSprite.width-44;
-        
-        
+
         if(!bStandard){
             iWidth = oSprite.width/2-20;
             var oData = {   

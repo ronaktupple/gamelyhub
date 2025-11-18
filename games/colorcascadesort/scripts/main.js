@@ -104,7 +104,6 @@
     }
 };
 
-
 'use strict'; {
     window.DOMElementHandler = class DOMElementHandler extends self.DOMHandler {
         constructor(iRuntime, componentId) {
@@ -221,7 +220,6 @@
         }
     }
 };
-
 
 'use strict'; {
     const isiOSLike = /(iphone|ipod|ipad|macos|macintosh|mac os x)/i.test(navigator.userAgent);
@@ -964,7 +962,6 @@
         }
     }
 };
-
 
 'use strict'; {
     const RuntimeInterface = self.RuntimeInterface;
@@ -1767,7 +1764,6 @@
     RuntimeInterface.AddDOMHandlerClass(HANDLER_CLASS)
 };
 
-
 'use strict'; {
     const DISPATCH_WORKER_SCRIPT_NAME = "dispatchworker.js";
     const JOB_WORKER_SCRIPT_NAME = "jobworker.js";
@@ -1831,7 +1827,6 @@
         }
     }
 };
-
 
 'use strict'; {
     if (window["C3_IsSupported"]) {
@@ -2405,7 +2400,6 @@
                 try {
                     buffer = await this._GetAudioBuffer(e["bufferOriginalUrl"], e["bufferUrl"], e["bufferType"], false)
                 } catch (err) {
-                    console.log("[Construct 3] Audio: error loading convolution: ", err);
                     return
                 }
                 effect = new self.C3AudioConvolveFX(this, buffer.GetAudioBuffer(), ...params);

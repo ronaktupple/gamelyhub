@@ -67,7 +67,6 @@ function CGame(oData){
         _oFrontSkin = createBitmap(s_oSpriteLibrary.getSprite('mask_slot'));
         s_oStage.addChild(_oFrontSkin);
 
-        
         this._initStaticSymbols();
         
         this._initHitAreaColumn();
@@ -174,7 +173,6 @@ function CGame(oData){
                     true, true, false,
                     false);
             oText.setShadow("#000",2,2,2);     
-            
 
             _aHoldText[i] = oText;
             
@@ -186,8 +184,7 @@ function CGame(oData){
             
             _aHitAreaColumn.push(oHitArea);
         }
-        
-        
+
     };
     
     this.generateFinalSymbols = function(){
@@ -329,16 +326,13 @@ function CGame(oData){
     this.increaseReelLoops = function(){
         _iCurReelLoops += 2;
     };
-    
-    
+
     this.stopNextReel = function() {
         _iNumReelsStopped++;
         if(_iNumReelsStopped%2 === 0){
-            
-            
+
             playSound("reel_stop",0.3,false);
-            
-            
+
             _iNextColToStop = _aReelSequence[_iNumReelsStopped/2];
             
             if (_iNumReelsStopped === (NUM_REELS*2) ) {
@@ -391,8 +385,7 @@ function CGame(oData){
             _iCurState = GAME_STATE_SHOW_ALL_WIN;
             
             playSound("win",1,false);
-            
-            
+
             _bFirstSpin = true;
             if(_bBonus === false){
                 _oInterface.disableBetBut(false);
@@ -454,7 +447,6 @@ function CGame(oData){
         for(var k=0;k<aList.length;k++){
             _aStaticSymbols[aList[k].row][aList[k].col].show(aList[k].value);
         }
-            
 
         _iCurWinShown++;
         
@@ -503,8 +495,7 @@ function CGame(oData){
 		_iTotBet = iNewTotalBet;
 		_oInterface.refreshTotalBet(_iTotBet);
 		_oInterface.refreshNumLines(_iLastLineActive);
-		
-		
+
 		if(iNewTotalBet>_iMoney){
 			_oInterface.disableSpin();
 		}else{
@@ -526,7 +517,6 @@ function CGame(oData){
         
         _oInterface.refreshTotalBet(_iTotBet);
         _oInterface.refreshNumLines(_iLastLineActive);
-
 
         if(iNewTotalBet>_iMoney){
                 _oInterface.disableSpin();
@@ -606,8 +596,7 @@ function CGame(oData){
             _aHoldText[iIndexCol].refreshText(" ");
             _aMovingColumns[iIndexCol].setHold(true);
             _aMovingColumns[iIndexCol+NUM_REELS].setHold(true);
-            
-            
+
             playSound("press_hold",1,false);
             
         }
@@ -632,8 +621,7 @@ function CGame(oData){
     };
     
     this.endBonus = function(iBonus){
-        
-        
+
         iBonus *= _iCurBet;
         _iMoney += iBonus;
         _oInterface.refreshMoney(_iMoney);
@@ -829,8 +817,7 @@ function CGame(oData){
                 break;
             }
         }
-        
-	
+
     };
     
     s_oGame = this;

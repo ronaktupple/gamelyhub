@@ -45,8 +45,7 @@ function CLoadingPanel(){
             _aDots[i].x = CANVAS_WIDTH*0.5 - 72 + i*70;
             _aDots[i].y = CANVAS_HEIGHT*0.5 +50;
         }
-        
-        
+
         _oGroup.addChild(_oRect, oLogo, _aDots[0], _aDots[1], _aDots[2]);
         
         s_oStage.addChild(_oGroup);

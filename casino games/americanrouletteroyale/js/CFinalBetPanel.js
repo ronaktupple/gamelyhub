@@ -26,8 +26,7 @@ function CFinalBetPanel(iX,iY){
         for(var i=0;i<10;i++){
             var oBut = new CTextButton(iXOffset,iYOffset,oSprite,""+i,FONT1,"#fff",14,_oContainer);
             oBut.addEventListenerWithParams(ON_MOUSE_UP, this._onFinalBetPressed, this,{index:i});
-            
-            
+
             if(i===4){
                 iXOffset = oSprite.width/2;
                 iYOffset +=oSprite.height;

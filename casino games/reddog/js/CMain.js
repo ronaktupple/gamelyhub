@@ -20,8 +20,7 @@ function CMain(oData){
         }else{
             createjs.Touch.enable(s_oStage,true);
         }
-        
-        
+
         s_iPrevTime = new Date().getTime();
 
         createjs.Ticker.framerate = 30;
@@ -64,7 +63,6 @@ function CMain(oData){
         s_aSoundsInfo.push({path: './sounds/',filename:'press_but',loop:false,volume:1, ingamename: 'press_but'});
         s_aSoundsInfo.push({path: './sounds/',filename:'win',loop:false,volume:1, ingamename: 'win'});
         s_aSoundsInfo.push({path: './sounds/',filename:'lose',loop:false,volume:1, ingamename: 'lose'});
-              
 
         RESOURCE_TO_LOAD += s_aSoundsInfo.length;
 
@@ -101,7 +99,6 @@ function CMain(oData){
                                                                                           s_aSounds[s_aSoundsInfo[i].ingamename].once('unlock', function() {
                                                                                             s_aSounds[s_aSoundsInfo[i].ingamename].play();
 
-
                                                                                           });
                                                                                          break;
                                                                                      }
@@ -110,10 +107,8 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
-        
-        
+
     };
     
     this._loadImages = function(){

@@ -13,10 +13,8 @@ function CPausePanel(oContainer) {
         _oPanelContainer = new createjs.Container();        
         oContainer.addChild(_oPanelContainer);
 
-
         _oPanelContainer.x = CANVAS_WIDTH/2;
         _oPanelContainer.y = CANVAS_HEIGHT/2;  
-
 
         var oTitle = new createjs.Text(TEXT_PAUSE," 54px "+PRIMARY_FONT, PRIMARY_FONT_COLOUR);
         oTitle.y = 0;

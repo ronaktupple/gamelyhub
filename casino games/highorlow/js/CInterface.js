@@ -113,7 +113,6 @@ function CInterface(){
                     true, true, true,
                     false );
 
-        
         _oMakeText = new CTLText(s_oStage, 
                     442, 558, 300, 58, 
                     28, "center", "#fff", PRIMARY_FONT, 1,
@@ -136,7 +135,6 @@ function CInterface(){
                     true, true, false,
                     false );
 
-        
         _oMoneyText = new CTLText(s_oStage, 
                     432, 662, 300, 32, 
                     32, "center", "#fff", PRIMARY_FONT, 1,
@@ -162,7 +160,6 @@ function CInterface(){
                     true, true, false,
                     false );
 
-        
         _oHighsText = new CTLText(_oInfoContainer, 
                     10, 30, 250, 24, 
                     18, "left", "#fff", PRIMARY_FONT, 1,
@@ -171,7 +168,6 @@ function CInterface(){
                     true, true, false,
                     false );
 
-        
         _oLowsText = new CTLText(_oInfoContainer, 
                     10, 55, 250, 24, 
                     18, "left", "#fff", PRIMARY_FONT, 1,
@@ -180,7 +176,6 @@ function CInterface(){
                     true, true, false,
                     false );
 
-        
         _oGuessText = new CTLText(_oInfoContainer, 
                     10, 80, 250, 24, 
                     18, "left", "#fff", PRIMARY_FONT, 1,
@@ -189,7 +184,6 @@ function CInterface(){
                     true, true, false,
                     false );
 
-        
         this.refreshButtonPos(s_iOffsetX, s_iOffsetY);
         
     };

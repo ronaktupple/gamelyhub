@@ -94,8 +94,7 @@ function CPreloader() {
             createjs.Tween.removeTweens(_oFade);
             _oContainer.removeChild(_oFade);
         });        
-        
-        
+
     };
 
     this._onButStartRelease = function(){

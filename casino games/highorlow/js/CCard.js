@@ -9,9 +9,7 @@ function CCard(iX,iY,oParentContainer,szFotogram,iRank){
     var _oContainer;
     var _oParentContainer;   
     var _oParent;
-    
 
-    
     this._init = function(iX,iY,oParentContainer,szFotogram,iRank){
         _oParentContainer = oParentContainer;
         _szFotogram = szFotogram;

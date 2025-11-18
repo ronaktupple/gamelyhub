@@ -60,7 +60,6 @@ function CBottomBar(iX, iY, oParentContainer){
                     true, true, false,
                     false );
 
-                    
         var iWidth = 180;
         var iTextX = 36;
         _oCreditsNum = new CTLText(_oContainer, 
@@ -87,14 +86,12 @@ function CBottomBar(iX, iY, oParentContainer){
                                     }
                    };
 
-
         var oSpriteSheet = new createjs.SpriteSheet(oData);
         _oHandAnim = createSprite(oSpriteSheet, "start",iWidth/2,iHeight/2,iWidth,iHeight);
         _oHandAnim.x = _oButPlus.getX();
         _oHandAnim.y = _oButPlus.getY();
         _oContainer.addChild(_oHandAnim);
 
-        
         var oControllerPos = {x: 265,y: -115}
         _oController = new CController(oControllerPos.x, oControllerPos.y, _oContainer);
         _oController.addEventListener(ON_CONTROLLER, this._onControllerChanged, this);
@@ -108,11 +105,8 @@ function CBottomBar(iX, iY, oParentContainer){
 
         this._handWheelAnim(1);
 
-        
-
         this._changePowerLevel(0);
-        
-        
+
     };
     
     this.unload = function(){
@@ -199,16 +193,13 @@ function CBottomBar(iX, iY, oParentContainer){
         }else {
             _oParent._checkHandWheelAnimToShown();
         }
-        
-        
+
         _oParent._changePowerLevel(iValue);
         
         s_oGame.onControllerChanged(iValue);
     };  
-    
-    
+
     _oParent = this;
     this._init(iX, iY, oParentContainer);
 }
-
 

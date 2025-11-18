@@ -40,7 +40,6 @@ function CObjectBuilder(){
         oFixDef.shape = new b2PolygonShape;
         oFixDef.shape.SetAsBox((iWidth/2)/ WORLD_SCALE, (iHeight/2)/ WORLD_SCALE);
 
-
         oBodyDef.position.Set(iX/ WORLD_SCALE, iY/ WORLD_SCALE);
         oBodyDef.angle = iAngle*Math.PI/180;
         var oBody = _oWorld.CreateBody(oBodyDef);
@@ -69,8 +68,7 @@ function CObjectBuilder(){
         oBodyDef.angle = iAngle*Math.PI/180;
         var oBody = _oWorld.CreateBody(oBodyDef);
         oBody.CreateFixture(oFixDef);
-        
-        
+
         return oBody;
     };
     
@@ -198,7 +196,6 @@ function CObjectBuilder(){
         return {fixture1: oCrateFixture1, fixture2:oCrateFixture2};
     };
 
-   
     this.addLeftFlipper = function(aPoints,iX,iY, density, friction, restitution) {
         // Create some objects in the world
         
@@ -224,8 +221,6 @@ function CObjectBuilder(){
         var Body1 = _oWorld.CreateBody(oBodyDef);
         var oCrateFixture1 = Body1.CreateFixture(oFixDef);
 
-       
-       
         var oPivotfixDef = new b2FixtureDef;
         oPivotfixDef.density = density;
         oPivotfixDef.friction = friction;
@@ -278,8 +273,7 @@ function CObjectBuilder(){
         
         var Body1 = _oWorld.CreateBody(oBodyDef);
         var oCrateFixture1 = Body1.CreateFixture(oFixDef);
-       
-       
+
         var oPivotfixDef = new b2FixtureDef;
         oPivotfixDef.density = density;
         oPivotfixDef.friction = friction;

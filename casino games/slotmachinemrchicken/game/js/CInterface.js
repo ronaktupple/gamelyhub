@@ -15,7 +15,6 @@ function CInterface(iCurBet,iTotBet,iMoney){
     var _oButFullscreen;
     var _fRequestFullScreen = null;
     var _fCancelFullScreen = null;
-    
 
     var _oCoinText;
     var _oMoneyText;
@@ -59,18 +58,15 @@ function CInterface(iCurBet,iTotBet,iMoney){
         oSprite = s_oSpriteLibrary.getSprite('spin_but');
         _oSpinBut = new CTextButton(1090 + (oSprite.width/2),CANVAS_HEIGHT - (oSprite.height/2),oSprite,"",FONT_GAME,"#ffde00",22,s_oStage);  
         _oSpinBut.addEventListener(ON_MOUSE_UP, this._onSpin, this);
-        
-        
+
         oSprite = s_oSpriteLibrary.getSprite('info_but');
         _oInfoBut = new CTextButton(328 + (oSprite.width/2),CANVAS_HEIGHT - (oSprite.height/2),oSprite,TEXT_INFO,FONT_GAME,"#ffffff",30,s_oStage);        
         _oInfoBut.addEventListener(ON_MOUSE_UP, this._onInfo, this);
-        
-        
+
         oSprite = s_oSpriteLibrary.getSprite('but_lines_bg');
         _oAddLineBut = new CTextButton(494 + (oSprite.width/2),CANVAS_HEIGHT - (oSprite.height/2),oSprite,TEXT_LINES,FONT_GAME,"#ffffff",30,s_oStage);
         _oAddLineBut.addEventListener(ON_MOUSE_UP, this._onAddLine, this);
-        
-        
+
         _oNumLinesText = new CTLText(s_oStage, 
                     494, CANVAS_HEIGHT - 86, oSprite.width, 26, 
                     26, "center", "#ffffff", FONT_GAME, 1,
@@ -79,8 +75,7 @@ function CInterface(iCurBet,iTotBet,iMoney){
                     true, true, false,
                     false);
         _oNumLinesText.setShadow("#000", 2, 2, 2);
-        
-        
+
         oSprite = s_oSpriteLibrary.getSprite('coin_but');
         _oBetCoinBut = new CTextButton(680 + (oSprite.width/2),CANVAS_HEIGHT - (oSprite.height/2),oSprite,TEXT_COIN,FONT_GAME,"#ffffff",30,s_oStage);
         _oBetCoinBut.addEventListener(ON_MOUSE_UP, this._onBet, this);
@@ -92,16 +87,13 @@ function CInterface(iCurBet,iTotBet,iMoney){
                     iCurBet.toFixed(2),
                     true, true, false,
                     false);
-                    
 
         _oCoinText.setShadow("#000", 2, 2, 2);
 
-        
         oSprite = s_oSpriteLibrary.getSprite('but_maxbet_bg');
         _oMaxBetBut = new CTextButton(866 + (oSprite.width/2),CANVAS_HEIGHT - (oSprite.height/2),oSprite,TEXT_MAX_BET,FONT_GAME,"#ffffff",30,s_oStage);
         _oMaxBetBut.addEventListener(ON_MOUSE_UP, this._onMaxBet, this);
-		
-                
+
         _oTotalBetText = new CTLText(s_oStage, 
                     866, CANVAS_HEIGHT - 86, oSprite.width, 26, 
                     26, "center", "#ffffff", FONT_GAME, 1,
@@ -109,11 +101,9 @@ function CInterface(iCurBet,iTotBet,iMoney){
                     TEXT_BET +": "+iTotBet.toFixed(2),
                     true, true, false,
                     false);
-                    
 
         _oTotalBetText.setShadow("#000", 2, 2, 2);
-        
-        
+
 	_oMoneyText = new CTLText(s_oStage, 
                     349, 22, oSprite.width-20, 60, 
                     60, "center", "#ffde00", FONT_GAME, 1,
@@ -122,9 +112,6 @@ function CInterface(iCurBet,iTotBet,iMoney){
                     true, true, true,
                     false);
 
-
-        
-        
         oSprite = s_oSpriteLibrary.getSprite('bet_but');
         _aLinesBut = new Array();
         
@@ -338,7 +325,6 @@ function CInterface(iCurBet,iTotBet,iMoney){
 		_oButFullscreen.setActive(s_bFullscreen);
 	}
     };
-
 
     this._onFullscreenRelease = function(){
 	if(s_bFullscreen) { 

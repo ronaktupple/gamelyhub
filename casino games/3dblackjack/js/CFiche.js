@@ -31,7 +31,6 @@ function CFiche(iX,iY,iIndex,szValue,bClickable,oParentContainer){
                     true, true, false,
                     false );
 
-        
         if(bClickable){
             _bDisable = false;
             _iWidth = oSpriteFiche.width;
@@ -83,11 +82,9 @@ function CFiche(iX,iY,iIndex,szValue,bClickable,oParentContainer){
         if(_bDisable){
             return;
         }
-        
-        
+
         playSound("press_but", 1, false);
-        
-        
+
         _oContainer.scaleX = 1;
         _oContainer.scaleY = 1;
 

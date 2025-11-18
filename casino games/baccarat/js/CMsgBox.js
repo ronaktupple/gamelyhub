@@ -10,8 +10,7 @@ function CMsgBox(){
         _oGroup.alpha = 0;
         _oGroup.visible=false;
         s_oStage.addChild(_oGroup);
-        
-        
+
         _oBg = createBitmap(s_oSpriteLibrary.getSprite('msg_box'));
         _oGroup.addChild(_oBg);
         
@@ -22,8 +21,6 @@ function CMsgBox(){
                     TEXT_NO_MONEY,
                     true, true, true,
                     false );
-                    
-        
 
         _oMsgText = new CTLText(_oGroup, 
                     CANVAS_WIDTH/2 - 210, (CANVAS_HEIGHT/2)-92, 400, 180, 
@@ -32,12 +29,7 @@ function CMsgBox(){
                     TEXT_NO_MONEY,
                     true, true, true,
                     false );
-                    
-        
-        
-        
 
-        
     };
     
     this.unload = function(){

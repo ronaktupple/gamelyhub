@@ -30,8 +30,7 @@ function CSpinButton(iXPos,iYPos,oSprite,oParentContainer){
         _oButton.y = iYPos; 
         _oButton.cursor = "pointer";
         _oParentContainer.addChild(_oButton);
-        
-        
+
         this._initListener();
     };
     
@@ -89,7 +88,6 @@ function CSpinButton(iXPos,iYPos,oSprite,oParentContainer){
         if(_bDisable){
             return;
         }
-        
 
        if(_aCbCompleted[ON_MOUSE_DOWN]){
            _aCbCompleted[ON_MOUSE_DOWN].call(_aCbOwner[ON_MOUSE_DOWN],_aParams);
@@ -112,8 +110,7 @@ function CSpinButton(iXPos,iYPos,oSprite,oParentContainer){
     this.getButtonImage = function(){
         return _oButton;
     };
-    
-    
+
     this.getX = function(){
         return _oButton.x;
     };

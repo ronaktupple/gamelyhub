@@ -70,12 +70,9 @@ function CCircularList(){
                     default: {
                             
                             _aList[i] = {object: _aList[i].object,  prev: _aList[i-1]};
-                            
 
                             _aList[i-i] = {object: _aList[i-1].object, next: _aList[i], prev: _aList[i-2]};
 
-                            
-                            
                             break;
                     }
                 }
@@ -85,5 +82,4 @@ function CCircularList(){
     this._init();
     
 }
-
 

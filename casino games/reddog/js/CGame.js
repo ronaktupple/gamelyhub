@@ -61,8 +61,7 @@ function CGame(oData){
         _oPuck = new CPuck(400,414,s_oStage);
         _oHelpCursorAnte = new CHelpCursor(515,590,s_oSpriteLibrary.getSprite("help_cursor"),s_oStage);
         _oHelpCursorDeal = new CHelpCursor(1240,720,s_oSpriteLibrary.getSprite("help_cursor"),s_oStage);
-        
-        
+
         this.reset(false);
 
         _oStartingCardOffset = new CVector2();
@@ -289,8 +288,7 @@ function CGame(oData){
 				_oInterface.enable(false,true,true,false);
 				_oInterface.displayMsg(TEXT_DISPLAY_MSG_USER_TURN);
 			}
-            
-            
+
             s_oGame.changeState(STATE_GAME_PLAYER_TURN);
         }
     };
@@ -304,8 +302,7 @@ function CGame(oData){
         _iState = STATE_GAME_SHOWDOWN;
         setTimeout(function(){s_oGame._showWin();},1500);
     };
-    
-    
+
     this._onEndHand = function(){       
         var pRemoveOffset=new CVector2(_oRemoveCardsOffset.getX(),_oRemoveCardsOffset.getY());
         for(var i=0;i<_aCardsDealing.length;i++){
@@ -313,7 +310,6 @@ function CGame(oData){
             _aCardsDealing[i].hideCard();
         }
 
-        
         _iTimeElaps=0;
         s_oGame.changeState(STATE_GAME_SHOW_WINNER);
         
@@ -494,7 +490,6 @@ function CGame(oData){
         return aPlayerCards;
     };
 
-    
     this._checkDeckLength = function(){
         if(_iCurIndexDeck >= _aCardDeck.length){
             _aCardDeck = s_oGameSettings.getShuffledCardDeck();
@@ -630,8 +625,7 @@ function CGame(oData){
                     break;
             }
         }
-        
-	
+
     };
     
     s_oGame = this;

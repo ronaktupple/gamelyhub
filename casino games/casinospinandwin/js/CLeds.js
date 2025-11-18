@@ -22,7 +22,6 @@ function CLeds (iX, iY, oParentContainer){
         _iNumIdleAnim = 4;
         _iLedState = Math.floor(Math.random()*_iNumIdleAnim);
         _iTimeElaps = 0;
-        
 
         _aLeds = new Array();
         _aColors = new Array();
@@ -46,7 +45,6 @@ function CLeds (iX, iY, oParentContainer){
         };
         var oSpriteSheet = new createjs.SpriteSheet(oData);        
 
-        
         var aLedPos = [
             {x:-143, y:319}, {x:142, y:319},
             {x:-143, y:234}, {x:142, y:234},
@@ -92,7 +90,6 @@ function CLeds (iX, iY, oParentContainer){
 
     };
 
- 
     this.unload = function(){
         oParentContainer.removeChild(_oLedsContainer);
     };
@@ -129,7 +126,6 @@ function CLeds (iX, iY, oParentContainer){
 
         _iTimeElaps += s_iTimeElaps;
 
-
         if(_iTimeElaps > ANIM_IDLE1_TIMESPEED){
             
             if(_iCurLed > _aLeftList.length-1){
@@ -146,8 +142,7 @@ function CLeds (iX, iY, oParentContainer){
             _iTimeElaps = 1;
         }
     };
-    
-    
+
     this.animIdle1 = function(){
       
         if(_iTimeElaps === 0){

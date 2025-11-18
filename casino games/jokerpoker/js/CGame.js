@@ -48,8 +48,7 @@ function CGame(oData){
         
         _iHandCont = 0;
         _iCurBet = parseFloat(BET_TYPE[_iCurBetIndex] * (_iCurCreditIndex+1));
-		
-		
+
         _oPayTable.setCreditColumn(_iCurCreditIndex);
         
         _iCurState = STATE_GAME_WAITING_FOR_BET;
@@ -74,11 +73,9 @@ function CGame(oData){
         this.placeFakeCardForStarting();
         
         _oDoubleUpPanel = new CDoubleUpPanel(_oSpriteSheetCard);
-        
-        
+
         setVolume("soundtrack",SOUNDTRACK_VOLUME_IN_GAME );
-        
-        
+
     };
     
     this.unload = function(){
@@ -104,8 +101,7 @@ function CGame(oData){
         
         _bBlock = false;
         _iCurState = STATE_GAME_WAITING_FOR_BET;
-        
-        
+
     };
     
     this.checkMoney = function(){
@@ -395,8 +391,7 @@ function CGame(oData){
         _iMoney = iMoney;
         
         _oPayTable.setCreditColumn(_iCurCreditIndex);
-        
-        
+
         this.checkMoney();
         _oInterface.refreshMoney(_iMoney,_iCurBet);
         _oInterface.refreshBet(BET_TYPE[_iCurBetIndex]);
@@ -432,7 +427,6 @@ function CGame(oData){
 
                     _iHandResult = _oHandEvaluator.evaluate(_aCurHand);
                     _oInterface.setState(_iCurState);
-                    
 
                     if(_iHandResult !== HIGH_CARD){
                         s_oGame.assignWin();
@@ -452,8 +446,7 @@ function CGame(oData){
                     _iHandCont++;
                     if(_iHandCont === NUM_HAND_FOR_ADS){
                         _iHandCont = 0;
-                        
-                        
+
                         $(s_oMain).trigger("show_interlevel_ad");
                     }
                     break;
@@ -611,8 +604,7 @@ function CGame(oData){
         if(_iCurCreditIndex === NUM_BETS){
             _iCurCreditIndex = 0;
         }
-        
-        
+
         var iNewBet = parseFloat(BET_TYPE[_iCurBetIndex] * (_iCurCreditIndex+1));
         if(_iMoney < iNewBet){
             //this._showAlertPanel(TEXT_NO_MONEY);

@@ -25,9 +25,7 @@ function CGameOverPanel(){
         var oSpriteBg = s_oSpriteLibrary.getSprite("msg_box");
         var oBg = createBitmap(oSpriteBg);
         _oContainerPanel.addChild(oBg);
-        
 
-        
         var oTitleText = new CTLText(_oContainerPanel, 
                     20, 170, oSpriteBg.width -40, 60, 
                     60, "center", FONT_COLOR, FONT, 1,
@@ -36,7 +34,6 @@ function CGameOverPanel(){
                     true, true, false,
                     false);
 
-        
         _oTotWinText = new CTLText(_oContainerPanel, 
                     20, 300, oSpriteBg.width - 40, 100, 
                     50, "center", FONT_COLOR, FONT, 1,
@@ -48,7 +45,6 @@ function CGameOverPanel(){
         _oButExit = new CTextButton(oSpriteBg.width/2, 560,s_oSpriteLibrary.getSprite("but_generic_small"),TEXT_EXIT,FONT,FONT_COLOR,124,_oContainerPanel);
         _oButExit.addEventListener(ON_MOUSE_UP,this._onExit,this);
 
-        
         _oContainerPanel.regX = oSpriteBg.width/2;
         _oContainerPanel.regY = oSpriteBg.height/2;
         _oContainerPanel.scale = 0.01;
@@ -73,7 +69,6 @@ function CGameOverPanel(){
         
         s_oGame.unload();
     };
-    
-    
+
     this._init();
 }

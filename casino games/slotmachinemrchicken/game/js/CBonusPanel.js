@@ -170,8 +170,7 @@ function CBonusPanel(){
         
         _oContainer.visible = true;
         createjs.Tween.get(_oContainer).to({alpha:1}, 1000);  
-		
-        
+
         setVolume("soundtrack",0);
         playSound("soundtrack_bonus",1,true);
         
@@ -190,8 +189,7 @@ function CBonusPanel(){
         }while(_aBonusValue[s_aEggOccurence[iRandEgg]]*_iCurBet > SLOT_CASH);
         
         this.playChickenLayAnim(iIndex,s_aEggOccurence[iRandEgg]);
-		
-        
+
         playSound("choose_chicken",1,false);
         
     };
@@ -222,8 +220,7 @@ function CBonusPanel(){
         _oEgg.x = _aChickens[iIndex].x ;
         var oParent = this;
         createjs.Tween.get(_oEgg).to({y:460}, 300).call(function(){oParent.endBonus();});  
-		
-        
+
         playSound("reveal_egg",1,false);
         
     };

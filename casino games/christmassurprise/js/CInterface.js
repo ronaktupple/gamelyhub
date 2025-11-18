@@ -60,13 +60,11 @@ function CInterface(){
             _oButFullscreen = new CToggle(_pStartPosFullscreen.x,_pStartPosFullscreen.y,oSprite,s_bFullscreen, s_oStage);
             _oButFullscreen.addEventListener(ON_MOUSE_UP,this._onFullscreenRelease,this);
         }
-        
-        
+
         var oSprite = s_oSpriteLibrary.getSprite('but_settings');
         _oGUIExpandible = new CGUIExpandible(_pStartPosExit.x, _pStartPosExit.y, oSprite, s_oStage);
         _oGUIExpandible.addButton(_oButExit);
-        
-        
+
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             _oGUIExpandible.addButton(_oAudioToggle);
         }

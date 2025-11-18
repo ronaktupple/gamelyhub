@@ -22,7 +22,6 @@ function CAnimText(iX,iY,oParentContainer){
                     " ",
                     true, true, true,
                     false );
-                    
 
     };
     

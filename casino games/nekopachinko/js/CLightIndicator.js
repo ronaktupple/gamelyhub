@@ -162,4 +162,3 @@ function CLightIndicator(oSprite, iX, iY, oParentContainer, iOffsetX, iOffsetY){
     
 }
 
-

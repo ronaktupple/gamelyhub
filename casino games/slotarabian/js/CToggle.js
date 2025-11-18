@@ -24,7 +24,6 @@ function CToggle(iXPos, iYPos, oSprite, bActive, oParentContainer) {
             animations: {state_true: [0], state_false: [1]}
         };
 
-
         var oSpriteSheet = new createjs.SpriteSheet(oData);
 
         _bActive = bActive;
@@ -73,9 +72,7 @@ function CToggle(iXPos, iYPos, oSprite, bActive, oParentContainer) {
         _oButton.scaleX = 1;
         _oButton.scaleY = 1;
 
-        
         playSound("press_but",1,false);
-        
 
         _bActive = !_bActive;
         _oButton.gotoAndStop("state_" + _bActive);

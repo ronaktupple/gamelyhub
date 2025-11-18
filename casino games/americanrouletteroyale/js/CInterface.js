@@ -43,7 +43,6 @@ function CInterface(){
                     true, true, false,
                     false );
 
-        
         _oMoneyAmountText = new CTLText(s_oStage, 
                     200, 125, oSprite.width-17, 16, 
                     16, "center", "#fff", FONT1, 1,
@@ -52,7 +51,6 @@ function CInterface(){
                     true, true, false,
                     false );
 
-        
         var oCurBetBg = createBitmap(s_oSpriteLibrary.getSprite('but_bg'));
         oCurBetBg.x = 350;
         oCurBetBg.y = 93;
@@ -65,8 +63,7 @@ function CInterface(){
                     TEXT_CUR_BET,
                     true, true, false,
                     false );
-        
-        
+
         _oBetAmountText = new CTLText(s_oStage, 
                     359, 125, oSprite.width-17, 16, 
                     16, "center", "#fff", FONT1, 1,
@@ -74,7 +71,6 @@ function CInterface(){
                     " ",
                     true, true, false,
                     false );
-
 
         _oDisplayBg = createBitmap(s_oSpriteLibrary.getSprite('but_bets'));
         _oDisplayBg.x = 515;
@@ -89,7 +85,6 @@ function CInterface(){
                     true, true, true,
                     false );
 
-        
         var oLogo = createBitmap(s_oSpriteLibrary.getSprite('logo_game_0'));
         oLogo.x = 856;
         oLogo.y = 612;
@@ -121,8 +116,7 @@ function CInterface(){
         
         _pStartPosHistory = {x:1095,y:158};
         _oHistoryPanel = new CHistory(_pStartPosHistory.x,_pStartPosHistory.y,s_oStage);
-        
-        
+
         _iIndexFicheSelected=0;
         _aFiches[_iIndexFicheSelected].select();
         
@@ -308,7 +302,6 @@ function CInterface(){
 
             iCurIndex++;
         }
-
 
     };
     

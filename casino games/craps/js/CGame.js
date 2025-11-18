@@ -23,8 +23,7 @@ function CGame(oData){
     var _oMsgBox;
     var _oGameOverPanel;
     var _oAreYouSurePanel;
-    
-    
+
     this._init = function(){
         s_oTweenController = new CTweenController();
         s_oGameSettings = new CGameSettings();
@@ -106,9 +105,7 @@ function CGame(oData){
         
         _oTableController.setState(iState);
     };
-    
-    
-    
+
     this._prepareForRolling = function(){
         _oInterface.disableBetFiches();
         _oInterface.disableClearButton();
@@ -129,8 +126,7 @@ function CGame(oData){
         }else{
             iWinOccurence = WIN_OCCURRENCE;
         }
-        
-        
+
         var aDiceForLose;
         var aDiceForWin;
         
@@ -264,8 +260,7 @@ function CGame(oData){
                     _oMySeat.removeBet(_aBetsToRemove[j]);
                     delete _aBetHistory[_aBetsToRemove[j]];
                 }
-                
-                
+
                 _oInterface.setCurBet(_oMySeat.getCurBet());
                 
             }
@@ -298,8 +293,7 @@ function CGame(oData){
                 this._setState(STATE_GAME_WAITING_FOR_BET);
             }
         }
-        
-        
+
         _oInterface.setMoney(_oMySeat.getCredit());
         if(Object.keys(_aBetHistory).length > 0){
             _oInterface.enableRoll(true);
@@ -322,7 +316,6 @@ function CGame(oData){
         _oInterface.hideBlock();
     };
 
-    
     this._checkWinForBet = function(){
         var iSumDices = _aDiceResult[0] + _aDiceResult[1];
         
@@ -395,8 +388,7 @@ function CGame(oData){
 
             aFicheMc[k].setEndPoint(oEndPos.x,oEndPos.y);
         }
-        
-        
+
         _aBetHistory["number"+iNumberAssigned] = _aBetHistory[szOrigBet];
         delete _aBetHistory[szOrigBet];
         
@@ -413,8 +405,7 @@ function CGame(oData){
 
             aFicheMc[k].setEndPoint(oEndPos.x,oEndPos.y);
         }
-        
-        
+
         _aBetHistory["lay_bet"+iNumberAssigned] = _aBetHistory[szOrigBet];
         delete _aBetHistory[szOrigBet];
         
@@ -540,8 +531,7 @@ function CGame(oData){
         _oInterface.setCurBet(_oMySeat.getCurBet());
         _oInterface.enableRoll(false);
         _oInterface.disableClearButton();
-        
-        
+
     };
    
     this.onExit = function(bForceExit){

@@ -61,8 +61,7 @@ function CGameSettings(){
         }
         //_aShuffledCardDecks.unshift({fotogram:46,rank:8,suit:3},{fotogram:48,rank:10,suit:3},{fotogram:32,rank:7,suit:2},{fotogram:31,rank:6,suit:2},{fotogram:30,rank:5,suit:2})
         //_aShuffledCardDecks.unshift({fotogram:30,rank:5,suit:2},{fotogram:48,rank:10,suit:3},{fotogram:32,rank:7,suit:2},{fotogram:31,rank:6,suit:2},{fotogram:52,rank:15,suit:2})
-        
-        
+
         return _aShuffledCardDecks;
     };
     

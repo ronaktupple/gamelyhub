@@ -116,7 +116,6 @@ function CSlotSettings() {
         };
 
         s_aSymbolAnims[7] = new createjs.SpriteSheet(oData);
-        
 
         oData = {   
                         framerate: 20,
@@ -227,7 +226,6 @@ function CSlotSettings() {
         }
     };
 
-    
     this._init();
 }
 

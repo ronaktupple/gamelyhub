@@ -88,9 +88,7 @@ function CInterface(iMoney){
                     " ",
                     true, true, true,
                     false );
-                    
-  
-        
+
         _oDisplayText2 = new CTLText(s_oStage, 
                     412, 64, 190, 40, 
                     19, "left", "#ffde00", FONT_GAME_2, 1,
@@ -98,8 +96,6 @@ function CInterface(iMoney){
                     " ",
                     true, true, true,
                     false );
-                    
-      
 
         _oCurDealerCardValueText = new createjs.Text("","20px "+FONT_GAME_1, "#fff");
         _oCurDealerCardValueText.shadow = new createjs.Shadow("#000000", 2, 2, 1);
@@ -122,9 +118,7 @@ function CInterface(iMoney){
                     TEXT_MONEY+":",
                     true, true, false,
                     false );
-                    
-     
-        
+
         _oMoneyText = new CTLText(s_oStage, 
                     470, CANVAS_HEIGHT - 90, 190, 40, 
                     30, "left", "#ffde00", FONT_GAME_2, 1,
@@ -132,8 +126,7 @@ function CInterface(iMoney){
                     formatValue(iMoney),
                     true, true, false,
                     false );
-      
-        
+
         oSprite = s_oSpriteLibrary.getSprite('but_deal');
         _oDealBut = new CGuiButton(1282,CANVAS_HEIGHT - oSprite.height/2,oSprite,TEXT_DEAL,FONT_GAME_1,"#ffffff",26,s_oStage);
         _oDealBut.addEventListener(ON_MOUSE_UP, this._onButDealRelease, this);
@@ -142,8 +135,7 @@ function CInterface(iMoney){
         _aWinText[BET_TIE] = new CWinDisplay(CANVAS_WIDTH + 100,360,s_oStage);
         _aWinText[BET_BANKER] = new CWinDisplay(CANVAS_WIDTH + 100,460,s_oStage);
         _aWinText[BET_PLAYER] = new CWinDisplay(CANVAS_WIDTH + 100,580,s_oStage);
-        
-        
+
         POS_BET[BET_TIE] = {x:_oBetTie.getX(),y:_oBetTie.getY()+15};
         POS_BET[BET_BANKER] = {x:_oBetBanker.getX(),y:_oBetBanker.getY()+35};
         POS_BET[BET_PLAYER] = {x:_oBetPlayer.getX(),y:_oBetPlayer.getY()+35};
@@ -152,7 +144,6 @@ function CInterface(iMoney){
         var aPos = [{x:387,y:CANVAS_HEIGHT - 24},{x:467,y:CANVAS_HEIGHT - 24},{x:547,y:CANVAS_HEIGHT - 24},{x:627,y:CANVAS_HEIGHT - 24},{x:707,y:CANVAS_HEIGHT - 24},{x:787,y:CANVAS_HEIGHT - 24}];
         _aFiches = new Array();
 
-        
         for(var i=0;i<NUM_FICHES;i++){
             _aFiches[i] = new CFiche(aPos[i].x,aPos[i].y,i,FICHES_VALUE[i],1,true,s_oStage);
             _aFiches[i].addEventListenerWithParams(ON_MOUSE_UP, this._onFicheClicked, this,[FICHES_VALUE[i],i]);

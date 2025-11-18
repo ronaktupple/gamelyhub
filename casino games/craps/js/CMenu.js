@@ -34,7 +34,6 @@ function CMenu(){
             var oSprite = s_oSpriteLibrary.getSprite('audio_icon');
             _pStartPosAudio = {x: CANVAS_WIDTH - (oSprite.height/2)- 10, y: (oSprite.height/2) + 10}; 
         }
-        
 
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             
@@ -57,7 +56,6 @@ function CMenu(){
             _oButFullscreen = new CToggle(_pStartPosFullscreen.x,_pStartPosFullscreen.y,oSprite,s_bFullscreen,s_oStage);
             _oButFullscreen.addEventListener(ON_MOUSE_UP, this._onFullscreenRelease, this);
         }
-     
 
         _oFade = new createjs.Shape();
         _oFade.graphics.beginFill("black").drawRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
@@ -136,7 +134,6 @@ function CMenu(){
 	
 	sizeHandler();
     };
-
 
     this._onCredits = function(){
         new CCreditsPanel();

@@ -20,7 +20,6 @@ function CGame(oData){
     var _oTable;
     var _oCurBallDebug;
 
-    
     var _oSpriteContainer;
     var _oBackGroundContainer;
     var _oMiddleContainer;
@@ -139,7 +138,6 @@ function CGame(oData){
         _oPachinkoText.scale(iScale);
     };
 
-    
     this.onControllerChanged = function(iValue){
         _iControllerValue = iValue;
         if(_iControllerValue === 0){
@@ -199,8 +197,7 @@ function CGame(oData){
         
         _oBonusPlatform.spin(aCombo);
     };    
-    
-    
+
     this._generateLoseCombo = function(){
         var aRandomCombo = new Array();
         do{
@@ -455,7 +452,6 @@ function CGame(oData){
        this._onCannonUsing();
        
     };
-
 
     WIN_PERCENTAGE = oData.win_occurrence;
     START_CREDITS = oData.start_credits;

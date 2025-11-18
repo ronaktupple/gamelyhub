@@ -36,8 +36,7 @@ function CSymbolsSettings() {
         for(i=0;i<10;i++){
             s_aRandSymbols.push(0);
         }
-        
-        
+
         //OCCURENCE FOR SYMBOL 2
         for(i=0;i<10;i++){
             s_aRandSymbols.push(1);
@@ -50,7 +49,6 @@ function CSymbolsSettings() {
         
     };
 
-    
     this._initSymbolsSpritesheets = function(){
         s_aSymbolData = new Array();
         for(var i=0; i<NUM_SYMBOLS; i++){

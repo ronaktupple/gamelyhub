@@ -289,7 +289,6 @@ class Reel{
 
         if (this.symbols.length < this.windowsCount)
         {
-            console.log("Reel " +this.reelNumber +  ": symbols tape size< slot window size, add symbols");
         }
 
         var invisibleSymbols = this.symbols.length - this.windowsCount;
@@ -350,7 +349,6 @@ class Reel{
 
         sA.add((callBack) =>{
             this.canSpin = true; 
-            console.log(this.reelNumber + ' - reel spin complete');
             completeCallBack(); 
             callBack();
         }, this);
@@ -405,7 +403,7 @@ class Reel{
         var symID = this.symbOrder[newSymbolOrder];         // получаем имя символа 
         slotSymbol.setIcon(symID);
         slotSymbol.orderOnReel = newSymbolOrder;
-      //  if(this.reelNumber == 0) console.log('slotSymbol:' + slotSymbol.sprite.name + '; posY: ' + slotSymbol.posY + '; order: ' + slotSymbol.orderOnReel);
+      //  if(this.reelNumber == 0) 
     }
 
     //arrange tape symbols above and below the window
@@ -461,7 +459,7 @@ class Reel{
                 order = order % this.symbols.length;
             }
             vSymbols.push(this.symbols[order]);
-           // console.log(this.reelNumber + ':' + this.symbols[order].sprite.name);
+           // 
         }
         return vSymbols;
     }
@@ -666,7 +664,6 @@ class LineBehavior
     {
         this.linesController.lineButton_Click(this);
         this.scene.soundController.playClip('button_click');
-        console.log('click line button: ' + this.number);
     }
 
     addChangeSelectionEvent(action, context)
@@ -732,7 +729,6 @@ class LinesController{
             var lineBehavior = new LineBehavior(this.scene, this, this.linesData[i], (this.lineButtons) ? this.lineButtons[i] : null, i + 1, this.lineColor);
             this.lines.push(lineBehavior);
         }    
-        console.log('this.linesData : ' + this.linesData + '; length: ' + this.linesData.length);
     }
 
     setControlActivity(activity)
@@ -759,7 +755,6 @@ class LinesController{
         {
             count = line.number;
         }
-        console.log('line: ' + line.number + '; count'+ count + '; iselected:' + line.isSelected);
         if (this.controls != null) this.controls.setSelectedLinesCount(count, true);
     }
 
@@ -834,7 +829,6 @@ class WinController
 
     searchWinSymbols()
     {
-        console.log('search win symbols');
         this.winLines = [];
         this.linesController.lines.forEach((lB)=>{
             if (lB.isSelected)
@@ -843,7 +837,6 @@ class WinController
                 if(lB.win!=null) 
                 {
                     this.winLines.push(lB);
-                    console.log(lB.number + ' - line win: ' + lB.win);
                 }
             }
         });
@@ -860,7 +853,6 @@ class WinController
                 var temp = reel.findWindowsSymbols(this.scatter);
                 if(temp.length > 0) scatterWinSymbols.push(...temp);
             });
-
 
             this.scatterPayTable.forEach((sPL)=>
             {
@@ -957,7 +949,6 @@ class WinController
         {
             this.scatterWinSymbols.forEach((s)=>{s.showAnim(false);})
         }
-        console.log('winShowCancel');
     }
     
     resetWin()
@@ -1332,7 +1323,6 @@ class SlotControls
 
     setControlActivity(activity, spinButtonActivity, autoSpinButtonActivity)
     {
-        console.log('setControlActivity(activity, spinButtonActivity, autoSpinButtonActivity): ' + activity + ',' + spinButtonActivity + ',' + autoSpinButtonActivity)
         if (this.menuController)  this.menuController.setControlActivity(activity);
         if (this.linesController) { this.linesController.setControlActivity(activity); }
 
@@ -1491,12 +1481,10 @@ class SlotControls
 
     setLineBet(count)
     {
-        console.log('current line bet: ' + this.lineBet)
         count = Math.max(1, count);
         count = Math.min(count, this.maxLineBet);
         var changed = (this.lineBet != count);
         this.lineBet = count;
-        console.log('set new line bet: ' + this.lineBet)
         if (changed)
         {
             this.changeLineBetEvent.events.forEach((eW)=>{ if (eW != null && eW.action != null) eW.action.call(eW.context, this.lineBet); });
@@ -1538,7 +1526,6 @@ class SlotControls
             this.changeSelectedLinesEvent.events.forEach((eW)=>{ if (eW != null && eW.action != null) eW.action.call(eW.context, count, burn); });
             this.changeTotalBetEvent.events.forEach((eW)=>{ if (eW != null && eW.action != null) eW.action.call(eW.context, this.getTotalBet()); });
         }
-        console.log('selectedLinesCount: '+ this.selectedLinesCount);
     }
 
     addFreeSpins(count)

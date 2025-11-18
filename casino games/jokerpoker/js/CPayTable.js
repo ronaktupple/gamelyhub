@@ -43,8 +43,7 @@ function CPayTable(iX,iY){
                     TEXT_COMBO[k],
                     true, true, false,
                     false );
-           
-            
+
             iYOffset += 20;
             
             _aComboText[k] = oComboText;

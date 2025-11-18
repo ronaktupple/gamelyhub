@@ -34,8 +34,6 @@ function CAreYouSurePanel(oFunction) {
                     TEXT_ARE_SURE,
                     true, true, true,
                     false );
-                    
-
 
         _oButYes = new CGfxButton(CANVAS_WIDTH/2+100, 420, s_oSpriteLibrary.getSprite('but_yes'), _oPanelContainer);
         _oButYes.addEventListener(ON_MOUSE_UP, this._onButYes, this);

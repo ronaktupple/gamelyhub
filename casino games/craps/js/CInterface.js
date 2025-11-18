@@ -36,9 +36,7 @@ function CInterface(){
                     TEXT_MONEY,
                     true, true, false,
                     false );
-                    
 
-        
         _oMoneyAmountText = new CTLText(s_oStage, 
                     260, 636, 140, 16, 
                     16, "center", "#fff", FONT1, 1,
@@ -47,7 +45,6 @@ function CInterface(){
                     true, true, false,
                     false );
 
-        
         var oCurBetBg = createBitmap(s_oSpriteLibrary.getSprite('but_bg'));
         oCurBetBg.x = 410;
         oCurBetBg.y = 603;
@@ -60,8 +57,7 @@ function CInterface(){
                     TEXT_CUR_BET,
                     true, true, false,
                     false );
-                    
-        
+
         _oBetAmountText = new CTLText(s_oStage, 
                     419, 636, 140, 16, 
                     16, "center", "#fff", FONT1, 1,
@@ -69,9 +65,7 @@ function CInterface(){
                     " ",
                     true, true, false,
                     false );
-                    
 
-        
         _oDisplayBg = createBitmap(s_oSpriteLibrary.getSprite('but_bets'));
         _oDisplayBg.x = 575;
         _oDisplayBg.y = 610;
@@ -85,7 +79,6 @@ function CInterface(){
                     true, true, true,
                     false );
 
-        
         var oHelpBg = createBitmap(s_oSpriteLibrary.getSprite('display_bg'));
         oHelpBg.x = 880;
         oHelpBg.y = 210;
@@ -99,7 +92,6 @@ function CInterface(){
                     true, true, true,
                     false );
 
-        
         _szLastMsgHelp = TEXT_WAITING_BET;
 
         _oRollBut = new CTextButton(1030,162,s_oSpriteLibrary.getSprite('roll_but'),"  "+TEXT_ROLL,FONT1,"#fff",22,"right",s_oStage);

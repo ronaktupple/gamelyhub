@@ -9,8 +9,7 @@ function CMsgBox(){
         _oGroup.alpha = 0;
         _oGroup.visible=false;
         s_oStage.addChild(_oGroup);
-        
-        
+
         _oBg = createBitmap(s_oSpriteLibrary.getSprite('msg_box'));
         _oBg.on("click",function(){});
         _oGroup.addChild(_oBg);

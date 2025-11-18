@@ -169,7 +169,6 @@ function CBonusPanel(){
         
         _oContainer.visible = true;
         createjs.Tween.get(_oContainer).to({alpha:1}, 1000);  
-		
 
         setVolume("soundtrack",0);
         playSound("soundtrack_bonus",1,true);
@@ -190,8 +189,7 @@ function CBonusPanel(){
         }while(_aBonusValue[s_aAlienOccurence[iRandAlien]]*_iCurBet > SLOT_CASH);
 
         this.playUfoLayAnim(iIndex,s_aAlienOccurence[iRandAlien]);
-		
-        
+
         playSound("choose_ufo",1,false);
         
     };
@@ -219,8 +217,7 @@ function CBonusPanel(){
         _oAlien.x = _aUfos[iIndex].x ;
         var oParent = this;
         createjs.Tween.get(_oAlien).to({y:460}, 300).call(function(){oParent.endBonus();});  
-		
-        
+
         playSound("reveal_alien",1,false);
         
     };

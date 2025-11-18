@@ -104,11 +104,9 @@ function CGame(oData){
         } else if(_iMultiply > _iCurCredit/START_BET){
             _iMultiply = Math.floor(_iCurCredit/START_BET);
         }
-        
-        
+
         _iCurBet = (START_BET*_iMultiply).toFixed(2)/1;
 
-		
         _oInterface.refreshBet(_iCurBet);
         _oWheel.setText(_iMultiply);
     };
@@ -170,8 +168,6 @@ function CGame(oData){
         //SELECT PRIZE      
         _iCurWin = this._getBetPrize();
 
-        
-
         playSound("start_reel",1,false);
         playSound("reel",0.2,true);
 
@@ -205,7 +201,6 @@ function CGame(oData){
             playSound("game_over",1,false);
         }
 
-        
         if(MONEY_WHEEL_SETTINGS[_iCurWin].type === "prize"){
             s_oGame.setWinPrize();
         }
@@ -302,8 +297,7 @@ function CGame(oData){
         
         this.unload();
         s_oMain.gotoMenu();
-        
-        
+
     };
     
     this.gameOver = function(){  
@@ -311,15 +305,13 @@ function CGame(oData){
         _oEndPanel.show();
     };
 
-    
     this._animLedIdle = function(){
         
         _iTimeIdle += s_iTimeElaps;
         
         if(_iTimeIdle > TIME_ANIM_IDLE){
             _iTimeIdle=0;
-            
-            
+
             var iRandAnim = Math.floor(Math.random()*_oLeds.getNumAnim());
     
             while(iRandAnim === _iCurAnim){
@@ -387,8 +379,7 @@ function CGame(oData){
 	if(_bInitGame){
             
             _oLeds.update();
-          
-        
+
             switch(_iGameState) {
                 case STATE_IDLE:{
                         this._animLedIdle();
@@ -421,9 +412,7 @@ function CGame(oData){
     AD_SHOW_COUNTER = oData.ad_show_counter;
     
     BANK_CASH = oData.bank_cash;
-	
-    
-        
+
     _oParent=this;
     this._init();
 }

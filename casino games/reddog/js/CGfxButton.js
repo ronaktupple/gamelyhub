@@ -11,7 +11,6 @@ function CGfxButton(iXPos, iYPos, oSprite, oParentContainer) {
     var _oListenerMouseDown;
     var _oListenerMouseUp;
 
-
     var _oParentContainer;
 
     this._init = function (iXPos, iYPos, oSprite) {
@@ -29,7 +28,6 @@ function CGfxButton(iXPos, iYPos, oSprite, oParentContainer) {
         _fScaleX = 1;
         _fScaleY = 1;
 
-       
         if (!s_bMobile)
             _oButton.cursor = "pointer";
 

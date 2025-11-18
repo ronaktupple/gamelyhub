@@ -83,8 +83,6 @@
                                     // http://codecanyon.net/item/ctl-arcade-wordpress-plugin/13856421 ///////////
                                 });
 
-
-					 
                     $(oMain).on("recharge", function(evt) {
                             //INSERT HERE YOUR RECHARGE SCRIPT THAT RETURN MONEY TO RECHARGE
                             var iMoney = 100;
@@ -94,7 +92,6 @@
                     });
                     
                     $(oMain).on("bet_placed", function(evt,iCurBet) {
-                             console.log("iCurBet "+iCurBet)
                     });
                     
                     $(oMain).on("start_session", function(evt) {
@@ -110,7 +107,6 @@
                            }
                            //...ADD YOUR CODE HERE EVENTUALLY
                     });
-
 
                     $(oMain).on("save_score", function(evt,iMoney) {
                            if(getParamValue('ctl-arcade') === "true"){

@@ -31,8 +31,7 @@ function CGfxButton(iXPos,iYPos,oSprite,oParentContainer){
 	}
 
         _oParentContainer.addChild(_oButton);
-        
-        
+
         this._initListener();
     };
     

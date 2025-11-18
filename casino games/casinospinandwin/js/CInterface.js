@@ -52,8 +52,7 @@ function CInterface(){
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             oExitX = _pStartPosAudio.x - oSprite.width/2 -10;
         }
-        
-        
+
         if (_fRequestFullScreen && screenfull.isEnabled){
             oSprite = s_oSpriteLibrary.getSprite('but_fullscreen');
             _pStartPosFullscreen = {x:oExitX , y:oSprite.height/2 + 14};
@@ -121,7 +120,6 @@ function CInterface(){
         _oButMin.enable();
         _oButMin.addEventListener(ON_MOUSE_UP, this._onButMinRelease, this);
         _oButMin.setTextPosition(-2,10);
-
 
         ///////////////////////CREDITS PANEL///////////////////////
         var oSprite = s_oSpriteLibrary.getSprite('credits_money_panel');
@@ -334,7 +332,6 @@ function CInterface(){
 	}
     };
 
-        
     this._onFullscreenRelease = function(){
 	if(s_bFullscreen) { 
 		_fCancelFullScreen.call(window.document);

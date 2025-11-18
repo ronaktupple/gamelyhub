@@ -11,7 +11,6 @@ import {
     levelGroupNames
 } from './Settings.js';
 
-
 export let currentLevelTiles = [];
 
 function getScene() {
@@ -46,8 +45,6 @@ function LoadMenu(runtime) {
     loadMenu(runtime);
 }
 
-
-
 const scriptsInEvents = {
 
     async Egame_Event1_Act2(runtime, localVars) {
@@ -68,7 +65,6 @@ const scriptsInEvents = {
     },
 
     async Emenu_Event3_Act1(runtime, localVars) {
-        console.log("on start of layout");
         setProgresses(getLevelGroupNames().map(_ => 0));
     },
 
@@ -76,28 +72,23 @@ const scriptsInEvents = {
 
         getLevelProgresses()[0] = runtime.globalVars.temp ? runtime.globalVars.temp : 0;
 
-        console.log(levelProgresses);
     },
 
     async Emenu_Event5_Act2(runtime, localVars) {
 
         getLevelProgresses()[1] = runtime.globalVars.temp ? runtime.globalVars.temp : 0;
 
-
-        console.log(levelProgresses);
     },
 
     async Emenu_Event6_Act2(runtime, localVars) {
 
         getLevelProgresses()[2] = runtime.globalVars.temp ? runtime.globalVars.temp : 0;
-        console.log(levelProgresses);
     },
 
     async Emenu_Event19_Act1(runtime, localVars) {
 
         //runtime.objects.LevelText.instances().forEach(i=>i.destroy());
         //runtime.objects.LevelTileBG.instances().forEach(i=>i.destroy());
-        console.log(runtime);
 
         currentLevelTiles.forEach(t => {
             t.tile.destroy();
@@ -113,8 +104,6 @@ const scriptsInEvents = {
 
         const tileWidth = (runtime.layout.width - (levelPerRow + 1) * spacing) / levelPerRow;
 
-        console.log(tileWidth);
-
         for (let i = 0; i < levelGroup.levels.length; i++) {
             const tile = runtime.objects.LevelTileBG.createInstance(2, 0, 0);
             const text = runtime.objects.LevelText.createInstance(2, 0, 0);
@@ -129,7 +118,6 @@ const scriptsInEvents = {
             tile.y = y;
             tile.width = tileWidth;
             tile.height = tileWidth;
-
 
             text.width = tileWidth;
             text.height = tileWidth;
@@ -147,8 +135,6 @@ const scriptsInEvents = {
 
             if (tile.instVars.locked === 1)
                 tile.setAnimation("Locked");
-            console.log(levelProgresses[runtime.globalVars.SelectedLevelGroup] < i);
-
 
             currentLevelTiles.push({
                 tile,
@@ -158,15 +144,6 @@ const scriptsInEvents = {
         }
 
         runtime.globalVars.MaxLevelPanelY = currentLevelTiles[currentLevelTiles.length - 1].tile.y + tileWidth - runtime.layout.height / 2;
-
-
-
-
-
-
-
-
-
 
     },
 

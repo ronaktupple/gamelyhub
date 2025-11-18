@@ -47,8 +47,7 @@ function CBonusPlatform(iX, iY, oParentContainer){
             aFrames.push(i);
         }
         oCloseShutterAnim.frames = aFrames;
-        
-        
+
         var aFrames = new Array();
         var oFlipToIdleAnim = {frames:[], next:"state_close", speed:1};
         for(var i=20; i>=1; i--){
@@ -79,8 +78,7 @@ function CBonusPlatform(iX, iY, oParentContainer){
         oBallPanel.y = 170;
         oBallPanel.scaleX = oBallPanel.scaleY = 1.3; 
         _oContainer.addChild(oBallPanel);
-        
-        
+
         var iWidth = 30;
         var iHeight = 22;
         var iTextX = oBallPanel.x;
@@ -138,12 +136,12 @@ function CBonusPlatform(iX, iY, oParentContainer){
     };
 
     this.showReels = function(){
-        //console.log("show reels");
+        //
         _oWheelEngine.setVisible(true);
     };
     
     this.hideReels = function(){
-        //console.log("hide reels");
+        //
         _oWheelEngine.setVisible(false);
     };
     
@@ -151,7 +149,6 @@ function CBonusPlatform(iX, iY, oParentContainer){
         _oBallNum.refreshText(iBalls);
     };
 
-    
     this.spin = function(aCombo){
         _oWheelEngine.generateWheelCombo(aCombo);
     };
@@ -177,8 +174,7 @@ function CBonusPlatform(iX, iY, oParentContainer){
         }else {
             playSound("well_done", 1, false);
         }
-        
-        
+
         if(_aCbCompleted[ON_WHEEL_WIN]){
             _aCbCompleted[ON_WHEEL_WIN].call(_aCbOwner[ON_WHEEL_WIN], iSymbolIndex);
         }

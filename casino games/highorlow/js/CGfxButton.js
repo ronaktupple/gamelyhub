@@ -42,8 +42,7 @@ function CGfxButton(iXPos,iYPos,oSprite,bStandard,oParentContainer){
         _oButton.y = iYPos; 
         _oButton.cursor = "pointer";
         _oParentContainer.addChild(_oButton);
-        
-        
+
         this._initListener();
     };
     
@@ -120,7 +119,6 @@ function CGfxButton(iXPos,iYPos,oSprite,bStandard,oParentContainer){
         if(!bStandard){
             _oButton.gotoAndStop("state_true");
         }
-        
 
     };
     

@@ -72,7 +72,6 @@ function CMain(oData){
             this.tryToLoadSound(s_aSoundsInfo[i], false);
         }
 
-        
     };  
     
     this.tryToLoadSound = function(oSoundInfo, bDelay){
@@ -102,7 +101,6 @@ function CMain(oData){
                                                                                           s_aSounds[s_aSoundsInfo[i].ingamename].once('unlock', function() {
                                                                                             s_aSounds[s_aSoundsInfo[i].ingamename].play();
 
-
                                                                                           });
                                                                                          break;
                                                                                      }
@@ -111,12 +109,9 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
-        
-        
-    };
 
+    };
 
     this._loadImages = function(){
         s_oSpriteLibrary.init( this._onImagesLoaded,this._onAllImagesLoaded, this );

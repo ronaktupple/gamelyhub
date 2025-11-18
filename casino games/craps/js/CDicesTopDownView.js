@@ -42,8 +42,7 @@ function CDicesTopDownView(iX,iY,oParentContainer){
         _oDice2.x = (oSpriteDice.width/6)/2 + oSpriteDice.width/6 + 20;
         _oDice2.y = oSpriteDice.height/2;
         _oContainer.addChild(_oDice2);
-        
-       
+
         _oResultText = new CTLText(_oContainer, 
                     oSpriteDice.width/6 -80, oSpriteDice.height + 6, 190, 20, 
                     20, "center", "#fff", FONT1, 1,

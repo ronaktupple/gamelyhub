@@ -17,7 +17,6 @@ function CMenu() {
     var _pStartPosFriendlyBut;
     var _pStartPosTournamentBut;
 
-
     this._init = function() {
         s_b2Players = false;
         setVolume("soundtrack", 1);

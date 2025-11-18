@@ -20,9 +20,7 @@ function CInsurancePanel(){
                     true, true, true,
                     false );
         _oMsgText.setShadow("#000000", 2, 2, 2);
-        
 
-        
         var oSprite = s_oSpriteLibrary.getSprite('but_game_small_bg');
         _oButNo = new CTextButton((CANVAS_WIDTH/2) - 100,CANVAS_HEIGHT -300,oSprite,TEXT_NO,FONT_GAME_1,"#ffffff",20,_oContainer);
         _oButNo.addEventListener(ON_MOUSE_UP, this._onButNoRelease, this);

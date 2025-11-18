@@ -49,8 +49,7 @@ function CGridCell(iX,iY,iRow,iCol,iType,oParentContainer){
         var oSpriteSheet = new createjs.SpriteSheet(oData);
         _oSymbolSprite = createSprite(oSpriteSheet,"start",0,0,iWidthSprite,iHeightSprite);
         _oContainer.addChild(_oSymbolSprite);
-        
-        
+
         //WIN FRAME
         var aSpritesFrame = new Array();
         for(var k=0;k<25;k++){
@@ -67,13 +66,11 @@ function CGridCell(iX,iY,iRow,iCol,iType,oParentContainer){
 
         var oSpriteSheet = new createjs.SpriteSheet(oData);
 
-
         _oWinFrame = createSprite(oSpriteSheet,"start",aSpritesFrame[0].width/2,aSpritesFrame[0].height/2,aSpritesFrame[0].width,aSpritesFrame[0].height);
         _oWinFrame.x = aSpritesFrame[0].width/2;
         _oWinFrame.y = aSpritesFrame[0].height/2;
         _oContainer.addChild(_oWinFrame);
-            
-            
+
         //CONTAINER WIN
         _oContainerWin = new createjs.Container();
         _oContainerWin.x = iWidthSprite/2;
@@ -117,8 +114,7 @@ function CGridCell(iX,iY,iRow,iCol,iType,oParentContainer){
         _oSilver.y = oSpriteBg.height/2;
         _oSilver.on("animationend",this._onEndReveal,this);
         _oContainer.addChild(_oSilver);
-        
-        
+
         _oContainer.regX = oSpriteBg.width/2;
         _oContainer.regY = oSpriteBg.height/2;
     };

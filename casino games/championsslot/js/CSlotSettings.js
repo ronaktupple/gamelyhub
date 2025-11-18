@@ -26,7 +26,6 @@ function CSlotSettings(oData){
         //STORE ALL INFO ABOUT PAYLINE COMBOS
 
         s_aPaylineCombo = [{row:1,col:0},{row:1,col:1},{row:1,col:2}];
-        
 
     };
     

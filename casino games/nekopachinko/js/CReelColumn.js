@@ -62,9 +62,7 @@ function CReelColumn(iIndex,iXPos,iYPos,iDelay,aSymbols,oAttachSymbols,oAttachWi
         _oContainer = new createjs.Container();
         _oContainer.x = iXPos;
         _oContainer.y = iYPos;
-        
-        
-        
+
         var iX = 0;
         var iY = 0;
         _aSymbols = new Array();
@@ -119,7 +117,7 @@ function CReelColumn(iIndex,iXPos,iYPos,iDelay,aSymbols,oAttachSymbols,oAttachWi
         var iX = 0;
         var iY = 0;
         
-        //console.log("sym:"+aSymbols)
+        //
         
         for(var i=0;i<aSymbols.length;i++){
             var oSymbolData = new createjs.Sprite(s_aSymbolData[aSymbols[i]]);

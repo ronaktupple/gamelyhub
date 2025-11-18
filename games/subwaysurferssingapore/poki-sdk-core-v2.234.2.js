@@ -1213,7 +1213,7 @@
             return "US" === e ? 1.5 : B.includes(e) ? .5 : P.includes(e) ? .15 : D.includes(e) ? .08 : M.includes(e) ? .03 : .02
         }
         const z = function(e) {
-            r.debug ? console.log(e) : fetch("https://t.poki.io/adserver", {
+            r.debug ? : fetch("https://t.poki.io/adserver", {
                 method: "POST",
                 mode: "no-cors",
                 body: JSON.stringify(e)
@@ -3298,7 +3298,7 @@
                                     new window.OverlayController(document.body, e)
                                 }, document.head.appendChild(t), Xe = !0), [3, 5];
                             case 4:
-                                return i = n.sent(), console.log(i), [3, 5];
+                                return i = n.sent(), , [3, 5];
                             case 5:
                                 return [2]
                         }
@@ -3905,7 +3905,7 @@
                     data: t
                 })
             }, e.setupDefaultEvents = function() {
-                var t, i = ((t = {})[n.ready] = n.tracking.sdk.status.initialized, t[n.adblocked] = console.log(n.tracking.sdk.status.failed), t[n.ads.busy] = n.tracking.ads.status.busy, t[n.ads.completed] = n.tracking.ads.status.completed, t[n.ads.error] = console.log(n.tracking.ads.status.error), t[n.ads.displayError] = console.log(n.tracking.ads.status.displayError), t[n.ads.impression] = n.tracking.ads.status.impression, t[n.ads.limit] = n.tracking.ads.status.limit, t[n.ads.ready] = n.tracking.ads.status.ready, t[n.ads.requested] = n.tracking.ads.status.requested, t[n.ads.prebidRequested] = n.tracking.ads.status.prebidRequested, t[n.ads.skipped] = n.tracking.ads.status.skipped, t[n.ads.started] = n.tracking.ads.status.started, t[n.ads.video.clicked] = n.tracking.ads.video.clicked, t[n.ads.video.error] = n.tracking.ads.video.error, t[n.ads.video.loaderError] = n.tracking.ads.video.loaderError, t[n.ads.video.buffering] = n.tracking.ads.status.buffering, t[n.ads.video.progress] = n.tracking.ads.video.progress, t[n.ads.video.paused] = n.tracking.ads.video.paused, t[n.ads.video.resumed] = n.tracking.ads.video.resumed, t[n.tracking.screen.gameplayStart] = n.tracking.screen.gameplayStart, t[n.tracking.screen.gameplayStop] = n.tracking.screen.gameplayStop, t[n.tracking.screen.loadingProgress] = n.tracking.screen.loadingProgress, t[n.tracking.screen.commercialBreak] = n.tracking.screen.commercialBreak, t[n.tracking.screen.rewardedBreak] = n.tracking.screen.rewardedBreak, t[n.tracking.screen.happyTime] = n.tracking.screen.happyTime, t);
+                var t, i = ((t = {})[n.ready] = n.tracking.sdk.status.initialized, t[n.adblocked] = , t[n.ads.busy] = n.tracking.ads.status.busy, t[n.ads.completed] = n.tracking.ads.status.completed, t[n.ads.error] = , t[n.ads.displayError] = , t[n.ads.impression] = n.tracking.ads.status.impression, t[n.ads.limit] = n.tracking.ads.status.limit, t[n.ads.ready] = n.tracking.ads.status.ready, t[n.ads.requested] = n.tracking.ads.status.requested, t[n.ads.prebidRequested] = n.tracking.ads.status.prebidRequested, t[n.ads.skipped] = n.tracking.ads.status.skipped, t[n.ads.started] = n.tracking.ads.status.started, t[n.ads.video.clicked] = n.tracking.ads.video.clicked, t[n.ads.video.error] = n.tracking.ads.video.error, t[n.ads.video.loaderError] = n.tracking.ads.video.loaderError, t[n.ads.video.buffering] = n.tracking.ads.status.buffering, t[n.ads.video.progress] = n.tracking.ads.video.progress, t[n.ads.video.paused] = n.tracking.ads.video.paused, t[n.ads.video.resumed] = n.tracking.ads.video.resumed, t[n.tracking.screen.gameplayStart] = n.tracking.screen.gameplayStart, t[n.tracking.screen.gameplayStop] = n.tracking.screen.gameplayStop, t[n.tracking.screen.loadingProgress] = n.tracking.screen.loadingProgress, t[n.tracking.screen.commercialBreak] = n.tracking.screen.commercialBreak, t[n.tracking.screen.rewardedBreak] = n.tracking.screen.rewardedBreak, t[n.tracking.screen.happyTime] = n.tracking.screen.happyTime, t);
                 Object.keys(i).forEach((function(t) {
                     o.addEventListener(t, (function(n) {
                         e.track(i[t], n)
@@ -3953,7 +3953,7 @@
                         console.error(e)
                     }
                 }
-            } else console.log(e)
+            } else 
         }
         "undefined" != typeof window && (t().remoteFetching = !1, t().report.subscribe((function(e) {
             if ("Script error." === e.message && window.pokiLastCatch) {

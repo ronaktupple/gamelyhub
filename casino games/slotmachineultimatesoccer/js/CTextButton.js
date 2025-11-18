@@ -112,8 +112,7 @@ function CTextButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize){
            _aCbCompleted[ON_MOUSE_DOWN].call(_aCbOwner[ON_MOUSE_DOWN]);
        }
     };
-    
-    
+
     this.setTextPosition = function(iY){
         _oText.y= iY;
         _oTextBack.y = iY+2;

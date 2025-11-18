@@ -50,7 +50,6 @@ function CCreditsPanel(){
                     true, true, true,
                     false );
 
-
         var iWidth = 400;
         var iHeight = 60;
         var iTextX = 0;
@@ -63,7 +62,6 @@ function CCreditsPanel(){
                     true, true, true,
                     false );
 
-        
         var oSprite = s_oSpriteLibrary.getSprite('ctl_logo');
         _oLogo = createBitmap(oSprite);
         _oLogo.regX = oSprite.width/2;
@@ -100,8 +98,6 @@ function CCreditsPanel(){
     };
     
     this._init();
-    
-    
-};
 
+};
 

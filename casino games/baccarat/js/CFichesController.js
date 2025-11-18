@@ -32,9 +32,7 @@ function CFichesController(){
                     " ",
                     true, true, false,
                     false );
-                    
 
-        
         _oBetAmountText =  new CTLText(_oTextAttach, 
                     0, 0, 150, 28, 
                     28, "center", "#fff", FONT_GAME_1, 1,
@@ -42,7 +40,6 @@ function CFichesController(){
                     " ",
                     true, true, false,
                     false );
-
 
         _iTimeElaps=0;
         _iValue = _iPrevValue = 0;
@@ -99,8 +96,7 @@ function CFichesController(){
         }
         
         playSound("chip", 1, false);
-        
-        
+
         _oBetAmountText.setX(iXPos);
         _oBetAmountText.setY(iYPos + 20);
         _oBetAmountText.refreshText(formatValue(_iValue));

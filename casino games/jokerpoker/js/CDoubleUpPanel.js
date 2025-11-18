@@ -35,7 +35,6 @@ function CDoubleUpPanel(oSpriteSheetCard){
                     true, true, false,
                     false );
 
-        
         var oTextWon = new CTLText(_oContainer, 
                     CANVAS_WIDTH/2-350, 150, 300, 30, 
                     30, "right", "#fff", FONT1, 1,
@@ -44,7 +43,6 @@ function CDoubleUpPanel(oSpriteSheetCard){
                     true, true, false,
                     false );
 
-        
         var oTextDoubleHalfTo = new CTLText(_oContainer, 
                     CANVAS_WIDTH/2-350, 200, 350, 30, 
                     30, "right", "#fff", FONT1, 1,
@@ -53,7 +51,6 @@ function CDoubleUpPanel(oSpriteSheetCard){
                     true, true, false,
                     false );
 
-        
         var oTextDoubleUpTo = new CTLText(_oContainer, 
                     CANVAS_WIDTH/2-350, 250, 350, 30, 
                     30, "right", "#fff", FONT1, 1,
@@ -62,7 +59,6 @@ function CDoubleUpPanel(oSpriteSheetCard){
                     true, true, false,
                     false );
 
-        
         _oTextWonAmount = new CTLText(_oContainer, 
                     CANVAS_WIDTH/2 + 50, 150, 350, 30, 
                     30, "left", "#ffc501", FONT1, 1,
@@ -71,7 +67,6 @@ function CDoubleUpPanel(oSpriteSheetCard){
                     true, true, false,
                     false );
 
-        
         _oTextDoubleAmount = new CTLText(_oContainer, 
                     CANVAS_WIDTH/2 + 50, 250, 350, 30, 
                     30, "left", "#ffc501", FONT1, 1,
@@ -80,7 +75,6 @@ function CDoubleUpPanel(oSpriteSheetCard){
                     true, true, false,
                     false );
 
-        
         _oTextDoubleHalf = new CTLText(_oContainer, 
                     CANVAS_WIDTH/2 + 50, 200, 350, 30, 
                     30, "left", "#ffc501", FONT1, 1,
@@ -89,7 +83,6 @@ function CDoubleUpPanel(oSpriteSheetCard){
                     true, true, false,
                     false );
 
-        
         var oTextDealer = new CTLText(_oContainer, 
                     450, 335, 230, 20, 
                     20, "center", "#fff", FONT1, 1,
@@ -97,9 +90,7 @@ function CDoubleUpPanel(oSpriteSheetCard){
                     TEXT_DEALER_CARD,
                     true, true, false,
                     false );
-                    
 
-        
         _oButDouble = new CTextButton(CANVAS_WIDTH/2 - 300,700,s_oSpriteLibrary.getSprite("but_menu_bg"),TEXT_DOUBLE,FONT1,"#ffffff",30,0,_oContainer);
         _oButDouble.addEventListener(ON_MOUSE_UP, this._onButDoubleRelease, this);
         
@@ -116,9 +107,7 @@ function CDoubleUpPanel(oSpriteSheetCard){
                     " ",
                     true, true, false,
                     false );
-                    
 
-        
         //ATTACH DELAER CARD
         _oCardDealer = new CCard(565,490,oSpriteSheetCard,_oContainer,0,0,0);
         

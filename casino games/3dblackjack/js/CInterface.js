@@ -48,7 +48,6 @@ function CInterface(iMoney){
         
         if (_fRequestFullScreen && screenfull.isEnabled){
             oSprite = s_oSpriteLibrary.getSprite('but_fullscreen');
-            
 
             _oButFullscreen = new CToggle(_pStartPosFullscreen.x,_pStartPosFullscreen.y,oSprite,s_bFullscreen,s_oStage);
             _oButFullscreen.addEventListener(ON_MOUSE_UP, this._onFullscreenRelease, this);
@@ -79,9 +78,7 @@ function CInterface(iMoney){
                     " ",
                     true, true, true,
                     false );
-                    
 
-        
         _oDisplayText2 = new CTLText(s_oStage, 
                     400, 60, 190, 40, 
                     18, "left", "#ffde00", FONT_GAME_2, 1,
@@ -89,7 +86,6 @@ function CInterface(iMoney){
                     " ",
                     true, true, true,
                     false );
-
 
         _oCurDealerCardValueText = new createjs.Text("","20px "+FONT_GAME_1, "#fff");
         _oCurDealerCardValueText.shadow = new createjs.Shadow("#000000", 2, 2, 1);
@@ -111,7 +107,6 @@ function CInterface(iMoney){
                     true, true, true,
                     false );
 
-        
         oSprite = s_oSpriteLibrary.getSprite('but_game_bg');
         _oDealBut = new CTextButton(908,CANVAS_HEIGHT -30,oSprite,TEXT_DEAL,FONT_GAME_1,"#ffffff",20,s_oStage);
         _oDealBut.addEventListener(ON_MOUSE_UP, this._onButDealRelease, this);
@@ -140,7 +135,6 @@ function CInterface(iMoney){
         
         _oInsurancePanel = new CInsurancePanel();
 
-
         this.disableButtons();
         
         this.refreshButtonPos (s_iOffsetX,s_iOffsetY);
@@ -158,7 +152,6 @@ function CInterface(iMoney){
         if (_fRequestFullScreen && screenfull.isEnabled){
             _oButFullscreen.unload();
         }
-        
 
         s_oInterface = null;
     };

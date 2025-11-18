@@ -66,16 +66,10 @@
     }
     </script>
 
-
     <!-- Cookie Consent CSS (loads before other styles) -->
     <link href="../css/cookie-consent.css" rel="stylesheet">
     
     <!-- Note: Google Analytics and AdSense are loaded conditionally after cookie consent -->
- 
-
-
-
-
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -454,8 +448,6 @@
         </div>
     </header>
 
-
-
     <!-- Main Content Wrapper with Sidebars -->
     <div class="main-content-wrapper mt-5" style="position: relative; z-index: 10;">
         <!-- Left Sidebar Games -->
@@ -509,8 +501,6 @@
                     </div>
                 </section>
 
-
-
                 <!-- Top Advertisement Banner -->
                 <!-- <div class="advertisement-banner mb-4">
                     <div class="ad-placeholder bg-light p-3 text-center rounded">
@@ -518,9 +508,6 @@
                         <small>Premium gaming deals and offers</small>
                     </div>
                 </div> -->
-
-
-
 
                 <!-- Game Full Content -->
                 <section class="game-full-content mb-5" id="gameFullContentSection" style="display: none;">
@@ -702,17 +689,14 @@
                     const keys = Object.keys(gamesData);
                     // Make sure we have a reasonable number of games loaded (at least 20)
                     if (keys.length >= 20) {
-                        console.log(`✓ gamesData loaded successfully with ${keys.length} games`);
                         callback();
                         return;
                     } else if (retryCount < maxRetries) {
-                        console.log(`Waiting for gamesData to fully load... (${keys.length} keys found, retry ${retryCount + 1}/${maxRetries})`);
                         retryCount++;
                         setTimeout(check, retryDelay);
                         return;
                     }
                 } else if (retryCount < maxRetries) {
-                    console.log(`Waiting for gamesData to be defined... (retry ${retryCount + 1}/${maxRetries})`);
                     retryCount++;
                     setTimeout(check, retryDelay);
                     return;
@@ -741,8 +725,6 @@
                 return;
             }
 
-            console.log(`Looking for game: "${gameId}"`);
-
             // Wait for gamesData to be fully loaded
             waitForGamesData(function() {
                 // Get game data
@@ -755,14 +737,10 @@
                     // Check if it's a case sensitivity issue
                     const lowerGameId = gameId.toLowerCase();
                     const foundGame = Object.keys(gamesData).find(key => key.toLowerCase() === lowerGameId);
-                    if (foundGame) {
-                        console.log(`Found similar game with different case: "${foundGame}"`);
-                    }
                     window.location.href = '../index.html';
                     return;
                 }
 
-                console.log(`✓ Game "${gameId}" found: "${game.title}"`);
                 // Game found, proceed with loading
                 loadGameDetails(game);
             });
@@ -844,7 +822,6 @@
                     if (typeof gamesData !== 'undefined' && typeof GameLoader !== 'undefined') {
                         const keys = Object.keys(gamesData);
                         if (keys.length >= 20 && GameLoader.loadGames) {
-                            console.log(`✓ Dependencies loaded: ${keys.length} games, GameLoader ready`);
                             callback();
                             return;
                         }
@@ -906,7 +883,6 @@
                 
                 // Load initial games
                 const result = loadFilteredGames(0, 20);
-                console.log(`Loaded ${result.loaded} games in "More Games to Play" section`);
                 
                 // Setup infinite scroll if there are more games
                 if (result.hasMore) {
@@ -1028,7 +1004,6 @@
                     if (typeof gamesData !== 'undefined' && typeof GameLoader !== 'undefined') {
                         const keys = Object.keys(gamesData);
                         if (keys.length >= 20 && GameLoader.getAllGames) {
-                            console.log(`✓ Dependencies loaded for sidebar games: ${keys.length} games`);
                             callback();
                             return;
                         }
@@ -1167,8 +1142,6 @@
                 // Load games into both sidebars
                 loadSidebar(leftContainer, leftGames, leftLoading);
                 loadSidebar(rightContainer, rightGames, rightLoading);
-                
-                console.log(`Loaded ${leftGames.length} games in left sidebar, ${rightGames.length} games in right sidebar`);
             });
         }
 

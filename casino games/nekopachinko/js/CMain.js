@@ -76,7 +76,6 @@ function CMain(oData){
         s_aSoundsInfo.push({path: './sounds/',filename:'reels',loop:false,volume:1, ingamename: 'reels'});
         s_aSoundsInfo.push({path: './sounds/',filename:'reels_stop',loop:false,volume:1, ingamename: 'reels_stop'});
         s_aSoundsInfo.push({path: './sounds/',filename:'platform_turn',loop:false,volume:1, ingamename: 'platform_turn'});
-        
 
         RESOURCE_TO_LOAD += s_aSoundsInfo.length;
         
@@ -121,7 +120,6 @@ function CMain(oData){
                                                             } 
                                                         });
 
-            
         }, (bDelay ? 200 : 0) );
     };
 

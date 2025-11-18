@@ -46,8 +46,7 @@ function CGameSettings(){
         _aAttachFiches["horn3"] = {x:930,y:520};
         _aAttachFiches["horn2"] = {x:1032,y:520};
         _aAttachFiches["horn12"] = {x:1134,y:520};
-        
-        
+
         _aAttachFiches["oDealerWin"] = {x:CANVAS_WIDTH/2,y:-232};
         _aAttachFiches["oReceiveWin"] = {x:CANVAS_WIDTH/2,y:CANVAS_HEIGHT + 100};
     };

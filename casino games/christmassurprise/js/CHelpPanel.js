@@ -39,8 +39,7 @@ function CHelpPanel(iStartX,iStartY,oEaseIn,oEaseOut,oParentContainer){
         oBg.regX = oSpriteBg.width * 0.5;
         oBg.regY = oSpriteBg.height * 0.5;
         _oPanelContainer.addChild(oBg);
-        
-        
+
         var oMsg = new CTLText(_oPanelContainer, 
                     -350, -150, 700, 140, 
                     70, "center", FONT_COLOR, FONT, 1,
@@ -80,8 +79,7 @@ function CHelpPanel(iStartX,iStartY,oEaseIn,oEaseOut,oParentContainer){
     
     this.hide = function(bExit){
         _oContainer.visible = false;
-        
-        
+
         if (_aCbCompleted[ON_EXIT_FROM_HELP]) {
             _aCbCompleted[ON_EXIT_FROM_HELP].call(_aCbOwner[ON_EXIT_FROM_HELP],bExit);
         }

@@ -14,8 +14,7 @@ function CWinText (szType,iX, iAmount){
         _oTextContainer.y=CANVAS_HEIGHT/2 - 135;        
         _oTextContainer.alpha = 1;        
         s_oStage.addChild(_oTextContainer);
-        
-        
+
         _oTextOutline = new CTLText(_oTextContainer, 
                     -500, 0, 1000, 60, 
                     60, "center", "#000", PRIMARY_FONT, 1,
@@ -34,7 +33,6 @@ function CWinText (szType,iX, iAmount){
                     true, true, false,
                     false );
 
-        
         _iTextWidth = _oTextContainer.getBounds().width; 
         
         this.show(iX,iAmount);

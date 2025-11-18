@@ -121,7 +121,6 @@
     }
     </script>
 
-
     <!-- Cookie Consent CSS (loads before other styles) -->
     <link href="css/cookie-consent.css" rel="stylesheet">
     
@@ -143,7 +142,6 @@
             try {
                 if (typeof gamesData !== 'undefined') {
                     const keys = Object.keys(gamesData);
-                    console.log('✓ games-data.js loaded: ' + keys.length + ' games found');
                     if (keys.length < 50) {
                         console.error('✗ ERROR: Only ' + keys.length + ' games loaded! Expected ~80 games.');
                         console.error('Available keys:', keys);
@@ -152,8 +150,6 @@
                         console.error('  - Windows/Linux: Ctrl + Shift + R or Ctrl + F5');
                         console.error('  - Mac: Cmd + Shift + R');
                         console.error('  - Or clear browser cache and reload');
-                    } else {
-                        console.log('✓ All games loaded successfully!');
                     }
                 } else {
                     console.error('✗ gamesData is not defined! Check if games-data.js loaded correctly.');
@@ -659,7 +655,6 @@
                         </a>
                     </div>
                 </section> -->
-              
 
                 <!-- Top Advertisement Banner -->
                 <!-- <div class="advertisement-banner mb-4">
@@ -684,7 +679,6 @@
                     </div>
                 </section>
 
-
                 <!-- Top Advertisement Banner -->
                 <!-- <div class="advertisement-banner mb-4">
                     <div class="ad-placeholder bg-light p-3 text-center rounded">
@@ -692,8 +686,6 @@
                         <small>Premium gaming deals and offers</small>
                     </div>
                 </div> -->
-
-
 
             </div>
         </div>
@@ -800,17 +792,10 @@
         (function checkGamesData() {
             if (typeof gamesData !== 'undefined') {
                 const keys = Object.keys(gamesData);
-                console.log('Immediate check - gamesData keys:', keys.length);
                 if (keys.length < 50) {
                     console.warn('WARNING: Only', keys.length, 'games found. Expected ~80 games.');
-                    console.log('Available keys:', keys);
-                    console.log('Sample game:', gamesData[keys[0]]);
-                    // Check if there's a script error by trying to access a later game
-                    console.log('Checking for game at index 13:', keys[13]);
-                    console.log('Checking for game at index 20:', keys[20]);
                 }
             } else {
-                console.log('gamesData not yet defined, will retry...');
                 setTimeout(checkGamesData, 100);
             }
         })();
@@ -819,10 +804,8 @@
         window.addEventListener('load', function() {
             if (typeof gamesData !== 'undefined') {
                 const keys = Object.keys(gamesData);
-                console.log('After page load - gamesData keys:', keys.length);
                 if (keys.length < 50) {
                     console.warn('WARNING: Only', keys.length, 'games found. Expected ~80 games.');
-                    console.log('Available keys:', keys);
                 }
             } else {
                 console.error('gamesData is not defined after page load!');
@@ -865,7 +848,6 @@
                     if (typeof casinoGamesData !== 'undefined') {
                         const keys = Object.keys(casinoGamesData);
                         if (keys.length > 0) {
-                            console.log(`✓ casinoGamesData loaded for home page: ${keys.length} games`);
                             callback();
                             return;
                         }

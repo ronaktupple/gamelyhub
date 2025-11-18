@@ -14,7 +14,6 @@ $(window).resize(function() {
 });
 
 function trace(szMsg){
-    console.log(szMsg);
 }
 
 function getSize(Name) {
@@ -59,9 +58,7 @@ function getSize(Name) {
        return size;
 };
 
-
 window.addEventListener("orientationchange", onOrientationChange );
-
 
 function onOrientationChange(){
     if (window.matchMedia("(orientation: portrait)").matches) {
@@ -114,8 +111,7 @@ function isIOS() {
            
    while (iDevices.length) {
        if (navigator.platform === iDevices.pop()){
-           
-               
+
            return true; 
        } 
    } 
@@ -291,7 +287,6 @@ function createSprite(oSpriteSheet, szState, iRegX,iRegY,iWidth, iHeight){
 	return oRetSprite;
 }
 
-
 function randomFloatBetween(minValue,maxValue,precision){
     if(typeof(precision) === 'undefined'){
         precision = 2;
@@ -408,13 +403,10 @@ function easeInQuad (t, b, c, d){
 function easeInSine (t, b, c, d) {
 			return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
 		}
-                
-                
-                
+
 function easeInCubic (t, b, c, d) {
 			return c*(t/=d)*t*t + b;
 		};                
-
 
 function getTrajectoryPoint(t,p){
     var result = new createjs.Point();
@@ -678,7 +670,6 @@ function getParamValue(paramName){
                         return pArr[1];
         }
 }
-
 
 function fullscreenHandler(){
     if (!ENABLE_FULLSCREEN || !screenfull.isEnabled){

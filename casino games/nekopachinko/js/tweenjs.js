@@ -26,7 +26,6 @@
 * OTHER DEALINGS IN THE SOFTWARE.
 */
 
-
 //##############################################################################
 // extend.js
 //##############################################################################
@@ -47,8 +46,8 @@ this.createjs = this.createjs||{};
  * 	MySubClass.prototype.doSomething = function() { }
  *
  * 	var foo = new MySubClass();
- * 	console.log(foo instanceof MySuperClass); // true
- * 	console.log(foo.prototype.constructor === MySubClass); // true
+ * 	// true
+ * 	// true
  *
  * @method extend
  * @param {Function} subclass The subclass.
@@ -103,7 +102,7 @@ this.createjs = this.createjs||{};
  * 	createjs.promote(ClassB, "ClassA");
  *
  * 	var foo = new ClassB("World", "!?!");
- * 	console.log(foo.greet()); // Hello World!?!
+ * 	// Hello World!?!
  *
  * @method promote
  * @param {Function} subclass The class to promote super class methods on.
@@ -160,7 +159,7 @@ createjs.deprecate = function(fallbackMethod, name) {
 	"use strict";
 	return function() {
 		var msg = "Deprecated property or method '"+name+"'. See docs for info.";
-		console && (console.warn ? console.warn(msg) : console.log(msg));
+		console && (console.warn ? console.warn(msg) : );
 		return fallbackMethod && fallbackMethod.apply(this, arguments);
 	}
 };
@@ -188,8 +187,7 @@ this.createjs = this.createjs||{};
 	 * @constructor
 	 **/
 	function Event(type, bubbles, cancelable) {
-		
-	
+
 	// public properties:
 		/**
 		 * The type of event.
@@ -388,7 +386,6 @@ this.createjs = this.createjs||{};
 (function() {
 	"use strict";
 
-
 // constructor:
 	/**
 	 * EventDispatcher provides methods for managing queues of event listeners and dispatching events.
@@ -418,7 +415,7 @@ this.createjs = this.createjs||{};
 	 *
 	 *      instance.addEventListener("eventName", handlerMethod);
 	 *      function handlerMethod(event) {
-	 *          console.log(event.target + " Was Clicked");
+	 *          
 	 *      }
 	 *
 	 * <b>Maintaining proper scope</b><br />
@@ -426,11 +423,11 @@ this.createjs = this.createjs||{};
 	 * method to subscribe to events simplifies this.
 	 *
 	 *      instance.addEventListener("click", function(event) {
-	 *          console.log(instance == this); // false, scope is ambiguous.
+	 *          // false, scope is ambiguous.
 	 *      });
 	 *      
 	 *      instance.on("click", function(event) {
-	 *          console.log(instance == this); // true, "on" uses dispatcher scope by default.
+	 *          // true, "on" uses dispatcher scope by default.
 	 *      });
 	 * 
 	 * If you want to use addEventListener instead, you may want to use function.bind() or a similar proxy to manage
@@ -445,8 +442,7 @@ this.createjs = this.createjs||{};
 	 * @constructor
 	 **/
 	function EventDispatcher() {
-	
-	
+
 	// private properties:
 		/**
 		 * @protected
@@ -486,7 +482,6 @@ this.createjs = this.createjs||{};
 		target._dispatchEvent = p._dispatchEvent;
 		target.willTrigger = p.willTrigger;
 	};
-	
 
 // public methods:
 	/**
@@ -538,7 +533,7 @@ this.createjs = this.createjs||{};
 	 * 		var listener = myBtn.on("click", handleClick, null, false, {count:3});
 	 * 		function handleClick(evt, data) {
 	 * 			data.count -= 1;
-	 * 			console.log(this == myBtn); // true - scope defaults to the dispatcher
+	 * 			// true - scope defaults to the dispatcher
 	 * 			if (data.count == 0) {
 	 * 				alert("clicked 3 times!");
 	 * 				myBtn.off("click", listener);
@@ -727,7 +722,6 @@ this.createjs = this.createjs||{};
 		return "[EventDispatcher]";
 	};
 
-
 // private methods:
 	/**
 	 * @method _dispatchEvent
@@ -756,7 +750,6 @@ this.createjs = this.createjs||{};
 		if (eventPhase === 2) { this._dispatchEvent(eventObj, 2.1); }
 	};
 
-
 	createjs.EventDispatcher = EventDispatcher;
 }());
 
@@ -768,7 +761,6 @@ this.createjs = this.createjs||{};
 
 (function() {
 	"use strict";
-
 
 // constructor:
 	/**
@@ -796,7 +788,6 @@ this.createjs = this.createjs||{};
 	function Ticker() {
 		throw "Ticker cannot be instantiated.";
 	}
-
 
 // constants:
 	/**
@@ -848,7 +839,6 @@ this.createjs = this.createjs||{};
 	 **/
 	Ticker.TIMEOUT = "timeout";
 
-
 // static events:
 	/**
 	 * Dispatched each tick. The event will be dispatched to each listener even when the Ticker has been paused using
@@ -858,7 +848,7 @@ this.createjs = this.createjs||{};
 	 *
 	 *      createjs.Ticker.addEventListener("tick", handleTick);
 	 *      function handleTick(event) {
-	 *          console.log("Paused:", event.paused, event.delta);
+	 *          
 	 *      }
 	 *
 	 * @event tick
@@ -871,7 +861,6 @@ this.createjs = this.createjs||{};
 	 * 	you could determine the amount of time that the Ticker has been paused since initialization with `time-runTime`.
 	 * @since 0.6.0
 	 */
-
 
 // public static properties:
 	/**
@@ -913,7 +902,6 @@ this.createjs = this.createjs||{};
 	 *      createjs.Ticker.addEventListener("tick", handleTick);
 	 *      createjs.Ticker.paused = true;
 	 *      function handleTick(event) {
-	 *          console.log(event.paused,
 	 *          	createjs.Ticker.getTime(false),
 	 *          	createjs.Ticker.getTime(true));
 	 *      }
@@ -924,7 +912,6 @@ this.createjs = this.createjs||{};
 	 * @default false
 	 **/
 	Ticker.paused = false;
-
 
 // mix-ins:
 	// EventDispatcher methods:
@@ -939,7 +926,6 @@ this.createjs = this.createjs||{};
 		!Ticker._inited&&Ticker.init();
 		return Ticker._addEventListener.apply(Ticker, arguments);
 	};
-
 
 // private static properties:
 	/**
@@ -1034,7 +1020,6 @@ this.createjs = this.createjs||{};
 	 * @private
 	 **/
 	Ticker._raf = true;
-	
 
 // static getter / setters:
 	/**
@@ -1112,8 +1097,7 @@ this.createjs = this.createjs||{};
 			interval: { get: Ticker._getInterval, set: Ticker._setInterval },
 			framerate: { get: Ticker._getFPS, set: Ticker._setFPS }
 		});
-	} catch (e) { console.log(e); }
-
+	} catch (e) { }
 
 // public static methods:
 	/**
@@ -1235,7 +1219,6 @@ this.createjs = this.createjs||{};
 		return  Ticker._ticks - (pauseable ? Ticker._pausedTicks : 0);
 	};
 
-
 // private static methods:
 	/**
 	 * @method _handleSynch
@@ -1339,7 +1322,6 @@ this.createjs = this.createjs||{};
 		return ((now&&now.call(w.performance))||(new Date().getTime())) - Ticker._startTime;
 	};
 
-
 	createjs.Ticker = Ticker;
 }());
 
@@ -1351,7 +1333,6 @@ this.createjs = this.createjs||{};
 
 (function() {
 	"use strict";
-
 
 // constructor
 	/**
@@ -1463,8 +1444,7 @@ this.createjs = this.createjs||{};
 		 * @readonly
 		 */
 		this.rawPosition = -1;
-		
-		
+
 	// private properties:
 		/**
 		 * @property _paused
@@ -1669,7 +1649,7 @@ this.createjs = this.createjs||{};
 	
 	/**
 	 * Calculates a normalized position based on a raw position. For example, given a tween with a duration of 3000ms set to loop:
-	 * 	console.log(myTween.calculatePosition(3700); // 700
+	 * 	// 700
 	 * @method calculatePosition
 	 * @param {Number} rawPosition A raw position.
 	 */
@@ -1703,7 +1683,6 @@ this.createjs = this.createjs||{};
 		}
 		return list;
 	};
-	
 
 	/**
 	 * Defines labels for use with gotoAndPlay/Stop. Overwrites any previously set labels.
@@ -1765,7 +1744,6 @@ this.createjs = this.createjs||{};
 		if (isNaN(pos)) { pos = this._labels && this._labels[positionOrLabel]; }
 		return pos;
 	};
-	
 
 	/**
 	 * Returns a string representation of this object.
@@ -1783,7 +1761,6 @@ this.createjs = this.createjs||{};
 	p.clone = function() {
 		throw("AbstractTween can not be cloned.")
 	};
-
 
 // private methods:
 	/**
@@ -1820,7 +1797,7 @@ this.createjs = this.createjs||{};
 	p._runActions = function(startRawPos, endRawPos, jump, includeStart) {
 		// runs actions between startPos & endPos. Separated to support action deferral.
 		
-		//console.log(this.passive === false ? " > Tween" : "Timeline", "run", startRawPos, endRawPos, jump, includeStart);
+		//
 		
 		// if we don't have any actions, and we're not a Timeline, then return:
 		// TODO: a cleaner way to handle this would be to override this method in Tween, but I'm not sure it's worth the overhead.
@@ -1885,7 +1862,6 @@ this.createjs = this.createjs||{};
 
 (function() {
 	"use strict";
-
 
 // constructor
 	/**
@@ -1973,8 +1949,7 @@ this.createjs = this.createjs||{};
 		 * @readonly
 		 **/
 		this.passive = false;
-		
-		
+
 	// private properties:
 	
 		/**
@@ -2093,7 +2068,6 @@ this.createjs = this.createjs||{};
 	 * @protected
 	 */
 	Tween._tweenTail = null;
-
 
 // static methods	
 	/**
@@ -2266,7 +2240,6 @@ this.createjs = this.createjs||{};
 		tween._paused = paused;
 	};
 
-
 // events:
 
 // public methods:
@@ -2431,7 +2404,6 @@ this.createjs = this.createjs||{};
 	p.clone = function() {
 		throw("Tween can not be cloned.")
 	};
-
 
 // private methods:
 	/**
@@ -2686,10 +2658,8 @@ this.createjs = this.createjs||{};
 
 this.createjs = this.createjs||{};
 
-
 (function() {
 	"use strict";
-	
 
 // constructor	
 	/**
@@ -2749,10 +2719,8 @@ this.createjs = this.createjs||{};
 	
 	var p = createjs.extend(Timeline, createjs.AbstractTween);
 
-	
 // events:
 	// docced in AbstractTween.
-
 
 // public methods:
 	/**
@@ -2854,14 +2822,13 @@ this.createjs = this.createjs||{};
 	
 	// Docced in AbstractTween
 	p._runActionsRange = function(startPos, endPos, jump, includeStart) {
-		//console.log("	range", startPos, endPos, jump, includeStart);
+		//
 		var t = this.position;
 		for (var i=0, l=this.tweens.length; i<l; i++) {
 			this.tweens[i]._runActions(startPos, endPos, jump, includeStart);
 			if (t !== this.position) { return true; } // an action changed this timeline's position.
 		}
 	};
-
 
 	createjs.Timeline = createjs.promote(Timeline, "AbstractTween");
 
@@ -2898,7 +2865,6 @@ this.createjs = this.createjs||{};
 	function Ease() {
 		throw "Ease cannot be instantiated.";
 	}
-
 
 // static methods and properties
 	/**
@@ -3347,7 +3313,6 @@ this.createjs = this.createjs||{};
 		throw("MotionGuidePlugin cannot be instantiated.")
 	}
 	var s = MotionGuidePlugin;
-
 
 // static properties:
 	/**

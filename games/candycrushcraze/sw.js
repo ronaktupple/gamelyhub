@@ -208,12 +208,10 @@ function UpdateCheck(isFirst)
 				{
 					if (isUpdatePending)
 					{
-						console.log(CONSOLE_PREFIX + "Update pending");
 						Broadcast("update-pending");
 					}
 					else
 					{
-						console.log(CONSOLE_PREFIX + "Up to date");
 						Broadcast("up-to-date");
 					}
 				});
@@ -229,9 +227,7 @@ function UpdateCheck(isFirst)
 				
 				if (mainPageUrl && fileList.indexOf(mainPageUrl) === -1)
 					fileList.unshift(mainPageUrl);
-				
-				console.log(CONSOLE_PREFIX + "Caching " + fileList.length + " files for offline use");
-				
+
 				if (isFirst)
 					Broadcast("downloading");
 				else
@@ -247,12 +243,10 @@ function UpdateCheck(isFirst)
 				{
 					if (isUpdatePending)
 					{
-						console.log(CONSOLE_PREFIX + "All resources saved, update ready");
 						BroadcastUpdateReady(version);
 					}
 					else
 					{
-						console.log(CONSOLE_PREFIX + "All resources saved, offline support ready");
 						Broadcast("offline-ready");
 					}
 				});
@@ -309,7 +303,6 @@ self.addEventListener('fetch', event =>
 				
 				// Identify newest cache to use. Delete all the others.
 				let latestCacheName = availableCacheNames[availableCacheNames.length - 1];
-				console.log(CONSOLE_PREFIX + "Updating to new version");
 				
 				return Promise.all(availableCacheNames.slice(0, -1)
 									.map(c => caches.delete(c)))

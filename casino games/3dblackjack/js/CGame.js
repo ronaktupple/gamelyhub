@@ -98,8 +98,7 @@ function CGame(oData){
         }else{
             _bUpdate = true;
         }
-        
-        
+
     };
     
     this.unload = function(){
@@ -306,12 +305,10 @@ function CGame(oData){
                 
             }
 
-
             oCard.addEventListener(ON_CARD_ANIMATION_ENDING,this.cardFromDealerArrived);
 
             _aCardsDealing.push(oCard);
-            
-            
+
             playSound("card", 1, false);
             
     };
@@ -490,8 +487,7 @@ function CGame(oData){
                             oCard.addEventListener(ON_CARD_SHOWN,this._onCardShown);
                     }
                 }else{
-                 
-                   
+
                     if(!_bDealerLoseInCurHand && _iNextCardForPlayer === 1  &&
                         (s_oGameSettings.getCardValue(_aCardsInCurHandForPlayer[_iNextCardForPlayer])+s_oGameSettings.getCardValue(_aCardsInCurHandForPlayer[_iNextCardForPlayer-1]) ) > 18){
                         
@@ -514,11 +510,9 @@ function CGame(oData){
                 _aCardsDealing.push(oCard);
                 _iCardIndexToDeal++;
 
-
                 oCard.addEventListener(ON_CARD_ANIMATION_ENDING,this.cardFromDealerArrived);
                 oCard.addEventListener(ON_CARD_TO_REMOVE,this._onRemoveCard);
-                
-                
+
                 playSound("card", 1, false);
                 
         }else{
@@ -563,7 +557,6 @@ function CGame(oData){
             _aDealerCards[i].hideCard();
         }
 
-
         var aCards=_oSeat.getPlayerCards();
         for(var k=0;k<aCards.length;k++){
                 aCards[k].initRemoving(pRemoveOffset);
@@ -574,18 +567,15 @@ function CGame(oData){
         _oInterface.clearDealerText();
         _iTimeElaps=0;
         s_oGame.changeState(STATE_GAME_SHOW_WINNER);
-        
-        
+
         playSound("fiche_collect", 1, false);
-        
-        
+
         _iAdsCounter++;
         if(_iAdsCounter === AD_SHOW_COUNTER){
             _iAdsCounter = 0;
             $(s_oMain).trigger("show_interlevel_ad");
         }
 
-	
     };
     
     this.ficheSelected = function(iFicheValue,iFicheIndex){
@@ -931,8 +921,7 @@ function CGame(oData){
                     break;
             }
         }
-        
-	
+
     };
     
     s_oGame = this;

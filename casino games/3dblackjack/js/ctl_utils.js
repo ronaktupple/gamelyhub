@@ -15,7 +15,6 @@ $(window).resize(function() {
 });
 
 function trace(szMsg){
-    console.log(szMsg);
 }
 
 function getSize(Name) {
@@ -99,8 +98,6 @@ function isMobile(){
     }  
 };
 
-
-
 function isIOS() {
     if(isIpad()){
         return true;
@@ -124,7 +121,6 @@ function isIOS() {
     s_bIsIphone = false;
     return false; 
 }
-
 
 function isRetina(){
     var query = "(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
@@ -223,8 +219,7 @@ function sizeHandler() {
         if(s_oMenu !== null){
             s_oMenu.refreshButtonPos( s_iOffsetX,s_iOffsetY);
         }
-        
-        
+
 	if(s_bIsRetina && s_oStage){
             canvas = document.getElementById('canvas');
             s_oStage.canvas.width = destW*2;
@@ -321,9 +316,7 @@ function _checkOrientation(iWidth,iHeight){
 				s_bFocus = true;
 			}
 		}
-        
-        
-                
+
     }
 })();
 
@@ -516,7 +509,6 @@ function ctlArcadePause(){
     }
 }
 
-
 function getParamValue(paramName){
     var url = window.location.search.substring(1);
     var qArray = url.split('&'); 
@@ -527,8 +519,6 @@ function getParamValue(paramName){
                     return pArr[1];
     }
 }
-
-
 
 function fullscreenHandler(){
 	if (!ENABLE_FULLSCREEN || screenfull.isEnabled === false){
@@ -546,7 +536,6 @@ function fullscreenHandler(){
     }
 }
 
-
 if (screenfull.isEnabled) {
     screenfull.on('change', function(){
             s_bFullscreen = screenfull.isFullscreen;
@@ -560,6 +549,4 @@ if (screenfull.isEnabled) {
             }
     });
 }
-
-
 

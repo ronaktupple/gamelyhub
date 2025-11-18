@@ -53,7 +53,6 @@ function CWheelAnim(iX,iY){
         
         this._initBall();
 
-        
         _aWheelMaskSprites = new Array();
         for(var j=0;j<NUM_MASK_BALL_SPIN_FRAMES;j++){
             var oImage = createBitmap(s_oSpriteLibrary.getSprite('wheel_handle_'+j));
@@ -115,7 +114,6 @@ function CWheelAnim(iX,iY){
                     true, true, false,
                     false );
 
-        
         _oShowNumber.regX = oSprite.width/2;
         _oShowNumber.regY = oSprite.height/2;
     };
@@ -367,8 +365,7 @@ function CWheelAnim(iX,iY){
              _oResultText.__refreshTextFont(22);
             _oResultText.refreshText(TEXT_YOU_LOSE);
         }
-        
-        
+
         switch(s_oGameSettings.getColorNumber(iNumExtracted)){
                 case COLOR_BLACK:{
                     _oNumberColorBg.gotoAndStop("black");

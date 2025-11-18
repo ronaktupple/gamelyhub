@@ -14,7 +14,6 @@ $(window).resize(function() {
 });
 
 function trace(szMsg){
-    console.log(szMsg);
 }
 
 function getSize(Name) {
@@ -90,8 +89,7 @@ function isIOS() {
             
     while (iDevices.length) {
         if (navigator.platform === iDevices.pop()){
-            
-                
+
             return true; 
         } 
     } 
@@ -430,7 +428,6 @@ function ctlArcadePause(){
     }
 }
 
-
 function getParamValue(paramName){
     var url = window.location.search.substring(1);
     var qArray = url.split('&'); 
@@ -441,7 +438,6 @@ function getParamValue(paramName){
                     return pArr[1];
     }
 }
-
 
 function fullscreenHandler(){
     if (!ENABLE_FULLSCREEN || screenfull.enabled === false){
@@ -458,7 +454,6 @@ function fullscreenHandler(){
         s_oMenu.resetFullscreenBut();
     }
 }
-
 
 if (screenfull.enabled) {
     screenfull.on('change', function(){

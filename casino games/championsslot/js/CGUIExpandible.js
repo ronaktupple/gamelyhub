@@ -56,9 +56,7 @@ function CGUIExpandible(iX, iY, oSprite, oParentContainer){
         oButton.y = 0;
         oButton.visible = 0;
         _oBackContainer.addChildAt(oButton, 0);
-        
-        
-        
+
         _aButtons.push(oButton);
         
     };
@@ -95,5 +93,4 @@ function CGUIExpandible(iX, iY, oSprite, oParentContainer){
     _oParent = this;
     this._init(iX, iY, oSprite, oParentContainer);
 }
-
 

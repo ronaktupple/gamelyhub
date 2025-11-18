@@ -15,7 +15,6 @@ $(window).resize(function() {
 });
 
 function trace(szMsg){
-    console.log(szMsg);
 }
 
 function getSize(Name) {
@@ -62,7 +61,6 @@ function getSize(Name) {
 
 window.addEventListener("orientationchange", onOrientationChange );
 
-
 function onOrientationChange(){
     if (window.matchMedia("(orientation: portrait)").matches) {
        // you're in PORTRAIT mode	   
@@ -83,7 +81,6 @@ function isMobile(){
     
     return jQuery.browser.mobile;
 }
-
 
 function isIpad() {
     var isIpad = navigator.userAgent.toLowerCase().indexOf('ipad') !== -1;
@@ -207,8 +204,7 @@ function sizeHandler() {
         if(s_oMenu !== null){
             s_oMenu.refreshButtonPos( s_iOffsetX,s_iOffsetY);
         }
-        
-        
+
 	$("#canvas").css("width",destW+"px");
 	$("#canvas").css("height",destH+"px");
         
@@ -332,7 +328,6 @@ function formatValue(iValue){
     return TEXT_CURRENCY + iValue.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
 
-
 (function() {
     var hidden = "hidden";
 
@@ -376,7 +371,6 @@ function formatValue(iValue){
 		}
     }
 })();
-
 
 function playSound(szSound,iVolume,bLoop){
     if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
@@ -433,7 +427,6 @@ function getParamValue(paramName){
         }
 }
 
-
 function fullscreenHandler(){
     if (!ENABLE_FULLSCREEN || !screenfull.isEnabled){
        return;
@@ -449,7 +442,6 @@ function fullscreenHandler(){
         s_oMenu.resetFullscreenBut();
     }
 }
-
 
 if (screenfull.isEnabled) {
     screenfull.on('change', function(){

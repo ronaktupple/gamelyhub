@@ -178,8 +178,7 @@ function CBoard(oParentContainer){
             setTimeout(function(){
                 _oThis._showRemainingSymbols();
             },iTimeWin/2);
-            
-            
+
             return;
         }else if(_aVisibleSymbols.length === 9){
             _bEndScratching = true;

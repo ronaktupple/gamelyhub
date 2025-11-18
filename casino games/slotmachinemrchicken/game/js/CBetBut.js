@@ -29,8 +29,7 @@ function CBetBut(iXPos,iYPos,oSprite){
         _oButton.regY = oSprite.height/2;
        
         s_oStage.addChild(_oButton);
-        
-        
+
         this._initListener();
     };
     
@@ -75,11 +74,9 @@ function CBetBut(iXPos,iYPos,oSprite){
     
     this.buttonRelease = function(){
         if(_aCbCompleted[ON_MOUSE_UP] && _bDisable === false){
-            
 
             playSound("press_but",1,false);
-            
-            
+
             _aCbCompleted[ON_MOUSE_UP].call(_aCbOwner[ON_MOUSE_UP],_aParams);
         }
     };
@@ -106,8 +103,7 @@ function CBetBut(iXPos,iYPos,oSprite){
     this.getButtonImage = function(){
         return _oButton;
     };
-    
-    
+
     this.getX = function(){
         return _oButton.x;
     };

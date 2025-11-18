@@ -14,7 +14,6 @@ class PreSpinState
 
     enterFrom(oldState)
     {
-        console.log(this.toString() + ' - Enter From: ' + oldState.toString());
 
         if (this.spinButton !== null)
         {
@@ -54,8 +53,6 @@ class PreSpinState
             this.stateMachine.changeState(this.stateObject.iddleState);
             return;
         }
-
-        console.log(this.toString() + '  - go to spin state');
 
         this.stateMachine.changeState(this.stateObject.spinState);
     }
@@ -137,13 +134,11 @@ class SpinState
 
      enterFrom(oldState)
      {
-        console.log(this.toString() + ' - Enter From: ' + oldState.toString());
         if (this.stateObject.isCascadeSpin) this.subState = this.cascadeSpinState; // first cascade spins
         else if (this.slotControls.hasFreeSpin()) this.subState = this.freeSpinState;
         else if (this.slotControls.auto) this.subState = this.autoSpinState;
         else if (this.slotControls.useManualStop()) this.subState = this.endLessSpinState;
         else this.subState = this.normalSpinState;
-        console.log('Spin Substate: ' +  this.subState.toString());
         this.subState.enterFrom(oldState);
      }
 
@@ -185,7 +180,6 @@ class AutoSpinState
 
      enterFrom(oldState)
      {
-        console.log(this.toString() + " - Enter From: " + oldState.toString());
 
         if (this.spinButton !== null)
         {
@@ -202,7 +196,6 @@ class AutoSpinState
 
         this.slotControls.setSpinButtonText("SPIN");
         this.slotControls.setControlActivity(false, true, false);
-        console.log(this.toString() + " - run auto spin");
         this.slotControls.applyBet();
         this.stateObject.runSlot();
      }
@@ -279,7 +272,6 @@ class NormalSpinState
 
     enterFrom(oldState)
     {
-        console.log(this.toString() + ' - Enter From: ' + oldState.toString());
         if (this.spinButton !== null)
         {
             this.spinButton.longPressClickEvent.add(this.longPressSpin_Click);
@@ -295,7 +287,6 @@ class NormalSpinState
 
         this.slotControls.setSpinButtonText('SPIN');
         this.slotControls.setControlActivity(false, false,false);       // activity, spinButtonAcivity, autoSpinButtonAcivity
-        console.log(this.toString() + '  - run normal spin');
         this.slotControls.applyBet();
         this.stateObject.runSlot();
     }
@@ -342,7 +333,6 @@ class NormalSpinState
     }
     //endregion input
 
-
     //region old
     handleInput()
     {
@@ -379,7 +369,6 @@ class IddleState
 
     enterFrom(oldState)
     {
-        console.log(this.toString() + ' - enter from: ' + ((oldState === null) ? 'null' : oldState.toString()));
         if (this.spinButton !== null)
         {
             this.spinButton.longPressClickEvent.add(this.longPressSpin_Click, this);
@@ -398,7 +387,6 @@ class IddleState
 
     exitTo(newState)
     {
-        console.log(this.toString() + ' - Exit To: ' + newState.toString());
         if (this.spinButton !== null)
         {
             this.spinButton.longPressClickEvent.remove(this.longPressSpin_Click);
@@ -432,13 +420,11 @@ class IddleState
 
     spin_Click()
     {
-        console.log(this.toString() + " - Spin Click");
         this.stateMachine.changeState(this.stateObject.preSpinState);
     }
 
     autoSpin_Click()
     {
-        console.log(this.toString() + " - Auto Spin Click");
         this.slotControls.setAutoSpinsMode();
         this.stateMachine.changeState(this.stateObject.preSpinState);
     }
@@ -473,7 +459,6 @@ class FreeSpinState
 
     enterFrom(oldState)
     {
-        console.log(this.toString() + " - Enter From: " + oldState.toString());
         if (this.spinButton !== null)
         {
             this.spinButton.longPressClickEvent.add(this.longPressSpin_Click, this);
@@ -486,7 +471,6 @@ class FreeSpinState
             this.autoSpinButton.clickEvent.add(this.autoSpin_Click, this);
         }
         this.slotControls.setControlActivity(false, this.slotControls.auto, false);      // activity, spinButtonAcivity, autoSpinButtonAcivity
-        console.log(this.toString() + "  - run free spin");
         this.stateObject.isFreeSpin = true;
         this.slotControls.applyFreeSpin();
         this.stateObject.runSlot();
@@ -495,7 +479,6 @@ class FreeSpinState
 
     exitTo(newState)
     {
-        console.log(this.toString() + " - Exit To: " + newState.toString());
         if (this.spinButton !== null)
         {
             this.spinButton.longPressClickEvent.remove(this.longPressSpin_Click);
@@ -570,7 +553,6 @@ class EndLessSpinState
 
     enterFrom(oldState)
     {
-        console.log(this.toString() + " - Enter From: " + oldState.toString());
         if (this.spinButton !== null)
         {
             this.spinButton.longPressClickEvent.add(this.longPressSpin_Click, this);
@@ -585,14 +567,12 @@ class EndLessSpinState
         this.slotControls.setSpinButtonText("STOP");
         this.slotControls.setControlActivity(false, true, false);       // activity, spinButtonAcivity, autoSpinButtonAcivity
 
-        console.log(this.toString() + "  - run endless spin");
         this.slotControls.applyBet();
         this.stateObject.runSlotEndLess();
     }
 
     exitTo(newState)
     {
-        console.log(this.toString() + " - Exit To: " + newState.toString());
         if (this.spinButton !== null)
         {
             this.spinButton.longPressClickEvent.remove(this.longPressSpin_Click);
@@ -665,7 +645,6 @@ class CascadeSpinState
 
     enterFrom(oldState)
     {
-        console.log(this.toString() + " - Enter From: " + oldState.toString());
         if (this.spinButton !== null)
         {
             this.spinButton.longPressClickEvent.add(this.longPressSpin_Click, this);
@@ -680,7 +659,6 @@ class CascadeSpinState
 
         this.slotControls.setSpinButtonText("SPIN");
         this.slotControls.setControlActivity(false, false, false);  // activity, spinButtonAcivity, autoSpinButtonAcivity
-        console.log(this.toString() + "  - run cascade spin");
         this.stateObject.runCascadeSpin();  // run cascade spin
     }
 
@@ -750,7 +728,6 @@ class WinState
 
     enterFrom(oldState)
     {
-        console.log(this.toString() + " - Enter From: " + oldState.toString());
         if (this.spinButton !== null)
         {
             this.spinButton.longPressClickEvent.add(this.longPressSpin_Click, this);
@@ -856,7 +833,6 @@ class LoseState
 
     enterFrom(oldState)
     {
-        console.log(this.toString() + ' - Enter From: ' + oldState.toString());
 
         if (this.spinButton !== null)
         {
@@ -988,7 +964,6 @@ class FreeInputWinState
 
     enterFrom(oldState)
     {
-        console.log(this.toString() + ' - Enter From: ' + oldState.toString());
 
         if (this.spinButton !== null)
         {
@@ -1172,7 +1147,7 @@ class SpinButton
         this.pDown = true;
         if(!this.interactable) return;
         if(this.isSwitch) this.pressed = !this.pressed;  
-        this.button.setTexture(this.spriteHover); //         console.log('button down', arguments);
+        this.button.setTexture(this.spriteHover); //         
         this.pointerDownEvent.invoke();      
 
         this.timeoutID = setTimeout(() => {

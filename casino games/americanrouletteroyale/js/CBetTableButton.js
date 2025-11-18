@@ -11,7 +11,6 @@ function CBetTableButton(iXPos,iYPos,oSprite,szName,oContainer,bSelfEnlight){
     var _aNumbersToBet;
     var _oContainer;
 
-    
     this._init =function(iXPos,iYPos,oSprite,szName,oContainer,bSelfEnlight){
         _bSelfEnlight = bSelfEnlight;
         _szName =szName;
@@ -94,7 +93,6 @@ function CBetTableButton(iXPos,iYPos,oSprite,szName,oContainer,bSelfEnlight){
     
     this.buttonRelease = function(){
         playSound("click",1,false);
-        
 
         if(_aCbCompleted[ON_MOUSE_UP]){
             _aCbCompleted[ON_MOUSE_UP].call(_aCbOwner[ON_MOUSE_UP],
@@ -151,8 +149,7 @@ function CBetTableButton(iXPos,iYPos,oSprite,szName,oContainer,bSelfEnlight){
     this.getButtonImage = function(){
         return _oButton;
     };
-    
-    
+
     this.getX = function(){
         return _oButton.x;
     };

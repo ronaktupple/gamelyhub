@@ -105,7 +105,6 @@ function CMenu(){
     this._onButPlayRelease = function(){
         this.unload();
 
-        
         s_oMain.gotoGame();
         $(s_oMain).trigger("start_session");
     };
@@ -125,7 +124,6 @@ function CMenu(){
 	}
     };
 
-
     this._onFullscreenRelease = function(){
 	if(s_bFullscreen) { 
 		_fCancelFullScreen.call(window.document);
@@ -136,7 +134,6 @@ function CMenu(){
 	sizeHandler();
     };
 
-    
     s_oMenu = this;
     
     this._init();

@@ -20,7 +20,6 @@ function CLedsBonus (iX, iY,oParentContainer){
         _iNumIdleAnim = 3;
         _iLedState = Math.floor(Math.random()*_iNumIdleAnim);
         _iTimeElaps = 0;
-        
 
         _aLeds = new Array();
         _aLedsPos = new Array();
@@ -48,9 +47,7 @@ function CLedsBonus (iX, iY,oParentContainer){
         var oStartLedPos = {x: -255, y:0};
         var vVect = new CVector2(oStartLedPos.x, oStartLedPos.y);
         var iRotation =  (Math.PI*(360/WHEEL_SETTINGS.length))/180;
-        
-        
-        
+
         for(var i=0; i<WHEEL_SETTINGS.length; i++ ){
             _aLeds[i] = createSprite(oSpriteSheet,"off",0,0,iLedWidth,iLedHeight);            
             _aLeds[i].x = vVect.getX();
@@ -60,7 +57,6 @@ function CLedsBonus (iX, iY,oParentContainer){
         }
         
         _aLeds[0].visible = false;
-        
 
     };
  
@@ -112,8 +108,7 @@ function CLedsBonus (iX, iY,oParentContainer){
         }
     
     };
-    
-    
+
     this.animIdle1 = function(){
       
         if(_iTimeElaps === 0){
@@ -160,8 +155,7 @@ function CLedsBonus (iX, iY,oParentContainer){
                 _aLeds[_aLeds.length*3/4 + _iCurLed-1].gotoAndStop("off");
                 _aLeds[_aLeds.length*3/4 + _iCurLed].gotoAndStop("white");                
             }
-            
-            
+
             _iCurLed++;
             _iTimeElaps=1;
         }       
@@ -203,7 +197,6 @@ function CLedsBonus (iX, iY,oParentContainer){
                         _aLeds[_aLeds.length - _iCurLed + 1].gotoAndStop("off");
                     }                    
                 _aLeds[_aLeds.length - _iCurLed].gotoAndStop("white");              
-
 
                 _aLeds[_iCurLed2 + 1].gotoAndStop("off");
                 _aLeds[_iCurLed2].gotoAndStop("white");

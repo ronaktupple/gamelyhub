@@ -86,8 +86,7 @@ var za, Ka, kb, kc, yc, Nc, Sc, dd, nd, Jd, Kd, Ld, Qd, Rd, Sd, Td, Wd, Xd, $d, 
         return a.ee - e.ee
     }
     yc = function(a) {
-        window.console && window.console.log &&
-            window.console.log(a)
+            window.
     };
     Nc = function(a) {
         window.console && window.console.error && window.console.error(a)
@@ -2123,7 +2122,7 @@ function Pg(f, q, m, w) {
         }, !0), document.addEventListener("touchstart", function() {
             window.focus()
         }, !0));
-        "undefined" !== typeof cr_is_preview && (this.yd && console.log("[Construct 2] In preview-over-wifi via CocoonJS mode"), -1 < window.location.search.indexOf("continuous") && (yc("Reloading for continuous preview"), this.gm = "__c2_continuouspreview",
+        "undefined" !== typeof cr_is_preview && (this.yd && , -1 < window.location.search.indexOf("continuous") && (yc("Reloading for continuous preview"), this.gm = "__c2_continuouspreview",
             this.jk = !0), this.HY && !this.We && (jQuery(window).focus(function() {
             a.setSuspended(!1)
         }), jQuery(window).blur(function() {
@@ -11807,7 +11806,7 @@ var fh = function() {
             l.oP || (lf = !0, Ie = Gh, e(Hh), Wf ? (process.stdout.once("drain", function() {
                     process.exit(a)
                 }),
-                console.log(" "), setTimeout(function() {
+                , setTimeout(function() {
                     process.exit(a)
                 }, 500)) : tg && "function" === typeof quit && quit(a), f(new $a(a)))
         }
@@ -12627,9 +12626,7 @@ var fh = function() {
                 c.send(null);
                 return c.responseText
             }, "undefined" != typeof arguments && (l.arguments = arguments), "undefined" !== typeof console ? (l.print || (l.print = function(a) {
-                console.log(a)
             }), l.Yg || (l.Yg = function(a) {
-                console.log(a)
             })) : l.print || (l.print = function() {}), Uf ? window.Module =
             l : l.load = importScripts) : f("Unknown runtime environment. Where are we?");
         !l.load && l.Vj && (l.load = function(a) {

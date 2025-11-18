@@ -78,7 +78,6 @@ function CFichesController(pPos,pInsurance){
 
         _iValue=0;
         var iCont=0;
-        
 
         for(var i=0;i<aFiches.length;i++){
                 var oParentContainer = _oFichesAttach;
@@ -101,8 +100,7 @@ function CFichesController(pPos,pInsurance){
         }
         
         playSound("chip", 1, false);
-        
-        
+
     };
     		
     this.createFichesPile = function(iAmount,bInsurance){

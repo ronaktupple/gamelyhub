@@ -64,11 +64,9 @@ function CEndPanel(oSpriteBg, iWinner) {
         _oScoreText.textBaseline = "alphabetic";
         _oScoreText.lineWidth = 550;
 
-
         _oGroup = new createjs.Container();
         _oGroup.alpha = 0;
         _oGroup.visible = false;
-
 
         _oGroup.addChild(oShape, _oBg, _oScoreTextBack, _oScoreText, _oMsgTextBack, _oMsgText);
 
@@ -196,8 +194,6 @@ function CEndPanel(oSpriteBg, iWinner) {
         _oGroup.off("mousedown", this._onExit);
         s_oStage.removeChild(_oGroup);
 
-
-
         s_oGame.unload();
         s_oMain.gotoMenu();
     };
@@ -215,7 +211,6 @@ function CEndPanel(oSpriteBg, iWinner) {
             var szMsgShare = "My score is " + _iScore + " points! Can you do better?";
             $(s_oMain).trigger("share_event", _iScore, szImg, szTitle, szMsg, szMsgShare);
         }
-
 
     };
 

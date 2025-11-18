@@ -167,8 +167,6 @@
         const keys = Object.keys(gamesData);
         let totalKeys = keys.length;
         
-        console.log(`Total keys in gamesData object: ${totalKeys}`);
-        
         keys.forEach(key => {
             const game = gamesData[key];
             // Check if it's a game object (has id or title property)
@@ -185,14 +183,6 @@
                 }
             }
         });
-        
-        console.log(`Found ${totalKeys} keys in gamesData, ${games.length} valid games`);
-        
-        if (games.length === 0) {
-            console.warn('No games found in gamesData');
-        } else {
-            console.log(`Loaded ${games.length} games from gamesData`);
-        }
         
         return games;
     }
@@ -234,7 +224,6 @@
         }
 
         const gamesToLoad = shuffledGames.slice(startIndex, startIndex + count);
-        console.log(`Loading games ${startIndex} to ${startIndex + gamesToLoad.length} (${gamesToLoad.length} games)`);
         
         let validCards = 0;
         gamesToLoad.forEach(game => {
@@ -248,15 +237,6 @@
             if (cardHTML) {
                 container.insertAdjacentHTML('beforeend', cardHTML);
                 validCards++;
-                
-                // Log first few game URLs for debugging
-                if (validCards <= 3) {
-                    const isInPages = window.location.pathname.includes('/pages/');
-                    const gameUrl = isInPages ? `game_detail_play.html?game=${encodeURIComponent(game.id)}` : `pages/game_detail_play.html?game=${encodeURIComponent(game.id)}`;
-                    console.log(`Game "${game.title}" (${game.id}) -> ${gameUrl}`);
-                }
-            } else {
-                console.warn(`Failed to generate card for game:`, game);
             }
         });
 
@@ -271,8 +251,6 @@
             total: shuffledGames.length,
             hasMore: newIndex < shuffledGames.length
         };
-        
-        console.log(`Loaded ${gamesToLoad.length} games. Total loaded: ${newIndex}/${shuffledGames.length}, hasMore: ${result.hasMore}`);
         
         return result;
     }
@@ -359,11 +337,9 @@
             }
 
             const keys = Object.keys(gamesData);
-            console.log(`gamesData check: ${keys.length} keys found`);
 
             // If we have very few keys, it might not be fully loaded yet
             if (keys.length < 20 && retryCount < maxRetries) {
-                console.warn(`Only ${keys.length} keys found, retrying... (${retryCount + 1}/${maxRetries})`);
                 retryCount++;
                 setTimeout(tryInit, retryDelay);
                 return;
@@ -375,21 +351,14 @@
             if (featuredContainer) {
                 // Get all games first to verify
                 const allGames = getAllGames();
-                console.log(`Initializing with ${allGames.length} total games available`);
                 
                 // Load initial 20 games
                 const featuredResult = loadGames('featuredGamesContainer', false, 0, CONFIG.gamesPerPage);
-                console.log(`Initial load: ${featuredResult.loaded} games loaded, ${featuredResult.total} total, hasMore: ${featuredResult.hasMore}`);
                 
                 // Setup infinite scroll if there are more games
                 if (featuredResult.hasMore) {
-                    console.log('Setting up infinite scroll...');
                     setupInfiniteScroll('featuredGamesContainer', 'loadingIndicator');
-                } else {
-                    console.log('All games loaded, no infinite scroll needed');
                 }
-            } else {
-                console.warn('featuredGamesContainer not found');
             }
 
             // Initialize lazy loading

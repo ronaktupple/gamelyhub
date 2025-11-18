@@ -56,7 +56,6 @@ function CToggle(iXPos,iYPos,oSprite,bActive){
     this.buttonRelease = function(){
         _oButton.scaleX = 1;
         _oButton.scaleY = 1;
-        
 
         _bActive = !_bActive;
         _oButton.gotoAndStop("state_"+_bActive);

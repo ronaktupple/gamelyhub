@@ -36,9 +36,7 @@ function CCreditsPanel(){
         _pStartPosExit = {x: CANVAS_WIDTH/2 +234, y: 254};
         _oButExit = new CGfxButton(_pStartPosExit.x, _pStartPosExit.y, oSprite, _oContainer);
         _oButExit.addEventListener(ON_MOUSE_UP, this.unload, this);
-        
-        
-		
+
         oSprite = s_oSpriteLibrary.getSprite('logo_credits');
         var oLogo = createBitmap(oSprite);
         oLogo.regX = oSprite.width/2;
@@ -68,8 +66,6 @@ function CCreditsPanel(){
     };
     
     this._init();
-    
-    
-};
 
+};
 

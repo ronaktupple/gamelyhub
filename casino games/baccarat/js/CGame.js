@@ -61,8 +61,7 @@ function CGame(oData){
         
         _oSeat = new CSeat();
         _oSeat.setCredit(TOTAL_MONEY);
-        
-        
+
         this.reset(false);
 
         _oStartingCardOffset = new CVector2();
@@ -185,7 +184,6 @@ function CGame(oData){
                     }while(aBetPlayer[iWinningBet] === 0);
                 }
 
-
                 do{
                     if(_aCardDeck.length < 6){
                         this.shuffleCard(); 
@@ -214,7 +212,6 @@ function CGame(oData){
                 //PLAYER LOSES
                 var iLosingBet;
 
-                
                 if(iNumBets === 3){
                     //PLAYER PUT FICHES ON ALL BETS
                     //CHOOSE WORST BET BETWEEN BANKER OR PLAYER
@@ -231,7 +228,6 @@ function CGame(oData){
                     var iRand = Math.floor(Math.random()*aMissingBets.length);
                     iLosingBet = aMissingBets[iRand];
                 }
-
 
                 do{
                     if(_aCardDeck.length < 6){
@@ -339,7 +335,6 @@ function CGame(oData){
         }
     };
 
-
     this.cardFromDealerArrived = function(oCard,bDealerCard,iCount){
 
         if(bDealerCard === false){
@@ -395,8 +390,7 @@ function CGame(oData){
             //PLAYER WIN
             iWinningBet = BET_PLAYER;
         }
-        
-        
+
         var aBets = _oSeat.getBetArray();
         var bAnyWin = false;
         
@@ -467,7 +461,6 @@ function CGame(oData){
         if(_iCardIndexToDeal<_aCurActiveCardOffset.length*2){
                 var oCard = new CCard(_oStartingCardOffset.getX(),_oStartingCardOffset.getY(),_oCardContainer);
 
-                
                 var pEndingPoint;
 
                 //THIS CARD IS FOR THE DEALER
@@ -648,8 +641,7 @@ function CGame(oData){
                     break;
             }
         }
-        
-	
+
     };
     
     s_oGame = this;

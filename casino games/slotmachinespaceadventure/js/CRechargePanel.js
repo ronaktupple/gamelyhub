@@ -6,7 +6,6 @@ function CRechargePanel(){
     var _oMsgText;
     var _oMsgTextOutline;
 
-    
     var _oContainer;
     
     var _oThis = this;
@@ -15,14 +14,11 @@ function CRechargePanel(){
         _oContainer = new createjs.Container();
         _oContainer.visible = false;
         s_oStage.addChild(_oContainer);
-        
-       
-        
+
         _oBg = createBitmap(s_oSpriteLibrary.getSprite('msg_box'));
         _oListener = _oBg.on("click",function(){});
         _oContainer.addChild(_oBg);
-        
-       
+
         _oMsgTextOutline = new CTLText(_oContainer, 
                     CANVAS_WIDTH/2-240, 230, 480, 150, 
                     40, "center", "#000", FONT_GAME, 1,
@@ -48,7 +44,6 @@ function CRechargePanel(){
         _oButRecharge.addEventListener(ON_MOUSE_UP,this._onRecharge,this);
     };
 
-    
     this.unload = function(){
         _oBg.off("click", _oListener);
         
@@ -81,8 +76,6 @@ function CRechargePanel(){
     };
     
     this._init();
-    
-    
-};
 
+};
 

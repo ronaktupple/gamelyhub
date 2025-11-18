@@ -100,12 +100,9 @@ function CComplexFrame(iX, iY, oSprite, oParentContainer, oTextInfo){
         };
 
         for(var i=0; i<_iNumLoadingIteration; i++){
-            
-            
-            
+
             var oBg = createBitmap(oSprite);
             _aFragment[_iCurFragmentToLoad].addChild(oBg);
-
 
             oParentContainer.addChild(_aFragment[_iCurFragmentToLoad]);
 
@@ -126,7 +123,6 @@ function CComplexFrame(iX, iY, oSprite, oParentContainer, oTextInfo){
             
             _aFragment[_iCurFragmentToLoad].cache(0,_iCurFragmentToLoad*PRECISION,oSprite.width, PRECISION);
             _iCurFragmentToLoad++;
-            
 
             if(_iCurFragmentToLoad === _iTotalFragment){
                 _bIsLoaded = true;
@@ -139,5 +135,4 @@ function CComplexFrame(iX, iY, oSprite, oParentContainer, oTextInfo){
     this._init(iX, iY, oSprite, oParentContainer, oTextInfo);
     
 }
-
 

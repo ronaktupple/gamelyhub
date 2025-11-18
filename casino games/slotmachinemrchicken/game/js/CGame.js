@@ -67,7 +67,6 @@ function CGame(oData){
         _oFrontSkin = createBitmap(s_oSpriteLibrary.getSprite('mask_slot'));
         s_oStage.addChild(_oFrontSkin);
 
-        
         this._initStaticSymbols();
         
         this._initHitAreaColumn();
@@ -87,8 +86,7 @@ function CGame(oData){
     
     this.unload = function(){
         stopSound("reels");
-        
-        
+
         s_oStage.removeChild(_oBg);
         s_oStage.removeChild(_oFrontSkin);
         _oInterface.unload();
@@ -174,8 +172,7 @@ function CGame(oData){
                     true, true, false,
                     false);
             oText.setShadow("#000",2,2,2);     
-           
-            
+
             _aHoldText[i] = oText;
             
             var oHitArea = new CGfxButton(iX + (oSprite.width/2),iY +(oSprite.height/2),oSprite);
@@ -186,8 +183,7 @@ function CGame(oData){
             
             _aHitAreaColumn.push(oHitArea);
         }
-        
-        
+
     };
     
     this.generateFinalSymbols = function(){
@@ -329,16 +325,13 @@ function CGame(oData){
     this.increaseReelLoops = function(){
         _iCurReelLoops += 2;
     };
-    
-    
+
     this.stopNextReel = function() {
         _iNumReelsStopped++;
         if(_iNumReelsStopped%2 === 0){
-            
-            
+
             playSound("reel_stop",0.3,false);
-            
-            
+
             _iNextColToStop = _aReelSequence[_iNumReelsStopped/2];
             
             if (_iNumReelsStopped === (NUM_REELS*2) ) {
@@ -389,8 +382,7 @@ function CGame(oData){
             }
             _iTimeElaps = 0;
             _iCurState = GAME_STATE_SHOW_ALL_WIN;
-            
-            
+
             playSound("win",1,false);
             
             _bFirstSpin = true;
@@ -412,7 +404,6 @@ function CGame(oData){
             }
             _iCurState = GAME_STATE_IDLE;
         }
-
 
         _iNumSpinCont++;
         if(_iNumSpinCont === _iAdsShowingCont){
@@ -456,7 +447,6 @@ function CGame(oData){
         for(var k=0;k<aList.length;k++){
             _aStaticSymbols[aList[k].row][aList[k].col].show(aList[k].value);
         }
-            
 
         _iCurWinShown++;
         
@@ -505,8 +495,7 @@ function CGame(oData){
 		_iTotBet = iNewTotalBet;
 		_oInterface.refreshTotalBet(_iTotBet);
 		_oInterface.refreshNumLines(_iLastLineActive);
-		
-		
+
 		if(iNewTotalBet>_iMoney){
 			_oInterface.disableSpin();
 		}else{
@@ -527,7 +516,6 @@ function CGame(oData){
         _iTotBet = Math.floor(_iTotBet * 100)/100;
         _oInterface.refreshTotalBet(_iTotBet);
         _oInterface.refreshNumLines(_iLastLineActive);
-
 
         if(iNewTotalBet>_iMoney){
                 _oInterface.disableSpin();
@@ -608,8 +596,7 @@ function CGame(oData){
             _aHoldText[iIndexCol].refreshText(" ");
             _aMovingColumns[iIndexCol].setHold(true);
             _aMovingColumns[iIndexCol+NUM_REELS].setHold(true);
-            
-            
+
             playSound("press_hold",1,false);
             
         }
@@ -660,8 +647,7 @@ function CGame(oData){
         
         stopSound("win");
         playSound("reels",0.3,false);
-        
-        
+
         this.disableColumnHitArea();
         _oInterface.disableBetBut(true);
         this.removeWinShowing();
@@ -684,8 +670,7 @@ function CGame(oData){
             SLOT_CASH += _iTotBet;
             $(s_oMain).trigger("bet_placed",{bet:_iCurBet,tot_bet:_iTotBet});
         }
-        
-        
+
         if( !_bFirstPlay && (_aMovingColumns[0].visible && _aMovingColumns[1].visible) && this._checkForCombos() ){
             //THERE IS ALREADY A WINNING COMBO WITH HOLD COLUMNS
             this._assignWin();
@@ -838,8 +823,7 @@ function CGame(oData){
                 break;
             }
         }
-        
-	
+
     };
     
     s_oGame = this;

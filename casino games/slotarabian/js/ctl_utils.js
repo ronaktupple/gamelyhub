@@ -14,9 +14,7 @@ $(window).resize(function() {
 });
 
 function trace(szMsg){
-    console.log(szMsg);
 }
-
 
 function isIpad() {
     var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
@@ -25,7 +23,6 @@ function isIpad() {
     return isTouchDevice && isMacLike;
 }
 
-    
 function isMobile(){
     if(isIpad()){
         return true;
@@ -64,7 +61,6 @@ function isIOS() {
 
     return false; 
 }
-
 
 function getSize(Name) {
        var size;
@@ -109,7 +105,6 @@ function getSize(Name) {
 };
 
 window.addEventListener("orientationchange", onOrientationChange );
-
 
 function onOrientationChange(){
     if (window.matchMedia("(orientation: portrait)").matches) {
@@ -167,7 +162,6 @@ function sizeHandler() {
 	var destW = Math.round(CANVAS_WIDTH * multiplier);
     var destH = Math.round(CANVAS_HEIGHT * multiplier);
 
-        
         var iAdd = 0;
         if (destH < h){
             iAdd = h-destH;
@@ -211,12 +205,10 @@ function sizeHandler() {
         if(s_oMenu !== null){
             s_oMenu.refreshButtonPos( s_iOffsetX,s_iOffsetY);
         }
-        
 
         $("#canvas").css("width",destW+"px");
         $("#canvas").css("height",destH+"px");
 
-        
         if(fOffsetY < 0){
             $("#canvas").css("top",fOffsetY+"px");
         }else{
@@ -383,7 +375,6 @@ onTouchEnd: function(e) {
 
 };
 
-
 //////////////////////////API CALL/////////////////////////////
 function getUrlVars( urlVars ) {
 	urlVars = urlVars.trim();
@@ -519,7 +510,6 @@ function setMute(szSound, bMute){
     }
 })();
 
-
 function fullscreenHandler(){
 	if (!ENABLE_FULLSCREEN || !screenfull.isEnabled){
        return;
@@ -535,7 +525,6 @@ function fullscreenHandler(){
         s_oMenu.resetFullscreenBut();
     }
 }
-
 
 if (screenfull.isEnabled) {
     screenfull.on('change', function(){

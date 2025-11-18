@@ -87,8 +87,7 @@ function CMenu(){
         if(SHOW_CREDITS){
             _oButCredits.unload();
         }
-        
-        
+
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             _oAudioToggle.unload();
             _oAudioToggle = null;

@@ -34,8 +34,7 @@ function CMenu(){
         var oSpriteSheet = new createjs.SpriteSheet(oData);
         var oBgAnim = createSprite(oSpriteSheet, "idle",0,0,iWidth,iHeight);
         s_oStage.addChild(oBgAnim);
-        
-        
+
         var aSprite = new Array();
         for(var i=0; i<4; i++){
             aSprite.push(s_oSpriteLibrary.getSprite('logo_menu_'+i));
@@ -88,7 +87,6 @@ function CMenu(){
             _oButFullscreen.addEventListener(ON_MOUSE_UP,this._onFullscreenRelease,this);
         }
 
-       
         _oFade = new createjs.Shape();
         _oFade.graphics.beginFill("black").drawRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
         

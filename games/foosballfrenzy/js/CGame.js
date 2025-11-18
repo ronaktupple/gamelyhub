@@ -35,7 +35,6 @@ function CGame(oData) {
     var _aHalfUpEdges;
     var _aHalfDownEdges;
 
-
     this._init = function() {
 
         setVolume("soundtrack", 0.1);
@@ -73,7 +72,6 @@ function CGame(oData) {
         _oInterface.refreshScore(_iScore);
         _aFieldEdgesBall = new Array();
 
-
         //1664
         _aFieldEdgesBall[HORIZONTAL_LINE_UP] = new CEdge(309, 210, 1608, 210, 5, false).getModel(); //Horizontal Line Up;
         _aFieldEdgesBall[HORIZONTAL_LINE_DOWN] = new CEdge(1608, 798, 309, 798, 5, false).getModel(); //Horizontal Line Down;
@@ -86,7 +84,6 @@ function CGame(oData) {
 
         _aHalfUpEdges = [_aFieldEdgesBall[HORIZONTAL_LINE_UP], _aFieldEdgesBall[VERTICAL_LINE_LEFT_UP], _aFieldEdgesBall[VERTICAL_LINE_RIGHT_UP]];
         _aHalfDownEdges = [_aFieldEdgesBall[HORIZONTAL_LINE_DOWN], _aFieldEdgesBall[VERTICAL_LINE_LEFT_DOWN], _aFieldEdgesBall[VERTICAL_LINE_RIGHT_DOWN]];
-
 
         _aPlayer1Stick[GOALKEEPER] = new CStick(280 + 67, CANVAS_HEIGHT + 200, BLUE_STICK, 1150, 1410, [{
             y2: 475,
@@ -339,7 +336,6 @@ function CGame(oData) {
             ];
             var iStriker = getNearestNumber(aPosStrikerY, oBall.getY());
 
-
             if (fixEnemyTremble(oBall, aSticks[STRIKER].getEdges()[iStriker].getModel()) === false) {
                 if (iStriker === 0) {
                     if (oBall.getY() - oBall.getHalfRadius() > aSticks[STRIKER].getEdges()[iStriker].getModel().getPointB().getY()) {
@@ -376,7 +372,6 @@ function CGame(oData) {
             }
         }
 
-
     };
 
     this.setBooleanUp1 = function(bVal) {
@@ -405,7 +400,6 @@ function CGame(oData) {
         vLaunch.normalize();
         vLaunch.scalarProduct(BALL_START_VELOCITY);
         _oBall.vCurForce().setV(vLaunch);
-
 
         _oBall.setVisible(true);
         _oBall.scale(1.4);
@@ -445,7 +439,6 @@ function CGame(oData) {
         _oBall.vCurForce().setV(vDir);
     };
 
-
     this.unload = function() {
         _bStartGame = false;
 
@@ -456,7 +449,6 @@ function CGame(oData) {
 
         createjs.Tween.removeAllTweens();
         s_oStage.removeAllChildren();
-
 
     };
 
@@ -540,7 +532,6 @@ function CGame(oData) {
                         _oSound = playSound("ball_kick", 0.6, false);
 
                     }
-
 
                 }
             }

@@ -79,7 +79,6 @@ function CHelpPanel(oParentContainer){
         oHoles.regY = oSprite.height/2;
         oHoles.y = -90;
         _oPage1Container.addChild(oHoles);
-        
 
         var oText2Pos = {x: 0, y:110};
   
@@ -103,9 +102,7 @@ function CHelpPanel(oParentContainer){
             oSymbolData.y = oText2Pos.y+70; 
             _oPage1Container.addChild(oSymbolData);
         }
-        
-        
-        
+
         /////////PAGE2;
         _oPage2Container = new createjs.Container();     
         _oPanelContainer.addChild(_oPage2Container);
@@ -156,7 +153,6 @@ function CHelpPanel(oParentContainer){
                         false );
             
         }
-        
 
         this._onPag1();
         
@@ -216,8 +212,6 @@ function CHelpPanel(oParentContainer){
         _oPage1Container.visible = false;
         _oPage2Container.visible = true;
     };
-
-    
 
     _oParent=this;
     this._init(oParentContainer);

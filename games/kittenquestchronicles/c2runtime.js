@@ -85,7 +85,6 @@ var aa, ba, ca, da, ea, fa, ga, ha, ia, ja, ka, ma, na, oa, C, pa, qa, ta, ua, v
         return a.Id - d.Id
     }
     da = function(a) {
-        window.console && window.console.log && window.console.log(a)
     };
     ea = function(a) {
         window.console && window.console.error && window.console.error(a)
@@ -2138,7 +2137,7 @@ function kc(c, p, n, q) {
         }, !0), document.addEventListener("touchstart", function() {
             window.focus()
         }, !0));
-        "undefined" !== typeof cr_is_preview && (this.gd && console.log("[Construct 2] In preview-over-wifi via CocoonJS mode"), -1 < window.location.search.indexOf("continuous") && (da("Reloading for continuous preview"),
+        "undefined" !== typeof cr_is_preview && (this.gd && , -1 < window.location.search.indexOf("continuous") && (da("Reloading for continuous preview"),
             this.Xk = "__c2_continuouspreview", this.sj = !0), this.Sx && !this.te && (jQuery(window).focus(function() {
             a.setSuspended(!1)
         }), jQuery(window).blur(function() {
@@ -7400,7 +7399,6 @@ function qc(c) {
                 else try {
                     this.n.play()
                 } catch (g) {
-                    console && console.log && console.log("[C2] WARNING: exception trying to play audio '" + this.buffer.src + "': ", g)
                 }
                 break;
             case 1:

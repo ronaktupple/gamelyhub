@@ -212,10 +212,8 @@ async function UpdateCheck(isFirst) {
             // Log whether we are up-to-date or pending an update.
             const isUpdatePending = await IsUpdatePending();
             if (isUpdatePending) {
-                console.log(CONSOLE_PREFIX + "Update pending");
                 Broadcast("update-pending");
             } else {
-                console.log(CONSOLE_PREFIX + "Up to date");
                 Broadcast("up-to-date");
             }
             return;
@@ -230,8 +228,6 @@ async function UpdateCheck(isFirst) {
 
         if (mainPageUrl && fileList.indexOf(mainPageUrl) === -1)
             fileList.unshift(mainPageUrl);
-
-        console.log(CONSOLE_PREFIX + "Caching " + fileList.length + " files for offline use");
 
         if (isFirst)
             Broadcast("downloading");
@@ -249,10 +245,8 @@ async function UpdateCheck(isFirst) {
         const isUpdatePending = await IsUpdatePending();
 
         if (isUpdatePending) {
-            console.log(CONSOLE_PREFIX + "All resources saved, update ready");
             BroadcastUpdateReady(version);
         } else {
-            console.log(CONSOLE_PREFIX + "All resources saved, offline support ready");
             Broadcast("offline-ready");
         }
     } catch (err) {
@@ -288,7 +282,6 @@ async function GetCacheNameToUse(availableCacheNames, doUpdateCheck) {
 
     // Identify newest cache to use. Delete all the others.
     const latestCacheName = availableCacheNames[availableCacheNames.length - 1];
-    console.log(CONSOLE_PREFIX + "Updating to new version");
 
     await Promise.all(
         availableCacheNames.slice(0, -1)

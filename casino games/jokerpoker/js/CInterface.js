@@ -63,9 +63,7 @@ function CInterface(iMoney,iBet){
                     TEXT_WIN,
                     true, true, false,
                     false );
-                    
-       
-        
+
         var oDisplayBet = createBitmap(s_oSpriteLibrary.getSprite('display_bg'));
         oDisplayBet.x = 480;
         oDisplayBet.y = 81;
@@ -87,7 +85,6 @@ function CInterface(iMoney,iBet){
                     true, true, false,
                     false );
 
-        
         _oWinText = new CTLText(s_oStage, 
                     490, 30, 200, 30, 
                     30, "center", "#ffde00", FONT2, 1,
@@ -95,8 +92,7 @@ function CInterface(iMoney,iBet){
                     "0"+TEXT_CURRENCY,
                     true, true, false,
                     false );
-        
-        
+
         var oDisplayMoney = createBitmap(s_oSpriteLibrary.getSprite('display_bg'));
         oDisplayMoney.x = 472;
         oDisplayMoney.y = 694;

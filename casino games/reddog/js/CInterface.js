@@ -103,7 +103,6 @@ function CInterface(iMoney){
                     true, true, false,
                     false );
 
-        
         _oToggleProgressive = new CToggle(480,504,s_oSpriteLibrary.getSprite("toggle_progressive"),s_bProgressiveAnte,false,s_oStage);
         _oToggleProgressive.addEventListener(ON_MOUSE_UP, this._onToggleProgressiveRelease, this);
         
@@ -123,7 +122,6 @@ function CInterface(iMoney){
                     true, true, true,
                     false );
 
-        
         _oDisplayText2 = new CTLText(s_oStage, 
                     410, 62, 190, 40, 
                     19, "left", "#ffde00", FONT_GAME_1, 1,
@@ -132,7 +130,6 @@ function CInterface(iMoney){
                     true, true, true,
                     false );
 
-        
         _oMoneyText = new CTLText(s_oStage, 
                     300, CANVAS_HEIGHT - 84, 310, 30, 
                     30, "left", "#ffde00", FONT_GAME_2, 1,
@@ -140,7 +137,6 @@ function CInterface(iMoney){
                     TEXT_MONEY+": ",
                     true, true, false,
                     false );
-
 
         //SET FICHES BUTTON
         var aPos = [{x:337,y:CANVAS_HEIGHT - 24},{x:417,y:CANVAS_HEIGHT - 24},{x:497,y:CANVAS_HEIGHT - 24},{x:577,y:CANVAS_HEIGHT - 24},{x:657,y:CANVAS_HEIGHT - 24},{x:737,y:CANVAS_HEIGHT - 24}];

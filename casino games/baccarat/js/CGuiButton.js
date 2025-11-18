@@ -20,7 +20,6 @@ function CGuiButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oContain
         _oButton.y = iYPos;
         _oButton.regX = oSprite.width/2;
         _oButton.regY = oSprite.height/2;
-        
 
         _oContainer.addChild(_oButton);
         
@@ -37,10 +36,6 @@ function CGuiButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oContain
                     szText,
                     true, true, false,
                     false );
-                    
-
-
-        
 
         this._initListener();
     };
@@ -84,8 +79,7 @@ function CGuiButton(iXPos,iYPos,oSprite,szText,szFont,szColor,iFontSize,oContain
         }
 
         playSound("press_but", 1, false);
-        
-        
+
         _oButton.scaleX = 1;
         _oButton.scaleY = 1;
 

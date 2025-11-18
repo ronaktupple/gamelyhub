@@ -80,8 +80,7 @@ function CHistory(iX,iY,oParentContainer){
             _aRows[0].unload();
             _aRows.splice(0,1);
         }
-        
-        
+
         var oRow = new CHistoryRow(0,0,_iNextPlayerValueCard,_iNextDealerValueCard,_iNextWinBet,_oSpriteCell,_oContainerRows);
         _aRows.push(oRow);
     };

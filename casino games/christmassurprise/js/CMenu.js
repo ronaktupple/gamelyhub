@@ -75,8 +75,7 @@ function CMenu(){
         if (_fRequestFullScreen && screenfull.isEnabled){
                 _oButFullscreen.unload();
         }
-        
-        
+
         s_oMenu = null;
         s_oStage.removeAllChildren();        
     };
@@ -102,7 +101,6 @@ function CMenu(){
 
     };
 
-    
     this._onStart = function(){
         $(s_oMain).trigger("start_session");
         s_oMenu.unload();
@@ -134,13 +132,10 @@ function CMenu(){
 	
 	sizeHandler();
     };
-    
-   
-    
+
     s_oMenu = this;        
     this._init();
-    
-    
+
 };
 
 var s_oMenu = null;
