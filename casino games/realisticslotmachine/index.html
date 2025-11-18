@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <style type = "text/css">
+            body{
+                background-image: url("png/Background_2.png"); /* The image used */
+                background-color: #cccccc; /* Used if the image is unavailable */  /* background: #a3a3a3; */
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Do not repeat the image */
+                background-size: cover; /* Resize the background image to cover the entire container */
+                padding: 0px;
+                margin: 0px;
+            }
+            canvas{
+                display:block;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+        <script src = "js/phaser.js"></script>      
+    </head>
+	<body>
+            <!-- remove or comment unused configs before publish --> 
+                <!-- yellow machines --> 
+        <script src = "js/slotConfigYellow3x3_20L.js"></script>
+        <script src = "js/slotConfigYellow3x1.js"></script>
+        <script src = "js/slotConfigYellow3x3_27L.js"></script>          <!-- yellow 27 line bonus machine -->
+
+                <!-- red machines -->
+        <script src = "js/slotConfigRed3x3_20L.js"></script>
+        <script src = "js/slotConfigRed3x1.js"></script>  
+
+                <!-- violet machines -->
+        <script src = "js/slotConfigViolet3x1.js"></script>
+        <script src = "js/slotConfigViolet3x3_20L.js"></script> 
+        
+        <script src = "js/mkutils.js"></script>
+        <script src = "js/popups.js"></script>
+        <script src = "js/state_machine.js"></script>
+        <script src = "js/slot_classes.js"></script>
+	    <script src = "js/slotGame.js"></script>
+	</body>
+</html>
