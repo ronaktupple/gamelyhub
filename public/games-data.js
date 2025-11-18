@@ -3247,8 +3247,8 @@ const gamesData = {
 <p>Keep high-value tiles in corners. Positioning your highest tiles in corners helps prevent them from blocking other combinations.</p>
 <p>Create chains of combinations. Setting up multiple combinations in sequence maximizes your score and tile values.</p>
 <p>Manage space carefully. Don't fill the board too quickly—leave room for new tiles and combinations.</p>`,
-        thumbnail: '../public/images/gam-thumb.png',
-        logo: '../public/images/gam-thumb.png',
+        thumbnail: '../public/images/banners/2048 1.avif',
+        logo: '../public/images/banners/2048 1.avif',
         categories: ['Puzzle', 'Fusion', 'Strategy'],
         stats: {
             players: '2M+',
