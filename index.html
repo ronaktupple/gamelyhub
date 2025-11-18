@@ -367,6 +367,123 @@
                 background-position: -200% 0;
             }
         }
+
+        /* Casino Games Section on Home Page */
+        .casino-games-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .casino-section-title-home {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #D4AF37;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        .casino-section-subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        .home-casino-game-card {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(13, 13, 13, 0.95) 100%);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .home-casino-game-card:hover {
+            transform: translateY(-10px);
+            border-color: #D4AF37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .home-casino-game-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .home-casino-game-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .home-casino-game-card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80px;
+        }
+
+        .home-casino-game-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #D4AF37;
+            margin: 0;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .home-casino-game-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+
+        .home-casino-game-card-link:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .btn-casino-cta {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+            color: #0D0D0D;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-casino-cta:hover {
+            background: linear-gradient(135deg, #B8941F 0%, #D4AF37 100%);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.5);
+            color: #0D0D0D;
+        }
+
+        @media (max-width: 768px) {
+            .casino-section-title-home {
+                font-size: 2rem;
+            }
+
+            .casino-games-section {
+                padding: 2rem 1rem;
+            }
+        }
     </style>
 
 </head>
@@ -504,6 +621,28 @@
                     </button>
                 </div>
 
+                <!-- Casino Games Section -->
+                <section class="casino-games-section mb-5">
+                    <div class="casino-section-header text-center mb-4">
+                        <h2 class="casino-section-title-home">
+                            <i class="fas fa-dice me-2"></i>Casino Games
+                        </h2>
+                        <p class="casino-section-subtitle">Experience the thrill of Las Vegas from your browser</p>
+                    </div>
+                    <div class="row g-4" id="homeCasinoGamesContainer">
+                        <!-- Casino games will be loaded dynamically -->
+                        <div class="col-12 text-center">
+                            <div class="spinner-border text-warning" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="pages/casino-games.html" class="btn btn-casino-cta">
+                            <i class="fas fa-dice me-2"></i>View All Casino Games
+                        </a>
+                    </div>
+                </section>
 
                 <!-- Top Advertisement Banner -->
                 <!-- <div class="advertisement-banner mb-4">
@@ -675,6 +814,9 @@
     </script>
     <script src="public/game-loader.js"></script>
     
+    <!-- Casino Games Data for Home Page -->
+    <script src="public/casino-games-data.js"></script>
+    
     <script>
         // Make carousel items clickable
         document.addEventListener('DOMContentLoaded', function() {
@@ -690,7 +832,95 @@
                     }
                 });
             });
+
+            // Load casino games for home page
+            loadHomeCasinoGames();
         });
+
+        // Function to load 4 casino games on home page
+        function loadHomeCasinoGames() {
+            function waitForCasinoData(callback) {
+                let retryCount = 0;
+                const maxRetries = 50;
+                const retryDelay = 100;
+
+                function check() {
+                    if (typeof casinoGamesData !== 'undefined') {
+                        const keys = Object.keys(casinoGamesData);
+                        if (keys.length > 0) {
+                            console.log(`✓ casinoGamesData loaded for home page: ${keys.length} games`);
+                            callback();
+                            return;
+                        }
+                    }
+                    
+                    if (retryCount < maxRetries) {
+                        retryCount++;
+                        setTimeout(check, retryDelay);
+                    } else {
+                        console.error('✗ casinoGamesData failed to load for home page');
+                    }
+                }
+
+                setTimeout(check, 50);
+            }
+
+            waitForCasinoData(function() {
+                const container = document.getElementById('homeCasinoGamesContainer');
+                if (!container) {
+                    console.error('Home casino games container not found');
+                    return;
+                }
+
+                // Get all casino games and shuffle, then take first 4
+                const allGames = Object.values(casinoGamesData);
+                const shuffledGames = allGames.sort(() => 0.5 - Math.random());
+                const selectedGames = shuffledGames.slice(0, 4);
+
+                container.innerHTML = selectedGames.map(game => {
+                    const formattedName = game.title;
+                    // Fix logo path for home page (remove '../' prefix)
+                    const logoPath = game.logo.startsWith('../') ? game.logo.substring(3) : game.logo;
+                    return `
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="home-casino-game-card">
+                                <a href="pages/casino-game-detail.html?game=${game.id}" class="home-casino-game-card-link">
+                                    <img src="${logoPath}" 
+                                         alt="${formattedName}" 
+                                         loading="lazy"
+                                         onerror="this.src='public/images/gam-thumb.png'; this.onerror=null;" />
+                                    <div class="home-casino-game-card-body">
+                                        <h3 class="home-casino-game-card-title">${formattedName}</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                // Initialize lazy loading for images
+                setTimeout(() => {
+                    const images = container.querySelectorAll('img[loading="lazy"]');
+                    if ('IntersectionObserver' in window) {
+                        const imageObserver = new IntersectionObserver((entries, observer) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    const img = entry.target;
+                                    img.src = img.dataset.src || img.src;
+                                    observer.unobserve(img);
+                                }
+                            });
+                        });
+
+                        images.forEach(img => {
+                            if (img.dataset.src) {
+                                imageObserver.observe(img);
+                            }
+                        });
+                    }
+                }, 100);
+            });
+        }
     </script>
     <script id="dhws-dataInjector" src="public/dhws-data-injector.js"></script>
     <!-- Cookie Consent Banner - Must be loaded last -->
