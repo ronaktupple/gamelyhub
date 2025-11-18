@@ -16,6 +16,31 @@
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_categories.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/about.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/contact.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/privacy.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/terms.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
 
 <!-- Game Index Pages -->
 <url>
@@ -24,42 +49,47 @@
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/games/cookieclicker/index.html</loc>
+	<loc>https://gamelyhub.com/games/8ballbilliards/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/games/pacman/index.html</loc>
+	<loc>https://gamelyhub.com/games/alienlinkup/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/games/smashkarts/index.html</loc>
+	<loc>https://gamelyhub.com/games/alienrun/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/games/poper/index.html</loc>
+	<loc>https://gamelyhub.com/games/angrybolls/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/games/cryzen/index.html</loc>
+	<loc>https://gamelyhub.com/games/animaldash/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/games/minefun/index.html</loc>
+	<loc>https://gamelyhub.com/games/animalfusion/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/games/zombr/index.html</loc>
+	<loc>https://gamelyhub.com/games/animalspuzzle/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/games/tribles/index.html</loc>
+	<loc>https://gamelyhub.com/games/animatedslots/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/aztecpuzzlequest/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
@@ -69,7 +99,142 @@
 	<priority>0.7</priority>
 </url>
 <url>
+	<loc>https://gamelyhub.com/games/birdnestquest/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/boatrush/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/bouncyflap/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
 	<loc>https://gamelyhub.com/games/buildr/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/buildyourrobot/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/candycascade/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/candycrushcraze/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/celestialwar/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/citydefender/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/colorcascadesort/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/colorcrafthomemakeover/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/cookieclicker/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/cryzen/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/cuberun/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/dogeadventure/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/donkeysavior/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/feedthefarm/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/flapcathalloween/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/flyghost/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/foosball/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/foosballfrenzy/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/formuladrage/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/fruitmerge/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/fruitninjamaster/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/galacticbattlefront/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/galaxyquest/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/gangsterjigsaw/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/gemcandycrush/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
@@ -79,59 +244,259 @@
 	<priority>0.7</priority>
 </url>
 <url>
+	<loc>https://gamelyhub.com/games/icecreamcraze/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/icehockeyhero/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/killzombies/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/kingblox/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/kittenquestchronicles/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/kobyjumpescape/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/ludorivals/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/machinecarnage/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/madrunner/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/minefun/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/mountainrush/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/ninjablock/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/ninjapumpkin/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/olympicchampion/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/pacman/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/penaltyshootout/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/poper/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/punchmaster/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/racketchampions/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/rangersvsundead/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/robberhunter/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/runwayrush/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/savethesanta/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/searaiders/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/skycombatfury/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/smashkarts/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/snowballchristmas/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/soldierpath/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/spookytrails/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/strikethepinball/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
 	<loc>https://gamelyhub.com/games/subwaysurferssingapore/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/tilefusion2048/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/tinycrashfighter/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/tribles/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/trztictactoe/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/tumblebeans/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/turbotrucksoccer/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/turboturtletrek/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/valentineshooter/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/vikingway/index.html</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/games/zombr/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 
 <!-- Game Detail Pages -->
 <url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=subwaysurferssingapore</loc>
-	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
-	<priority>0.7</priority>
-</url>
-<url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=cookieclicker</loc>
-	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
-	<priority>0.7</priority>
-</url>
-<url>
 	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=2048</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=pacman</loc>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=8ballbilliards</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=smashkarts</loc>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=alienlinkup</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=poper</loc>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=alienrun</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=cryzen</loc>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=angrybolls</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=minefun</loc>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=animaldash</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=zombr</loc>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=animalfusion</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=tribles</loc>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=animalspuzzle</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=animatedslots</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=aztecpuzzlequest</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
@@ -141,12 +506,352 @@
 	<priority>0.7</priority>
 </url>
 <url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=birdnestquest</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=boatrush</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=bouncyflap</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
 	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=buildr</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
 <url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=buildyourrobot</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=candycascade</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=candycrushcraze</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=celestialwar</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=citydefender</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=colorcascadesort</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=colorcrafthomemakeover</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=cookieclicker</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=cryzen</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=cuberun</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=dogeadventure</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=donkeysavior</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=feedthefarm</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=flapcathalloween</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=flyghost</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=foosball</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=foosballfrenzy</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=formuladrage</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=fruitmerge</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=fruitninjamaster</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=galacticbattlefront</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=galaxyquest</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=gangsterjigsaw</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=gemcandycrush</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
 	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=hextris</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=icecreamcraze</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=icehockeyhero</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=killzombies</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=kingblox</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=kittenquestchronicles</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=kobyjumpescape</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=ludorivals</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=machinecarnage</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=madrunner</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=minefun</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=mountainrush</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=ninjablock</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=ninjapumpkin</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=olympicchampion</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=pacman</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=penaltyshootout</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=poper</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=punchmaster</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=racketchampions</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=rangersvsundead</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=robberhunter</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=runwayrush</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=savethesanta</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=searaiders</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=skycombatfury</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=smashkarts</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=snowballchristmas</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=soldierpath</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=spookytrails</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=strikethepinball</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=subwaysurferssingapore</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=tilefusion2048</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=tinycrashfighter</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=tribles</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=trztictactoe</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=tumblebeans</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=turbotrucksoccer</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=turboturtletrek</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=valentineshooter</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=vikingway</loc>
+	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=zombr</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>
