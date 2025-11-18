@@ -368,7 +368,7 @@
             }
         }
 
-        /* Casino Games Section on Home Page */
+        /* Temporarily hidden: Casino Games Section on Home Page
         .casino-games-section {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
             border: 2px solid rgba(212, 175, 55, 0.3);
@@ -484,6 +484,18 @@
                 padding: 2rem 1rem;
             }
         }
+        */
+        
+        /* Force hide any casino elements that might still be visible */
+        .casino-games-section,
+        #homeCasinoGamesContainer,
+        .btn-casino-cta,
+        .home-casino-game-card,
+        .casino-section-title-home,
+        .casino-section-subtitle {
+            display: none !important;
+            visibility: hidden !important;
+        }
     </style>
 
 </head>
@@ -510,11 +522,13 @@
                             <i class="fas fa-th-large me-1"></i>Games
                         </a>
                     </li>
+                    <!-- Temporarily hidden: Casino Games
                     <li class="nav-item">
                         <a class="nav-link" href="pages/casino-games.html">
                             <i class="fas fa-dice me-1"></i>Casino Games
                         </a>
                     </li>
+                    -->
                     <li class="nav-item">
                         <a class="nav-link" href="pages/game_categories.html">
                             <i class="fas fa-tags me-1"></i>Categories
@@ -621,7 +635,7 @@
                     </button>
                 </div>
 
-                <!-- Casino Games Section -->
+                <!-- Temporarily hidden: Casino Games Section
                 <section class="casino-games-section mb-5">
                     <div class="casino-section-header text-center mb-4">
                         <h2 class="casino-section-title-home">
@@ -631,7 +645,7 @@
                     </div>
                     <div class="row g-4" id="homeCasinoGamesContainer">
                         <!-- Casino games will be loaded dynamically -->
-                        <div class="col-12 text-center">
+                        <!-- <div class="col-12 text-center">
                             <div class="spinner-border text-warning" role="status">
                                 <span class="visually-hidden">Loading...</span>
                             </div>
@@ -642,7 +656,8 @@
                             <i class="fas fa-dice me-2"></i>View All Casino Games
                         </a>
                     </div>
-                </section>
+                </section> -->
+              
 
                 <!-- Top Advertisement Banner -->
                 <!-- <div class="advertisement-banner mb-4">
@@ -654,7 +669,7 @@
 
                 <!-- All Games Section -->
                 <section class="mb-5">
-                    <h2 class="text-gradient text-center mb-4">All Games</h2>
+                    <!-- <h2 class="text-gradient text-center mb-4">All Games</h2> -->
                     <div class="row g-4 game-grid-5" id="featuredGamesContainer">
                         <!-- Games will be loaded dynamically -->
                                 </div>
@@ -715,7 +730,7 @@
                         <h6 class="mb-3">Pages</h6>
                         <ul class="list-unstyled footer-links-list">
                             <li><a href="/" class="footer-link">Home</a></li>
-                            <li><a href="pages/casino-games.html" class="footer-link">Casino Games</a></li>
+                            <!-- Temporarily hidden: <li><a href="pages/casino-games.html" class="footer-link">Casino Games</a></li> -->
                             <li><a href="pages/game_categories.html" class="footer-link">Categories</a></li>
                             <li><a href="pages/search_discovery.html" class="footer-link">Search & Discovery</a></li>
                             <li><a href="pages/about.html" class="footer-link">About Us</a></li>
@@ -814,7 +829,7 @@
     </script>
     <script src="public/game-loader.js"></script>
     
-    <!-- Casino Games Data for Home Page -->
+    <!-- Temporarily hidden: Casino Games Data for Home Page
     <script src="public/casino-games-data.js"></script>
     
     <script>
@@ -921,6 +936,25 @@
                 }, 100);
             });
         }
+    </script>
+    -->
+    
+    <script>
+        // Make carousel items clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            carouselItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // Only trigger if clicked outside the button
+                    if (!e.target.closest('.btn')) {
+                        const link = item.querySelector('a');
+                        if (link) {
+                            window.location.href = link.href;
+                        }
+                    }
+                });
+            });
+        });
     </script>
     <script id="dhws-dataInjector" src="public/dhws-data-injector.js"></script>
     <!-- Navigation Highlight Script -->

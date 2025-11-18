@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>Game Categories - Gamely Hub | Browse by Genre</title>
     <meta name="title" content="Game Categories - Gamely Hub | Browse by Genre">
-    <meta name="description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, casino games, and more. Find your favorite game genre!">
-    <meta name="keywords" content="game categories, game genres, action games, puzzle games, strategy games, adventure games, racing games, sports games, casino games, browse games by category, game types">
+    <meta name="description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, and more. Find your favorite game genre!">
+    <meta name="keywords" content="game categories, game genres, action games, puzzle games, strategy games, adventure games, racing games, sports games, browse games by category, game types">
     <meta name="author" content="Gamely Hub">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="English">
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gamelyhub.com/pages/game_categories.html">
     <meta property="og:title" content="Game Categories - Gamely Hub | Browse by Genre">
-    <meta property="og:description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, casino games, and more.">
+    <meta property="og:description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, and more.">
     <meta property="og:image" content="https://gamelyhub.com/public/images/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -34,7 +34,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gamelyhub.com/pages/game_categories.html">
     <meta name="twitter:title" content="Game Categories - Gamely Hub | Browse by Genre">
-    <meta name="twitter:description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, casino games, and more.">
+    <meta name="twitter:description" content="Browse games by category at Gamely Hub! Explore action games, puzzle games, strategy games, adventure games, racing games, sports games, and more.">
     <meta name="twitter:image" content="https://gamelyhub.com/public/images/og-image.jpg">
     <meta name="twitter:image:alt" content="Game Categories - Gamely Hub">
     
@@ -58,7 +58,7 @@
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": "Game Categories",
-      "description": "Browse games by category at Gamely Hub - action, puzzle, strategy, adventure, racing, sports, and casino games",
+      "description": "Browse games by category at Gamely Hub - action, puzzle, strategy, adventure, racing, and sports games",
       "url": "https://gamelyhub.com/pages/game_categories.html"
     }
     </script>
@@ -78,7 +78,7 @@
     <link href="../css/advertisements.css" rel="stylesheet">
     <script src="../public/games-data.js?v=3"></script>
     <script src="../public/game-loader.js"></script>
-    <script src="../public/casino-games-data.js"></script>
+    <!-- Temporarily hidden: <script src="../public/casino-games-data.js"></script> -->
     <style>
         /* Container larger width - consistent for header, main, and footer */
         .container-fluid {
@@ -200,11 +200,13 @@
                             <i class="fas fa-th-large me-1"></i>Games
                         </a>
                     </li>
+                    <!-- Temporarily hidden: Casino Games
                     <li class="nav-item">
                         <a class="nav-link" href="casino-games.html">
                             <i class="fas fa-dice me-1"></i>Casino Games
                         </a>
                     </li>
+                    -->
                     <li class="nav-item">
                         <a class="nav-link" href="game_categories.html">
                             <i class="fas fa-tags me-1"></i>Categories
@@ -277,7 +279,7 @@
                         <h6 class="mb-3">Pages</h6>
                         <ul class="list-unstyled footer-links-list">
                             <li><a href="../" class="footer-link">Home</a></li>
-                            <li><a href="casino-games.html" class="footer-link">Casino Games</a></li>
+                            <!-- Temporarily hidden: <li><a href="casino-games.html" class="footer-link">Casino Games</a></li> -->
                             <li><a href="game_categories.html" class="footer-link">Categories</a></li>
                             <li><a href="search_discovery.html" class="footer-link">Search & Discovery</a></li>
                             <li><a href="about.html" class="footer-link">About Us</a></li>
@@ -348,8 +350,8 @@
             { name: 'Strategy', search: 'strategy', icon: 'fa-chess' },
             { name: 'Adventure', search: 'adventure', icon: 'fa-map' },
             { name: 'Racing', search: 'racing', icon: 'fa-car' },
-            { name: 'Sports', search: 'sports', icon: 'fa-futbol' },
-            { name: 'Casino', search: 'casino', icon: 'fa-dice', isCasino: true }
+            { name: 'Sports', search: 'sports', icon: 'fa-futbol' }
+            // Temporarily hidden: ,{ name: 'Casino', search: 'casino', icon: 'fa-dice', isCasino: true }
         ];
 
         // Function to get a representative game for each category
