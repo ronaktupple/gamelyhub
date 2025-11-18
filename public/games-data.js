@@ -263,149 +263,6 @@ const gamesData = {
         ],
         relatedGames: ['2048', 'cookieclicker']
     },
-    'minefun': {
-        id: 'minefun',
-        title: 'Mine fun',
-        description: 'MineFun is a creative sandbox game where you mine blocks, craft tools, and build anything you imagine.',
-        longDescription: 'MineFun is an exciting sandbox-style game that lets you unleash your creativity in a blocky, pixelated world. Explore vast landscapes, gather resources, and craft tools to help you survive and thrive. Whether you want to build towering structures, dig deep into mysterious caverns, or simply explore the endless terrain, MineFun offers endless hours of fun and discovery for players of all ages.',
-        fullContent: `<h2>About Mine Fun</h2>
-<p>MineFun is a creative sandbox game that puts the power of creation in your hands. This blocky, pixelated world is your canvas, where you can mine resources, craft tools, and build anything your imagination can conceive. Whether you're constructing magnificent castles, exploring deep underground caverns, or simply enjoying the freedom of an open world, MineFun offers endless possibilities for creativity and adventure.</p>
-
-<h3>Gameplay Mechanics</h3>
-<p>The core gameplay revolves around mining blocks and using them to build structures. Start by gathering basic resources like wood and stone, then craft tools that allow you to mine more advanced materials. As you progress, you'll unlock new crafting recipes and discover rare resources hidden deep underground or in distant biomes.</p>
-
-<p>Exploration is a key aspect of MineFun. The world is procedurally generated, meaning each new world is unique. Venture into forests, deserts, mountains, and caves, each offering different resources and challenges. The day-night cycle adds another layer of strategy, as some activities are safer during daylight hours.</p>
-
-<h3>Building and Crafting</h3>
-<p>Building in MineFun is limited only by your creativity. Use blocks to construct houses, castles, bridges, or any structure you can imagine. The block-based building system makes it easy to create detailed structures while maintaining the game's charming pixelated aesthetic.</p>
-
-<p>The crafting system allows you to create tools, weapons, and items that enhance your gameplay experience. Start with basic wooden tools and progress to stone, iron, and even more advanced materials. Each tool tier offers improved efficiency and durability, making resource gathering faster and more rewarding.</p>
-
-<h3>Key Features</h3>
-<p>MineFun features a vast, procedurally generated world that ensures no two playthroughs are the same. The infinite terrain means you'll never run out of space to explore and build, providing truly endless gameplay possibilities.</p>
-
-<p>The game includes multiple biomes, each with unique resources, terrain, and challenges. From lush forests to arid deserts, snowy mountains to deep oceans, the variety keeps exploration exciting and rewarding.</p>
-
-<p>With its combination of creative building, resource gathering, crafting, and exploration, MineFun offers a comprehensive sandbox experience that appeals to both creative builders and adventurous explorers.</p>
-
-<h3>Tips for Success</h3>
-<p>Start by gathering basic resources like wood and stone. These are essential for crafting your first tools and building your first shelter.</p>
-<p>Build a shelter before nightfall. Having a safe place to rest protects you from nighttime dangers and provides a base for your adventures.</p>
-<p>Explore caves carefully. They contain valuable resources but can be dangerous. Bring torches and be prepared to fight hostile creatures.</p>
-<p>Experiment with different building styles. Try creating various structures to discover what building techniques work best for your playstyle.</p>`,
-        thumbnail: '../public/images/banners/mfbannner.webp',
-        logo: '../public/images/banners/mfbannner.webp',
-        categories: ['Arcade', 'Classic', 'Puzzle', 'Action'],
-        stats: {
-            players: '2.5M+',
-            rating: '4.8',
-            difficulty: 'Medium',
-            ageRating: 'All Ages'
-        },
-        screenshots: [
-            '../public/images/banners/mfss1.jpg',
-            '../public/images/banners/mfss2.jpg',
-            '../public/images/banners/mfss3.webp'
-        ],
-        relatedGames: ['2048', 'cookieclicker']
-    },
-    
-    'poper': {
-        id: 'poper',
-        title: 'Poper',
-        description: 'Paper.io 2 is a fast-paced territory game where you draw and expand your area while avoiding enemies.',
-        longDescription: 'Paper.io 2 is an addictive and competitive multiplayer game where your goal is to claim as much territory as possible. Glide across the screen, draw your zone, and connect it back to your base to expand your land. But watch out—other players are doing the same, and one wrong move can wipe you out! With smooth controls and colorful gameplay, Paper.io 2 offers a fun and strategic experience thats easy to pick up but hard to master.',
-        fullContent: `<h2>About Poper (Paper.io 2)</h2>
-<p>Poper, also known as Paper.io 2, is a fast-paced territory game that combines strategy, skill, and competition in an addictive multiplayer experience. Your goal is to claim as much territory as possible by drawing your zone and connecting it back to your base. Glide across the screen, expand your area, and watch out for other players who are trying to do the same. With smooth controls and colorful gameplay, this game offers a fun and strategic experience that's easy to pick up but hard to master.</p>
-
-<h3>Gameplay Mechanics</h3>
-<p>The core gameplay is deceptively simple: glide across the screen to draw your territory, then connect it back to your base to claim the enclosed area. However, the strategic depth comes from competing with other players who are trying to do the same. If another player's line crosses yours while you're drawing, you're eliminated, making every move a calculated risk.</p>
-
-<p>The controls are smooth and responsive, allowing for precise movement and territory claiming. Learning to balance aggressive expansion with defensive play is key to success in this competitive environment.</p>
-
-<h3>Strategic Territory Control</h3>
-<p>Success in Poper requires strategic thinking about when and how to expand. Claiming large territories is rewarding but risky, as longer drawing lines leave you vulnerable to elimination. Smaller, safer expansions are more secure but slower. Finding the right balance is crucial.</p>
-
-<p>You must also be aware of other players' movements and plan your expansions to avoid their paths. The competitive nature means that every player is both a threat and a potential victim, creating dynamic and exciting gameplay.</p>
-
-<h3>Key Features</h3>
-<p>Poper features colorful, vibrant graphics that make territory claiming visually satisfying. The smooth animations and clear visual feedback make it easy to see your progress and understand the game state.</p>
-
-<p>The game includes various customization options, allowing you to personalize your appearance and territory color. These customization options add a personal touch to your gameplay experience.</p>
-
-<p>With its combination of simple mechanics, strategic depth, and competitive multiplayer action, Poper offers an engaging experience that keeps players coming back for more.</p>
-
-<h3>Tips for Success</h3>
-<p>Start with small expansions. Claiming smaller territories is safer and helps you build a base before attempting larger claims.</p>
-<p>Watch other players carefully. Understanding their movement patterns helps you avoid elimination and find opportunities to claim territory.</p>
-<p>Be patient. Rushing to claim large territories often leads to elimination—take your time and expand strategically.</p>
-<p>Use your base wisely. Your base is your safe zone—use it as a starting point for expansions and a retreat when threatened.</p>`,
-        thumbnail: '../public/images/banners/popbanner.jpg',
-        logo: '../public/images/banners/popbanner.jpg',
-        categories: ['Arcade', 'Classic', 'Puzzle', 'Action'],
-        stats: {
-            players: '2.5M+',
-            rating: '4.8',
-            difficulty: 'Medium',
-            ageRating: 'All Ages'
-        },
-        screenshots: [
-            '../public/images/banners/popss1.webp',
-            '../public/images/banners/popss2.avif'
-        ],
-        relatedGames: ['2048', 'cookieclicker']
-    },
-    'zombr': {
-        id: 'zombr',
-        title: 'Zombs Royale',
-        description: 'Zombs Royale is a fast-paced battle royale game where you fight against players in a top-down, last-one-standing showdown.',
-        longDescription: 'Zombs Royale is an action-packed multiplayer battle royale game that throws you into a chaotic arena with dozens of other players. Parachute in, loot powerful weapons, and fight to be the last one standing in this top-down shooter. With quick matches, colorful graphics, and intense PvP action, Zombs Royale delivers nonstop fun whether you are playing solo, with a duo, or as part of a squad. Can you outlast the competition and claim victory?',
-        fullContent: `<h2>About Zombs Royale</h2>
-<p>Zombs Royale is an action-packed multiplayer battle royale game that throws you into a chaotic arena with dozens of other players. Parachute into the battlefield, loot powerful weapons, and fight to be the last one standing in this top-down shooter. With quick matches, colorful graphics, and intense PvP action, Zombs Royale delivers nonstop fun whether you're playing solo, with a duo, or as part of a squad. Can you outlast the competition and claim victory?</p>
-
-<h3>Gameplay Mechanics</h3>
-<p>The game follows classic battle royale mechanics: parachute into the map, loot weapons and supplies, and fight other players until you're the last one standing. The top-down perspective offers a unique view of the battlefield, allowing you to see more of your surroundings and plan your movements strategically.</p>
-
-<p>Matches are fast-paced and action-packed, with the play area shrinking over time to force encounters. The quick match format means you can jump into a game, play, and finish in just a few minutes, making it perfect for quick gaming sessions.</p>
-
-<h3>Combat and Weapons</h3>
-<p>Zombs Royale features a variety of weapons, from pistols to assault rifles to sniper rifles. Each weapon has its own characteristics, and finding the right weapon for your playstyle is key to success. The weapon variety ensures that combat remains varied and exciting.</p>
-
-<p>Combat requires both aiming skill and strategic positioning. The top-down view allows you to see enemies and plan your approach, but you must also be aware of your surroundings and other players who might be targeting you.</p>
-
-<h3>Game Modes</h3>
-<p>Play solo, team up with a friend in duo mode, or join a squad for team-based action. Each mode offers a different experience and requires different strategies. Solo mode tests your individual skills, while team modes emphasize coordination and teamwork.</p>
-
-<p>The variety of game modes ensures that there's always a way to play that matches your preference, whether you enjoy solo competition or team-based cooperation.</p>
-
-<h3>Key Features</h3>
-<p>Zombs Royale features colorful, vibrant graphics that make the battlefield visually appealing. The top-down perspective and clear visual design make it easy to see what's happening and react quickly to threats.</p>
-
-<p>The game includes various maps and locations, each with unique layouts and loot distribution. The variety keeps matches fresh and ensures that each game feels different.</p>
-
-<p>With its combination of fast-paced action, strategic gameplay, and quick matches, Zombs Royale offers an exciting battle royale experience that's perfect for both casual and competitive players.</p>
-
-<h3>Tips for Success</h3>
-<p>Loot quickly but carefully. Get weapons and supplies fast, but don't expose yourself unnecessarily while looting.</p>
-<p>Use cover strategically. The top-down view makes positioning important—use buildings and terrain to your advantage.</p>
-<p>Watch the shrinking zone. Stay ahead of the zone to avoid taking damage and to position yourself advantageously.</p>
-<p>Choose your fights wisely. Not every encounter needs to be fought—sometimes retreating is the better strategy.</p>`,
-        thumbnail: '../public/images/banners/zrbanner.jpg',
-        logo: '../public/images/banners/zrbanner.jpg',
-        categories: ['Arcade', 'Classic', 'Puzzle', 'Action'],
-        stats: {
-            players: '2.5M+',
-            rating: '4.8',
-            difficulty: 'Medium',
-            ageRating: 'All Ages'
-        },
-        screenshots: [
-            '../public/images/banners/zrss1.webp',
-            '../public/images/banners/zrss2.jpg',
-            '../public/images/banners/zrss3.jpg'
-        ],
-        relatedGames: ['2048', 'cookieclicker']
-    },
     'battled': {
         id: 'battled',
         title: 'Battle Dudes',
@@ -448,52 +305,6 @@ const gamesData = {
         screenshots: [
             '../public/images/banners/bdss1.webp',
             '../public/images/banners/bdss1.webp'
-        ],
-        relatedGames: ['2048', 'cookieclicker']
-    },
-    'tribles': {
-        id: 'tribles',
-        title: 'Tribles',
-        description: 'Tribals.io is a survival multiplayer game where you gather resources, craft tools, and build your own tribe.',
-        longDescription: 'Tribals.io is an immersive survival experience set on a remote island where danger and opportunity are everywhere. Work solo or with others to gather resources, craft weapons, build shelters, and defend against threats. Whether you choose to explore peacefully or dominate the land, Tribals.io offers a mix of crafting, strategy, and action in a vibrant open world. Can you build your tribe and survive the wild?',
-        fullContent: `<h2>About Tribles (Tribals.io)</h2>
-<p>Tribles, featuring Tribals.io gameplay, is an immersive survival experience set on a remote island where danger and opportunity are everywhere. This multiplayer survival game challenges you to gather resources, craft tools, and build your own tribe. Work solo or with others to gather resources, craft weapons, build shelters, and defend against threats. Whether you choose to explore peacefully or dominate the land, Tribals.io offers a mix of crafting, strategy, and action in a vibrant open world. Can you build your tribe and survive the wild?</p>
-
-<h3>Gameplay Mechanics</h3>
-<p>The game features comprehensive survival mechanics that require you to manage resources, craft items, and build structures. Start by gathering basic resources like wood and stone, then craft tools that allow you to gather more advanced materials. As you progress, you'll unlock new crafting recipes and build more sophisticated structures.</p>
-
-<p>Survival requires balancing multiple needs: gathering resources, crafting tools, building shelters, and defending against threats. The game offers freedom to choose your approach, whether you prefer peaceful exploration or aggressive domination.</p>
-
-<h3>Multiplayer and Tribes</h3>
-<p>Tribals.io features multiplayer gameplay where you can work with others or compete against them. Form tribes with other players to share resources and defend together, or go solo and rely on your own skills. The multiplayer aspect adds social elements and strategic depth to the survival experience.</p>
-
-<p>Building and managing a tribe requires coordination and teamwork. Working together allows you to accomplish more than you could alone, but it also requires trust and cooperation.</p>
-
-<h3>Key Features</h3>
-<p>Tribals.io features a vibrant open world with diverse environments to explore. Each area offers different resources and challenges, encouraging exploration and strategic planning.</p>
-
-<p>The game includes extensive crafting and building systems that allow you to create tools, weapons, and structures. The variety of items and buildings ensures that there's always something new to work towards.</p>
-
-<p>With its combination of survival mechanics, crafting, multiplayer interaction, and open-world exploration, Tribals.io offers a comprehensive survival experience that appeals to both solo players and team-oriented gamers.</p>
-
-<h3>Tips for Success</h3>
-<p>Gather resources efficiently. Focus on collecting the materials you need for your current goals rather than hoarding everything.</p>
-<p>Build a shelter early. Having a safe place to store items and rest is crucial for survival.</p>
-<p>Learn the crafting recipes. Understanding what you can craft and what materials you need helps you plan your resource gathering.</p>
-<p>Be aware of other players. In multiplayer, other players can be allies or threats—choose your interactions carefully.</p>`,
-        thumbnail: '../public/images/banners/tribalsbanner.jpg',
-        logo: '../public/images/banners/tribalsbanner.jpg',
-        categories: ['Arcade', 'Classic', 'Puzzle', 'Action'],
-        stats: {
-            players: '2.5M+',
-            rating: '4.8',
-            difficulty: 'Medium',
-            ageRating: 'All Ages'
-        },
-        screenshots: [
-            '../public/images/banners/triblesss1.jpg',
-            '../public/images/banners/triblesss2.jpg',
-            '../public/images/banners/triblesss3.webp'
         ],
         relatedGames: ['2048', 'cookieclicker']
     },
@@ -2369,7 +2180,7 @@ const gamesData = {
             ageRating: '13+'
         },
         screenshots: ['../public/images/gam-thumb.png'],
-        relatedGames: ['tinycrashfighter', 'cryzen']
+        relatedGames: ['tinycrashfighter']
     },
     'madrunner': {
         id: 'madrunner',
