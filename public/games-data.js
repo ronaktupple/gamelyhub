@@ -309,52 +309,7 @@ const gamesData = {
         ],
         relatedGames: ['2048', 'cookieclicker']
     },
-    'cryzen': {
-        id: 'cryzen',
-        title: 'Cryzen',
-        description: 'Cryzen is a fast-paced cyberpunk shooter where you battle enemies in a high-tech dystopian world.',
-        longDescription: 'Cryzen drops you into a futuristic cyberpunk world full of danger, action, and intense battles. Armed with high-tech weapons and quick reflexes, you must fight through waves of enemies in neon-lit arenas. With sleek visuals, fast gameplay, and an electrifying atmosphere, Cryzen delivers a thrilling experience for fans of sci-fi shooters and futuristic combat. Get ready to test your skills and survive the chaos!',
-        fullContent: `<h2>About Cryzen</h2>
-<p>Cryzen drops you into a futuristic cyberpunk world full of danger, action, and intense battles. This fast-paced shooter combines high-tech weapons, quick reflexes, and strategic combat in neon-lit arenas. Armed with advanced weaponry and cybernetic enhancements, you must fight through waves of enemies in this electrifying dystopian setting. With sleek visuals, fast gameplay, and an immersive atmosphere, Cryzen delivers a thrilling experience for fans of sci-fi shooters and futuristic combat.</p>
-
-<h3>Gameplay Mechanics</h3>
-<p>The game features fast-paced combat where quick reflexes and precise aiming are essential for survival. You'll face waves of enemies in various cyberpunk environments, each requiring different strategies and tactics. The controls are responsive and intuitive, allowing for smooth movement and accurate shooting even in the heat of battle.</p>
-
-<p>As you progress, you'll unlock new weapons and abilities that enhance your combat effectiveness. Each weapon has unique characteristics, from rapid-fire machine guns to powerful energy weapons. Learning to use each weapon effectively is key to overcoming the increasingly challenging enemy waves.</p>
-
-<h3>Combat and Weapons</h3>
-<p>Cryzen features a diverse arsenal of high-tech weapons, each suited for different combat situations. From plasma rifles to cybernetic blades, the weapon variety ensures that combat remains exciting and varied. Each weapon feels distinct and requires different strategies to use effectively.</p>
-
-<p>The combat system rewards both aggressive playstyles and tactical positioning. You can engage enemies head-on with powerful weapons or use cover and positioning to gain tactical advantages. The choice of approach adds depth to the gameplay and allows for different playstyles.</p>
-
-<h3>Key Features</h3>
-<p>Cryzen features stunning cyberpunk visuals with neon-lit environments that create an immersive futuristic atmosphere. The sleek graphics and smooth animations bring the dystopian world to life, making each battle visually spectacular.</p>
-
-<p>The game includes multiple levels and arenas, each with unique layouts and enemy types. The variety keeps the gameplay fresh and ensures that each battle feels different from the last.</p>
-
-<p>With its combination of fast-paced action, strategic combat, and cyberpunk aesthetics, Cryzen offers an exciting shooter experience that will test your skills and reflexes.</p>
-
-<h3>Tips for Success</h3>
-<p>Master the movement controls. Being able to move quickly and accurately is essential for avoiding enemy fire and positioning yourself advantageously.</p>
-<p>Learn each weapon's characteristics. Different weapons are effective in different situations, so experiment to find what works best for your playstyle.</p>
-<p>Use cover strategically. While aggressive play can be effective, sometimes taking cover and planning your approach is the better strategy.</p>
-<p>Upgrade your weapons and abilities. As you progress, invest in upgrades that complement your playstyle and help you overcome tougher enemies.</p>`,
-        thumbnail: '../public/images/banners/cryzenbanner.jpg',
-        logo: '../public/images/banners/cryzenbanner.jpg',
-        categories: ['Arcade', 'Classic', 'Puzzle', 'Action'],
-        stats: {
-            players: '2.5M+',
-            rating: '4.8',
-            difficulty: 'Medium',
-            ageRating: 'All Ages'
-        },
-        screenshots: [
-            '../public/images/banners/czss1.png',
-            '../public/images/banners/czss2.png',
-            '../public/images/banners/czss3.png'
-        ],
-        relatedGames: ['2048', 'cookieclicker']
-    },
+    
     'poper': {
         id: 'poper',
         title: 'Poper',
@@ -448,51 +403,6 @@ const gamesData = {
             '../public/images/banners/zrss1.webp',
             '../public/images/banners/zrss2.jpg',
             '../public/images/banners/zrss3.jpg'
-        ],
-        relatedGames: ['2048', 'cookieclicker']
-    },
-    'smashkarts': {
-        id: 'smashkarts',
-        title: 'Smash Karts',
-        description: 'Smash Karts is a wild multiplayer kart game where you collect weapons and blast opponents in fast-paced arenas',
-        longDescription: 'Smash Karts is an action-packed multiplayer kart battle game that combines high-speed racing with explosive combat. Jump into colorful arenas, collect crazy power-ups like rockets and machine guns, and outlast your opponents in chaotic matches. With smooth controls, fun characters, and non-stop action, Smash Karts is perfect for players who love racing and a bit of mayhem. The more you play, the more you unlock—so get ready to roll and rule the arena!',
-        fullContent: `<h2>About Smash Karts</h2>
-<p>Smash Karts is an action-packed multiplayer kart battle game that combines high-speed racing with explosive combat. Jump into colorful arenas, collect crazy power-ups like rockets and machine guns, and outlast your opponents in chaotic matches. This wild kart game takes the excitement of racing and adds weapon-based combat, creating a unique and thrilling experience. With smooth controls, fun characters, and non-stop action, Smash Karts is perfect for players who love racing and a bit of mayhem.</p>
-
-<h3>Gameplay Mechanics</h3>
-<p>The game combines racing and combat in a unique way. You drive karts around colorful arenas while collecting weapons and power-ups scattered throughout the track. Use these weapons to eliminate opponents and be the last kart standing. The controls are smooth and responsive, making it easy to drive, aim, and fire weapons simultaneously.</p>
-
-<p>Matches are fast-paced and chaotic, with multiple players competing in each arena. The combination of racing skills and combat tactics creates exciting gameplay where anything can happen. One moment you might be in the lead, and the next you could be dodging rockets and machine gun fire.</p>
-
-<h3>Weapons and Power-Ups</h3>
-<p>Smash Karts features a variety of weapons and power-ups that can turn the tide of battle. Rockets can eliminate opponents with a direct hit, machine guns provide sustained firepower, and shields can protect you from incoming attacks. Each weapon has its own characteristics and best use cases.</p>
-
-<p>Strategic use of weapons is key to success. Knowing when to use each weapon type and how to combine them effectively can give you a significant advantage. The power-up system adds an element of luck and strategy, as you must decide which items to collect and when to use them.</p>
-
-<h3>Key Features</h3>
-<p>Smash Karts features colorful, vibrant graphics that make each arena visually appealing. The fun character designs and smooth animations create an enjoyable atmosphere that's perfect for casual and competitive play alike.</p>
-
-<p>The game includes multiple arenas and game modes, each offering unique challenges and gameplay experiences. The variety ensures that matches remain fresh and exciting even after many plays.</p>
-
-<p>With its combination of racing, combat, and multiplayer mayhem, Smash Karts offers a unique and entertaining experience that's perfect for quick gaming sessions or extended play.</p>
-
-<h3>Tips for Success</h3>
-<p>Master the driving controls first. Being able to maneuver your kart effectively is essential for both racing and combat.</p>
-<p>Collect weapons strategically. Don't just grab the first power-up you see—think about which weapons will be most useful in your current situation.</p>
-<p>Use weapons at the right time. Timing is crucial—save powerful weapons for when they'll have the most impact.</p>
-<p>Stay mobile. Constant movement makes you harder to hit and gives you better opportunities to collect power-ups and attack opponents.</p>`,
-        thumbnail: '../public/images/banners/skbanner.jpeg',
-        logo: '../public/images/banners/skbanner.jpeg',
-        categories: ['Arcade', 'Classic', 'Puzzle', 'Action'],
-        stats: {
-            players: '2.5M+',
-            rating: '4.8',
-            difficulty: 'Medium',
-            ageRating: 'All Ages'
-        },
-        screenshots: [
-            '../public/images/banners/skss1.webp',
-            '../public/images/banners/skss2.png'
         ],
         relatedGames: ['2048', 'cookieclicker']
     },
