@@ -1015,7 +1015,13 @@
 
             // Update play button
             const playButton = document.getElementById('playButtonTop');
-            playButton.href = `../games/${game.id}/`;
+            playButton.href = `../games/${game.id}/index.html`;
+            
+            // Update sticky play button
+            const stickyPlayButton = document.getElementById('playButton');
+            if (stickyPlayButton) {
+                stickyPlayButton.href = `../games/${game.id}/index.html`;
+            }
         }
     </script>
 
