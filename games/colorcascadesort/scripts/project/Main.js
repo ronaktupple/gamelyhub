@@ -10,8 +10,10 @@ import {
 export let scene = null;
 export let levelGroups = []; //all level groups
 
+
 export let level = null;
 //cache level tiles
+
 
 export let levelProgresses = []; //level progress for each group
 
@@ -37,6 +39,7 @@ runOnStartup(async runtime => {
     runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 
 });
+
 
 export function loadGame(runtime, lvl) {
     level = lvl;

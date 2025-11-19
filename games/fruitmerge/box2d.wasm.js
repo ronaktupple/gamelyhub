@@ -19,6 +19,7 @@ self.Box2DWasmModule = function(Box2D) {
     else throw Error("The provided Module['ENVIRONMENT'] value is not valid. It must be one of: WEB|WORKER|NODE|SHELL.");
     else ca = "object" === typeof window, da = "function" === typeof importScripts, ea = "object" === typeof process && "function" === typeof require && !ca && !da, fa = !ca && !ea && !da;
     if (ea) {
+        b.print || (b.print = console.log);
         b.printErr || (b.printErr = console.warn);
         var ga, ha;
         b.read = function(a, c) {
@@ -80,6 +81,7 @@ self.Box2DWasmModule = function(Box2D) {
             e.onerror = d;
             e.send(null)
         }, "undefined" != typeof arguments && (b.arguments = arguments), "undefined" !== typeof console ? (b.print || (b.print = function(a) {
+            console.log(a)
         }), b.printErr || (b.printErr = function(a) {
             console.warn(a)
         })) : b.print || (b.print = function() {}), da && (b.load = importScripts), "undefined" === typeof b.setWindowTitle && (b.setWindowTitle =

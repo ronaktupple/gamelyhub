@@ -76,6 +76,7 @@ function CCreditsPanel() {
         _oFade.off("mousedown", function() {});
         _oLogo.off("mousedown", this._onLogoButRelease);
 
+
     };
 
     this._onLogoButRelease = function() {
@@ -87,5 +88,6 @@ function CCreditsPanel() {
     };
 
     this._init();
+
 
 };

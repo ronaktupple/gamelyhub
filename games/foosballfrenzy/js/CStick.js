@@ -166,6 +166,7 @@ function CStick(iX, iY, iColorStick, iYUp, iYDown, aPosEdges, iTypeStick, iSpeed
         }
     };
 
+
     this.getEdges = function() {
         return _aPlayerEdges;
     };

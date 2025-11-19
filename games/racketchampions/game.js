@@ -2152,7 +2152,7 @@
     }), (e["awe6.core.drivers.createjs.Factory"] = ct).__name__ = "awe6.core.drivers.createjs.Factory", ct.__super__ = Q, ct.prototype = t(Q.prototype, {
         _driverInit: function() {
             this.isDebug || (ri.trace = function(t, e) {
-                window.
+                window.console.log(t)
             });
             var t, e = new createjs.Container;
             this._context.addChild(e), this._context = e, this._countConfigsLoaded = 0, this._countConfigsToLoad = 0, "" != this._config ? (t = null != this._config ? this._config : "assets/__Config.xml", null != (e = this._context.getStage().canvas.getAttribute("config")) && "" != e && (t = e), this._loadConfig(t)) : this._launchKernel()
@@ -8235,6 +8235,7 @@ var ri = function() {};
     return s + ": " + i
 }, ri.trace = function(t, e) {
     e = ri.formatOutput(t, e);
+    "undefined" != typeof console && null != console.log && console.log(e)
 };
 var oi = function() {};
 (e["haxe.Resource"] = oi).__name__ = "haxe.Resource", oi.getString = function(t) {

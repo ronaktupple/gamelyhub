@@ -50,6 +50,7 @@ function CHelpPanel() {
         _oText2.textBaseline = "alphabetic";
         _oText2.lineWidth = 280;
 
+
         _oGroup = new createjs.Container();
         _oGroup.addChild(_oHelpBg, _oText1Back, _oText1, _oText2Back, _oText2);
         _oGroup.alpha = 0;
@@ -62,6 +63,7 @@ function CHelpPanel() {
         _oGroup.on("pressup", function() {
             oParent._onExitHelp();
         });
+
 
     };
 

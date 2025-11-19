@@ -58,6 +58,7 @@ function buildGameCanvas() {
     btnStart.x = canvasW / 2;
     btnStart.y = canvasH / 100 * 80;
 
+
     popSelectTerminal = new createjs.Bitmap(loader.getResult('popSelectTerminal'));
     bgThumbSelected = new createjs.Bitmap(loader.getResult('thumbSelect'));
     bgThumb1 = new createjs.Bitmap(loader.getResult('thumbNormal'));

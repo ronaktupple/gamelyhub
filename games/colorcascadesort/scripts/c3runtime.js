@@ -5327,7 +5327,7 @@
             this._parameters.set(parameterName, parameterValue)
         }
         LogAll() {
-            for (const e of this._parameters) )
+            for (const e of this._parameters) console.log("[QueryParser] Parameter '" + e[0] + "' = " + (e[1] === null ? "null" : "'" + e[1] + "'"))
         }
         Has(name) {
             return this._parameters.has(name)
@@ -6462,6 +6462,7 @@
     C3.RafLog = function RaFLog(name, ...args) {
         if (!logRafIds.has(name)) logRafIds.set(name, -1);
         if (logRafIds.get(name) === -1) logRafIds.set(name, requestAnimationFrame(() => {
+            console.log(`%c${name}`, "font-weight: bold", ...args);
             logRafIds.set(name, -1)
         }))
     };
@@ -6487,6 +6488,7 @@
         m.total += m.current;
         m.average = m.total / m.calls;
         m.calls++;
+        console.log(m.toString());
         performance.clearMarks();
         performance.clearMeasures()
     };
@@ -17936,7 +17938,7 @@
             if (runtime.IsInWorker()) self["alert"] = message => {
                 if (!didWarnInAlertPolyfill) {
                     didWarnInAlertPolyfill = true;
-                    console.warn("[Construct 3] alert() was called from a Web Worker, because the project 'Use worker' setting is enabled. This method is not normally available in a Web Worker. Construct has implemented the alert for you, but note that other features may be missing in worker mode. You may wish to disable 'Use worker', or use a more convenient function like . For more information please refer to the scripting section of the manual.")
+                    console.warn("[Construct 3] alert() was called from a Web Worker, because the project 'Use worker' setting is enabled. This method is not normally available in a Web Worker. Construct has implemented the alert for you, but note that other features may be missing in worker mode. You may wish to disable 'Use worker', or use a more convenient function like console.log(). For more information please refer to the scripting section of the manual.")
                 }
                 return this.alert(message)
             }
@@ -40002,6 +40004,7 @@
             return this.GetRenderer().IsContextLost()
         }
         _OnWebGLContextLost(e) {
+            console.log("[Construct 3] WebGL context lost");
             e.preventDefault();
             this._availableAdditionalRenderTargets = [];
             this._usedAdditionalRenderTargets.clear();
@@ -40014,6 +40017,7 @@
             for (const effectList of this._runtime._GetAllEffectLists())
                 for (const effectType of effectList.GetAllEffectTypes()) effectType._InitRenderer(this._webglRenderer);
             await this._runtime._OnWebGLContextRestored();
+            console.log("[Construct 3] WebGL context restored")
         }
         GetWebGLRenderer() {
             return this._webglRenderer
@@ -41726,11 +41730,13 @@
             if (this._suspendCount < 0) this._suspendCount = 0;
             const isSuspended = this.IsSuspended();
             if (!wasSuspended && isSuspended) {
+                console.log("[Construct 3] Suspending");
                 this._CancelAnimationFrame();
                 this._dispatcher.dispatchEvent(C3.New(C3.Event, "suspend"));
                 this.Trigger(C3.Plugins.System.Cnds.OnSuspend,
                     null, null)
             } else if (wasSuspended && !isSuspended) {
+                console.log("[Construct 3] Resuming");
                 const now = performance.now();
                 this._lastTickTime = now;
                 this._fpsLastTime = now;
@@ -42293,6 +42299,7 @@
             const saveJson = await this._SaveToJsonString();
             try {
                 await this._GetSavegamesStorage().setItem(slotName, saveJson);
+                console.log("[Construct 3] Saved state to storage (" + saveJson.length + " chars)");
                 this._lastSaveJson = saveJson;
                 await this.TriggerAsync(C3.Plugins.System.Cnds.OnSaveComplete, null);
                 this._lastSaveJson = ""
@@ -42306,6 +42313,7 @@
             try {
                 const loadJson = await this._GetSavegamesStorage().getItem(slotName);
                 if (!loadJson) throw new Error("empty slot");
+                console.log("[Construct 3] Loaded state from storage (" + loadJson.length + " chars)");
                 await this._DoLoadFromJsonString(loadJson);
                 this._lastSaveJson = loadJson;
                 await this.TriggerAsync(C3.Plugins.System.Cnds.OnLoadComplete, null);
@@ -48437,7 +48445,7 @@
         },
         ConsoleLog(type, msg) {
             msg = msg.toString();
-            if (type === 0) 
+            if (type === 0) console.log(msg);
             else if (type === 1) console.warn(msg);
             else if (type === 2) console.error(msg)
         },
@@ -49602,5 +49610,6 @@
             return () => f0(f1((n2.ExpObject() + (v3.GetValue() - v4.GetValue())), v5.GetValue()), (f6() / 2));
         }
     ];
+
 
 }

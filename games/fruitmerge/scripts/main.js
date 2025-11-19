@@ -2305,6 +2305,7 @@ self.AudioDOMHandler = class extends self.DOMHandler {
         if ("convolution" === b) try {
             e = await this._GetAudioBuffer(a.bufferOriginalUrl, a.bufferUrl, a.bufferType, !1)
         } catch (f) {
+            console.log("[Construct] Audio: error loading convolution: ",
                 f);
             return
         }
@@ -3895,7 +3896,7 @@ self.C3AdUtils = {
         if ("android" === self.cordova.platformId) return a;
         if ("ios" === self.cordova.platformId) {
             const c = !!testAdUnitsiOS[b];
-            return configureOptions.debug && !idfaAvailable && c ? (,
+            return configureOptions.debug && !idfaAvailable && c ? (console.log("[C3 advert]", "USING TEST AD UNITS"),
                 testAdUnitsiOS[b]) : a
         }
     },
@@ -4883,6 +4884,7 @@ let bannerState = null,
 function getArgument(a, b) {
     const c = b.slice(0, -1);
     b = b[b.length - 1];
+    console.log(a, c);
     return [c, b]
 }
 addHandler$jscomp$1("CreateBannerAdvert", async (...a) => {
@@ -5246,7 +5248,7 @@ self.RuntimeInterface.AddDOMHandlerClass(class extends self.DOMHandler {
     }
     async _OnRequestWakeLock() {
         if (!this._screenWakeLock) try {
-            this._screenWakeLock = await navigator.wakeLock.request("screen"), this._screenWakeLock.addEventListener("release", () => this._OnWakeLockReleased()), ,
+            this._screenWakeLock = await navigator.wakeLock.request("screen"), this._screenWakeLock.addEventListener("release", () => this._OnWakeLockReleased()), console.log("[Construct] Screen wake lock acquired"),
                 this.PostToRuntime("wake-lock-acquired")
         } catch (a) {
             console.warn("[Construct] Failed to acquire screen wake lock: ", a), this.PostToRuntime("wake-lock-error")
@@ -5256,6 +5258,7 @@ self.RuntimeInterface.AddDOMHandlerClass(class extends self.DOMHandler {
         this._screenWakeLock && (this._screenWakeLock.release(), this._screenWakeLock = null)
     }
     _OnWakeLockReleased() {
+        console.log("[Construct] Screen wake lock released");
         this._screenWakeLock = null;
         this.PostToRuntime("wake-lock-released")
     }

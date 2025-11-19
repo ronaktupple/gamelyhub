@@ -57,6 +57,7 @@ function CPanelTutorial() {
         var oText2;
         switch (iPage) {
 
+
             case 0:
                 oText = new createjs.Text(TEXT_TUTORIAL_1, " 35px " + PRIMARY_FONT, "#FFFFFF");
                 oText.lineWidth = 650;

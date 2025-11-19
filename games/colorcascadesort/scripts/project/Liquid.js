@@ -5,6 +5,7 @@ import Vector from "./Vector.js";
 
 export default class Liquid extends ISpriteInstance {
 
+
     constructor() {
         super();
         this.groupId = 0;
@@ -19,6 +20,7 @@ export default class Liquid extends ISpriteInstance {
         this.value = 1;
         this.front = false;
     }
+
 
     addDefaultChild(child) {
         this.addChild(child, {
@@ -38,9 +40,12 @@ export default class Liquid extends ISpriteInstance {
         this.renderer.colorRgb = colors[id % colors.length];
     }
 
+
     size() {
         return this.value * this.unitSize;
     }
+
+
 
     setValue(value) {
         this.value = value;

@@ -37,6 +37,7 @@
 			-ms-touch-action: none;
 		}
     </style>
+	
 
 <script src="offlineClient.js"></script></head> 
  
@@ -77,6 +78,8 @@
 	<!-- Construct 2 exported games require jQuery. -->
 	<script src="jquery-3.4.1.min.js"></script>
 
+
+	
     <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
     This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
 	<script src="c2runtime.js"></script>
@@ -118,6 +121,7 @@
 				navigator.serviceWorker.register("sw.js", { scope: "./" })
 				.then(function (reg)
 				{
+					console.log("Registered service worker on " + reg.scope);
 				})
 				.catch(OnRegisterSWError);
 			}

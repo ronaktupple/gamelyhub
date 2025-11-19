@@ -4404,6 +4404,7 @@ C3$jscomp$2.QueryParser = class {
             } else this._parameters.set(a, null)
     }
     LogAll() {
+        for (const a of this._parameters) console.log("[QueryParser] Parameter '" +
             a[0] + "' = " + (null === a[1] ? "null" : "'" + a[1] + "'"))
     }
     Has(a) {
@@ -5365,9 +5366,11 @@ C3X.IsNullOrUndefined = C3$jscomp$7.IsNullOrUndefined;
 const C3$jscomp$8 = self.C3,
     logRafIds = new Map;
 C3$jscomp$8.ColorLog = function(a, b) {
+    console.log(`%c${a}`, `font-weight: bold; color:${b}`)
 };
 C3$jscomp$8.RafLog = function(a, ...b) {
     logRafIds.has(a) || logRafIds.set(a, -1); - 1 === logRafIds.get(a) && logRafIds.set(a, requestAnimationFrame(() => {
+        console.log(`%c${a}`, "font-weight: bold", ...b);
         logRafIds.set(a, -1)
     }))
 };
@@ -5392,6 +5395,7 @@ C3$jscomp$8.EndMeasure = function(a) {
     d.current = b.duration;
     d.total += d.current;
     d.average = d.total / d.calls;
+    console.log(d.toString());
     d.calls++;
     performance.clearMarks(a);
     performance.clearMeasures(`measure-${a}`)
@@ -16063,7 +16067,7 @@ self.IRuntime = class {
         runtime$jscomp$1.UserScriptDispatcher().addEventListener("keyup", d => keysDownByKey.delete(d.key));
         runtime$jscomp$1.Dispatcher().addEventListener("window-blur", () => keysDownByKey.clear());
         runtime$jscomp$1.IsInWorker() && (self.alert = d => {
-            didWarnInAlertPolyfill || (didWarnInAlertPolyfill = !0, console.warn("[Construct] alert() was called from a Web Worker, because the project 'Use worker' setting is enabled. This method is not normally available in a Web Worker. Construct has implemented the alert for you, but note that other features may be missing in worker mode. You may wish to disable 'Use worker', or use a more convenient function like . For more information please refer to the scripting section of the manual."));
+            didWarnInAlertPolyfill || (didWarnInAlertPolyfill = !0, console.warn("[Construct] alert() was called from a Web Worker, because the project 'Use worker' setting is enabled. This method is not normally available in a Web Worker. Construct has implemented the alert for you, but note that other features may be missing in worker mode. You may wish to disable 'Use worker', or use a more convenient function like console.log(). For more information please refer to the scripting section of the manual."));
             return this.alert(d)
         })
     }
@@ -20174,7 +20178,7 @@ C3$jscomp$88.Layout = class extends C3$jscomp$88.DefendedBase {
     _LogLayerList(a, b = 0) {
         a = a.slice(0);
         a.reverse();
-        for (const d of a) }- ${d.GetName()}`), this._LogLayerList(d.GetSubLayers(), b + 1)
+        for (const d of a) console.log(`${"\t".repeat(b)}- ${d.GetName()}`), this._LogLayerList(d.GetSubLayers(), b + 1)
     }
 };
 "use strict";
@@ -35956,6 +35960,7 @@ C3$jscomp$177.CanvasManager = class extends C3$jscomp$177.DefendedBase {
         return this.GetRenderer().IsContextLost()
     }
     _OnWebGLContextLost(a) {
+        console.log("[Construct] WebGL context lost");
         a.preventDefault();
         this._availableAdditionalRenderTargets = [];
         this._usedAdditionalRenderTargets.clear();
@@ -35964,6 +35969,7 @@ C3$jscomp$177.CanvasManager = class extends C3$jscomp$177.DefendedBase {
         this._runtime._OnRendererContextLost()
     }
     _OnWebGPUDeviceLost() {
+        console.log("[Construct] WebGPU device lost");
         this._availableAdditionalRenderTargets = [];
         this._usedAdditionalRenderTargets.clear();
         this._effectChainManager.OnContextLost();
@@ -35973,10 +35979,12 @@ C3$jscomp$177.CanvasManager = class extends C3$jscomp$177.DefendedBase {
         await this._webglRenderer.OnContextRestored();
         await this._InitRenderer();
         await this._runtime._OnRendererContextRestored();
+        console.log("[Construct] WebGL context restored")
     }
     async _OnWebGPUDeviceRestored() {
         await this._InitRenderer();
         await this._runtime._OnRendererContextRestored();
+        console.log("[Construct] WebGPU device restored")
     }
     GetWebGLRenderer() {
         return this._webglRenderer
@@ -37378,8 +37386,8 @@ C3$jscomp$178.Runtime = class extends C3$jscomp$178.DefendedBase {
             this._suspendCount += a ? 1 : -1;
             0 > this._suspendCount && (this._suspendCount = 0);
             a = this.IsSuspended();
-            !b && a ? (, this._CancelAnimationFrame(), this._dispatcher.dispatchEvent(C3$jscomp$178.New(C3$jscomp$178.Event, "suspend")), this.Trigger(C3$jscomp$178.Plugins.System.Cnds.OnSuspend, null, null)) :
-                b && !a && (, this._fpsLastTime = this._lastTickTime = b = performance.now(), this._mainThreadTimeCounter = this._mainThreadTime = this._fps = this._fpsFrameCount = 0, this._dispatcher.dispatchEvent(C3$jscomp$178.New(C3$jscomp$178.Event, "resume")), this.Trigger(C3$jscomp$178.Plugins.System.Cnds.OnResume, null, null), this.HitBreakpoint() || this.Tick(b))
+            !b && a ? (console.log("[Construct] Suspending"), this._CancelAnimationFrame(), this._dispatcher.dispatchEvent(C3$jscomp$178.New(C3$jscomp$178.Event, "suspend")), this.Trigger(C3$jscomp$178.Plugins.System.Cnds.OnSuspend, null, null)) :
+                b && !a && (console.log("[Construct] Resuming"), this._fpsLastTime = this._lastTickTime = b = performance.now(), this._mainThreadTimeCounter = this._mainThreadTime = this._fps = this._fpsFrameCount = 0, this._dispatcher.dispatchEvent(C3$jscomp$178.New(C3$jscomp$178.Event, "resume")), this.Trigger(C3$jscomp$178.Plugins.System.Cnds.OnResume, null, null), this.HitBreakpoint() || this.Tick(b))
         }
     }
     _AddBehInstToTick(a) {
@@ -37922,7 +37930,7 @@ C3$jscomp$178.Runtime = class extends C3$jscomp$178.DefendedBase {
     async _DoSaveToSlot(a) {
         const b = await this._SaveToJsonString();
         try {
-            await this._GetSavegamesStorage().setItem(a, b), "), this._lastSaveJson = b, await this.TriggerAsync(C3$jscomp$178.Plugins.System.Cnds.OnSaveComplete, null), this._lastSaveJson = ""
+            await this._GetSavegamesStorage().setItem(a, b), console.log("[Construct] Saved state to storage (" + b.length + " chars)"), this._lastSaveJson = b, await this.TriggerAsync(C3$jscomp$178.Plugins.System.Cnds.OnSaveComplete, null), this._lastSaveJson = ""
         } catch (d) {
             console.error("[Construct] Failed to save state to storage: ", d), await this.TriggerAsync(C3$jscomp$178.Plugins.System.Cnds.OnSaveFailed, null)
         }
@@ -37931,6 +37939,7 @@ C3$jscomp$178.Runtime = class extends C3$jscomp$178.DefendedBase {
         try {
             const b = await this._GetSavegamesStorage().getItem(a);
             if (!b) throw Error("empty slot");
+            console.log("[Construct] Loaded state from storage (" + b.length + " chars)");
             await this._DoLoadFromJsonString(b);
             this._lastSaveJson = b;
             await this.TriggerAsync(C3$jscomp$178.Plugins.System.Cnds.OnLoadComplete, null);
@@ -44894,6 +44903,7 @@ C3$jscomp$235.Plugins.advert.Type = class extends C3$jscomp$235.SDKTypeBase {
 const C3$jscomp$236 = self.C3;
 
 function Log(a) {
+    console.log("[C3 advert]", a)
 }
 C3$jscomp$236.Plugins.advert.Instance = class extends C3$jscomp$236.SDKInstanceBase {
     constructor(a, b) {

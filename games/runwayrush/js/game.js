@@ -35,6 +35,7 @@ var shareText = 'SHARE IT NOW'; //text for share instruction
 var shareTitle = 'Best score on Airport Rush [TERMINAL] is [SCORE]'; //social share score title
 var shareMessage = '[SCORE] is mine new best score on Airport Rush [TERMINAL]! Try it now!'; //social share score message
 
+
 /*!
  *
  * GAME SETTING CUSTOMIZATION END
@@ -265,6 +266,7 @@ function toggleOverlay(con) {
         }, 500);
 }
 
+
 /*!
  * 
  * SELECT TERMINALS - This is the function that runs to display select terminals
@@ -432,9 +434,11 @@ function saveGame(score, type) {
       url: 'saveResults.php',
       data: {score:score},
       success: function (result) {
+          console.log(result);
       }
     });*/
 }
+
 
 /*!
  * 
@@ -639,6 +643,7 @@ function startPlaneActionTimer(num) {
 
     /*planeData[num].interval = setInterval(function(){
     	planeData[num].timer.store+=.1;
+    	console.log(planeData[num].timer.store);
     	
     	TweenMax.killTweensOf(planeData[num].timer);
     	$(planeData[num].timer)
@@ -703,6 +708,7 @@ function updateTimerIcon(num) {
     var endAngle = Number(numberAngle + (Math.PI * 2 * ((planeData[num].timer.max - planeData[num].timer.count) / planeData[num].timer.max)));
     $.planes['timer' + num].graphics.moveTo(0, 0).arc(0, 0, timerCicleWidth, numberAngle, endAngle, false).lineTo(0, 0).closePath();
 }
+
 
 /*!
  * 
@@ -1030,6 +1036,7 @@ function updatePlaneCollision() {
         }
     }
 }
+
 
 /*!
  * 

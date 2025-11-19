@@ -86,7 +86,8 @@ var Oa, Jb, tc, $c, cd, kd, pd, qd, Kd, Ld, Nd, Od, Sd, Td, Wd, Xd, Yd, Zd, $d, 
         return m.Od - f.Od
     }
     cd = function(m) {
-            window.
+        window.console && window.console.log &&
+            window.console.log(m)
     };
     kd = function(m) {
         window.console && window.console.error && window.console.error(m)
@@ -1961,7 +1962,7 @@ function Hg(e, p, a, y) {
             }, !0), document.addEventListener("touchstart", function() {
             window.focus()
         }, !0));
-        "undefined" !== typeof cr_is_preview && (this.Vc && , -1 < window.location.search.indexOf("continuous") && (cd("Reloading for continuous preview"), this.sl = "__c2_continuouspreview", this.Lj = !0), this.fX && !this.Ce && (jQuery(window).focus(function() {
+        "undefined" !== typeof cr_is_preview && (this.Vc && console.log("[Construct 2] In preview-over-wifi via CocoonJS mode"), -1 < window.location.search.indexOf("continuous") && (cd("Reloading for continuous preview"), this.sl = "__c2_continuouspreview", this.Lj = !0), this.fX && !this.Ce && (jQuery(window).focus(function() {
             m.setSuspended(!1)
         }), jQuery(window).blur(function() {
             m.setSuspended(!0)
@@ -6910,6 +6911,7 @@ function Ng(e) {
                 else try {
                     this.F.play()
                 } catch (m) {
+                    console && console.log && console.log("[C2] WARNING: exception trying to play audio '" + this.buffer.src + "': ", m)
                 }
                 break;
             case 1:
@@ -9348,13 +9350,16 @@ function Wg(e) {
     e.L = {};
     p = e.L;
     p.log = function(a) {
+        console.log(a)
     };
     p.Z_ = function(a) {
         if (void 0 != a.n) {
             for (var e = "", n = 0; n < a.n[0].o_; n++) {
                 for (var e = "", p = 0; p < a.n[0].n_; p++) e += JSON.stringify(a.n[0].i_[p][n]);
+                console.log(e)
             }
-        } else 
+            console.log("\n")
+        } else console.log(a)
     };
     e.aa = {}
 })();
@@ -10123,7 +10128,7 @@ var Yg = function() {
             h.uO || (kf = !0, Ee = wh, f(xh), Rf ? (process.stdout.once("drain", function() {
                     process.exit(a)
                 }),
-                , setTimeout(function() {
+                console.log(" "), setTimeout(function() {
                     process.exit(a)
                 }, 500)) : og && "function" === typeof quit && quit(a), e(new wb(a)))
         }
@@ -10947,7 +10952,9 @@ var Yg = function() {
                 d.send(null);
                 return d.responseText
             }, "undefined" != typeof arguments && (h.arguments = arguments), "undefined" !== typeof console ? (h.print || (h.print = function(a) {
+                console.log(a)
             }), h.Fg || (h.Fg = function(a) {
+                console.log(a)
             })) : h.print || (h.print = function() {}), Pf ? window.Module = h : h.load = importScripts) : e("Unknown runtime environment. Where are we?");
         !h.load && h.yj && (h.load = function(a) {
             p(h.yj(a))

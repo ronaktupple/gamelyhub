@@ -127,9 +127,11 @@ async function UpdateCheck(isFirst) {
         if (cacheExists) {
             const isUpdatePending = await IsUpdatePending();
             if (isUpdatePending) {
+                console.log(CONSOLE_PREFIX +
                     "Update pending");
                 Broadcast("update-pending")
             } else {
+                console.log(CONSOLE_PREFIX + "Up to date");
                 Broadcast("up-to-date")
             }
             return
@@ -137,6 +139,7 @@ async function UpdateCheck(isFirst) {
         const mainPageUrl = await GetMainPageUrl();
         fileList.unshift("./");
         if (mainPageUrl && fileList.indexOf(mainPageUrl) === -1) fileList.unshift(mainPageUrl);
+        console.log(CONSOLE_PREFIX + "Caching " + fileList.length + " files for offline use");
         if (isFirst) Broadcast("downloading");
         else BroadcastDownloadingUpdate(version);
         if (lazyLoadList) await WriteLazyLoadListToStorage(lazyLoadList);
@@ -144,8 +147,10 @@ async function UpdateCheck(isFirst) {
             fileList, !isFirst);
         const isUpdatePending = await IsUpdatePending();
         if (isUpdatePending) {
+            console.log(CONSOLE_PREFIX + "All resources saved, update ready");
             BroadcastUpdateReady(version)
         } else {
+            console.log(CONSOLE_PREFIX + "All resources saved, offline support ready");
             Broadcast("offline-ready")
         }
     } catch (err) {
@@ -160,6 +165,7 @@ async function GetCacheNameToUse(availableCacheNames, doUpdateCheck) {
     const allClients = await clients.matchAll();
     if (allClients.length > 1) return availableCacheNames[0];
     const latestCacheName = availableCacheNames[availableCacheNames.length - 1];
+    console.log(CONSOLE_PREFIX + "Updating to new version");
     await Promise.all(availableCacheNames.slice(0, -1).map(c => caches.delete(c)));
     return latestCacheName
 }

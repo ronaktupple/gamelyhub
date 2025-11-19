@@ -40,6 +40,7 @@
         }
     </style>
 
+
 </head>
 
 <body>
@@ -77,6 +78,8 @@
 
     <!-- Construct 2 exported games require jQuery. -->
     <script src="jquery-3.4.1.min.js"></script>
+
+
 
     <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
     This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
@@ -117,6 +120,7 @@
                         scope: "./"
                     })
                     .then(function(reg) {
+                        console.log("Registered service worker on " + reg.scope);
                     })
                     .catch(OnRegisterSWError);
             } catch (e) {
@@ -124,5 +128,6 @@
             }
         };
     </script>
+
 
 </body></html>

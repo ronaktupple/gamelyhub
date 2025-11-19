@@ -15,7 +15,8 @@ if (typeof Object.getPrototypeOf !== "function") {
 }
 (function() {
     cr.logexport = function(msg) {
-            window.
+        if (window.console && window.console.log)
+            window.console.log(msg);
     };
     cr.logerror = function(msg) {
         if (window.console && window.console.error)
@@ -2406,6 +2407,7 @@ quat4.str = function(a) {
     {
     	if (!lose_ext)
     	{
+    		console.log("WEBGL_lose_context not supported");
     		return;
     	}
     	lose_ext.loseContext();
@@ -2414,6 +2416,7 @@ quat4.str = function(a) {
     {
     	if (!lose_ext)
     	{
+    		console.log("WEBGL_lose_context not supported");
     		return;
     	}
     	lose_ext.restoreContext();
@@ -4317,6 +4320,7 @@ quat4.str = function(a) {
         }
         if (typeof cr_is_preview !== "undefined") {
             if (this.isCocoonJs)
+                console.log("[Construct 2] In preview-over-wifi via CocoonJS mode");
             if (window.location.search.indexOf("continuous") > -1) {
                 cr.logexport("Reloading for continuous preview");
                 this.loadFromSlot = "__c2_continuouspreview";
@@ -7918,6 +7922,7 @@ window["cr_setSuspended"] = function(s) {
         /*
         if (this.runtime.glwrap)
         {
+        	console.log("Estimated VRAM at layout start: " + this.runtime.glwrap.textureCount() + " textures, approx. " + Math.round(this.runtime.glwrap.estimateVRAM() / 1024) + " kb");
         }
         */
         if (this.runtime.isLoadingState) {
@@ -7954,6 +7959,7 @@ window["cr_setSuspended"] = function(s) {
         /*
         if (this.runtime.glwrap)
         {
+        	console.log("Estimated VRAM at layout end: " + this.runtime.glwrap.textureCount() + " textures, approx. " + Math.round(this.runtime.glwrap.estimateVRAM() / 1024) + " kb");
         }
         */
         if (!this.runtime.isLoadingState) {
@@ -17153,6 +17159,8 @@ cr.plugins_.Browser = function(runtime) {
     Acts.prototype.ConsoleLog = function(type_, msg_) {
         if (typeof console === "undefined")
             return;
+        if (type_ === 0 && console.log)
+            console.log(msg_.toString());
         if (type_ === 1 && console.warn)
             console.warn(msg_.toString());
         if (type_ === 2 && console.error)
@@ -23623,7 +23631,9 @@ var Box2D = (function() {
         b.send(ba);
         return b.responseText
     }, "undefined" != typeof arguments && (e.arguments = arguments), "undefined" !== typeof console ? (e.print || (e.print = function(a) {
+        console.log(a)
     }), e.printErr || (e.printErr = function(a) {
+        console.log(a)
     })) : e.print || (e.print =
         function() {}), ga ? window.Module = e : e.load = importScripts) : c("Unknown runtime environment. Where are we?");
 
@@ -64844,7 +64854,7 @@ var Box2D = (function() {
     function kx(a) {
         e.noExitRuntime || (za = aa, ra = fx, qb(ub), fa ? (process.stdout.once("drain", function() {
             process.exit(a)
-        }), , setTimeout(function() {
+        }), console.log(" "), setTimeout(function() {
             process.exit(a)
         }, 500)) : ja && "function" === typeof quit && quit(a), c(new na(a)))
     }

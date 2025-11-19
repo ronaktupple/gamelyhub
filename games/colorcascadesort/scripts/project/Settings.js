@@ -1,5 +1,8 @@
 export let levelGroupNames = ["easy", "normal", "hard"]; //name for files
 
+
+
+
 const colorHexs = [
     "8CBEB2",
     "F2EBBF",
@@ -20,6 +23,7 @@ function hEXToVBColor(rrggbb) {
     const b = rrggbb.substr(4, 2);
     const g = rrggbb.substr(2, 2);
     const r = rrggbb.substr(0, 2);
+
 
     return [parseInt(r, 16) / 255, parseInt(g, 16) / 255, parseInt(b, 16) / 255];
 }

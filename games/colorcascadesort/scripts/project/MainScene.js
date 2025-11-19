@@ -8,7 +8,10 @@ import {
 import Holder from "./Holder.js";
 import Vector from './Vector.js';
 
+
+
 export default class MainScene {
+
 
     constructor(runtime, level) {
         this.runtime = runtime;
@@ -68,6 +71,7 @@ export default class MainScene {
     //on click the holder - call by event script
     async onClickHolder(holder) {
 
+
         if (this.runtime.globalVars.GameState !== "playing")
             return;
 
@@ -80,6 +84,7 @@ export default class MainScene {
             if (topLiquid == null || (pendingHolder.getTopLiquid().groupId === topLiquid.groupId && !holder.isFull())) {
                 pendingHolder.moveAndTransferLiquid(holder, () => this.checkAndGameOver());
             } else {
+
 
                 this.playSoundEffect("pop_sound_effect");
                 pendingHolder.clearPending();
@@ -126,17 +131,22 @@ export default class MainScene {
 
     checkAndGameOver() {
 
+
+
         if (this.holders.filter(h => h.liquids.length).every(h => h.isFull() && h.liquids.length == 1)) {
             this.overTheGame();
         }
 
     }
 
+
+
     async overTheGame() {
 
         this.runtime.globalVars.GameState = "over";
         this.playSoundEffect("Correct");
         this.runtime.objects.WinParticles.createInstance(0, this.runtime.layout.width / 2, 500).simulate();
+
 
         //update local storage for completed level if needed
         const lastCompletedLevel = await this.runtime.storage.getItem("LevelProgress_" + this.runtime.globalVars.SelectedLevelGroup);
@@ -145,6 +155,8 @@ export default class MainScene {
             await this.runtime.storage.setItem("LevelProgress_" + this.runtime.globalVars.SelectedLevelGroup, this.runtime.globalVars.SelectedLevel);
         }
         this.sendEvent("GameOver");
+
+
 
     }
 
@@ -159,6 +171,8 @@ export default class MainScene {
         event.destroy();
     }
 
+
+
     update(runtime) {
         for (const inst of runtime.objects.WinParticles.instances()) {
             inst.update();
@@ -168,6 +182,7 @@ export default class MainScene {
             inst.update();
         }
     }
+
 
     //get the positions for holder based on count
     calculatePositionsForHolders(count) {
@@ -205,6 +220,7 @@ export default class MainScene {
         }));
 
         const lowRowMinPoint = midPoint.add(new Vector(0, 1).mul(this.runtime.layout.height / 4.5)).sub(new Vector(1, 0).mul((count - maxCountInRow - 1) * this.minXDistanceBetweenHolders / 2)).add(new Vector(0, 1).mul(250));
+
 
         list.push(...[...Array(count - maxCountInRow).keys()].map(i => {
 
