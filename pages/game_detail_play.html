@@ -129,6 +129,31 @@
             margin: 0 auto;
         }
 
+        /* Game header background image */
+        .game-header {
+            background-image: url('../public/images/game-bg.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .game-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .game-header > .container-fluid {
+            position: relative;
+            z-index: 2;
+        }
+
         /* 5-column grid for large screens */
         @media (min-width: 992px) {
             .game-grid-5 > [class*="col-lg-3"] {
