@@ -284,11 +284,6 @@
 	<priority>0.7</priority>
 </url>
 <url>
-	<loc>https://gamelyhub.com/games/ludorivals/index.html</loc>
-	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
-	<priority>0.7</priority>
-</url>
-<url>
 	<loc>https://gamelyhub.com/games/machinecarnage/index.html</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
@@ -657,11 +652,6 @@
 </url>
 <url>
 	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=kobyjumpescape</loc>
-	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
-	<priority>0.7</priority>
-</url>
-<url>
-	<loc>https://gamelyhub.com/pages/game_detail_play.html?game=ludorivals</loc>
 	<lastmod>2025-06-17T13:21:30+01:00</lastmod>
 	<priority>0.7</priority>
 </url>

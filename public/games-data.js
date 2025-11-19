@@ -2098,48 +2098,6 @@ const gamesData = {
         screenshots: ['../public/images/gam-thumb.png'],
         relatedGames: ['cuberun', 'mountainrush']
     },
-    'ludorivals': {
-        id: 'ludorivals',
-        title: 'Ludo Rivals',
-        description: 'Play classic Ludo with friends! Roll dice and race to victory in this board game.',
-        longDescription: 'Ludo Rivals brings the classic board game Ludo to your screen. Roll dice, move your pieces, and race to get all your pieces home first. Play against friends or AI opponents in this timeless board game. With smooth gameplay and classic rules, this game captures the fun of Ludo.',
-        fullContent: `<h2>About Ludo Rivals</h2>
-<p>Ludo Rivals brings the classic board game Ludo directly to your screen, allowing you to enjoy this timeless game with friends or AI opponents. Roll dice, move your pieces strategically, and race to get all your pieces home first. With smooth gameplay, classic rules, and the excitement of competitive board gaming, Ludo Rivals captures all the fun and strategy of the traditional Ludo experience in a digital format.</p>
-
-<h3>Gameplay Mechanics</h3>
-<p>The game follows classic Ludo rules: roll the dice, move your pieces around the board, and be the first to get all your pieces into your home area. The gameplay is simple to learn but offers strategic depth as you decide which pieces to move and when. The dice-based movement adds an element of chance that keeps each game exciting and unpredictable.</p>
-
-<p>Each player has four pieces that must complete a full circuit of the board before entering the home area. Strategic decisions about which pieces to move and when to move them are key to success.</p>
-
-<h3>Strategy and Luck</h3>
-<p>Success in Ludo Rivals requires a balance of strategy and luck. While dice rolls determine your movement options, strategic thinking about which pieces to move and how to position them is crucial. You must also consider your opponents' positions and plan accordingly.</p>
-
-<p>The game includes special rules like safe spaces and the ability to send opponents' pieces back to the start, adding tactical elements that make each game unique and engaging.</p>
-
-<h3>Key Features</h3>
-<p>Ludo Rivals features classic Ludo board design with colorful pieces and smooth animations. The visual presentation captures the traditional board game experience while adding modern digital conveniences.</p>
-
-<p>The game includes multiple game modes, from quick games to full matches. You can play against AI opponents of varying difficulty levels or challenge friends in multiplayer matches.</p>
-
-<p>With its combination of classic gameplay, strategic depth, and competitive fun, Ludo Rivals offers an enjoyable board game experience that appeals to both casual and competitive players.</p>
-
-<h3>Tips for Success</h3>
-<p>Move pieces strategically. Don't just move the first piece you can—think about which piece will be most beneficial to move.</p>
-<p>Use safe spaces. Position your pieces on safe spaces when possible to protect them from being sent back.</p>
-<p>Watch your opponents. Pay attention to where your opponents' pieces are and plan your moves accordingly.</p>
-<p>Balance risk and reward. Sometimes it's worth taking risks to get pieces out or advance quickly, but don't be too reckless.</p>`,
-        thumbnail: '../public/images/thumbnails/imgi_48_ludo_rivals.webp',
-        logo: '../public/images/thumbnails/imgi_48_ludo_rivals.webp',
-        categories: ['Board Game', 'Strategy', 'Classic'],
-        stats: {
-            players: '1.8M+',
-            rating: '4.6',
-            difficulty: 'Easy',
-            ageRating: 'All Ages'
-        },
-        screenshots: ['../public/images/gam-thumb.png'],
-        relatedGames: ['trztictactoe', 'ludorivals']
-    },
     'machinecarnage': {
         id: 'machinecarnage',
         title: 'Machine Carnage',
@@ -3062,7 +3020,7 @@ const gamesData = {
             ageRating: 'All Ages'
         },
         screenshots: ['../public/images/gam-thumb.png'],
-        relatedGames: ['ludorivals', 'trztictactoe']
+        relatedGames: ['trztictactoe']
     },
     'tumblebeans': {
         id: 'tumblebeans',
