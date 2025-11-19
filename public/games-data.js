@@ -2392,48 +2392,7 @@ const gamesData = {
         screenshots: ['../public/images/gam-thumb.png'],
         relatedGames: ['punchmaster', 'fruitninjamaster']
     },
-    'racketchampions': {
-        id: 'racketchampions',
-        title: 'Racket Champions',
-        description: 'Become a racket sports champion! Play tennis and other racket sports.',
-        longDescription: 'Racket Champions is a sports game featuring various racket sports. Play tennis, badminton, and other racket games. Master different techniques and become a racket sports champion. With realistic gameplay and multiple sports, this game offers racket sports excitement.',
-        fullContent: `<h2>About Racket Champions</h2>
-<p>Racket Champions is a comprehensive sports game that features various racket sports, allowing you to play tennis, badminton, and other racket games. Master different techniques, learn the nuances of each sport, and become a racket sports champion. With realistic gameplay mechanics, multiple sports to choose from, and authentic racket sports action, Racket Champions offers an exciting sports experience that captures the skill and strategy of racket sports.</p>
-
-<h3>Gameplay Mechanics</h3>
-<p>The game features intuitive controls that make playing racket sports feel natural and responsive. Each sport has its own unique mechanics: tennis requires powerful serves and precise shots, badminton demands quick reflexes and strategic placement, and other racket sports offer their own challenges. The controls adapt to each sport, ensuring that each feels authentic.</p>
-
-<p>Mastering each racket sport requires practice and skill development. Learning the optimal techniques, timing, and strategies for each sport is key to becoming a champion.</p>
-
-<h3>Multiple Racket Sports</h3>
-<p>Racket Champions features various racket sports, each with unique rules, techniques, and challenges. From the power and precision of tennis to the speed and agility of badminton, the variety ensures that there's always a new sport to master and enjoy.</p>
-
-<p>Each sport is designed to be authentic to the real game while remaining accessible and fun. The realistic gameplay mechanics create an immersive experience that makes you feel like a real racket sports athlete.</p>
-
-<h3>Key Features</h3>
-<p>Racket Champions features realistic graphics that bring racket sports to life. The detailed courts, players, and visual effects create an immersive experience that captures the excitement of competitive racket sports.</p>
-
-<p>The game includes various game modes, from quick matches to tournaments. The variety ensures that there's always a way to play that matches your preferences and skill level.</p>
-
-<p>With its combination of multiple racket sports, realistic gameplay, and competitive action, Racket Champions offers a comprehensive sports experience that appeals to both casual and competitive players.</p>
-
-<h3>Tips for Success</h3>
-<p>Master the controls for each sport. Each racket sport has unique mechanics—learn them to excel.</p>
-<p>Practice different techniques. Understanding various shots and techniques helps you adapt to different situations.</p>
-<p>Study your opponents. Understanding your opponent's playing style helps you anticipate their moves and counter effectively.</p>
-<p>Focus on positioning. Good positioning is crucial in racket sports—place yourself strategically to cover the court effectively.</p>`,
-        thumbnail: '../public/images/gam-thumb.png',
-        logo: '../public/images/gam-thumb.png',
-        categories: ['Sports', 'Tennis', 'Action'],
-        stats: {
-            players: '1.4M+',
-            rating: '4.6',
-            difficulty: 'Medium',
-            ageRating: 'All Ages'
-        },
-        screenshots: ['../public/images/gam-thumb.png'],
-        relatedGames: ['penaltyshootout', 'foosball']
-    },
+    
     'rangersvsundead': {
         id: 'rangersvsundead',
         title: 'Rangers vs Undead',
@@ -3189,6 +3148,986 @@ const gamesData = {
         },
         screenshots: ['../public/images/gam-thumb.png'],
         relatedGames: ['searaiders', 'vikingway']
+    },
+    'ballblaster': {
+        id: 'ballblaster',
+        title: 'Ball Blaster',
+        description: 'Blast balls and destroy targets in this action-packed arcade game!',
+        longDescription: 'Ball Blaster is an exciting arcade game where you shoot balls to destroy targets and clear levels. With fast-paced action and challenging gameplay, this game tests your aim and reflexes.',
+        fullContent: `<h2>About Ball Blaster</h2>
+<p>Ball Blaster is an action-packed arcade game that challenges you to shoot balls and destroy targets with precision and speed. This fast-paced shooting game combines classic arcade mechanics with modern gameplay elements, creating an engaging experience that tests your aim, reflexes, and strategic thinking. Whether you're a casual player looking for quick entertainment or a competitive gamer chasing high scores, Ball Blaster offers endless shooting action that keeps you coming back for more.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Ball Blaster is beautifully simple yet deeply engaging. You control a cannon or shooter that fires balls at various targets scattered across the screen. Each target you hit awards points, and clearing all targets advances you to the next level. The game features intuitive shooting controls that make aiming and firing feel natural and responsive. You can aim in different directions, adjust your trajectory, and time your shots perfectly to maximize your score.</p>
+
+<p>As you progress through levels, the difficulty increases significantly. Targets move faster, appear in more challenging positions, and some may require multiple hits to destroy. The game introduces various target types, each with unique behaviors and point values. Some targets might move in predictable patterns, while others move erratically, requiring quick reflexes and sharp aim to hit.</p>
+
+<h3>Target Types and Challenges</h3>
+<p>Ball Blaster features a variety of target types that keep the gameplay fresh and challenging. Standard targets are straightforward to hit but may require multiple shots. Moving targets add an extra layer of difficulty as you must predict their movement patterns. Special targets may appear that award bonus points or provide power-ups when destroyed. Some levels feature obstacles that block your shots, requiring strategic positioning and careful aim.</p>
+
+<p>The game also includes boss levels where you face larger, more resilient targets that require sustained accuracy and multiple hits to defeat. These challenging encounters test all the skills you've developed throughout the game, combining precision aiming with pattern recognition and quick reflexes.</p>
+
+<h3>Power-Ups and Special Abilities</h3>
+<p>Throughout your journey, you'll encounter various power-ups that enhance your shooting capabilities. Multi-ball power-ups allow you to fire multiple balls simultaneously, increasing your chances of hitting targets. Rapid-fire power-ups boost your firing rate, letting you unleash a barrage of shots. Explosive balls can destroy multiple targets at once, while guided shots help you hit difficult targets with ease.</p>
+
+<p>Strategic use of these power-ups is crucial for achieving high scores and clearing challenging levels. Learning when to activate each power-up and how to combine them effectively adds a layer of strategic depth to the fast-paced action.</p>
+
+<h3>Key Features</h3>
+<p>Ball Blaster features vibrant, colorful graphics with smooth animations that make every shot satisfying. The visual feedback when targets are destroyed, combined with satisfying sound effects, creates an immersive arcade experience. The game's art style is modern and polished, with clear visual indicators that help you track your progress and identify targets quickly.</p>
+
+<p>The game includes a comprehensive scoring system that rewards accuracy, speed, and combo chains. Hitting multiple targets in quick succession builds combo multipliers that significantly boost your score. The leaderboard system tracks your best performances, encouraging you to improve and compete for top scores.</p>
+
+<p>With its combination of simple controls, increasing difficulty, and satisfying gameplay loop, Ball Blaster offers an addictive arcade experience that's perfect for quick gaming sessions or extended play.</p>
+
+<h3>Tips for Success</h3>
+<p>Practice your aim regularly. Consistent accuracy is more valuable than rapid, inaccurate shooting. Take time to line up your shots, especially for moving targets.</p>
+<p>Learn target movement patterns. Understanding how different targets move helps you predict their positions and aim more effectively.</p>
+<p>Save power-ups for challenging moments. Don't use all your power-ups immediately—save them for difficult sections or boss encounters where they'll have the most impact.</p>
+<p>Build combo chains. Hitting multiple targets in quick succession builds combo multipliers that dramatically increase your score.</p>
+<p>Stay calm under pressure. As levels become more challenging, maintaining composure and focusing on accuracy will serve you better than panicking and shooting wildly.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Arcade', 'Action', 'Shooter'],
+        stats: {
+            players: '1M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['bottleshoot', 'bubbleshooter']
+    },
+    'blockvsball': {
+        id: 'blockvsball',
+        title: 'Block vs Ball',
+        description: 'Break blocks with balls in this classic arcade game!',
+        longDescription: 'Block vs Ball is a classic arcade game where you bounce balls to break blocks. Control the paddle, aim carefully, and clear all blocks to advance. With multiple levels and power-ups, this game offers endless fun.',
+        fullContent: `<h2>About Block vs Ball</h2>
+<p>Block vs Ball is a classic arcade game that brings the timeless brick-breaking experience to modern gaming. This engaging game combines precision paddle control with strategic ball physics, creating an addictive gameplay loop that has captivated players for generations. Navigate your paddle to bounce balls and break through colorful blocks, clearing levels and unlocking new challenges as you progress through increasingly difficult stages.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Block vs Ball is elegantly simple: control a paddle at the bottom of the screen to bounce a ball upward, breaking blocks arranged at the top. Each block you hit awards points, and clearing all blocks advances you to the next level. The physics-based ball movement creates realistic bounces and angles, requiring you to predict trajectories and position your paddle strategically.</p>
+
+<p>As you progress, the game introduces various block types with different properties. Some blocks require a single hit to destroy, while others need multiple hits. Special blocks may contain power-ups, bonus points, or create chain reactions when destroyed. The ball speed gradually increases as you advance, making the game progressively more challenging and requiring faster reflexes and better paddle control.</p>
+
+<h3>Paddle Control and Ball Physics</h3>
+<p>Mastering paddle control is essential for success in Block vs Ball. The paddle moves horizontally along the bottom of the screen, and the angle at which the ball hits the paddle determines its trajectory. Hitting the ball with the center of the paddle sends it straight up, while hitting with the edges creates angled shots that can reach difficult-to-access blocks.</p>
+
+<p>The ball physics are realistic and consistent, allowing skilled players to predict ball movement and plan their shots. Learning to control the ball's angle through precise paddle positioning is key to clearing levels efficiently. Advanced players can use spin and angle manipulation to create trick shots and reach blocks that seem impossible to hit.</p>
+
+<h3>Power-Ups and Special Blocks</h3>
+<p>Throughout the game, you'll encounter various power-ups that drop from destroyed blocks. Multi-ball power-ups split your ball into multiple balls, dramatically increasing your block-breaking potential. Paddle size increases make it easier to hit the ball, while laser paddles allow you to shoot directly at blocks. Slow-motion power-ups give you more time to react, and extra lives provide safety nets for difficult levels.</p>
+
+<p>Special blocks add variety and strategic depth. Explosive blocks destroy surrounding blocks when hit, creating satisfying chain reactions. Metal blocks are indestructible and must be avoided or worked around. Moving blocks add dynamic challenges, while bonus blocks award extra points or power-ups when destroyed.</p>
+
+<h3>Level Design and Progression</h3>
+<p>Block vs Ball features carefully designed levels that gradually introduce new challenges and mechanics. Early levels teach you the basics with simple block arrangements, while later levels feature complex patterns, moving blocks, and strategic layouts that require careful planning. Each level is designed to be solvable but challenging, creating a satisfying difficulty curve.</p>
+
+<p>The game includes multiple worlds or themes, each with unique visual styles and level designs. As you progress through worlds, new block types and mechanics are introduced, keeping the gameplay fresh and preventing repetition. Boss levels feature massive block formations that require sustained accuracy and strategic power-up usage to defeat.</p>
+
+<h3>Key Features</h3>
+<p>Block vs Ball features modern, polished graphics that enhance the classic arcade experience. The colorful blocks, smooth animations, and satisfying particle effects when blocks are destroyed create a visually appealing experience. The game's art style is clean and vibrant, making it easy to track the ball and identify different block types.</p>
+
+<p>The game includes a comprehensive scoring system that rewards skillful play. Bonus points are awarded for clearing levels quickly, creating combo chains, and using power-ups effectively. The leaderboard system tracks your best scores, encouraging replay and competition.</p>
+
+<p>With its combination of classic arcade gameplay, modern presentation, and strategic depth, Block vs Ball offers an engaging experience that appeals to both casual players and arcade game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Master paddle positioning. Learn to control the ball's angle by hitting it with different parts of your paddle. The edges create angled shots that can reach difficult blocks.</p>
+<p>Don't let the ball fall. While it may seem obvious, maintaining ball control is crucial. Losing a ball means losing progress and potentially losing a life.</p>
+<p>Use power-ups strategically. Save powerful power-ups like multi-ball for challenging sections or when you have many blocks remaining.</p>
+<p>Plan your shots. Look ahead and identify which blocks are hardest to reach. Use angled shots to clear difficult areas first.</p>
+<p>Watch for patterns. Many levels have block arrangements that can be cleared efficiently with the right strategy. Take time to analyze the layout before starting.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Arcade', 'Classic', 'Puzzle'],
+        stats: {
+            players: '1.2M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['neonbricks', 'blockvsball']
+    },
+    'bottleshoot': {
+        id: 'bottleshoot',
+        title: 'Bottle Shoot',
+        description: 'Test your aim by shooting bottles in this precision shooting game!',
+        longDescription: 'Bottle Shoot is a precision shooting game where you aim and shoot at bottles. Test your accuracy and timing as you progress through challenging levels. With various targets and increasing difficulty, this game offers engaging shooting action.',
+        fullContent: `<h2>About Bottle Shoot</h2>
+<p>Bottle Shoot is a precision shooting game that tests your marksmanship skills in a fun, arcade-style environment. Inspired by classic carnival shooting games, this engaging title challenges you to aim carefully and shoot bottles with accuracy and timing. Whether you're practicing your aim or competing for high scores, Bottle Shoot offers satisfying shooting action that rewards precision and steady hands.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Bottle Shoot is straightforward yet challenging: aim your weapon and shoot at bottles arranged on shelves or platforms. Each successful hit awards points, and clearing all bottles advances you to the next level. The game features intuitive aiming controls that allow you to line up your shots precisely. You can adjust your aim, account for distance and angle, and time your shots perfectly to hit moving or stationary targets.</p>
+
+<p>As you progress through levels, the difficulty increases significantly. Bottles may be arranged in complex patterns, placed at varying distances, or set in motion. Some levels feature moving platforms or rotating shelves that require you to time your shots carefully. The game introduces various bottle types, each with different point values and behaviors, adding strategic depth to the shooting mechanics.</p>
+
+<h3>Shooting Mechanics and Accuracy</h3>
+<p>Bottle Shoot emphasizes precision and accuracy over rapid firing. Each shot requires careful aim, and the game rewards well-placed shots with bonus points. The shooting mechanics feel realistic, with factors like distance, angle, and timing affecting your accuracy. Learning to account for these variables is essential for achieving high scores and clearing challenging levels.</p>
+
+<p>The game includes various shooting modes and challenges. In some levels, you may have limited ammunition, requiring you to make every shot count. Time challenges add pressure, forcing you to balance speed with accuracy. Precision challenges reward perfect accuracy with bonus multipliers, encouraging careful, deliberate shooting.</p>
+
+<h3>Target Variety and Challenges</h3>
+<p>The game features a wide variety of bottle arrangements and challenges. Standard bottles are straightforward targets, while special bottles may award bonus points or power-ups when hit. Some levels feature moving targets that require prediction and timing. Stacked bottles create chain reaction opportunities, where hitting one bottle can knock down others.</p>
+
+<p>Environmental factors add complexity to the shooting challenges. Wind effects may require you to adjust your aim, while moving platforms create dynamic targets. Some levels feature obstacles that block your shots, requiring strategic positioning and careful angle selection. These varied challenges keep the gameplay fresh and prevent repetition.</p>
+
+<h3>Power-Ups and Special Abilities</h3>
+<p>Throughout the game, you'll encounter various power-ups that enhance your shooting capabilities. Slow-motion power-ups give you more time to aim precisely, while zoom features help you see distant targets more clearly. Multi-shot power-ups allow you to fire multiple projectiles, increasing your chances of hitting targets. Explosive shots can destroy multiple bottles at once, creating satisfying chain reactions.</p>
+
+<p>Strategic use of these power-ups is crucial for clearing difficult levels and achieving high scores. Learning when to activate each power-up and how to combine them effectively adds a layer of strategic depth to the precision shooting gameplay.</p>
+
+<h3>Key Features</h3>
+<p>Bottle Shoot features polished graphics with satisfying visual feedback. When bottles are hit, they shatter with realistic physics and particle effects, creating a rewarding sense of accomplishment. The game's art style is clean and clear, making it easy to identify targets and track your progress.</p>
+
+<p>The game includes a comprehensive scoring system that rewards accuracy, speed, and combo chains. Hitting multiple bottles in quick succession builds combo multipliers that significantly boost your score. Bonus points are awarded for perfect accuracy, clearing levels quickly, and hitting special targets. The leaderboard system tracks your best performances, encouraging improvement and competition.</p>
+
+<p>With its combination of precision shooting mechanics, varied challenges, and satisfying gameplay loop, Bottle Shoot offers an engaging experience that appeals to both casual players and shooting game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Take your time to aim. Precision is more valuable than speed—a well-aimed shot is better than multiple missed shots.</p>
+<p>Account for distance and angle. Learn to adjust your aim based on how far away targets are and at what angle they're positioned.</p>
+<p>Watch for patterns. Many levels have bottle arrangements that can be cleared efficiently with the right strategy. Identify the best order to shoot bottles.</p>
+<p>Use power-ups strategically. Save powerful power-ups for challenging sections or when you need to clear many bottles quickly.</p>
+<p>Practice regularly. Consistent practice improves your aim and helps you develop muscle memory for different shooting scenarios.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Shooter', 'Arcade', 'Action'],
+        stats: {
+            players: '950K+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['ballblaster', 'bubbleshooter']
+    },
+    'bubbleshooter': {
+        id: 'bubbleshooter',
+        title: 'Bubble Shooter',
+        description: 'Pop bubbles and clear the board in this classic puzzle game!',
+        longDescription: 'Bubble Shooter is a classic puzzle game where you shoot bubbles to match colors and clear the board. Plan your shots carefully, create combos, and clear all bubbles to win. With hundreds of levels, this game offers endless puzzle fun.',
+        fullContent: `<h2>About Bubble Shooter</h2>
+<p>Bubble Shooter is a classic puzzle game that has entertained millions of players worldwide with its simple yet addictive gameplay. This timeless game combines strategic thinking with precise aiming, creating an engaging experience that's easy to learn but challenging to master. Shoot colorful bubbles to match colors, create chain reactions, and clear the board in this beloved puzzle classic that continues to captivate players of all ages.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Bubble Shooter is elegantly simple: aim and shoot bubbles from the bottom of the screen to match three or more bubbles of the same color. When matching bubbles connect, they pop and disappear, causing bubbles above to fall. The goal is to clear all bubbles from the board to advance to the next level. The game features intuitive aiming controls that allow you to precisely target where your bubble will land.</p>
+
+<p>As you progress through levels, the difficulty increases significantly. Bubbles are arranged in more complex patterns, and new colors are introduced, making it harder to create matches. Some levels feature obstacles or special bubble arrangements that require careful planning and strategic shooting. The game introduces various bubble types, including special bubbles with unique properties that add depth to the puzzle mechanics.</p>
+
+<h3>Strategy and Planning</h3>
+<p>Success in Bubble Shooter requires more than just matching colors—it demands strategic thinking and careful planning. Each shot should be considered carefully, as the angle and position of your bubble determine how it will interact with existing bubbles. Skilled players learn to predict bubble trajectories, plan multiple moves ahead, and create chain reactions that clear large sections of the board.</p>
+
+<p>The game rewards players who think strategically. Bouncing bubbles off walls to reach difficult-to-access areas, creating cascading chain reactions, and clearing paths for future shots are all essential skills. Advanced players develop the ability to visualize multiple possible outcomes and choose the shot that maximizes their chances of success.</p>
+
+<h3>Special Bubbles and Power-Ups</h3>
+<p>Throughout the game, you'll encounter special bubbles that add variety and strategic depth. Rainbow bubbles can match any color, making them valuable for difficult situations. Bomb bubbles explode and clear surrounding bubbles, while fire bubbles can burn through multiple layers. These special bubbles appear at strategic moments and can turn the tide of a challenging level.</p>
+
+<p>Power-ups provide additional assistance when needed. Extra shots give you more attempts to clear the board, while color-changing bubbles help you create matches when you're stuck. Hint systems can suggest optimal shots, though relying on them too much reduces the challenge and satisfaction of solving puzzles yourself.</p>
+
+<h3>Level Design and Progression</h3>
+<p>Bubble Shooter features hundreds of carefully designed levels that gradually introduce new challenges and mechanics. Early levels teach you the basics with simple bubble arrangements and few colors. As you progress, levels become more complex with intricate patterns, multiple colors, and strategic layouts that require careful planning.</p>
+
+<p>The game includes multiple worlds or themes, each with unique visual styles and level designs. Each world introduces new challenges, from moving bubble arrangements to time-limited levels. Boss levels feature massive bubble formations that require sustained strategy and precise shooting to clear. The progressive difficulty curve ensures that players are constantly challenged while still feeling achievable.</p>
+
+<h3>Key Features</h3>
+<p>Bubble Shooter features vibrant, colorful graphics that make the gameplay visually appealing. The smooth animations when bubbles pop and fall create satisfying visual feedback. The game's art style is clean and polished, making it easy to distinguish between different bubble colors and plan your shots effectively.</p>
+
+<p>The game includes a comprehensive scoring system that rewards skillful play. Bonus points are awarded for creating chain reactions, clearing levels quickly, and using fewer shots. Combo multipliers significantly boost your score when you create multiple matches in quick succession. The leaderboard system tracks your best performances, encouraging replay and competition.</p>
+
+<p>With its combination of simple mechanics, strategic depth, and hundreds of levels, Bubble Shooter offers endless puzzle entertainment that appeals to both casual players and puzzle game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Plan your shots ahead. Don't just match the first available color—think about how each shot will affect the board and plan multiple moves in advance.</p>
+<p>Use walls to your advantage. Bouncing bubbles off walls can help you reach difficult-to-access areas and create unexpected matches.</p>
+<p>Create chain reactions. Look for opportunities to create cascading matches that clear large sections of the board automatically.</p>
+<p>Save special bubbles for difficult moments. Don't use rainbow or bomb bubbles immediately—save them for when you're truly stuck or need to clear a challenging section.</p>
+<p>Clear from the top when possible. Removing bubbles from the top creates more opportunities for chain reactions as bubbles fall and create new matches.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Puzzle', 'Arcade', 'Classic'],
+        stats: {
+            players: '2M+',
+            rating: '4.7',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['colorcascadesort', 'bubbleshooter']
+    },
+    'carnivalducks': {
+        id: 'carnivalducks',
+        title: 'Carnival Ducks',
+        description: 'Shoot ducks at the carnival in this fun arcade game!',
+        longDescription: 'Carnival Ducks is a fun arcade game inspired by carnival shooting games. Aim and shoot at ducks to score points and win prizes. With colorful graphics and engaging gameplay, this game brings the carnival experience to your screen.',
+        fullContent: `<h2>About Carnival Ducks</h2>
+<p>Carnival Ducks is a delightful arcade game that captures the excitement and nostalgia of classic carnival shooting galleries. This fun-filled game brings the carnival experience to your screen, challenging you to aim and shoot at moving ducks to score points and win prizes. With its colorful graphics, engaging gameplay, and festive carnival atmosphere, Carnival Ducks offers entertaining shooting action that appeals to players of all ages.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Carnival Ducks is straightforward and enjoyable: aim your shooting device and fire at ducks as they move across the screen. Each successful hit awards points, and clearing all ducks advances you to the next round. The game features intuitive aiming controls that make shooting feel natural and responsive. You can track moving targets, lead your shots, and time your firing perfectly to hit ducks as they move in various patterns.</p>
+
+<p>As you progress through rounds, the difficulty increases with faster-moving ducks, more complex movement patterns, and additional targets. The game introduces various duck types, each with different point values and behaviors. Some ducks move in predictable straight lines, while others follow curved or zigzag patterns that require prediction and timing to hit. Special ducks may appear that award bonus points or provide power-ups when shot.</p>
+
+<h3>Target Variety and Movement Patterns</h3>
+<p>Carnival Ducks features a variety of duck types that keep the gameplay interesting and challenging. Standard ducks are straightforward targets that move at moderate speeds. Fast ducks move quickly and require quick reflexes to hit. Special ducks may have unique appearances or movement patterns, and shooting them awards bonus points or special rewards.</p>
+
+<p>The ducks move in various patterns across the screen, creating dynamic shooting challenges. Some ducks move horizontally in straight lines, while others follow curved paths or zigzag patterns. Some may pause briefly, providing opportunities for precise shots, while others move continuously, requiring you to lead your shots and predict their movement. Learning to recognize and adapt to different movement patterns is key to achieving high scores.</p>
+
+<h3>Scoring and Rewards</h3>
+<p>The game features a comprehensive scoring system that rewards accuracy and speed. Each duck hit awards points based on its type and difficulty. Hitting multiple ducks in quick succession builds combo multipliers that significantly boost your score. Bonus points are awarded for perfect rounds, hitting special ducks, and achieving high accuracy rates.</p>
+
+<p>Throughout the game, you'll earn prizes and rewards that enhance your shooting experience. These rewards may include power-ups that help you hit difficult targets, extra ammunition for challenging rounds, or special abilities that make shooting easier. The reward system provides motivation to improve your skills and achieve better scores.</p>
+
+<h3>Power-Ups and Special Abilities</h3>
+<p>Carnival Ducks includes various power-ups that enhance your shooting capabilities. Slow-motion power-ups give you more time to aim at fast-moving ducks, while rapid-fire power-ups allow you to shoot multiple times quickly. Multi-shot power-ups let you fire multiple projectiles simultaneously, increasing your chances of hitting targets. Explosive shots can hit multiple ducks at once, creating satisfying multi-hit moments.</p>
+
+<p>Strategic use of these power-ups is important for achieving high scores and clearing challenging rounds. Learning when to activate each power-up and how to combine them effectively adds a layer of strategic depth to the shooting gameplay.</p>
+
+<h3>Key Features</h3>
+<p>Carnival Ducks features vibrant, carnival-themed graphics that capture the festive atmosphere of a real carnival. The colorful ducks, cheerful backgrounds, and satisfying visual effects when ducks are hit create an enjoyable and immersive experience. The game's art style is bright and playful, making it appealing to players of all ages.</p>
+
+<p>The game includes smooth, responsive controls that make aiming and shooting feel natural. The shooting mechanics are intuitive, allowing players to quickly learn the basics while still providing depth for those who want to master the game. The audio design complements the visual experience with satisfying sound effects and cheerful carnival music.</p>
+
+<p>With its combination of simple mechanics, engaging gameplay, and festive atmosphere, Carnival Ducks offers an entertaining experience that's perfect for quick gaming sessions or extended play.</p>
+
+<h3>Tips for Success</h3>
+<p>Lead your shots. Since ducks are moving, aim ahead of where they are to hit where they'll be when your shot arrives.</p>
+<p>Watch for patterns. Many ducks follow predictable movement patterns. Learning these patterns helps you anticipate where to aim.</p>
+<p>Prioritize special ducks. Special ducks often award bonus points or power-ups, so prioritize hitting them when they appear.</p>
+<p>Build combos. Hitting multiple ducks in quick succession builds combo multipliers that significantly boost your score.</p>
+<p>Use power-ups strategically. Save powerful power-ups for challenging rounds with fast-moving or difficult-to-hit ducks.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Arcade', 'Shooter', 'Casual'],
+        stats: {
+            players: '800K+',
+            rating: '4.4',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['bottleshoot', 'carnivalducks']
+    },
+    'colorbump': {
+        id: 'colorbump',
+        title: 'Color Bump',
+        description: 'Navigate through colored obstacles in this challenging puzzle game!',
+        longDescription: 'Color Bump is a challenging puzzle game where you navigate a ball through colored obstacles. Match colors to pass through barriers and reach the goal. With increasing difficulty and strategic gameplay, this game tests your problem-solving skills.',
+        fullContent: `<h2>About Color Bump</h2>
+<p>Color Bump is a challenging puzzle game that tests your problem-solving skills and color-matching abilities. This engaging game challenges you to navigate a ball through a maze of colored obstacles, using color matching to pass through barriers and reach the goal. With its simple yet deep mechanics, increasing difficulty, and strategic gameplay, Color Bump offers engaging puzzle challenges that will keep you thinking and planning your moves carefully.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Color Bump is elegantly simple: control a ball and navigate it through a level filled with colored obstacles. The key mechanic is color matching—your ball can only pass through obstacles that match its current color. When your ball touches an obstacle of a different color, it bounces back or stops, requiring you to change the ball's color to continue. The goal is to navigate through the maze, matching colors strategically to reach the end point.</p>
+
+<p>As you progress through levels, the complexity increases significantly. Levels feature more obstacles, more colors to manage, and more complex maze layouts. The game introduces various obstacle types, including barriers that change your ball's color, moving obstacles that require timing, and special obstacles with unique properties. Each level requires careful planning and precise control to navigate successfully.</p>
+
+<h3>Color Matching Strategy</h3>
+<p>Success in Color Bump requires strategic color management. You must plan your route through the level, considering which colors you'll need to pass through different sections. Changing your ball's color at the right moments is crucial—change too early and you might get stuck, change too late and you might miss an opportunity. The game rewards players who think ahead and plan their color changes strategically.</p>
+
+<p>The color-changing mechanics add depth to the puzzle gameplay. Some obstacles automatically change your ball's color when touched, while others require you to actively change colors. Learning to use these color-changing obstacles to your advantage is key to solving more complex levels. Advanced players develop the ability to visualize multiple possible routes and choose the path that requires the fewest color changes.</p>
+
+<h3>Level Design and Obstacles</h3>
+<p>Color Bump features carefully designed levels that gradually introduce new challenges and mechanics. Early levels teach you the basics with simple mazes and few colors. As you progress, levels become more complex with intricate layouts, multiple colors, and strategic obstacle placement. Each level is designed to be solvable but challenging, creating a satisfying difficulty curve.</p>
+
+<p>The game includes various obstacle types that add variety and challenge. Static barriers block your path unless your ball matches their color. Moving obstacles create dynamic challenges that require timing and prediction. Color-changing zones automatically change your ball's color, while special obstacles may have unique behaviors that require specific strategies to navigate.</p>
+
+<h3>Key Features</h3>
+<p>Color Bump features vibrant, colorful graphics that make the gameplay visually appealing. The smooth ball movement, satisfying color transitions, and clear visual indicators help you track your progress and plan your moves. The game's art style is clean and modern, making it easy to distinguish between different colors and identify obstacles.</p>
+
+<p>The game includes intuitive controls that make navigating your ball feel natural and responsive. The physics-based movement creates realistic ball behavior, while the color-matching mechanics are clear and easy to understand. The level design ensures that each puzzle feels fair and solvable, rewarding careful thinking and strategic planning.</p>
+
+<p>With its combination of simple mechanics, strategic depth, and challenging puzzles, Color Bump offers an engaging experience that appeals to both casual players and puzzle game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Plan your route before moving. Take time to analyze the level layout and identify which colors you'll need for different sections.</p>
+<p>Minimize color changes. Each color change can be strategic—try to plan your route to minimize unnecessary color changes.</p>
+<p>Use color-changing obstacles strategically. Some obstacles change your color automatically—use these to your advantage when planning your route.</p>
+<p>Watch for patterns. Many levels have optimal routes that minimize color changes and obstacles. Look for these patterns.</p>
+<p>Practice patience. Rushing through levels often leads to mistakes. Take your time to plan and execute your moves carefully.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Puzzle', 'Arcade', 'Strategy'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['colorup', 'colorbump']
+    },
+    'colorup': {
+        id: 'colorup',
+        title: 'Color Up',
+        description: 'Fill the board with colors in this vibrant puzzle game!',
+        longDescription: 'Color Up is a vibrant puzzle game where you fill the board with colors. Start from a corner and expand to cover the entire board. With strategic thinking and careful planning, this game offers engaging puzzle gameplay.',
+        fullContent: `<h2>About Color Up</h2>
+<p>Color Up is a vibrant puzzle game that challenges you to fill the entire board with your color through strategic expansion. This engaging game combines simple mechanics with deep strategic thinking, creating an addictive puzzle experience. Start from a corner and strategically expand your color to cover the entire board, planning your moves carefully to overcome obstacles and complete each level.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Color Up is elegantly simple: start from a corner of the board and expand your color to fill the entire playing field. Each move expands your colored area, and the goal is to cover every square on the board. The game features intuitive controls that make expanding your color feel natural and satisfying. You can expand in different directions, and each expansion requires strategic thinking about which areas to cover first.</p>
+
+<p>As you progress through levels, the complexity increases significantly. Boards become larger, obstacles appear that block your expansion, and new mechanics are introduced that add strategic depth. Some levels feature multiple starting points, while others have obstacles that require you to plan your expansion carefully. The game introduces various challenge types, each requiring different strategies to complete successfully.</p>
+
+<h3>Strategic Expansion</h3>
+<p>Success in Color Up requires careful planning and strategic thinking. You must analyze the board layout and identify the most efficient path to cover all areas. Expanding too quickly in one direction might leave isolated areas that are difficult to reach later. Planning your expansion route is crucial—covering areas strategically ensures you don't get stuck with unreachable sections.</p>
+
+<p>The game rewards players who think ahead and plan multiple moves in advance. Identifying optimal expansion paths, avoiding dead ends, and efficiently covering all areas are essential skills. Advanced players develop the ability to visualize the entire board and plan their expansion to minimize moves and maximize efficiency.</p>
+
+<h3>Obstacles and Challenges</h3>
+<p>Color Up features various obstacles and challenges that add complexity to the puzzle gameplay. Some obstacles block your expansion, requiring you to work around them or find alternative paths. Moving obstacles create dynamic challenges that require timing and prediction. Special tiles may have unique properties that affect your expansion strategy.</p>
+
+<p>The game includes different level types that keep the gameplay fresh. Some levels focus on speed, challenging you to fill the board quickly. Others emphasize efficiency, rewarding players who use fewer moves. Puzzle levels feature complex layouts that require careful planning and strategic thinking to solve.</p>
+
+<h3>Key Features</h3>
+<p>Color Up features vibrant, colorful graphics that make the gameplay visually appealing. The smooth color expansion animations and satisfying visual feedback create an enjoyable experience. The game's art style is clean and modern, making it easy to track your progress and identify areas that still need to be covered.</p>
+
+<p>The game includes intuitive controls that make expanding your color feel natural and responsive. The expansion mechanics are clear and easy to understand, while still providing depth for strategic players. The level design ensures that each puzzle feels fair and solvable, rewarding careful thinking and strategic planning.</p>
+
+<p>With its combination of simple mechanics, strategic depth, and vibrant visuals, Color Up offers an engaging puzzle experience that appeals to both casual players and puzzle game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Plan your expansion route. Before making moves, analyze the board and identify the most efficient path to cover all areas.</p>
+<p>Avoid creating isolated areas. Expanding too quickly in one direction can leave areas that are difficult to reach later.</p>
+<p>Work around obstacles strategically. Don't just avoid obstacles—use them to guide your expansion and create efficient paths.</p>
+<p>Think multiple moves ahead. Planning your expansion several moves in advance helps you avoid dead ends and inefficient paths.</p>
+<p>Cover corners and edges first. Starting from corners and working inward often creates more efficient expansion patterns.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Puzzle', 'Strategy', 'Arcade'],
+        stats: {
+            players: '1.3M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['colorbump', 'colorup']
+    },
+    'fighterjet': {
+        id: 'fighterjet',
+        title: 'Fighter Jet',
+        description: 'Pilot a fighter jet and engage in aerial combat!',
+        longDescription: 'Fighter Jet is an action-packed aerial combat game where you pilot a fighter jet and engage enemies. Dodge obstacles, shoot down enemies, and complete missions. With fast-paced action and challenging gameplay, this game offers thrilling aerial combat.',
+        fullContent: `<h2>About Fighter Jet</h2>
+<p>Fighter Jet is an action-packed aerial combat game that puts you in the cockpit of a powerful fighter jet, engaging in thrilling dogfights and dangerous missions. This exciting game combines fast-paced action with strategic combat, creating an immersive aerial warfare experience. Navigate through enemy territory, engage hostile aircraft, dodge obstacles, and complete challenging missions in this adrenaline-fueled combat adventure.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Fighter Jet puts you in control of a high-performance fighter aircraft as you engage in aerial combat missions. Control your jet's movement, aim and fire weapons at enemy targets, and maneuver through dangerous environments. The game features responsive controls that make piloting feel natural and exciting. You can perform aerial maneuvers, dodge incoming fire, and engage multiple enemies simultaneously.</p>
+
+<p>As you progress through missions, the difficulty increases with more enemies, faster combat, and more complex objectives. The game introduces various enemy types, each with unique attack patterns and behaviors. Some enemies attack directly, while others use evasive maneuvers or group tactics. Boss encounters feature powerful enemy aircraft that require sustained combat and strategic thinking to defeat.</p>
+
+<h3>Aerial Combat and Maneuvers</h3>
+<p>Fighter Jet emphasizes skillful piloting and combat tactics. Success requires mastering aerial maneuvers, evasive techniques, and combat strategies. You can perform barrel rolls, sharp turns, and other aerial maneuvers to dodge enemy fire and position yourself for optimal attacks. Learning to combine movement with combat creates dynamic and engaging gameplay.</p>
+
+<p>The combat system rewards accuracy and tactical thinking. Different weapons have different properties—some are rapid-fire but less powerful, while others are slower but deal massive damage. Learning when to use each weapon type and how to target enemy weak points is crucial for success. The game also includes special abilities and power-ups that enhance your combat capabilities.</p>
+
+<h3>Missions and Objectives</h3>
+<p>The game features various mission types that keep the gameplay varied and engaging. Combat missions require you to eliminate all enemies, while escort missions challenge you to protect friendly units. Time-limited missions add pressure, forcing you to balance speed with accuracy. Boss missions feature powerful enemies that require sustained combat and strategic thinking to defeat.</p>
+
+<p>Each mission presents unique challenges and objectives. Some missions require you to destroy specific targets, while others challenge you to survive waves of enemies. The variety ensures that gameplay remains fresh and that each mission feels different and memorable. Completing missions unlocks new aircraft, weapons, and abilities that enhance your combat capabilities.</p>
+
+<h3>Key Features</h3>
+<p>Fighter Jet features stunning aerial graphics that capture the excitement of aerial combat. The detailed aircraft models, dynamic environments, and impressive visual effects create an immersive experience. The game's art style is polished and modern, with smooth animations and satisfying combat feedback that makes every engagement feel impactful.</p>
+
+<p>The game includes a comprehensive progression system that rewards successful missions. Unlocking new aircraft provides different capabilities and playstyles, while weapon upgrades enhance your combat effectiveness. The variety of aircraft and weapons ensures that players can find options that match their preferred playstyle.</p>
+
+<p>With its combination of fast-paced action, strategic combat, and immersive aerial environments, Fighter Jet offers an exciting experience that appeals to both casual players and action game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Master aerial maneuvers. Learning to perform evasive maneuvers helps you avoid enemy fire and position yourself for counterattacks.</p>
+<p>Target enemy weak points. Some enemies have vulnerable areas that take more damage—aim for these to defeat enemies faster.</p>
+<p>Manage your weapons strategically. Different weapons are effective against different enemy types—learn when to use each weapon.</p>
+<p>Use power-ups wisely. Save powerful abilities for challenging sections or boss encounters where they'll have the most impact.</p>
+<p>Stay mobile. Constant movement makes you harder to hit—don't stay in one place for too long during combat.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Action', 'Shooter', 'Arcade'],
+        stats: {
+            players: '1.1M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['skycombatfury', 'fighterjet']
+    },
+    'happycups': {
+        id: 'happycups',
+        title: 'Happy Cups',
+        description: 'Sort and stack cups in this fun puzzle game!',
+        longDescription: 'Happy Cups is a fun puzzle game where you sort and stack cups by color. Move cups strategically to create stacks of matching colors. With increasing difficulty and strategic gameplay, this game offers engaging puzzle fun.',
+        fullContent: `<h2>About Happy Cups</h2>
+<p>Happy Cups is a fun and engaging puzzle game that challenges you to sort and stack colorful cups by matching their colors. This delightful game combines simple mechanics with strategic thinking, creating an addictive puzzle experience that's both relaxing and challenging. Move cups strategically between containers to create perfect stacks of matching colors, solving increasingly complex puzzles as you progress through levels.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Happy Cups is elegantly simple: you have multiple containers filled with cups of different colors, and your goal is to sort them so that each container holds cups of only one color. You can pour cups from one container to another, but you must follow specific rules—typically, you can only pour cups of the same color on top of each other, or into empty containers. The challenge is to plan your moves carefully to sort all cups without getting stuck.</p>
+
+<p>As you progress through levels, the complexity increases significantly. More containers and more colors are introduced, creating increasingly challenging puzzles. Some levels feature cups with multiple colors or special properties that add strategic depth. The game introduces various puzzle types, each requiring different strategies to solve successfully.</p>
+
+<h3>Sorting Strategy</h3>
+<p>Success in Happy Cups requires careful planning and strategic thinking. You must analyze the current cup arrangement and identify the most efficient sorting strategy. Pouring cups in the wrong order can create situations where you're stuck and unable to make progress. Learning to plan multiple moves ahead is crucial for solving more complex puzzles.</p>
+
+<p>The game rewards players who think strategically and plan their sorting moves carefully. Identifying which cups to move first, which containers to use as temporary storage, and how to create efficient sorting patterns are essential skills. Advanced players develop the ability to visualize the entire sorting process and plan their moves to minimize the number of pours needed.</p>
+
+<h3>Puzzle Types and Challenges</h3>
+<p>Happy Cups features various puzzle types that keep the gameplay fresh and engaging. Standard sorting puzzles challenge you to organize cups by color. Limited-move puzzles require you to solve puzzles using a specific number of moves or fewer. Time challenges add pressure, forcing you to sort quickly while maintaining accuracy.</p>
+
+<p>The game includes different difficulty levels that gradually introduce new challenges. Early levels teach you the basics with simple cup arrangements and few colors. As you progress, puzzles become more complex with intricate cup arrangements, more colors, and strategic layouts that require careful planning. Each puzzle is designed to be solvable but challenging, creating a satisfying difficulty curve.</p>
+
+<h3>Key Features</h3>
+<p>Happy Cups features vibrant, colorful graphics that make the gameplay visually appealing. The smooth cup animations, satisfying pouring effects, and clear visual indicators help you track your progress and plan your moves. The game's art style is cheerful and modern, making it enjoyable to play and visually engaging.</p>
+
+<p>The game includes intuitive controls that make moving and pouring cups feel natural and responsive. The sorting mechanics are clear and easy to understand, while still providing depth for strategic players. The puzzle design ensures that each level feels fair and solvable, rewarding careful thinking and strategic planning.</p>
+
+<p>With its combination of simple mechanics, strategic depth, and cheerful visuals, Happy Cups offers an engaging puzzle experience that appeals to both casual players and puzzle game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Plan your moves ahead. Before pouring cups, analyze the arrangement and identify the most efficient sorting strategy.</p>
+<p>Use empty containers strategically. Empty containers are valuable for temporary storage—use them to free up space and create sorting opportunities.</p>
+<p>Avoid creating dead ends. Pouring cups in the wrong order can create situations where you're stuck—think before you pour.</p>
+<p>Work from the top down. Often, it's easier to sort cups by working from the top of stacks and organizing them systematically.</p>
+<p>Practice patience. Rushing through puzzles often leads to mistakes. Take your time to plan and execute your moves carefully.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Puzzle', 'Strategy', 'Casual'],
+        stats: {
+            players: '1M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['liquidsort', 'happycups']
+    },
+    'infinitejumper': {
+        id: 'infinitejumper',
+        title: 'Infinite Jumper',
+        description: 'Jump endlessly and avoid obstacles in this endless runner game!',
+        longDescription: 'Infinite Jumper is an endless runner game where you jump to avoid obstacles and collect items. Jump higher and higher as you progress, avoiding obstacles and collecting power-ups. With endless gameplay and increasing difficulty, this game offers addictive jumping action.',
+        fullContent: `<h2>About Infinite Jumper</h2>
+<p>Infinite Jumper is an endless runner game that challenges you to jump as high as possible while navigating through an ever-changing vertical landscape. This addictive game combines precise platforming with endless progression, creating an engaging experience that tests your reflexes and timing. Jump from platform to platform, collect items, avoid obstacles, and see how high you can climb in this thrilling vertical adventure.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Infinite Jumper is elegantly simple: tap or click to make your character jump from one platform to another as you ascend vertically. Each successful jump propels you higher, and the goal is to reach as high as possible while avoiding obstacles and collecting items. The game features responsive controls that make jumping feel natural and satisfying. Timing is crucial—jump too early or too late, and you might miss a platform or hit an obstacle.</p>
+
+<p>As you progress higher, the difficulty increases significantly. Platforms become smaller, move faster, or appear in more challenging positions. Obstacles become more frequent and complex, requiring quick reflexes and precise timing to navigate. The game introduces various platform types, each with unique properties. Some platforms are stationary, while others move horizontally or vertically. Some platforms may disappear after being touched, adding an extra layer of challenge.</p>
+
+<h3>Platform Types and Obstacles</h3>
+<p>Infinite Jumper features a variety of platform types that keep the gameplay interesting and challenging. Standard platforms provide stable landing spots, while moving platforms require timing and prediction. Disappearing platforms vanish after being touched, forcing you to keep moving. Bouncy platforms launch you higher, while fragile platforms break after use. Learning to recognize and adapt to different platform types is key to achieving high scores.</p>
+
+<p>The game includes various obstacles that add challenge and require skillful navigation. Spikes, moving barriers, and other hazards can end your run if touched. Some obstacles move in predictable patterns, while others move erratically, requiring quick reflexes and sharp focus. The increasing frequency and complexity of obstacles as you progress higher creates a satisfying difficulty curve that keeps the game challenging.</p>
+
+<h3>Items and Power-Ups</h3>
+<p>Throughout your ascent, you'll encounter various items and power-ups that enhance your jumping capabilities. Coins and collectibles boost your score, while power-ups provide temporary advantages. Jetpack power-ups allow you to fly for a short time, bypassing platforms and obstacles. Slow-motion power-ups give you more time to react, while shield power-ups protect you from obstacles. Strategic use of these power-ups is crucial for reaching higher altitudes.</p>
+
+<p>The game includes combo systems that reward consecutive successful jumps. Building combos significantly boosts your score and provides motivation to maintain perfect timing. Special items may appear that grant temporary abilities or score multipliers, adding strategic depth to the endless gameplay.</p>
+
+<h3>Key Features</h3>
+<p>Infinite Jumper features vibrant, colorful graphics that make the vertical ascent visually appealing. The smooth animations, satisfying jump effects, and dynamic camera movement create an immersive experience. The game's art style is modern and polished, with clear visual indicators that help you identify platforms and obstacles quickly.</p>
+
+<p>The game includes a comprehensive scoring system that rewards skillful play. Bonus points are awarded for reaching new height milestones, collecting items, and building combos. The leaderboard system tracks your best performances, encouraging you to improve and compete for top scores. The endless nature of the game ensures that there's always a new challenge to overcome.</p>
+
+<p>With its combination of simple mechanics, increasing difficulty, and addictive gameplay loop, Infinite Jumper offers an engaging experience that's perfect for quick gaming sessions or extended play.</p>
+
+<h3>Tips for Success</h3>
+<p>Master the timing. Perfect timing is crucial for successful jumps—practice until jumping feels natural and automatic.</p>
+<p>Watch ahead. Don't just focus on the current platform—look ahead to plan your next few jumps and identify obstacles.</p>
+<p>Use power-ups strategically. Save powerful power-ups like jetpacks for challenging sections with many obstacles.</p>
+<p>Build combos. Maintaining consecutive successful jumps builds combo multipliers that significantly boost your score.</p>
+<p>Stay calm. As the game speeds up, maintaining composure and focusing on timing will help you reach higher altitudes.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Runner', 'Arcade', 'Action'],
+        stats: {
+            players: '1.2M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['subwaysurferssingapore', 'infinitejumper']
+    },
+    'knifeninja': {
+        id: 'knifeninja',
+        title: 'Knife Ninja',
+        description: 'Slice and throw knives with ninja precision!',
+        longDescription: 'Knife Ninja is an action game where you throw knives and slice targets with ninja precision. Test your aim and timing as you progress through challenging levels. With various targets and increasing difficulty, this game offers engaging ninja action.',
+        fullContent: `<h2>About Knife Ninja</h2>
+<p>Knife Ninja is an action game that tests your precision, timing, and ninja skills as you throw knives at various targets. This engaging game combines accurate aiming with quick reflexes, creating an exciting experience that challenges your hand-eye coordination. Master the art of knife throwing, hit targets with precision, and progress through increasingly difficult levels in this thrilling ninja adventure.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Knife Ninja is straightforward yet challenging: aim and throw knives at targets to score points and progress through levels. Each successful hit awards points, and clearing all targets advances you to the next level. The game features intuitive aiming controls that make throwing feel natural and responsive. You can adjust your aim, account for distance and angle, and time your throws perfectly to hit moving or stationary targets.</p>
+
+<p>As you progress through levels, the difficulty increases significantly. Targets become smaller, move faster, or appear in more challenging positions. The game introduces various target types, each with unique properties and point values. Some targets are stationary and easy to hit, while others move in patterns that require prediction and timing. Special targets may appear that award bonus points or provide power-ups when hit.</p>
+
+<h3>Target Types and Challenges</h3>
+<p>Knife Ninja features a variety of target types that keep the gameplay interesting and challenging. Standard targets are straightforward and award base points. Moving targets require prediction and timing to hit. Small targets test your precision, while special targets may have unique properties or award bonus rewards. Learning to recognize and adapt to different target types is key to achieving high scores.</p>
+
+<p>The game includes various challenge types that add variety to the gameplay. Some levels feature time challenges that require quick, accurate throwing. Precision challenges reward perfect accuracy with bonus multipliers. Combo challenges encourage hitting multiple targets in quick succession. The variety ensures that gameplay remains fresh and that each level feels different and memorable.</p>
+
+<h3>Throwing Mechanics and Accuracy</h3>
+<p>Success in Knife Ninja requires mastering the throwing mechanics and developing consistent accuracy. Each throw requires careful aim, and the game rewards well-placed throws with bonus points. The throwing mechanics feel realistic, with factors like distance, angle, and timing affecting your accuracy. Learning to account for these variables is essential for achieving high scores and clearing challenging levels.</p>
+
+<p>The game includes various throwing techniques and strategies. Direct throws are straightforward but may be blocked by obstacles. Arcing throws can reach targets behind obstacles or at difficult angles. Ricochet throws can hit multiple targets by bouncing off surfaces. Advanced players develop the ability to use different throwing techniques strategically based on the situation.</p>
+
+<h3>Key Features</h3>
+<p>Knife Ninja features ninja-themed graphics that create an immersive experience. The detailed knife animations, satisfying target hits, and impressive visual effects make every throw feel impactful. The game's art style is polished and modern, with clear visual indicators that help you identify targets and track your progress.</p>
+
+<p>The game includes a comprehensive scoring system that rewards skillful play. Bonus points are awarded for precision hits, combo chains, and clearing levels quickly. The leaderboard system tracks your best performances, encouraging improvement and competition. The progression system unlocks new knives, abilities, and challenges as you advance.</p>
+
+<p>With its combination of precision mechanics, varied challenges, and ninja-themed action, Knife Ninja offers an engaging experience that appeals to both casual players and action game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Practice your aim regularly. Consistent accuracy is more valuable than rapid, inaccurate throwing. Take time to line up your shots.</p>
+<p>Account for target movement. Moving targets require you to lead your throws—aim where the target will be, not where it is.</p>
+<p>Use different throwing techniques. Learn when to use direct throws, arcing throws, and ricochet throws based on the situation.</p>
+<p>Build combos. Hitting multiple targets in quick succession builds combo multipliers that significantly boost your score.</p>
+<p>Stay focused. Maintaining concentration and steady aim is crucial for achieving high scores and clearing challenging levels.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Action', 'Arcade', 'Shooter'],
+        stats: {
+            players: '900K+',
+            rating: '4.4',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['ninjafruitslice', 'knifeninja']
+    },
+    'liquidsort': {
+        id: 'liquidsort',
+        title: 'Liquid Sort',
+        description: 'Sort colored liquids into matching containers!',
+        longDescription: 'Liquid Sort is a puzzle game where you sort colored liquids into matching containers. Pour liquids strategically to separate colors and complete levels. With increasing difficulty and strategic gameplay, this game offers engaging puzzle challenges.',
+        fullContent: `<h2>About Liquid Sort</h2>
+<p>Liquid Sort is a puzzle game that challenges you to sort colored liquids into matching containers through strategic pouring. This engaging game combines simple mechanics with deep strategic thinking, creating an addictive puzzle experience. Pour liquids between containers, separate colors, and complete increasingly complex levels as you master the art of liquid sorting.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Liquid Sort is elegantly simple: you have multiple containers filled with liquids of different colors, and your goal is to sort them so that each container holds liquid of only one color. You can pour liquids from one container to another, but you must follow specific rules—typically, you can only pour liquids of the same color on top of each other, or into empty containers. The challenge is to plan your pours carefully to sort all liquids without mixing colors or getting stuck.</p>
+
+<p>As you progress through levels, the complexity increases significantly. More containers and more colors are introduced, creating increasingly challenging puzzles. Some levels feature liquids with multiple layers or special properties that add strategic depth. The game introduces various puzzle types, each requiring different strategies to solve successfully.</p>
+
+<h3>Sorting Strategy</h3>
+<p>Success in Liquid Sort requires careful planning and strategic thinking. You must analyze the current liquid arrangement and identify the most efficient sorting strategy. Pouring liquids in the wrong order can create situations where you're stuck and unable to make progress. Learning to plan multiple moves ahead is crucial for solving more complex puzzles.</p>
+
+<p>The game rewards players who think strategically and plan their sorting moves carefully. Identifying which liquids to move first, which containers to use as temporary storage, and how to create efficient sorting patterns are essential skills. Advanced players develop the ability to visualize the entire sorting process and plan their moves to minimize the number of pours needed.</p>
+
+<h3>Puzzle Types and Challenges</h3>
+<p>Liquid Sort features various puzzle types that keep the gameplay fresh and engaging. Standard sorting puzzles challenge you to organize liquids by color. Limited-pour puzzles require you to solve puzzles using a specific number of pours or fewer. Time challenges add pressure, forcing you to sort quickly while maintaining accuracy. Complex puzzles feature multiple colors and intricate arrangements that require careful planning.</p>
+
+<p>The game includes different difficulty levels that gradually introduce new challenges. Early levels teach you the basics with simple liquid arrangements and few colors. As you progress, puzzles become more complex with intricate liquid arrangements, more colors, and strategic layouts that require careful planning. Each puzzle is designed to be solvable but challenging, creating a satisfying difficulty curve.</p>
+
+<h3>Key Features</h3>
+<p>Liquid Sort features vibrant, colorful graphics that make the gameplay visually appealing. The smooth liquid animations, satisfying pouring effects, and clear visual indicators help you track your progress and plan your moves. The game's art style is clean and modern, making it easy to distinguish between different colors and identify containers.</p>
+
+<p>The game includes intuitive controls that make pouring liquids feel natural and responsive. The sorting mechanics are clear and easy to understand, while still providing depth for strategic players. The puzzle design ensures that each level feels fair and solvable, rewarding careful thinking and strategic planning.</p>
+
+<p>With its combination of simple mechanics, strategic depth, and colorful visuals, Liquid Sort offers an engaging puzzle experience that appeals to both casual players and puzzle game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Plan your pours ahead. Before pouring liquids, analyze the arrangement and identify the most efficient sorting strategy.</p>
+<p>Use empty containers strategically. Empty containers are valuable for temporary storage—use them to free up space and create sorting opportunities.</p>
+<p>Avoid mixing colors. Pouring liquids in the wrong order can create situations where colors get mixed—think before you pour.</p>
+<p>Work from the top down. Often, it's easier to sort liquids by working from the top of containers and organizing them systematically.</p>
+<p>Practice patience. Rushing through puzzles often leads to mistakes. Take your time to plan and execute your moves carefully.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Puzzle', 'Strategy', 'Arcade'],
+        stats: {
+            players: '1.4M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['happycups', 'liquidsort']
+    },
+    'mergis': {
+        id: 'mergis',
+        title: 'Mergis',
+        description: 'Merge items and create powerful combinations!',
+        longDescription: 'Mergis is a merge puzzle game where you combine items to create more powerful versions. Merge strategically to maximize your score and progress. With various items to merge and increasing difficulty, this game offers engaging merge gameplay.',
+        fullContent: `<h2>About Mergis</h2>
+<p>Mergis is a merge puzzle game that challenges you to combine matching items and create powerful combinations through strategic merging. This engaging game combines simple merge mechanics with deep strategic thinking, creating an addictive puzzle experience. Combine items, unlock new combinations, and progress through increasingly complex levels as you master the art of strategic merging.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Mergis is elegantly simple: combine matching items to create more powerful versions. When you merge two identical items, they combine into a single, more valuable item. The goal is to strategically merge items to maximize your score, unlock new combinations, and progress through levels. The game features intuitive controls that make merging feel natural and satisfying. You can drag items together, plan your merges, and create chain reactions that boost your score.</p>
+
+<p>As you progress through levels, the complexity increases significantly. More item types are introduced, each with unique properties and merge requirements. Some items require specific combinations to merge, while others can be merged with multiple item types. The game introduces various merge mechanics, including chain merges, combo merges, and special merges that unlock powerful items. Each level presents new challenges and requires strategic thinking to complete successfully.</p>
+
+<h3>Merge Strategy</h3>
+<p>Success in Mergis requires careful planning and strategic thinking. You must analyze the available items and identify the most efficient merge strategies. Merging items too quickly might waste valuable combinations, while merging too slowly might leave you without space. Learning to plan multiple merges ahead is crucial for achieving high scores and clearing challenging levels.</p>
+
+<p>The game rewards players who think strategically and plan their merges carefully. Identifying which items to merge first, how to create chain reactions, and when to save powerful items for later are essential skills. Advanced players develop the ability to visualize multiple merge possibilities and choose the strategy that maximizes their score and progress.</p>
+
+<h3>Item Types and Combinations</h3>
+<p>Mergis features a variety of item types that keep the gameplay interesting and challenging. Basic items are straightforward to merge, while special items have unique properties or merge requirements. Rare items may appear that unlock powerful combinations or provide significant score bonuses. Learning to recognize and utilize different item types is key to achieving high scores.</p>
+
+<p>The game includes various merge mechanics that add depth to the gameplay. Chain merges occur when merging items creates new matching items that automatically merge, creating satisfying chain reactions. Combo merges reward merging multiple items simultaneously with bonus points. Special merges unlock powerful items or provide unique abilities that enhance your merging capabilities.</p>
+
+<h3>Key Features</h3>
+<p>Mergis features vibrant, colorful graphics that make the merging process visually appealing. The smooth merge animations, satisfying combination effects, and clear visual indicators help you track your progress and plan your merges. The game's art style is clean and modern, making it easy to identify different item types and understand merge requirements.</p>
+
+<p>The game includes intuitive controls that make merging items feel natural and responsive. The merge mechanics are clear and easy to understand, while still providing depth for strategic players. The level design ensures that each puzzle feels fair and solvable, rewarding careful thinking and strategic planning.</p>
+
+<p>With its combination of simple mechanics, strategic depth, and satisfying merge gameplay, Mergis offers an engaging experience that appeals to both casual players and puzzle game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Plan your merges ahead. Before merging items, analyze the available items and identify the most efficient merge strategy.</p>
+<p>Create chain reactions. Look for opportunities to create chain merges that automatically combine multiple items and boost your score.</p>
+<p>Save powerful items. Don't merge powerful items immediately—save them for when they'll have the most impact or unlock valuable combinations.</p>
+<p>Manage your space. Keep your playing area organized to make it easier to identify merge opportunities and plan your strategy.</p>
+<p>Experiment with combinations. Try different merge strategies to discover new combinations and optimize your score.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Puzzle', 'Strategy', 'Arcade'],
+        stats: {
+            players: '1.1M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['fruitmerge', 'mergis']
+    },
+    'neonbricks': {
+        id: 'neonbricks',
+        title: 'Neon Bricks',
+        description: 'Break neon bricks in this vibrant arcade game!',
+        longDescription: 'Neon Bricks is a vibrant arcade game where you break neon-colored bricks. Bounce balls to destroy bricks and clear levels. With neon graphics and classic arcade gameplay, this game offers colorful brick-breaking action.',
+        fullContent: `<h2>About Neon Bricks</h2>
+<p>Neon Bricks is a vibrant arcade game that combines classic brick-breaking gameplay with stunning neon aesthetics. This exciting game brings the timeless brick-breaking experience to life with modern visuals and smooth gameplay. Bounce balls off your paddle to destroy neon-colored bricks, clear levels, and progress through increasingly challenging stages in this colorful arcade adventure.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Neon Bricks is elegantly simple: control a paddle at the bottom of the screen to bounce a ball upward, breaking neon bricks arranged at the top. Each brick you hit awards points, and clearing all bricks advances you to the next level. The physics-based ball movement creates realistic bounces and angles, requiring you to predict trajectories and position your paddle strategically. The game features responsive controls that make paddle movement feel natural and precise.</p>
+
+<p>As you progress, the game introduces various brick types with different properties. Some bricks require a single hit to destroy, while others need multiple hits. Special bricks may contain power-ups, bonus points, or create chain reactions when destroyed. The ball speed gradually increases as you advance, making the game progressively more challenging and requiring faster reflexes and better paddle control.</p>
+
+<h3>Neon Aesthetics and Visual Design</h3>
+<p>Neon Bricks features stunning neon graphics that create a vibrant, eye-catching visual experience. The neon-colored bricks glow against dark backgrounds, creating a striking contrast that makes the gameplay visually appealing. The smooth animations, particle effects when bricks are destroyed, and neon trail effects create an immersive arcade atmosphere. The game's visual design enhances the classic brick-breaking experience with modern aesthetics.</p>
+
+<p>The neon theme extends throughout the game, with glowing paddles, neon ball trails, and vibrant power-up effects. The visual feedback is satisfying and clear, making it easy to track the ball and identify different brick types. The polished graphics create an engaging experience that stands out in the brick-breaking genre.</p>
+
+<h3>Power-Ups and Special Bricks</h3>
+<p>Throughout the game, you'll encounter various power-ups that drop from destroyed bricks. Multi-ball power-ups split your ball into multiple balls, dramatically increasing your brick-breaking potential. Paddle size increases make it easier to hit the ball, while laser paddles allow you to shoot directly at bricks. Slow-motion power-ups give you more time to react, and extra lives provide safety nets for difficult levels.</p>
+
+<p>Special bricks add variety and strategic depth. Explosive bricks destroy surrounding bricks when hit, creating satisfying chain reactions. Metal bricks are indestructible and must be avoided or worked around. Moving bricks add dynamic challenges, while bonus bricks award extra points or power-ups when destroyed. The variety of brick types keeps the gameplay fresh and engaging.</p>
+
+<h3>Key Features</h3>
+<p>Neon Bricks features vibrant neon graphics with smooth animations that enhance the classic arcade experience. The colorful bricks, satisfying destruction effects, and polished visual design create an enjoyable gaming experience. The game's art style is modern and eye-catching, making it easy to track the ball and identify different brick types.</p>
+
+<p>The game includes a comprehensive scoring system that rewards skillful play. Bonus points are awarded for clearing levels quickly, creating combo chains, and using power-ups effectively. The leaderboard system tracks your best scores, encouraging replay and competition. The progressive difficulty curve ensures that players are constantly challenged while still feeling achievable.</p>
+
+<p>With its combination of classic arcade gameplay, modern neon aesthetics, and strategic depth, Neon Bricks offers an engaging experience that appeals to both casual players and arcade game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Master paddle positioning. Learn to control the ball's angle by hitting it with different parts of your paddle. The edges create angled shots that can reach difficult bricks.</p>
+<p>Don't let the ball fall. While it may seem obvious, maintaining ball control is crucial. Losing a ball means losing progress and potentially losing a life.</p>
+<p>Use power-ups strategically. Save powerful power-ups like multi-ball for challenging sections or when you have many bricks remaining.</p>
+<p>Plan your shots. Look ahead and identify which bricks are hardest to reach. Use angled shots to clear difficult areas first.</p>
+<p>Watch for patterns. Many levels have brick arrangements that can be cleared efficiently with the right strategy. Take time to analyze the layout before starting.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Arcade', 'Classic', 'Puzzle'],
+        stats: {
+            players: '1.3M+',
+            rating: '4.6',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['blockvsball', 'neonbricks']
+    },
+    'ninjafruitslice': {
+        id: 'ninjafruitslice',
+        title: 'Ninja Fruit Slice',
+        description: 'Slice fruits with ninja precision in this action game!',
+        longDescription: 'Ninja Fruit Slice is an action game where you slice fruits with ninja precision. Swipe to slice fruits and avoid bombs. With fast-paced action and increasing difficulty, this game offers engaging fruit-slicing action.',
+        fullContent: `<h2>About Ninja Fruit Slice</h2>
+<p>Ninja Fruit Slice is an action game that tests your reflexes, precision, and ninja skills as you slice fruits flying across the screen. This fast-paced game combines quick swiping with strategic thinking, creating an exciting experience that challenges your hand-eye coordination. Slice fruits with ninja precision, avoid bombs, and build combos to achieve high scores in this thrilling fruit-slicing adventure.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Ninja Fruit Slice is straightforward yet challenging: swipe across the screen to slice fruits as they fly upward. Each fruit you slice awards points, and the goal is to slice as many fruits as possible while avoiding bombs. The game features intuitive swipe controls that make slicing feel natural and responsive. You can slice fruits with quick swipes, create combo chains by slicing multiple fruits in one swipe, and use special techniques to maximize your score.</p>
+
+<p>As you progress through levels, the difficulty increases significantly. Fruits move faster, appear more frequently, and may follow more complex trajectories. The game introduces various fruit types, each with different point values. Some fruits are common and award base points, while special fruits may award bonus points or provide power-ups when sliced. Bombs become more frequent and may appear in tricky positions, requiring quick reflexes and sharp focus to avoid.</p>
+
+<h3>Slicing Techniques and Combos</h3>
+<p>Success in Ninja Fruit Slice requires mastering slicing techniques and building combo chains. Single swipes slice individual fruits, while longer swipes can slice multiple fruits in one motion, creating satisfying combo chains. The game rewards players who can slice multiple fruits in quick succession with combo multipliers that significantly boost scores. Learning to create efficient swipe patterns and maximize combo potential is key to achieving high scores.</p>
+
+<p>The game includes various slicing techniques that add depth to the gameplay. Quick swipes are effective for single fruits, while sweeping swipes can slice multiple fruits. Circular swipes can create impressive combo chains, while precise swipes are necessary to avoid bombs. Advanced players develop the ability to predict fruit trajectories and plan their swipes to maximize combos while avoiding hazards.</p>
+
+<h3>Fruit Types and Special Items</h3>
+<p>Ninja Fruit Slice features a variety of fruit types that keep the gameplay interesting and rewarding. Common fruits like apples, oranges, and bananas award standard points. Special fruits may appear that award bonus points, provide power-ups, or have unique properties. Some fruits may be worth more points, while others may trigger special effects when sliced. Learning to recognize and prioritize different fruit types is important for maximizing scores.</p>
+
+<p>The game includes various special items and power-ups that enhance your slicing capabilities. Multi-slice power-ups allow you to slice multiple fruits with a single swipe, while slow-motion power-ups give you more time to react. Score multipliers boost your points, while combo extenders help you maintain combo chains. Strategic use of these power-ups is crucial for achieving high scores and clearing challenging levels.</p>
+
+<h3>Key Features</h3>
+<p>Ninja Fruit Slice features vibrant, colorful graphics that make the fruit-slicing action visually appealing. The smooth fruit animations, satisfying slice effects, and impressive visual feedback create an immersive experience. The game's art style is polished and modern, with clear visual indicators that help you identify fruits and bombs quickly.</p>
+
+<p>The game includes a comprehensive scoring system that rewards skillful play. Bonus points are awarded for combo chains, slicing special fruits, and avoiding bombs. The leaderboard system tracks your best performances, encouraging improvement and competition. The progressive difficulty curve ensures that players are constantly challenged while still feeling achievable.</p>
+
+<p>With its combination of fast-paced action, precision mechanics, and satisfying gameplay loop, Ninja Fruit Slice offers an engaging experience that appeals to both casual players and action game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Build combo chains. Slicing multiple fruits in one swipe creates combo multipliers that significantly boost your score.</p>
+<p>Avoid bombs at all costs. Hitting a bomb ends your run, so prioritize avoiding bombs over slicing fruits when they're close together.</p>
+<p>Use efficient swipe patterns. Plan your swipes to slice multiple fruits while avoiding bombs and maximizing combo potential.</p>
+<p>Watch for special fruits. Special fruits often award bonus points or power-ups—prioritize slicing them when they appear.</p>
+<p>Stay focused. As the game speeds up, maintaining concentration and quick reflexes is crucial for achieving high scores.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Action', 'Arcade', 'Casual'],
+        stats: {
+            players: '1.2M+',
+            rating: '4.6',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['fruitninjamaster', 'ninjafruitslice']
+    },
+    'numbersnake': {
+        id: 'numbersnake',
+        title: 'Number Snake',
+        description: 'Control a snake and collect numbers in this puzzle game!',
+        longDescription: 'Number Snake is a puzzle game where you control a snake and collect numbers in sequence. Navigate through the board, collect numbers in order, and grow your snake. With strategic gameplay and increasing difficulty, this game offers engaging puzzle challenges.',
+        fullContent: `<h2>About Number Snake</h2>
+<p>Number Snake is a puzzle game that combines classic snake gameplay with number collection mechanics, creating a unique and engaging puzzle experience. This innovative game challenges you to control a snake and collect numbers in sequence, growing longer as you progress. Navigate through the board, plan your path strategically, and collect numbers in order to complete increasingly challenging levels.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Number Snake combines familiar snake mechanics with number-based puzzle elements. Control your snake and navigate through a board filled with numbered items. Your goal is to collect numbers in sequence, starting from the lowest number and progressing to higher numbers. Each number you collect in order makes your snake grow longer, and collecting all numbers in sequence completes the level. The game features intuitive controls that make snake movement feel natural and responsive.</p>
+
+<p>As you progress through levels, the complexity increases significantly. Boards become larger, more numbers are introduced, and obstacles appear that block your path. The game introduces various number arrangements, each requiring different strategies to collect in order. Some levels feature numbers arranged in patterns, while others have numbers scattered randomly. The challenge is to plan your path carefully to collect numbers in sequence without getting stuck or hitting obstacles.</p>
+
+<h3>Strategic Path Planning</h3>
+<p>Success in Number Snake requires careful planning and strategic thinking. You must analyze the board layout and identify the most efficient path to collect all numbers in sequence. Collecting numbers out of order doesn't help, so you must plan your route to ensure you can reach each number when needed. The growing snake adds complexity, as your longer body can block paths or create obstacles for yourself.</p>
+
+<p>The game rewards players who think strategically and plan their paths carefully. Identifying which numbers to collect first, how to navigate around obstacles, and how to avoid trapping yourself are essential skills. Advanced players develop the ability to visualize the entire collection path and plan their moves to minimize backtracking and maximize efficiency.</p>
+
+<h3>Obstacles and Challenges</h3>
+<p>Number Snake features various obstacles and challenges that add complexity to the puzzle gameplay. Walls and barriers block your path, requiring you to find alternative routes. Moving obstacles create dynamic challenges that require timing and prediction. Some levels feature time limits that add pressure, forcing you to balance speed with strategic planning. Special tiles may have unique properties that affect your movement or number collection.</p>
+
+<p>The game includes different level types that keep the gameplay fresh. Standard levels challenge you to collect all numbers in sequence. Puzzle levels feature complex arrangements that require careful planning. Speed challenges require quick thinking and fast movement. The variety ensures that gameplay remains interesting and that each level feels different and memorable.</p>
+
+<h3>Key Features</h3>
+<p>Number Snake features colorful graphics that make the puzzle gameplay visually appealing. The smooth snake movement, clear number indicators, and satisfying collection effects create an enjoyable experience. The game's art style is clean and modern, making it easy to identify numbers and plan your path.</p>
+
+<p>The game includes intuitive controls that make snake movement feel natural and responsive. The number collection mechanics are clear and easy to understand, while still providing depth for strategic players. The level design ensures that each puzzle feels fair and solvable, rewarding careful thinking and strategic planning.</p>
+
+<p>With its combination of classic snake mechanics, number-based puzzles, and strategic depth, Number Snake offers an engaging experience that appeals to both casual players and puzzle game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Plan your path before moving. Analyze the board layout and identify the most efficient route to collect all numbers in sequence.</p>
+<p>Consider your snake's length. As your snake grows, it can block paths—plan ahead to avoid trapping yourself.</p>
+<p>Work from the edges inward. Often, it's easier to collect numbers by working from the board's edges and moving inward systematically.</p>
+<p>Watch for obstacles. Identify obstacles early and plan your route to work around them while still collecting numbers in order.</p>
+<p>Practice patience. Rushing through levels often leads to mistakes. Take your time to plan and execute your moves carefully.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Puzzle', 'Strategy', 'Arcade'],
+        stats: {
+            players: '1M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['snakegame', 'numbersnake']
+    },
+    'pool8ball': {
+        id: 'pool8ball',
+        title: 'Pool 8 Ball',
+        description: 'Play pool and sink the 8-ball in this classic billiards game!',
+        longDescription: 'Pool 8 Ball is a classic billiards game where you play pool and try to sink the 8-ball. Aim carefully, use spin, and master the physics of pool. With realistic physics and challenging gameplay, this game offers authentic pool action.',
+        fullContent: `<h2>About Pool 8 Ball</h2>
+<p>Pool 8 Ball is a classic billiards game that brings authentic pool action to your screen with realistic physics and challenging gameplay. This engaging game captures the essence of real pool, requiring skill, strategy, and precision to master. Aim carefully, use spin to control the cue ball, and sink all your balls before the 8-ball to win games in this immersive pool experience.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Pool 8 Ball follows standard 8-ball pool rules. You're assigned either solid or striped balls, and your goal is to sink all your assigned balls, then sink the 8-ball to win. The game features realistic physics that accurately simulate ball movement, collisions, and spin effects. You can aim your shots, adjust power, and apply spin to control the cue ball's movement after impact. The intuitive controls make aiming and shooting feel natural and precise.</p>
+
+<p>As you progress through games, you'll face increasingly skilled opponents and more challenging table layouts. The game includes various game modes, from casual matches to competitive tournaments. Each shot requires careful consideration of angles, ball positions, and potential outcomes. The realistic physics mean that every shot behaves authentically, requiring skill and practice to master.</p>
+
+<h3>Shot Strategy and Planning</h3>
+<p>Success in Pool 8 Ball requires strategic thinking and careful planning. You must analyze the table layout, identify which balls to sink first, and plan your shots to set up future opportunities. Each shot should be considered not just for its immediate goal, but for how it positions the cue ball for your next shot. Learning to plan multiple shots ahead is crucial for winning games consistently.</p>
+
+<p>The game rewards players who think strategically and plan their shots carefully. Identifying optimal ball sequences, using defensive shots when needed, and managing the cue ball position are essential skills. Advanced players develop the ability to visualize shot outcomes, predict ball movements, and execute complex combination shots.</p>
+
+<h3>Spin and Control Techniques</h3>
+<p>Pool 8 Ball features advanced spin mechanics that add depth to the gameplay. You can apply top spin to make the cue ball follow after impact, back spin to make it draw back, and side spin to curve the ball's path. Mastering these spin techniques is essential for controlling the cue ball and setting up optimal positions for subsequent shots. Learning when and how to use different types of spin is a key skill that separates casual players from skilled ones.</p>
+
+<p>The game includes various shot types that add variety and strategic options. Straight shots are straightforward but may not position the cue ball well. Bank shots bounce off rails to reach difficult balls. Combination shots sink one ball by hitting another. Safety shots position the cue ball defensively when you can't make a clear shot. Learning to use these different shot types strategically is crucial for success.</p>
+
+<h3>Key Features</h3>
+<p>Pool 8 Ball features realistic graphics that capture the look and feel of a real pool table. The detailed ball physics, smooth animations, and authentic table appearance create an immersive experience. The game's visual design is polished and realistic, making it easy to judge angles and plan shots accurately.</p>
+
+<p>The game includes a comprehensive physics engine that accurately simulates ball movement, collisions, and spin effects. The realistic physics make each shot feel authentic and require skill to master. The intuitive controls allow for precise aiming and shooting, while the visual feedback helps you understand shot outcomes and improve your skills.</p>
+
+<p>With its combination of realistic physics, strategic depth, and authentic pool experience, Pool 8 Ball offers an engaging experience that appeals to both casual players and pool enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Plan your shots ahead. Before shooting, analyze the table and plan which balls to sink and in what order.</p>
+<p>Control the cue ball. Always consider where the cue ball will end up after each shot—positioning is crucial for setting up future shots.</p>
+<p>Master spin techniques. Learning to use top spin, back spin, and side spin effectively gives you better control over the cue ball.</p>
+<p>Practice angles. Understanding how balls bounce off rails and at what angles is essential for bank shots and positioning.</p>
+<p>Think defensively. Sometimes a safety shot that doesn't sink a ball but positions the cue ball well is better than a risky shot.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Sports', 'Arcade', 'Classic'],
+        stats: {
+            players: '1.5M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['8ballbilliards', 'pool8ball']
+    },
+    'snakegame': {
+        id: 'snakegame',
+        title: 'Snake Game',
+        description: 'Control a snake and eat food to grow in this classic arcade game!',
+        longDescription: 'Snake Game is a classic arcade game where you control a snake and eat food to grow longer. Avoid walls and your own tail as you grow. With classic gameplay and increasing difficulty, this game offers timeless arcade fun.',
+        fullContent: `<h2>About Snake Game</h2>
+<p>Snake Game is a classic arcade game that has entertained players for decades with its simple yet addictive gameplay. This timeless game challenges you to control a snake, eat food to grow longer, and avoid hitting walls or your own tail. With its classic mechanics, increasing difficulty, and endless replayability, Snake Game offers timeless arcade entertainment that continues to captivate players of all ages.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Snake Game is elegantly simple: control a snake that moves continuously across the screen, eating food items to grow longer. Each food item you eat makes your snake grow by one segment, and the goal is to grow as long as possible while avoiding collisions. The game features intuitive directional controls that make snake movement feel natural and responsive. You can change direction to navigate around the screen, but you cannot stop or reverse direction directly.</p>
+
+<p>As you progress and your snake grows longer, the difficulty increases significantly. A longer snake means more body segments to avoid, making navigation more challenging. The game speeds up as you eat more food, requiring faster reflexes and better planning. The increasing speed and length create a satisfying difficulty curve that keeps the game challenging and engaging.</p>
+
+<h3>Strategy and Navigation</h3>
+<p>Success in Snake Game requires strategic thinking and careful navigation. You must plan your path to avoid trapping yourself, especially as your snake grows longer. Moving in tight circles or narrow spaces becomes increasingly dangerous as your tail grows. Learning to navigate efficiently while leaving room to maneuver is key to achieving high scores.</p>
+
+<p>The game rewards players who think ahead and plan their movements carefully. Identifying safe paths, avoiding dead ends, and managing space effectively are essential skills. Advanced players develop the ability to predict their snake's position several moves ahead and plan routes that maximize food collection while minimizing collision risk.</p>
+
+<h3>Food Collection and Growth</h3>
+<p>Food items appear randomly on the screen, and eating them is essential for growth and score. Each food item you eat increases your snake's length and awards points. The challenge is to reach food items while avoiding collisions with walls or your own tail. As your snake grows, reaching food becomes more challenging, requiring careful path planning and precise movement.</p>
+
+<p>Some versions of the game may include special food items with unique properties. Bonus food items may award extra points or provide temporary advantages. The variety of food types adds depth to the gameplay and provides additional strategic considerations when planning your movements.</p>
+
+<h3>Key Features</h3>
+<p>Snake Game features classic arcade graphics with modern polish that enhances the timeless gameplay. The smooth snake movement, clear visual indicators, and satisfying growth effects create an enjoyable experience. The game's art style is clean and simple, making it easy to track your snake and identify food items quickly.</p>
+
+<p>The game includes a comprehensive scoring system that rewards skillful play. Points are awarded for each food item eaten, with bonus points possible for special items or achievements. The leaderboard system tracks your best scores, encouraging replay and competition. The endless nature of the game ensures that there's always a new challenge to overcome.</p>
+
+<p>With its combination of simple mechanics, increasing difficulty, and timeless appeal, Snake Game offers an engaging experience that's perfect for quick gaming sessions or extended play.</p>
+
+<h3>Tips for Success</h3>
+<p>Plan your path ahead. Don't just focus on the current food—think about where your snake will be after eating it.</p>
+<p>Avoid tight spaces. As your snake grows, narrow spaces become dangerous. Keep to open areas when possible.</p>
+<p>Use the edges strategically. The screen edges can be used to your advantage, but be careful not to trap yourself.</p>
+<p>Don't chase food blindly. Sometimes it's better to wait for food to appear in a safer location than to risk a collision.</p>
+<p>Practice regularly. Consistent practice improves your navigation skills and helps you develop better spatial awareness.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Arcade', 'Classic', 'Puzzle'],
+        stats: {
+            players: '2M+',
+            rating: '4.8',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['numbersnake', 'snakegame']
+    },
+    'tictactoe': {
+        id: 'tictactoe',
+        title: 'Tic Tac Toe',
+        description: 'Play the classic Tic Tac Toe game against the computer!',
+        longDescription: 'Tic Tac Toe is the classic game where you try to get three in a row. Play against the computer and test your strategy. With simple rules and strategic gameplay, this game offers classic gaming fun.',
+        fullContent: `<h2>About Tic Tac Toe</h2>
+<p>Tic Tac Toe is the classic game that has been enjoyed by players of all ages for generations. This timeless game challenges you to get three of your marks in a row while preventing your opponent from doing the same. Play against the computer, test your strategy, and enjoy the simple yet engaging gameplay that has made Tic Tac Toe a beloved classic.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Tic Tac Toe is elegantly simple: two players take turns placing X's and O's on a 3x3 grid. The first player to get three of their marks in a row—horizontally, vertically, or diagonally—wins the game. If all nine squares are filled without either player achieving three in a row, the game ends in a draw. The game features intuitive controls that make placing marks feel natural and responsive.</p>
+
+<p>While the rules are simple, the strategic depth is significant. Each move must be considered carefully, as placing a mark affects both your chances of winning and your opponent's opportunities. The game requires you to think ahead, anticipate your opponent's moves, and balance offense with defense. Playing against the computer adds an extra challenge, as computer opponents can be programmed with varying difficulty levels.</p>
+
+<h3>Strategy and Tactics</h3>
+<p>Success in Tic Tac Toe requires strategic thinking and careful planning. The opening move is crucial—starting in the center or a corner provides different strategic advantages. As the game progresses, you must balance trying to create your own three-in-a-row while blocking your opponent's attempts. Recognizing winning opportunities and defensive threats is essential for consistent success.</p>
+
+<p>The game rewards players who think ahead and plan their moves strategically. Identifying potential winning combinations, recognizing when to block an opponent, and creating multiple threats simultaneously are key skills. Advanced players develop the ability to see several moves ahead and plan strategies that maximize their chances of winning while minimizing their opponent's opportunities.</p>
+
+<h3>Game Variations and Challenges</h3>
+<p>While the basic 3x3 grid is the standard, Tic Tac Toe can be played with various rule variations and challenges. Some versions include larger grids, different win conditions, or special rules that add complexity. Playing against computer opponents of varying difficulty levels provides ongoing challenges and opportunities to improve your skills.</p>
+
+<p>The game includes various difficulty settings that adjust the computer opponent's skill level. Easy opponents may make mistakes, while hard opponents play optimally and are difficult to beat. The variety ensures that players of all skill levels can find an appropriate challenge and enjoy the game.</p>
+
+<h3>Key Features</h3>
+<p>Tic Tac Toe features classic gameplay with modern presentation that enhances the timeless experience. The clean grid design, clear visual indicators, and satisfying win animations create an enjoyable experience. The game's interface is simple and intuitive, making it easy to understand and play immediately.</p>
+
+<p>The game includes various features that enhance the gameplay experience. Statistics tracking records your wins, losses, and draws. Different difficulty levels provide appropriate challenges for players of all skill levels. The quick game sessions make it perfect for brief entertainment, while the strategic depth keeps it engaging for extended play.</p>
+
+<p>With its combination of simple rules, strategic depth, and timeless appeal, Tic Tac Toe offers an engaging experience that's perfect for players of all ages and skill levels.</p>
+
+<h3>Tips for Success</h3>
+<p>Control the center. Starting in the center square gives you the most strategic options and makes it easier to create winning combinations.</p>
+<p>Create multiple threats. Try to set up situations where you have two ways to win, forcing your opponent to block one while you win with the other.</p>
+<p>Block your opponent. Always watch for your opponent's winning opportunities and block them immediately.</p>
+<p>Think ahead. Consider not just your current move, but how it affects future moves and your opponent's options.</p>
+<p>Practice regularly. Consistent play improves your strategic thinking and helps you recognize patterns and opportunities more quickly.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Puzzle', 'Strategy', 'Classic'],
+        stats: {
+            players: '1.8M+',
+            rating: '4.7',
+            difficulty: 'Easy',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['trztictactoe', 'tictactoe']
+    },
+    'unparkjam': {
+        id: 'unparkjam',
+        title: 'Unpark Jam',
+        description: 'Unpark cars and solve parking puzzles!',
+        longDescription: 'Unpark Jam is a puzzle game where you move cars to unpark a specific vehicle. Plan your moves carefully to clear the path and solve parking puzzles. With increasing difficulty and strategic gameplay, this game offers engaging puzzle challenges.',
+        fullContent: `<h2>About Unpark Jam</h2>
+<p>Unpark Jam is a puzzle game that challenges you to move cars and solve parking puzzles through strategic thinking and careful planning. This engaging game combines simple mechanics with deep puzzle-solving, creating an addictive experience that tests your problem-solving skills. Move cars strategically to clear paths, unpark the target vehicle, and progress through increasingly complex parking puzzles.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The core gameplay of Unpark Jam is elegantly simple: you have a parking lot filled with cars, and your goal is to move cars to clear a path for a specific target vehicle to exit. Cars can only move forward or backward in their lanes—they cannot turn. The challenge is to plan your moves carefully to create a clear path without getting stuck. The game features intuitive controls that make moving cars feel natural and responsive.</p>
+
+<p>As you progress through levels, the complexity increases significantly. More cars are introduced, parking lots become larger, and car arrangements become more intricate. The game introduces various car types, each with different movement properties. Some cars may be longer and harder to move, while others may be positioned in ways that block multiple paths. Each level requires careful analysis and strategic planning to solve successfully.</p>
+
+<h3>Puzzle-Solving Strategy</h3>
+<p>Success in Unpark Jam requires careful planning and strategic thinking. You must analyze the parking lot layout, identify which cars need to be moved, and plan the sequence of moves to clear the path. Moving cars in the wrong order can create situations where you're stuck and unable to make progress. Learning to plan multiple moves ahead is crucial for solving more complex puzzles.</p>
+
+<p>The game rewards players who think strategically and plan their moves carefully. Identifying which cars to move first, which paths to clear, and how to create space for movement are essential skills. Advanced players develop the ability to visualize the entire solution and plan their moves to minimize the number of car movements needed.</p>
+
+<h3>Level Design and Challenges</h3>
+<p>Unpark Jam features carefully designed levels that gradually introduce new challenges and mechanics. Early levels teach you the basics with simple car arrangements and few obstacles. As you progress, levels become more complex with intricate car layouts, more vehicles, and strategic arrangements that require careful planning. Each level is designed to be solvable but challenging, creating a satisfying difficulty curve.</p>
+
+<p>The game includes various puzzle types that keep the gameplay fresh and engaging. Standard puzzles challenge you to clear a path for the target vehicle. Limited-move puzzles require you to solve puzzles using a specific number of moves or fewer. Complex puzzles feature multiple target vehicles or special objectives that add strategic depth. The variety ensures that gameplay remains interesting and that each level feels different and memorable.</p>
+
+<h3>Key Features</h3>
+<p>Unpark Jam features clean, modern graphics that make the puzzle gameplay visually appealing. The clear car representations, intuitive parking lot layout, and satisfying movement animations create an enjoyable experience. The game's art style is polished and easy to understand, making it simple to identify cars and plan your moves.</p>
+
+<p>The game includes intuitive controls that make moving cars feel natural and responsive. The puzzle mechanics are clear and easy to understand, while still providing depth for strategic players. The level design ensures that each puzzle feels fair and solvable, rewarding careful thinking and strategic planning.</p>
+
+<p>With its combination of simple mechanics, strategic depth, and challenging puzzles, Unpark Jam offers an engaging experience that appeals to both casual players and puzzle game enthusiasts.</p>
+
+<h3>Tips for Success</h3>
+<p>Analyze the layout first. Before making moves, study the parking lot and identify which cars need to be moved and in what order.</p>
+<p>Work backward from the goal. Identify the path the target vehicle needs to take, then figure out which cars are blocking that path.</p>
+<p>Create space strategically. Sometimes moving a car that isn't directly blocking the path can create space needed for other moves.</p>
+<p>Plan multiple moves ahead. Don't just think about the immediate move—consider how each move affects future possibilities.</p>
+<p>Practice patience. Rushing through puzzles often leads to mistakes. Take your time to analyze and plan your moves carefully.</p>`,
+        thumbnail: '../public/images/game-thumb.png',
+        logo: '../public/images/game-thumb.png',
+        categories: ['Puzzle', 'Strategy', 'Arcade'],
+        stats: {
+            players: '1.1M+',
+            rating: '4.5',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/game-thumb.png'],
+        relatedGames: ['unparkjam', 'tictactoe']
     }
 
 }; 
