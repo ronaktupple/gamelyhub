@@ -740,48 +740,6 @@ const gamesData = {
         screenshots: ['../public/images/gam-thumb.png'],
         relatedGames: ['animatedslots', 'candycascade']
     },
-    'aztecpuzzlequest': {
-        id: 'aztecpuzzlequest',
-        title: 'Aztec Puzzle Quest',
-        description: 'Embark on an adventure through ancient Aztec temples! Solve puzzles and discover treasures.',
-        longDescription: 'Aztec Puzzle Quest takes you on an epic journey through ancient Aztec civilization. Solve challenging puzzles, match gems, and unlock the secrets of the temples. With stunning visuals and engaging gameplay, this game combines adventure and puzzle-solving in one exciting experience.',
-        fullContent: `<h2>About Aztec Puzzle Quest</h2>
-<p>Aztec Puzzle Quest takes you on an epic journey through ancient Aztec civilization. This adventure puzzle game combines match-3 mechanics with exploration and discovery as you solve challenging puzzles, match gems, and unlock the secrets of ancient temples. With stunning visuals that bring the Aztec world to life and engaging gameplay that blends adventure and puzzle-solving, this game offers an exciting experience that will keep you coming back for more.</p>
-
-<h3>Gameplay Mechanics</h3>
-<p>The core gameplay combines match-3 puzzle mechanics with adventure elements. Match gems to clear the board and progress through ancient Aztec temples. Each level presents unique challenges that require strategic thinking and careful planning. The match-3 mechanics are familiar and easy to learn, while the adventure elements add depth and context to the puzzle-solving.</p>
-
-<p>As you progress through the temples, you'll encounter increasingly complex puzzles and obstacles. The difficulty gradually increases, ensuring that the game remains challenging as you improve your skills and unlock new areas.</p>
-
-<h3>Adventure and Exploration</h3>
-<p>The game features an adventure mode where you explore different Aztec temples, each with its own unique challenges and secrets. Unlock new areas by completing puzzles, discover treasures hidden within the temples, and learn about Aztec culture and history as you progress.</p>
-
-<p>The exploration aspect adds context to the puzzle-solving, making each level feel like part of a larger adventure. The temple settings provide beautiful backdrops for the puzzles and create an immersive experience.</p>
-
-<h3>Key Features</h3>
-<p>Aztec Puzzle Quest features stunning visuals that recreate the atmosphere of ancient Aztec temples. The detailed graphics and authentic design elements make each level visually impressive and help create an immersive experience.</p>
-
-<p>The game includes special gems and power-ups that can help you overcome difficult puzzles. These special items add strategic depth to the gameplay and provide tools for tackling challenging levels.</p>
-
-<p>With its combination of match-3 puzzles, adventure elements, and beautiful Aztec-themed visuals, Aztec Puzzle Quest offers a unique and engaging experience that stands out in the puzzle game genre.</p>
-
-<h3>Tips for Success</h3>
-<p>Plan your matches strategically. Look for opportunities to create special gem combinations that can clear large portions of the board.</p>
-<p>Use power-ups wisely. Save special items for difficult levels where they'll have the most impact.</p>
-<p>Pay attention to level objectives. Each puzzle has specific goals, so make sure your matches help you achieve them.</p>
-<p>Explore thoroughly. Take time to appreciate the temple designs and discover all the secrets hidden within.</p>`,
-        thumbnail: '../public/images/thumbnails/imgi_14_aztecpuzzleques.webp',
-        logo: '../public/images/thumbnails/imgi_14_aztecpuzzleques.webp',
-        categories: ['Puzzle', 'Adventure', 'Match-3'],
-        stats: {
-            players: '1.1M+',
-            rating: '4.7',
-            difficulty: 'Medium',
-            ageRating: 'All Ages'
-        },
-        screenshots: ['../public/images/gam-thumb.png'],
-        relatedGames: ['candycrushcraze', 'gemcandycrush']
-    },
     'birdnestquest': {
         id: 'birdnestquest',
         title: 'Bird Nest Quest',
