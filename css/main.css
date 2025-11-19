@@ -1,20 +1,5 @@
-@font-face {
-    font-family: 'Keygen';
-    src: url('/Fonts/Keygen.otf') format('opentype'),
-         url('/Fonts/Keygen.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Keygen Mono';
-    src: url('/Fonts/Keygen.otf') format('opentype'),
-         url('/Fonts/Keygen.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
@@ -184,7 +169,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: 'Keygen', sans-serif;
+  font-family: 'Poppins', sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -275,7 +260,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: 'Keygen Mono', monospace;
+  font-family: 'Poppins', monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -587,13 +572,13 @@ video {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Keygen', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   line-height: 1.2;
 }
 
 .font-mono {
-  font-family: 'Keygen Mono', monospace;
+  font-family: 'Poppins', monospace;
 }
 
 /* Card Interactions */
@@ -1473,7 +1458,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .font-mono{
-  font-family: 'Keygen Mono', monospace;
+  font-family: 'Poppins', monospace;
 }
 
 .text-2xl{
@@ -1909,7 +1894,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    font-family: 'Keygen', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
     min-height: 100vh;
     color: var(--text-primary);

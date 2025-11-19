@@ -82,20 +82,20 @@
 /* Base Styles */
 @layer base {
   body {
-    font-family: 'Keygen', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--color-background);
     color: var(--color-text-primary);
     line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Keygen', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     line-height: 1.2;
   }
 
   .font-mono {
-    font-family: 'Keygen Mono', monospace;
+    font-family: 'Poppins', monospace;
   }
 }
 

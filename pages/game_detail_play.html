@@ -75,7 +75,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Keygen Font -->
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Keygen Font (only for game title and play buttons) -->
     <style>
         @font-face {
             font-family: 'Keygen';
@@ -90,6 +92,11 @@
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/advertisements.css" rel="stylesheet">
     <style>
+        /* Ensure Poppins is used globally in this page */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
         /* Container larger width - consistent for header, main, and footer */
         .container-fluid {
             padding-left: 2rem;
@@ -348,6 +355,7 @@
 
         /* Game Title - Medium Size */
         #gameTitle {
+            font-family: 'Keygen', sans-serif;
             font-size: 2.5rem;
             font-weight: 700;
             line-height: 1.2;
@@ -389,6 +397,170 @@
             border-color: rgba(255, 255, 255, 0.5);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Creative Play Button Styles */
+        #playButtonTop {
+            font-family: 'Keygen', sans-serif;
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4),
+                        0 4px 10px rgba(118, 75, 162, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            cursor: pointer;
+            min-width: auto;
+            width: auto;
+        }
+
+        #playButtonTop::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        #playButtonTop:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5),
+                        0 6px 15px rgba(118, 75, 162, 0.4),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, #7c8ef5 0%, #8a5fb8 50%, #f5a5ff 100%);
+        }
+
+        #playButtonTop:hover::before {
+            left: 100%;
+        }
+
+        #playButtonTop:active {
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4),
+                        0 3px 8px rgba(118, 75, 162, 0.3);
+        }
+
+        #playButtonTop i {
+            margin-right: 0.75rem;
+            font-size: 1.1em;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Sticky Play Button Creative Style */
+        .sticky-play-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+        }
+
+        .sticky-play-button #playButton {
+            font-family: 'Keygen', sans-serif;
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4),
+                        0 4px 10px rgba(118, 75, 162, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            cursor: pointer;
+            min-width: auto;
+            width: auto;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .sticky-play-button #playButton::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .sticky-play-button #playButton:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5),
+                        0 6px 15px rgba(118, 75, 162, 0.4),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, #7c8ef5 0%, #8a5fb8 50%, #f5a5ff 100%);
+            animation: none;
+        }
+
+        .sticky-play-button #playButton:hover::before {
+            left: 100%;
+        }
+
+        .sticky-play-button #playButton:active {
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4),
+                        0 3px 8px rgba(118, 75, 162, 0.3);
+        }
+
+        .sticky-play-button #playButton i {
+            margin-right: 0.75rem;
+            font-size: 1.1em;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #playButtonTop {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+
+            .sticky-play-button {
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .sticky-play-button #playButton {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -450,8 +622,8 @@
                 <div class="col-12 text-center">
                     <h1 id="gameTitle" class="text-white mb-3">Loading...</h1>
                     <img id="gameLogo" src="" alt="Game Logo" class="game-logo mb-3 mx-auto d-block">
-                    <a href="#" id="playButtonTop" class="btn btn-light btn-lg w-75 d-block mx-auto mb-4 text-dark">
-                        <i class="fas fa-play me-2"></i>Play Now
+                    <a href="#" id="playButtonTop" class="mb-4">
+                        <i class="fas fa-play"></i>Play Now
                     </a>
                     <div id="gameCategories" class="mb-4">
                         <!-- Categories will be added dynamically -->
@@ -591,8 +763,8 @@
 
     <!-- Sticky Play Button -->
     <div class="sticky-play-button d-none">
-        <a href="#" id="playButton" class="btn btn-primary btn-lg" target="_blank">
-            <i class="fas fa-play me-2"></i>Play Now
+        <a href="#" id="playButton" target="_blank">
+            <i class="fas fa-play"></i>Play Now
         </a>
     </div>
 
