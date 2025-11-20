@@ -14,6 +14,13 @@
 
 <link rel="stylesheet" href="style.css">
 
+<script>
+// Define getGlobal before c3runtime.js loads
+self.getGlobal = function(a) {
+	if (!a) throw new Error("missing global variable");
+	return a;
+};
+</script>
 <script src="scripts/c3runtime.js"></script></head>
 <body>
 <div id="fb-root"></div>

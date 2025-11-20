@@ -1116,17 +1116,21 @@ self.C3_JsPropNameTable = [
 		async Egame_Event23_Act8(runtime, localVars)
 		{
 			const tile = runtime.getInstanceByUid(+runtime.globalVars.Temp);
-			runtime.getInstanceByUid(tile.instVars.PerfectPointUID).destroy();
+			if (!tile) return;
+			const perfectPoint = runtime.getInstanceByUid(tile.instVars.PerfectPointUID);
+			if (perfectPoint) perfectPoint.destroy();
 			const startY = tile.y;
 			const peakY = startY + 70;
 			const startColor = tile.colorRgb;
 			const endColor = [1,1,1];
 			
-			scene.lerbAnim(3,0,1.5,n=>{
-				tile.y = n<=0.5 ? lerp(startY,peakY,n/0.5) : lerp(peakY,startY,(n-0.5)/0.5);
-				tile.colorRgb = n<=0.5 ? lerpArray(startColor,endColor,n/0.5) : lerpArray(endColor,startColor,(n-0.5)/0.5);
-				
-			});
+			if (scene && scene.lerbAnim) {
+				scene.lerbAnim(3,0,1.5,n=>{
+					tile.y = n<=0.5 ? lerp(startY,peakY,n/0.5) : lerp(peakY,startY,(n-0.5)/0.5);
+					tile.colorRgb = n<=0.5 ? lerpArray(startColor,endColor,n/0.5) : lerpArray(endColor,startColor,(n-0.5)/0.5);
+					
+				});
+			}
 			
 			
 		},
@@ -1134,7 +1138,9 @@ self.C3_JsPropNameTable = [
 		async Egame_Event25_Act5(runtime, localVars)
 		{
 			const tile = runtime.getInstanceByUid(+runtime.globalVars.Temp);
+			if (!tile) return;
 			const perfectPoint = runtime.getInstanceByUid(tile.instVars.PerfectPointUID);
+			if (!perfectPoint) return;
 			
 			const startY = tile.y;
 			const peakY = startY + 10;
@@ -1142,12 +1148,14 @@ self.C3_JsPropNameTable = [
 			const endColor = [.5,.5,.5];
 			const perfectOffset = perfectPoint.y - startY;
 			
-			scene.lerbAnim(4,0,1.5,n=>{
-				tile.y = n<=0.5 ? lerp(startY,peakY,n/0.5) : lerp(peakY,startY,(n-0.5)/0.5);
-				tile.colorRgb = n<=0.5 ? lerpArray(startColor,endColor,n/0.5) : lerpArray(endColor,startColor,(n-0.5)/0.5);
-				perfectPoint.y = tile.y + perfectOffset;
-				
-			});
+			if (scene && scene.lerbAnim) {
+				scene.lerbAnim(4,0,1.5,n=>{
+					tile.y = n<=0.5 ? lerp(startY,peakY,n/0.5) : lerp(peakY,startY,(n-0.5)/0.5);
+					tile.colorRgb = n<=0.5 ? lerpArray(startColor,endColor,n/0.5) : lerpArray(endColor,startColor,(n-0.5)/0.5);
+					perfectPoint.y = tile.y + perfectOffset;
+					
+				});
+			}
 			
 			
 		}
@@ -1159,8 +1167,7 @@ self.C3_JsPropNameTable = [
 
 
 // User script Settings.js
-let colors = [[1,1,0],[0,1,0],[1,0,0],[0,1,1]//,[.5,.5,1]
-]; //Obstacle/Snake Color
+let colors = [[1,1,0],[0,1,0],[1,0,0],[0,1,1]]; //,[.5,.5,1] //Obstacle/Snake Color
 
 // User script Utils.js
 	function getRandom(start,end)
