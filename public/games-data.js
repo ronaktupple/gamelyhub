@@ -3397,8 +3397,8 @@ const gamesData = {
 <p>Prioritize special ducks. Special ducks often award bonus points or power-ups, so prioritize hitting them when they appear.</p>
 <p>Build combos. Hitting multiple ducks in quick succession builds combo multipliers that significantly boost your score.</p>
 <p>Use power-ups strategically. Save powerful power-ups for challenging rounds with fast-moving or difficult-to-hit ducks.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_4_image.webp',
+        logo: '../public/images/banners/imgi_4_image.webp',
         categories: ['Arcade', 'Shooter', 'Casual'],
         stats: {
             players: '800K+',
@@ -3406,7 +3406,7 @@ const gamesData = {
             difficulty: 'Easy',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_4_image.webp'],
         relatedGames: ['bottleshoot', 'carnivalducks']
     },
     'colorbump': {
@@ -4069,8 +4069,8 @@ const gamesData = {
 <p>Block your opponent. Always watch for your opponent's winning opportunities and block them immediately.</p>
 <p>Think ahead. Consider not just your current move, but how it affects future moves and your opponent's options.</p>
 <p>Practice regularly. Consistent play improves your strategic thinking and helps you recognize patterns and opportunities more quickly.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_6_image.webp',
+        logo: '../public/images/banners/imgi_6_image.webp',
         categories: ['Puzzle', 'Strategy', 'Classic'],
         stats: {
             players: '1.8M+',
@@ -4078,7 +4078,7 @@ const gamesData = {
             difficulty: 'Easy',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_6_image.webp'],
         relatedGames: ['trztictactoe', 'tictactoe']
     },
     'unparkjam': {
