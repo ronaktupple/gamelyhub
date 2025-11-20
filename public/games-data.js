@@ -3185,8 +3185,8 @@ const gamesData = {
 <p>Save power-ups for challenging moments. Don't use all your power-ups immediately—save them for difficult sections or boss encounters where they'll have the most impact.</p>
 <p>Build combo chains. Hitting multiple targets in quick succession builds combo multipliers that dramatically increase your score.</p>
 <p>Stay calm under pressure. As levels become more challenging, maintaining composure and focusing on accuracy will serve you better than panicking and shooting wildly.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_9_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_9_image - Edited.jpg',
         categories: ['Arcade', 'Action', 'Shooter'],
         stats: {
             players: '1M+',
@@ -3194,7 +3194,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_9_image - Edited.jpg'],
         relatedGames: ['bottleshoot', 'bubbleshooter']
     },
     'blockvsball': {
@@ -3291,8 +3291,8 @@ const gamesData = {
 <p>Watch for patterns. Many levels have bottle arrangements that can be cleared efficiently with the right strategy. Identify the best order to shoot bottles.</p>
 <p>Use power-ups strategically. Save powerful power-ups for challenging sections or when you need to clear many bottles quickly.</p>
 <p>Practice regularly. Consistent practice improves your aim and helps you develop muscle memory for different shooting scenarios.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_14_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_14_image - Edited.jpg',
         categories: ['Shooter', 'Arcade', 'Action'],
         stats: {
             players: '950K+',
@@ -3300,7 +3300,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_14_image - Edited.jpg'],
         relatedGames: ['ballblaster', 'bubbleshooter']
     },
     'bubbleshooter': {
@@ -3344,8 +3344,8 @@ const gamesData = {
 <p>Create chain reactions. Look for opportunities to create cascading matches that clear large sections of the board automatically.</p>
 <p>Save special bubbles for difficult moments. Don't use rainbow or bomb bubbles immediately—save them for when you're truly stuck or need to clear a challenging section.</p>
 <p>Clear from the top when possible. Removing bubbles from the top creates more opportunities for chain reactions as bubbles fall and create new matches.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_11_image.webp',
+        logo: '../public/images/banners/imgi_11_image.webp',
         categories: ['Puzzle', 'Arcade', 'Classic'],
         stats: {
             players: '2M+',
@@ -3353,7 +3353,7 @@ const gamesData = {
             difficulty: 'Easy',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_11_image.webp'],
         relatedGames: ['colorcascadesort', 'bubbleshooter']
     },
     'carnivalducks': {
@@ -3445,8 +3445,8 @@ const gamesData = {
 <p>Use color-changing obstacles strategically. Some obstacles change your color automatically—use these to your advantage when planning your route.</p>
 <p>Watch for patterns. Many levels have optimal routes that minimize color changes and obstacles. Look for these patterns.</p>
 <p>Practice patience. Rushing through levels often leads to mistakes. Take your time to plan and execute your moves carefully.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_17_image.webp',
+        logo: '../public/images/banners/imgi_17_image.webp',
         categories: ['Puzzle', 'Arcade', 'Strategy'],
         stats: {
             players: '1.5M+',
@@ -3454,7 +3454,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_17_image.webp'],
         relatedGames: ['colorup', 'colorbump']
     },
     'colorup': {
@@ -3493,8 +3493,8 @@ const gamesData = {
 <p>Work around obstacles strategically. Don't just avoid obstacles—use them to guide your expansion and create efficient paths.</p>
 <p>Think multiple moves ahead. Planning your expansion several moves in advance helps you avoid dead ends and inefficient paths.</p>
 <p>Cover corners and edges first. Starting from corners and working inward often creates more efficient expansion patterns.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_18_image.webp',
+        logo: '../public/images/banners/imgi_18_image.webp',
         categories: ['Puzzle', 'Strategy', 'Arcade'],
         stats: {
             players: '1.3M+',
@@ -3502,7 +3502,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_18_image.webp'],
         relatedGames: ['colorbump', 'colorup']
     },
     'fighterjet': {
@@ -3541,8 +3541,8 @@ const gamesData = {
 <p>Manage your weapons strategically. Different weapons are effective against different enemy types—learn when to use each weapon.</p>
 <p>Use power-ups wisely. Save powerful abilities for challenging sections or boss encounters where they'll have the most impact.</p>
 <p>Stay mobile. Constant movement makes you harder to hit—don't stay in one place for too long during combat.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_10_image.webp',
+        logo: '../public/images/banners/imgi_10_image.webp',
         categories: ['Action', 'Shooter', 'Arcade'],
         stats: {
             players: '1.1M+',
@@ -3550,7 +3550,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_10_image.webp'],
         relatedGames: ['skycombatfury', 'fighterjet']
     },
     'happycups': {
@@ -3589,8 +3589,8 @@ const gamesData = {
 <p>Avoid creating dead ends. Pouring cups in the wrong order can create situations where you're stuck—think before you pour.</p>
 <p>Work from the top down. Often, it's easier to sort cups by working from the top of stacks and organizing them systematically.</p>
 <p>Practice patience. Rushing through puzzles often leads to mistakes. Take your time to plan and execute your moves carefully.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_13_image.webp',
+        logo: '../public/images/banners/imgi_13_image.webp',
         categories: ['Puzzle', 'Strategy', 'Casual'],
         stats: {
             players: '1M+',
@@ -3598,7 +3598,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_13_image.webp'],
         relatedGames: ['liquidsort', 'happycups']
     },
     'infinitejumper': {
@@ -3637,8 +3637,8 @@ const gamesData = {
 <p>Use power-ups strategically. Save powerful power-ups like jetpacks for challenging sections with many obstacles.</p>
 <p>Build combos. Maintaining consecutive successful jumps builds combo multipliers that significantly boost your score.</p>
 <p>Stay calm. As the game speeds up, maintaining composure and focusing on timing will help you reach higher altitudes.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_12_image.webp',
+        logo: '../public/images/banners/imgi_12_image.webp',
         categories: ['Runner', 'Arcade', 'Action'],
         stats: {
             players: '1.2M+',
@@ -3646,7 +3646,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_12_image.webp'],
         relatedGames: ['subwaysurferssingapore', 'infinitejumper']
     },
     'knifeninja': {
@@ -3733,8 +3733,8 @@ const gamesData = {
 <p>Avoid mixing colors. Pouring liquids in the wrong order can create situations where colors get mixed—think before you pour.</p>
 <p>Work from the top down. Often, it's easier to sort liquids by working from the top of containers and organizing them systematically.</p>
 <p>Practice patience. Rushing through puzzles often leads to mistakes. Take your time to plan and execute your moves carefully.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_19_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_19_image - Edited.jpg',
         categories: ['Puzzle', 'Strategy', 'Arcade'],
         stats: {
             players: '1.4M+',
@@ -3742,7 +3742,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_19_image - Edited.jpg'],
         relatedGames: ['happycups', 'liquidsort']
     },
     'mergis': {
@@ -3829,8 +3829,8 @@ const gamesData = {
 <p>Use power-ups strategically. Save powerful power-ups like multi-ball for challenging sections or when you have many bricks remaining.</p>
 <p>Plan your shots. Look ahead and identify which bricks are hardest to reach. Use angled shots to clear difficult areas first.</p>
 <p>Watch for patterns. Many levels have brick arrangements that can be cleared efficiently with the right strategy. Take time to analyze the layout before starting.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_23_image.webp',
+        logo: '../public/images/banners/imgi_23_image.webp',
         categories: ['Arcade', 'Classic', 'Puzzle'],
         stats: {
             players: '1.3M+',
@@ -3838,7 +3838,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_23_image.webp'],
         relatedGames: ['blockvsball', 'neonbricks']
     },
     'ninjafruitslice': {
@@ -3877,8 +3877,8 @@ const gamesData = {
 <p>Use efficient swipe patterns. Plan your swipes to slice multiple fruits while avoiding bombs and maximizing combo potential.</p>
 <p>Watch for special fruits. Special fruits often award bonus points or power-ups—prioritize slicing them when they appear.</p>
 <p>Stay focused. As the game speeds up, maintaining concentration and quick reflexes is crucial for achieving high scores.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_7_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_7_image - Edited.jpg',
         categories: ['Action', 'Arcade', 'Casual'],
         stats: {
             players: '1.2M+',
@@ -3886,7 +3886,7 @@ const gamesData = {
             difficulty: 'Easy',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_7_image - Edited.jpg'],
         relatedGames: ['fruitninjamaster', 'ninjafruitslice']
     },
     'numbersnake': {
@@ -3973,8 +3973,8 @@ const gamesData = {
 <p>Master spin techniques. Learning to use top spin, back spin, and side spin effectively gives you better control over the cue ball.</p>
 <p>Practice angles. Understanding how balls bounce off rails and at what angles is essential for bank shots and positioning.</p>
 <p>Think defensively. Sometimes a safety shot that doesn't sink a ball but positions the cue ball well is better than a risky shot.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/imgi_8_image - Edited.jpg',
+        logo: '../public/images/imgi_8_image - Edited.jpg',
         categories: ['Sports', 'Arcade', 'Classic'],
         stats: {
             players: '1.5M+',
@@ -3982,7 +3982,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/imgi_8_image - Edited.jpg'],
         relatedGames: ['8ballbilliards', 'pool8ball']
     },
     'snakegame': {
@@ -4021,8 +4021,8 @@ const gamesData = {
 <p>Use the edges strategically. The screen edges can be used to your advantage, but be careful not to trap yourself.</p>
 <p>Don't chase food blindly. Sometimes it's better to wait for food to appear in a safer location than to risk a collision.</p>
 <p>Practice regularly. Consistent practice improves your navigation skills and helps you develop better spatial awareness.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_15_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_15_image - Edited.jpg',
         categories: ['Arcade', 'Classic', 'Puzzle'],
         stats: {
             players: '2M+',
@@ -4030,7 +4030,7 @@ const gamesData = {
             difficulty: 'Easy',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_15_image - Edited.jpg'],
         relatedGames: ['numbersnake', 'snakegame']
     },
     'tictactoe': {
@@ -4117,8 +4117,8 @@ const gamesData = {
 <p>Create space strategically. Sometimes moving a car that isn't directly blocking the path can create space needed for other moves.</p>
 <p>Plan multiple moves ahead. Don't just think about the immediate move—consider how each move affects future possibilities.</p>
 <p>Practice patience. Rushing through puzzles often leads to mistakes. Take your time to analyze and plan your moves carefully.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_16_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_16_image - Edited.jpg',
         categories: ['Puzzle', 'Strategy', 'Arcade'],
         stats: {
             players: '1.1M+',
@@ -4126,7 +4126,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_16_image - Edited.jpg'],
         relatedGames: ['unparkjam', 'tictactoe']
     }
 
