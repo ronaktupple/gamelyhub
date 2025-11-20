@@ -3238,8 +3238,8 @@ const gamesData = {
 <p>Use power-ups strategically. Save powerful power-ups like multi-ball for challenging sections or when you have many blocks remaining.</p>
 <p>Plan your shots. Look ahead and identify which blocks are hardest to reach. Use angled shots to clear difficult areas first.</p>
 <p>Watch for patterns. Many levels have block arrangements that can be cleared efficiently with the right strategy. Take time to analyze the layout before starting.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_22_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_22_image - Edited.jpg',
         categories: ['Arcade', 'Classic', 'Puzzle'],
         stats: {
             players: '1.2M+',
@@ -3247,7 +3247,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_22_image - Edited.jpg'],
         relatedGames: ['neonbricks', 'blockvsball']
     },
     'bottleshoot': {
@@ -3685,8 +3685,8 @@ const gamesData = {
 <p>Use different throwing techniques. Learn when to use direct throws, arcing throws, and ricochet throws based on the situation.</p>
 <p>Build combos. Hitting multiple targets in quick succession builds combo multipliers that significantly boost your score.</p>
 <p>Stay focused. Maintaining concentration and steady aim is crucial for achieving high scores and clearing challenging levels.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_31_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_31_image - Edited.jpg',
         categories: ['Action', 'Arcade', 'Shooter'],
         stats: {
             players: '900K+',
@@ -3694,7 +3694,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_31_image - Edited.jpg'],
         relatedGames: ['ninjafruitslice', 'knifeninja']
     },
     'liquidsort': {
@@ -3781,8 +3781,8 @@ const gamesData = {
 <p>Save powerful items. Don't merge powerful items immediately—save them for when they'll have the most impact or unlock valuable combinations.</p>
 <p>Manage your space. Keep your playing area organized to make it easier to identify merge opportunities and plan your strategy.</p>
 <p>Experiment with combinations. Try different merge strategies to discover new combinations and optimize your score.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_20_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_20_image - Edited.jpg',
         categories: ['Puzzle', 'Strategy', 'Arcade'],
         stats: {
             players: '1.1M+',
@@ -3790,7 +3790,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_20_image - Edited.jpg'],
         relatedGames: ['fruitmerge', 'mergis']
     },
     'neonbricks': {
@@ -3925,8 +3925,8 @@ const gamesData = {
 <p>Work from the edges inward. Often, it's easier to collect numbers by working from the board's edges and moving inward systematically.</p>
 <p>Watch for obstacles. Identify obstacles early and plan your route to work around them while still collecting numbers in order.</p>
 <p>Practice patience. Rushing through levels often leads to mistakes. Take your time to plan and execute your moves carefully.</p>`,
-        thumbnail: '../public/images/game-thumb.png',
-        logo: '../public/images/game-thumb.png',
+        thumbnail: '../public/images/banners/imgi_21_image - Edited.jpg',
+        logo: '../public/images/banners/imgi_21_image - Edited.jpg',
         categories: ['Puzzle', 'Strategy', 'Arcade'],
         stats: {
             players: '1M+',
@@ -3934,7 +3934,7 @@ const gamesData = {
             difficulty: 'Medium',
             ageRating: 'All Ages'
         },
-        screenshots: ['../public/images/game-thumb.png'],
+        screenshots: ['../public/images/banners/imgi_21_image - Edited.jpg'],
         relatedGames: ['snakegame', 'numbersnake']
     },
     'pool8ball': {
