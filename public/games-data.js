@@ -4128,6 +4128,74 @@ const gamesData = {
         },
         screenshots: ['../public/images/banners/imgi_16_image - Edited.jpg'],
         relatedGames: ['unparkjam', 'tictactoe']
+    },
+    'tetris': {
+        id: 'tetris',
+        title: 'Tetris',
+        description: 'The classic block-stacking puzzle game! Rotate and place falling blocks to clear lines.',
+        longDescription: 'Tetris is one of the most famous video games of all time. The goal is to rotate and move falling geometric shapes (tetrominoes) to create complete horizontal lines. When a line is completed, it disappears, and you score points. As you progress, the blocks fall faster, testing your reflexes and strategic thinking.',
+        fullContent: `<h2>About Tetris</h2>
+<p>Tetris is the legendary puzzle game that has captivated players for decades. With its simple yet addictive gameplay, it challenges you to arrange falling blocks into complete lines. Clear lines to score points and prevent the screen from filling up. It's a test of spatial awareness, quick thinking, and endurance.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>The game features seven different shapes of blocks, known as tetrominoes. You can move them left, right, and rotate them as they fall. The goal is to fit them together to form solid horizontal lines without gaps. When a line is formed, it vanishes, and the blocks above it fall down.</p>
+
+<p>As you clear more lines, the game speed increases, making it harder to place blocks accurately. The game ends when the blocks stack up to the top of the screen.</p>
+
+<h3>Key Features</h3>
+<p>Tetris offers a timeless challenge that is easy to learn but difficult to master. The increasing speed keeps the gameplay intense, while the satisfaction of clearing multiple lines at once (a "Tetris") is unmatched.</p>
+
+<p>With its iconic music and recognizable shapes, Tetris is a true classic that appeals to players of all ages.</p>
+
+<h3>Tips for Success</h3>
+<p>Keep your stack flat. Avoid creating deep holes that are hard to fill.</p>
+<p>Look ahead. Check the "Next" piece preview to plan your moves.</p>
+<p>Practice rotation. Learn how pieces rotate to fit them into tight spots.</p>`,
+        thumbnail: '../public/images/banners/tetris-banner.jpg',
+        logo: '../public/images/banners/tetris-banner.jpg',
+        categories: ['Puzzle', 'Arcade', 'Classic'],
+        stats: {
+            players: '100M+',
+            rating: '4.9',
+            difficulty: 'Hard',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/banners/tetris-banner.jpg'],
+        relatedGames: ['hextris', '2048']
+    },
+    'snake': {
+        id: 'snake',
+        title: 'Snake',
+        description: 'Control the snake, eat apples, and grow longer! Avoid hitting the walls or yourself.',
+        longDescription: 'Snake is a classic arcade game where you control a growing snake. Your objective is to eat apples that appear on the screen. Each apple makes the snake longer. You must avoid running into the walls or your own tail. How long can you grow?',
+        fullContent: `<h2>About Snake</h2>
+<p>Snake is a beloved classic that tests your reflexes and planning. Guide the snake to eat apples and grow in length. As the snake gets longer, maneuvering becomes more difficult. It's a simple concept that provides endless fun and challenge.</p>
+
+<h3>Gameplay Mechanics</h3>
+<p>Use the arrow keys to control the direction of the snake. The snake moves constantly, so you must think quickly. Eating an apple increases your score and the length of the snake. The game ends if you crash into a wall or the snake's own body.</p>
+
+<p>The challenge lies in managing the growing snake within the confined space. You need to plan your path to ensure you don't trap yourself.</p>
+
+<h3>Key Features</h3>
+<p>Snake features retro-style gameplay that is instantly recognizable. The simple controls make it accessible to everyone, while the high-score chasing element keeps it competitive.</p>
+
+<p>It's a perfect game for quick sessions or long attempts to beat your personal best.</p>
+
+<h3>Tips for Success</h3>
+<p>Don't rush. Make deliberate turns to avoid accidents.</p>
+<p>Use the space wisely. Try to keep the snake compact to leave room for maneuvering.</p>
+<p>Be careful near the edges. One wrong turn can end the game.</p>`,
+        thumbnail: '../public/images/banners/snake-banner.jpg',
+        logo: '../public/images/banners/snake-banner.jpg',
+        categories: ['Arcade', 'Classic', 'Casual'],
+        stats: {
+            players: '50M+',
+            rating: '4.7',
+            difficulty: 'Medium',
+            ageRating: 'All Ages'
+        },
+        screenshots: ['../public/images/banners/snake-banner.jpg'],
+        relatedGames: ['battled', 'pacman']
     }
 
-}; 
+};
