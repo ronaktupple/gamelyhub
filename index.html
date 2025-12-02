@@ -18,9 +18,19 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTFC9DNWHW"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BTFC9DNWHW');</script>
 
-    <!-- google adsense script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1403172463870891"
-        crossorigin="anonymous"></script>
+    <!-- google adsense script - Lazy Loaded -->
+    <script>
+        // Lazy load AdSense after page load to improve performance
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                var script = document.createElement('script');
+                script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1403172463870891";
+                script.crossOrigin = "anonymous";
+                script.async = true;
+                document.head.appendChild(script);
+            }, 2000);
+        });
+    </script>
 
     <!-- Primary Meta Tags -->
     <title>Gamely Hub - Your Ultimate Gaming Destination | Free Online Games</title>
@@ -82,7 +92,7 @@
 
     <!-- Preload Critical Images -->
     <link rel="preload" as="image" href="public/images/logo.png" fetchpriority="high">
-    <link rel="preload" as="image" href="public/images/slider/Frame 7.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="public/images/slider/Frame 7.webp" fetchpriority="high" type="image/webp">
 
 
     <!-- Structured Data (JSON-LD) -->
@@ -629,8 +639,11 @@
                     <div class="carousel-inner rounded">
                         <div class="carousel-item active">
                             <a href="pages/game_detail_play.html?game=gemcandycrush">
-                                <img src="public/images/slider/Frame 7.jpg" class="d-block w-100" alt="Gem Candy Crush"
-                                    width="1200" height="400" fetchpriority="high">
+                                <picture>
+                                    <source srcset="public/images/slider/Frame 7.webp" type="image/webp">
+                                    <img src="public/images/slider/Frame 7.jpg" class="d-block w-100"
+                                        alt="Gem Candy Crush" width="1200" height="400" fetchpriority="high">
+                                </picture>
                                 <div class="carousel-caption">
                                     <!-- <div class="btn btn-primary mt-4">Play Now</div> -->
                                 </div>
@@ -639,8 +652,11 @@
                         </div>
                         <div class="carousel-item ">
                             <a href="pages/game_detail_play.html?game=8ballbilliards">
-                                <img src="public/images/slider/Frame 13.jpg" class="d-block w-100"
-                                    alt="8 Ball Billiards" width="1200" height="400" loading="lazy">
+                                <picture>
+                                    <source srcset="public/images/slider/Frame 13.webp" type="image/webp">
+                                    <img src="public/images/slider/Frame 13.jpg" class="d-block w-100"
+                                        alt="8 Ball Billiards" width="1200" height="400" loading="lazy">
+                                </picture>
                                 <div class="carousel-caption">
                                     <!-- <div class="btn btn-primary mt-4">Play Now</div> -->
                                 </div>
@@ -649,8 +665,11 @@
                         </div>
                         <div class="carousel-item">
                             <a href="pages/game_detail_play.html?game=vikingway">
-                                <img src="public/images/slider/Frame 12.jpg" class="d-block w-100" alt="Viking Way"
-                                    width="1200" height="400" loading="lazy">
+                                <picture>
+                                    <source srcset="public/images/slider/Frame 12.webp" type="image/webp">
+                                    <img src="public/images/slider/Frame 12.jpg" class="d-block w-100" alt="Viking Way"
+                                        width="1200" height="400" loading="lazy">
+                                </picture>
                                 <div class="carousel-caption">
                                     <!-- <div class="btn btn-primary mt-4">Play Now</div> -->
                                 </div>
@@ -659,8 +678,11 @@
                         </div>
                         <div class="carousel-item">
                             <a href="pages/game_detail_play.html?game=unparkjam">
-                                <img src="public/images/slider/Frame 11.jpg" class="d-block w-100" alt="Unpark Jam"
-                                    width="1200" height="400" loading="lazy">
+                                <picture>
+                                    <source srcset="public/images/slider/Frame 11.webp" type="image/webp">
+                                    <img src="public/images/slider/Frame 11.jpg" class="d-block w-100" alt="Unpark Jam"
+                                        width="1200" height="400" loading="lazy">
+                                </picture>
                                 <div class="carousel-caption">
                                     <!-- <div class="btn btn-primary mt-4">Play Now</div> -->
                                 </div>
