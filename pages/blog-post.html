@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTFC9DNWHW"></script>
+    <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BTFC9DNWHW'); </script>
+
+    <!-- google adsense script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1403172463870891"
+        crossorigin="anonymous"></script>
+
+    <!-- Meta tags will be populated dynamically -->
+    <title id="pageTitle">Blog Post | Gamely Hub</title>
+    <meta name="description" id="pageDescription" content="Read gaming guides, tips, and insights from Gamely Hub">
+    <meta name="keywords" id="pageKeywords" content="gaming blog, game guides, gaming tips">
+    <meta name="author" content="Gamely Hub">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/main.css" rel="stylesheet">
+
+    <style>
+        .post-header {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 6rem 0 3rem;
+            margin-top: 70px;
+        }
+
+        .post-category {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .post-author-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .post-author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .post-author-details h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .post-author-details p {
+            font-size: 0.85rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .post-stats {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .post-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .post-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-content {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #334155;
+        }
+
+        .post-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #334155;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .post-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        .post-content ul,
+        .post-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .post-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .post-content a {
+            color: #6366f1;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .post-content a:hover {
+            color: #4f46e5;
+            border-bottom-color: #4f46e5;
+        }
+
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 2rem 0;
+        }
+
+        .post-tag {
+            background: #f1f5f9;
+            color: #64748b;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .post-tag:hover {
+            background: #e2e8f0;
+            color: #475569;
+        }
+
+        .author-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .author-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .author-card-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+
+        .author-card-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        .author-card-info p {
+            color: #6366f1;
+            font-weight: 500;
+            margin: 0.25rem 0 0 0;
+        }
+
+        .author-card-bio {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+
+
+        .related-posts {
+            margin: 4rem 0;
+        }
+
+        .related-posts h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 2rem;
+        }
+
+        .related-post-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .related-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 24px rgba(99, 102, 241, 0.12);
+        }
+
+        .related-post-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .related-post-body {
+            padding: 1.5rem;
+        }
+
+        .related-post-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .related-post-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .related-post-title a:hover {
+            color: #6366f1;
+        }
+
+        .related-post-excerpt {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .post-header {
+                padding: 5rem 0 2rem;
+            }
+
+            .post-title {
+                font-size: 1.75rem;
+            }
+
+            .post-content {
+                padding: 1.5rem;
+            }
+
+            .post-meta {
+                gap: 1rem;
+            }
+
+            .author-card-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Footer styles */
+        .footer {
+            background: #F8FAFC;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+            color: var(--text-primary);
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer h5,
+        .footer h6 {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-text-primary">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="z-index: 100;">
+        <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../public/images/logo.png" alt="Gamely Hub" style="height: 58px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                title="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            Games
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="openSearchModal(event)">
+                            <i class="fas fa-search me-1"></i>Search
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Header -->
+    <header class="post-header" id="postHeader">
+        <!-- Content will be loaded dynamically -->
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="max-width: 1320px;">
+        <!-- Post Image -->
+        <div id="postImageContainer"></div>
+
+        <!-- Post Content -->
+        <article class="post-content" id="postContent">
+            <!-- Content will be loaded dynamically -->
+        </article>
+
+        <!-- Tags -->
+        <div class="post-tags" id="postTags"></div>
+
+        <!-- Author Card -->
+        <div class="author-card" id="authorCard"></div>
+
+        <!-- Related Posts -->
+        <section class="related-posts">
+            <h2>Related Articles</h2>
+            <div class="row g-4" id="relatedPostsContainer"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="position: relative; z-index: 10;">
+        <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
+            <div class="row py-5">
+                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <h5 class="mb-3">
+                        <img src="../public/images/logo.png" alt="Gamely Hub" style="height: 90px;">
+                    </h5>
+                    <p class="footer-text mb-3">
+                        Your ultimate gaming destination. Play the best free online games anytime, anywhere.
+                    </p>
+                    <div class="footer-social mb-3">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
+                    <h6 class="mb-3">Pages</h6>
+                    <ul class="list-unstyled footer-links-list">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
+                    <h6 class="mb-3">Recent Games</h6>
+                    <ul class="list-unstyled footer-links-list">
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie
+                                Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
+                        <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
+                        <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
+                        <li><a href="game_detail_play.html?game=repuls" class="footer-link">Repuls</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
+                    <h6 class="mb-3">Popular Games</h6>
+                    <ul class="list-unstyled footer-links-list">
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie
+                                Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
+                        <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
+                        <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
+                        <li><a href="game_detail_play.html?game=repuls" class="footer-link">Repuls</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-3 mb-4 mb-lg-0">
+                    <h6 class="mb-3">Legal & Support</h6>
+                    <ul class="list-unstyled footer-links-list">
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                        <li><a href="contact.html" class="footer-link">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row border-top pt-4 mt-4" style="border-color: rgba(148, 163, 184, 0.2) !important;">
+                <div class="col-12 text-center">
+                    <p class="footer-text mb-0">
+                        &copy; 2025 Gamely Hub. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="search-modal">
+        <div class="search-modal-backdrop" onclick="closeSearchModal()"></div>
+        <div class="search-modal-content">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <i class="fas fa-search search-icon-input"></i>
+                    <input type="text" id="searchInput" placeholder="Search for games..." autocomplete="off">
+                    <button class="close-search-btn" onclick="closeSearchModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search-body custom-scrollbar">
+                <div id="searchResults" class="search-results">
+                    <div class="search-initial-state">
+                        <i class="fas fa-gamepad fa-3x mb-3 text-muted"></i>
+                        <p>Type to find your favorite games</p>
+                        <div class="search-tags mt-3">
+                            <!-- Categories removed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/games-data.js"></script>
+    <script src="../public/search.js"></script>
+    <script src="../public/nav-highlight.js"></script>
+    <!-- Blog Data -->
+    <script src="../public/blog-data.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get post ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('id');
+
+            if (!postId || !blogPosts[postId]) {
+                window.location.href = 'blog.html';
+                return;
+            }
+
+            const post = blogPosts[postId];
+            const author = blogAuthors[post.author];
+
+            // Update page title and meta
+            document.getElementById('pageTitle').textContent = `${post.title} | Gamely Hub Blog`;
+            document.getElementById('pageDescription').content = post.excerpt;
+            document.getElementById('pageKeywords').content = post.tags.join(', ');
+
+            // Render post header
+            document.getElementById('postHeader').innerHTML = `
+                <div class="container" style="max-width: 1320px;">
+                    <span class="post-category">${post.category}</span>
+                    <h1 class="post-title">${post.title}</h1>
+                    <div class="post-meta">
+                        <div class="post-author-info">
+                            <img src="${author.avatar}" alt="${author.name}" class="post-author-avatar"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2250%22 height=%2250%22%3E%3Ccircle fill=%22rgba(255,255,255,0.2)%22 cx=%2225%22 cy=%2225%22 r=%2225%22/%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E${author.name.charAt(0)}%3C/text%3E%3C/svg%3E'">
+                            <div class="post-author-details">
+                                <h4>${author.name}</h4>
+                                <p>${author.title}</p>
+                            </div>
+                        </div>
+                        <div class="post-stats">
+                            <span class="post-stat">
+                                <i class="far fa-calendar"></i>
+                                ${formatDate(post.publishDate)}
+                            </span>
+                            <span class="post-stat">
+                                <i class="far fa-clock"></i>
+                                ${post.readTime}
+                            </span>
+                            <span class="post-stat">
+                                <i class="far fa-eye"></i>
+                                ${post.views.toLocaleString()} views
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Render post image
+            document.getElementById('postImageContainer').innerHTML = `
+                <img src="${post.thumbnail}" alt="${post.title}" class="post-image"
+                     onerror="this.style.display='none'">
+            `;
+
+            // Render post content
+            document.getElementById('postContent').innerHTML = post.content;
+
+            // Render tags
+            document.getElementById('postTags').innerHTML = post.tags.map(tag =>
+                `<span class="post-tag"><i class="fas fa-tag me-1"></i>${tag}</span>`
+            ).join('');
+
+            // Render author card
+            document.getElementById('authorCard').innerHTML = `
+                <div class="author-card-header">
+                    <img src="${author.avatar}" alt="${author.name}" class="author-card-avatar"
+                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22%3E%3Ccircle fill=%22%236366f1%22 cx=%2240%22 cy=%2240%22 r=%2240%22/%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2232%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E${author.name.charAt(0)}%3C/text%3E%3C/svg%3E'">
+                    <div class="author-card-info">
+                        <h3><a href="author.html?id=${author.id}" style="text-decoration:none; color:inherit;">${author.name}</a></h3>
+                        <p>${author.title}</p>
+                    </div>
+                </div>
+                <p class="author-card-bio">${author.bio}</p>
+            `;
+
+            // Render related posts
+            const relatedPosts = getRelatedPosts(postId, 3);
+            document.getElementById('relatedPostsContainer').innerHTML = relatedPosts.map(relatedPost => `
+                <div class="col-12 col-md-4">
+                    <div class="related-post-card">
+                        <a href="blog-post.html?id=${relatedPost.id}">
+                            <img src="${relatedPost.thumbnail}" alt="${relatedPost.title}" class="related-post-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22180%22%3E%3Crect fill=%22%23f1f5f9%22 width=%22400%22 height=%22180%22/%3E%3Ctext fill=%22%2364748b%22 font-family=%22Arial%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E${relatedPost.title}%3C/text%3E%3C/svg%3E'">
+                        </a>
+                        <div class="related-post-body">
+                            <h3 class="related-post-title">
+                                <a href="blog-post.html?id=${relatedPost.id}">${relatedPost.title}</a>
+                            </h3>
+                            <p class="related-post-excerpt">${relatedPost.excerpt.substring(0, 100)}...</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            function formatDate(dateString) {
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

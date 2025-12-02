@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Image Placeholder Generator</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding: 2rem;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #6366f1;
+            margin-bottom: 2rem;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .image-item {
+            text-align: center;
+        }
+
+        canvas {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .download-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .download-btn:hover {
+            background: #4f46e5;
+        }
+
+        p {
+            margin-top: 0.5rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📸 Blog Image Placeholder Generator</h1>
+        <p>Click the download buttons below to save placeholder images for your blog posts and author avatars.</p>
+
+        <h2>Blog Post Thumbnails (800x400)</h2>
+        <div class="image-grid" id="blogImages"></div>
+
+        <h2>Author Avatars (400x400)</h2>
+        <div class="image-grid" id="authorImages"></div>
+    </div>
+
+    <script>
+        const blogPosts = [
+            { filename: 'puzzle-games-2024.jpg', title: 'Top 10 Puzzle Games', icon: '🧩' },
+            { filename: 'subway-surfers-guide.jpg', title: 'Subway Surfers Guide', icon: '🏃' },
+            { filename: 'browser-games-evolution.jpg', title: 'Browser Games Evolution', icon: '🎮' },
+            { filename: 'mobile-gaming-trends.jpg', title: 'Mobile Gaming Trends', icon: '📱' },
+            { filename: 'cookie-clicker-guide.jpg', title: 'Cookie Clicker Strategy', icon: '🍪' },
+            { filename: 'multiplayer-browser-games.jpg', title: 'Multiplayer Games', icon: '👥' }
+        ];
+
+        const authors = [
+            { filename: 'alex-gaming.jpg', name: 'Alex Thompson', initials: 'AT' },
+            { filename: 'sarah-chen.jpg', name: 'Sarah Chen', initials: 'SC' },
+            { filename: 'mike-rodriguez.jpg', name: 'Mike Rodriguez', initials: 'MR' },
+            { filename: 'emma-wilson.jpg', name: 'Emma Wilson', initials: 'EW' }
+        ];
+
+        function createBlogThumbnail(post) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 800;
+            canvas.height = 400;
+            const ctx = canvas.getContext('2d');
+
+            // Gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 800, 400);
+            gradient.addColorStop(0, '#6366f1');
+            gradient.addColorStop(1, '#8b5cf6');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 800, 400);
+
+            // Icon
+            ctx.font = 'bold 120px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+            ctx.fillText(post.icon, 400, 150);
+
+            // Title
+            ctx.font = 'bold 48px Poppins, Arial';
+            ctx.fillStyle = 'white';
+            ctx.fillText(post.title, 400, 300);
+
+            return canvas;
+        }
+
+        function createAuthorAvatar(author) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 400;
+            canvas.height = 400;
+            const ctx = canvas.getContext('2d');
+
+            // Gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 400, 400);
+            gradient.addColorStop(0, '#6366f1');
+            gradient.addColorStop(1, '#8b5cf6');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 400);
+
+            // Initials
+            ctx.font = 'bold 140px Poppins, Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillStyle = 'white';
+            ctx.fillText(author.initials, 200, 200);
+
+            return canvas;
+        }
+
+        function downloadCanvas(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+        }
+
+        // Generate blog thumbnails
+        const blogContainer = document.getElementById('blogImages');
+        blogPosts.forEach(post => {
+            const div = document.createElement('div');
+            div.className = 'image-item';
+
+            const canvas = createBlogThumbnail(post);
+            div.appendChild(canvas);
+
+            const btn = document.createElement('button');
+            btn.className = 'download-btn';
+            btn.textContent = 'Download';
+            btn.onclick = () => downloadCanvas(canvas, post.filename);
+            div.appendChild(btn);
+
+            const p = document.createElement('p');
+            p.textContent = post.filename;
+            div.appendChild(p);
+
+            blogContainer.appendChild(div);
+        });
+
+        // Generate author avatars
+        const authorContainer = document.getElementById('authorImages');
+        authors.forEach(author => {
+            const div = document.createElement('div');
+            div.className = 'image-item';
+
+            const canvas = createAuthorAvatar(author);
+            div.appendChild(canvas);
+
+            const btn = document.createElement('button');
+            btn.className = 'download-btn';
+            btn.textContent = 'Download';
+            btn.onclick = () => downloadCanvas(canvas, author.filename);
+            div.appendChild(btn);
+
+            const p = document.createElement('p');
+            p.textContent = `${author.name} (${author.filename})`;
+            div.appendChild(p);
+
+            authorContainer.appendChild(div);
+        });
+    </script>
+</body>
+
+</html>

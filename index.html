@@ -541,7 +541,11 @@
                         </a>
                     </li>
                     -->
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/blog.html">
+                            Blog
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pages/about.html">
                             About
@@ -734,6 +738,7 @@
                     <ul class="list-unstyled footer-links-list">
                         <li><a href="/" class="footer-link">Home</a></li>
                         <!-- Temporarily hidden: <li><a href="pages/casino-games.html" class="footer-link">Casino Games</a></li> -->
+                        <li><a href="pages/blog.html" class="footer-link">Blog</a></li>
                         <li><a href="pages/about.html" class="footer-link">About Us</a></li>
                         <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
                     </ul>
@@ -826,113 +831,7 @@
         </div>
     </div>
 
-    <script>
-        function openSearchModal(e) {
-            if (e) e.preventDefault();
-            document.getElementById('searchModal').classList.add('active');
-            setTimeout(() => document.getElementById('searchInput').focus(), 100);
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSearchModal() {
-            document.getElementById('searchModal').classList.remove('active');
-            document.body.style.overflow = '';
-            // Optional: clear search on close
-            // document.getElementById('searchInput').value = '';
-            // document.getElementById('searchResults').innerHTML = ...
-        }
-
-        function setSearch(term) {
-            const input = document.getElementById('searchInput');
-            input.value = term;
-            input.dispatchEvent(new Event('input'));
-            input.focus();
-        }
-
-        // Close on escape key
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeSearchModal();
-        });
-
-        // Search logic
-        document.getElementById('searchInput').addEventListener('input', function (e) {
-            const query = e.target.value.toLowerCase().trim();
-            const resultsContainer = document.getElementById('searchResults');
-
-            if (query.length < 1) {
-                resultsContainer.innerHTML = `
-                    <div class="search-initial-state">
-                        <i class="fas fa-gamepad fa-3x mb-3 text-muted"></i>
-                        <p>Type to find your favorite games</p>
-                        <div class="search-tags mt-3">
-                            <!-- Categories removed -->
-                        </div>
-                    </div>`;
-                return;
-            }
-
-            // Filter games
-            // gamesData is loaded from public/games-data.js
-            let results = [];
-            if (typeof gamesData !== 'undefined') {
-                results = Object.values(gamesData).filter(game => {
-                    // Skip if not a valid game object or if it's an array (like 'featured', 'recent')
-                    if (!game || typeof game !== 'object' || Array.isArray(game)) return false;
-                    if (!game.title) return false;
-
-                    const titleMatch = game.title.toLowerCase().includes(query);
-                    const descMatch = game.description && game.description.toLowerCase().includes(query);
-                    const catMatch = game.categories && game.categories.some(cat => cat.toLowerCase().includes(query));
-
-                    return titleMatch || descMatch || catMatch;
-                });
-            }
-
-            if (results.length === 0) {
-                resultsContainer.innerHTML = `
-                    <div class="search-no-results">
-                        <i class="fas fa-ghost fa-3x mb-3 text-muted"></i>
-                        <p>No games found matching "${e.target.value}"</p>
-                    </div>`;
-                return;
-            }
-
-            let html = '<div class="search-results-list">';
-            results.forEach(game => {
-                // Handle relative paths for images
-                let thumb = game.thumbnail;
-                if (thumb && !thumb.startsWith('http') && !thumb.startsWith('/')) {
-                    // If it starts with ../, remove it since we are at root
-                    thumb = thumb.replace('../', '');
-                }
-
-                html += `
-                    <a href="pages/game_detail_play.html?game=${game.id}" class="search-result-item" onclick="closeSearchModal()">
-                        <div class="search-result-thumb">
-                            <img src="${thumb}" alt="${game.title}" onerror="this.src='public/images/logo.png'">
-                        </div>
-                        <div class="search-result-info">
-                            <div class="search-result-title">
-                                ${game.title}
-                                ${game.rating ? `<span class="search-result-rating"><i class="fas fa-star text-warning"></i> ${game.rating}</span>` : ''}
-                            </div>
-                            <div class="search-result-desc">${game.description || ''}</div>
-                            <!-- Categories removed from search results
-                            <div class="search-result-meta">
-                                ${game.categories ? game.categories.map(c => `<span class="search-result-tag">${c}</span>`).join('') : ''}
-                            </div>
-                            -->
-                        </div>
-                        <div class="search-result-action">
-                            <i class="fas fa-play-circle"></i>
-                        </div>
-                    </a>
-                `;
-            });
-            html += '</div>';
-            resultsContainer.innerHTML = html;
-        });
-    </script>
+    <script src="public/search.js"></script>
 
     <!-- Game Loader Script -->
     <script>

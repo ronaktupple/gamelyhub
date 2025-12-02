@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTFC9DNWHW"></script>
+    <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BTFC9DNWHW'); </script>
+
+    <!-- google adsense script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1403172463870891"
+        crossorigin="anonymous"></script>
+
+    <!-- Primary Meta Tags -->
+    <title>Gaming Blog - Tips, Guides & News | Gamely Hub</title>
+    <meta name="title" content="Gaming Blog - Tips, Guides & News | Gamely Hub">
+    <meta name="description"
+        content="Explore expert gaming guides, tips, tricks, and the latest news from the world of online gaming. Learn strategies, discover new games, and level up your gaming skills.">
+    <meta name="keywords"
+        content="gaming blog, game guides, gaming tips, game strategies, gaming news, browser games blog, online gaming articles">
+    <meta name="author" content="Gamely Hub">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gamelyhub.com/pages/blog.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gamelyhub.com/pages/blog.html">
+    <meta property="og:title" content="Gaming Blog - Tips, Guides & News | Gamely Hub">
+    <meta property="og:description"
+        content="Explore expert gaming guides, tips, tricks, and the latest news from the world of online gaming.">
+    <meta property="og:image" content="https://gamelyhub.com/public/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gamelyhub.com/pages/blog.html">
+    <meta name="twitter:title" content="Gaming Blog - Tips, Guides & News | Gamely Hub">
+    <meta name="twitter:description"
+        content="Explore expert gaming guides, tips, tricks, and the latest news from the world of online gaming.">
+    <meta name="twitter:image" content="https://gamelyhub.com/public/images/og-image.jpg">
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/main.css" rel="stylesheet">
+
+    <style>
+        /* Blog-specific styles */
+        .blog-hero {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            margin-top: 70px;
+        }
+
+        .blog-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .blog-hero p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .featured-post {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            margin-bottom: 3rem;
+        }
+
+        .featured-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+        }
+
+        .featured-post-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #6366f1;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 24px rgba(99, 102, 241, 0.12);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .blog-card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: #6366f1;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .blog-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-title a:hover {
+            color: #6366f1;
+        }
+
+        .blog-excerpt {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .blog-author {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        .blog-author:hover {
+            color: #6366f1;
+        }
+
+        .blog-author-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+
+        .blog-date {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .blog-read-time {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .filter-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .filter-btn {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            color: #64748b;
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 0.25rem;
+        }
+
+        .filter-btn:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            color: #1e293b;
+        }
+
+        .filter-btn.active {
+            background: #6366f1;
+            border-color: #6366f1;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .featured-post-image {
+                height: 250px;
+            }
+
+            .blog-card-image {
+                height: 180px;
+            }
+        }
+
+        /* Footer styles matching main site */
+        .footer {
+            background: #F8FAFC;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+            color: var(--text-primary);
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer h5,
+        .footer h6 {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-text-primary">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="z-index: 100;">
+        <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../public/images/logo.png" alt="Gamely Hub" style="height: 58px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                title="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            Games
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="openSearchModal(event)">
+                            <i class="fas fa-search me-1"></i>Search
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container" style="max-width: 1320px;">
+            <div class="text-center">
+                <h1><i class="fas fa-gamepad me-3"></i>Gaming Blog</h1>
+                <p class="lead">Expert guides, tips, and insights from the world of gaming</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container py-5" style="max-width: 1320px;">
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <div class="d-flex flex-wrap align-items-center gap-2">
+                <span class="fw-semibold text-muted me-2">Filter by:</span>
+                <button class="filter-btn active" data-category="all">All Posts</button>
+                <button class="filter-btn" data-category="Puzzle Games">Puzzle Games</button>
+                <button class="filter-btn" data-category="Action Games">Action Games</button>
+                <button class="filter-btn" data-category="Strategy Guides">Strategy Guides</button>
+                <button class="filter-btn" data-category="Mobile Gaming">Mobile Gaming</button>
+                <button class="filter-btn" data-category="Gaming History">Gaming History</button>
+                <button class="filter-btn" data-category="Multiplayer Games">Multiplayer</button>
+            </div>
+        </div>
+
+        <!-- Featured Post -->
+        <div id="featuredPostContainer"></div>
+
+        <!-- Blog Posts Grid -->
+        <div class="row g-4" id="blogPostsContainer">
+            <!-- Blog posts will be loaded here -->
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResultsMessage" class="text-center py-5" style="display: none;">
+            <i class="fas fa-search fa-3x text-muted mb-3"></i>
+            <h3 class="text-muted">No posts found</h3>
+            <p class="text-muted">Try selecting a different category</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="position: relative; z-index: 10;">
+        <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
+            <div class="row py-5">
+                <!-- Brand Column -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <h5 class="mb-3">
+                        <img src="../public/images/logo.png" alt="Gamely Hub" style="height: 90px;">
+                    </h5>
+                    <p class="footer-text mb-3">
+                        Your ultimate gaming destination. Play the best free online games anytime, anywhere.
+                    </p>
+                    <div class="footer-social mb-3">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Pages Links Column -->
+                <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
+                    <h6 class="mb-3">Pages</h6>
+                    <ul class="list-unstyled footer-links-list">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Recent Games Column -->
+                <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
+                    <h6 class="mb-3">Recent Games</h6>
+                    <ul class="list-unstyled footer-links-list">
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie
+                                Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
+                        <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
+                        <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
+                        <li><a href="game_detail_play.html?game=repuls" class="footer-link">Repuls</a></li>
+                    </ul>
+                </div>
+
+                <!-- Popular Games Column -->
+                <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
+                    <h6 class="mb-3">Popular Games</h6>
+                    <ul class="list-unstyled footer-links-list">
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie
+                                Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
+                        <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
+                        <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
+                        <li><a href="game_detail_play.html?game=repuls" class="footer-link">Repuls</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal & Support Column -->
+                <div class="col-6 col-md-3 col-lg-3 mb-4 mb-lg-0">
+                    <h6 class="mb-3">Legal & Support</h6>
+                    <ul class="list-unstyled footer-links-list">
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                        <li><a href="contact.html" class="footer-link">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="row border-top pt-4 mt-4" style="border-color: rgba(148, 163, 184, 0.2) !important;">
+                <div class="col-12 text-center">
+                    <p class="footer-text mb-0">
+                        &copy; 2025 Gamely Hub. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="search-modal">
+        <div class="search-modal-backdrop" onclick="closeSearchModal()"></div>
+        <div class="search-modal-content">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <i class="fas fa-search search-icon-input"></i>
+                    <input type="text" id="searchInput" placeholder="Search for games..." autocomplete="off">
+                    <button class="close-search-btn" onclick="closeSearchModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search-body custom-scrollbar">
+                <div id="searchResults" class="search-results">
+                    <div class="search-initial-state">
+                        <i class="fas fa-gamepad fa-3x mb-3 text-muted"></i>
+                        <p>Type to find your favorite games</p>
+                        <div class="search-tags mt-3">
+                            <!-- Categories removed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/games-data.js"></script>
+    <script src="../public/search.js"></script>
+    <script src="../public/nav-highlight.js"></script>
+    <!-- Blog Data -->
+    <script src="../public/blog-data.js"></script>
+
+    <script>
+        // Load and display blog posts
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentFilter = 'all';
+
+            function renderFeaturedPost() {
+                const featuredPosts = getFeaturedPosts();
+                if (featuredPosts.length === 0) return;
+
+                const post = featuredPosts[0];
+                const author = blogAuthors[post.author];
+
+                const html = `
+                    <div class="featured-post position-relative">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i>
+                            Featured
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <img src="${post.thumbnail}" alt="${post.title}" class="featured-post-image" 
+                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23f1f5f9%22 width=%22800%22 height=%22400%22/%3E%3Ctext fill=%22%2364748b%22 font-family=%22Arial%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E${post.title}%3C/text%3E%3C/svg%3E'">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-4 p-lg-5">
+                                    <span class="blog-category">${post.category}</span>
+                                    <h2 class="blog-title mb-3">
+                                        <a href="blog-post.html?id=${post.id}">${post.title}</a>
+                                    </h2>
+                                    <p class="blog-excerpt">${post.excerpt}</p>
+                                    <div class="blog-meta">
+                                        <a href="author.html?id=${author.id}" class="blog-author">
+                                            <img src="${author.avatar}" alt="${author.name}" class="blog-author-avatar"
+                                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22%3E%3Ccircle fill=%22%236366f1%22 cx=%2216%22 cy=%2216%22 r=%2216%22/%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E${author.name.charAt(0)}%3C/text%3E%3C/svg%3E'">
+                                            <span>${author.name}</span>
+                                        </a>
+                                        <span class="blog-date">
+                                            <i class="far fa-calendar"></i>
+                                            ${formatDate(post.publishDate)}
+                                        </span>
+                                        <span class="blog-read-time">
+                                            <i class="far fa-clock"></i>
+                                            ${post.readTime}
+                                        </span>
+                                    </div>
+                                    <a href="blog-post.html?id=${post.id}" class="btn btn-primary mt-3">
+                                        Read More <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                document.getElementById('featuredPostContainer').innerHTML = html;
+            }
+
+            function renderBlogPosts(category = 'all') {
+                const container = document.getElementById('blogPostsContainer');
+                const noResults = document.getElementById('noResultsMessage');
+
+                let posts = category === 'all'
+                    ? getAllBlogPosts()
+                    : getPostsByCategory(category);
+
+                // Exclude featured post from regular grid
+                const featuredPosts = getFeaturedPosts();
+                if (featuredPosts.length > 0) {
+                    posts = posts.filter(p => p.id !== featuredPosts[0].id);
+                }
+
+                if (posts.length === 0) {
+                    container.innerHTML = '';
+                    noResults.style.display = 'block';
+                    return;
+                }
+
+                noResults.style.display = 'none';
+
+                const html = posts.map(post => {
+                    const author = blogAuthors[post.author];
+                    return `
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="blog-card">
+                                <a href="blog-post.html?id=${post.id}">
+                                    <img src="${post.thumbnail}" alt="${post.title}" class="blog-card-image"
+                                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22%3E%3Crect fill=%22%23f1f5f9%22 width=%22400%22 height=%22220%22/%3E%3Ctext fill=%22%2364748b%22 font-family=%22Arial%22 font-size=%2216%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E${post.title}%3C/text%3E%3C/svg%3E'">
+                                </a>
+                                <div class="blog-card-body">
+                                    <span class="blog-category">${post.category}</span>
+                                    <h3 class="blog-title">
+                                        <a href="blog-post.html?id=${post.id}">${post.title}</a>
+                                    </h3>
+                                    <p class="blog-excerpt">${post.excerpt}</p>
+                                    <div class="blog-meta">
+                                        <a href="author.html?id=${author.id}" class="blog-author">
+                                            <img src="${author.avatar}" alt="${author.name}" class="blog-author-avatar"
+                                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22%3E%3Ccircle fill=%22%236366f1%22 cx=%2216%22 cy=%2216%22 r=%2216%22/%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E${author.name.charAt(0)}%3C/text%3E%3C/svg%3E'">
+                                            <span>${author.name}</span>
+                                        </a>
+                                        <span class="blog-read-time">
+                                            <i class="far fa-clock"></i>
+                                            ${post.readTime}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                container.innerHTML = html;
+            }
+
+            function formatDate(dateString) {
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+            }
+
+            // Filter functionality
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const category = this.dataset.category;
+                    currentFilter = category;
+                    renderBlogPosts(category);
+                });
+            });
+
+            // Initial render
+            renderFeaturedPost();
+            renderBlogPosts();
+        });
+    </script>
+</body>
+
+</html>
