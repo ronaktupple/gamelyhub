@@ -5,9 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- DNS Prefetch and Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+    <!-- Google tag (gtag.js) - Deferred for performance -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTFC9DNWHW"></script>
-    <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BTFC9DNWHW'); </script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BTFC9DNWHW');</script>
 
     <!-- google adsense script -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1403172463870891"
@@ -70,6 +79,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/public/images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/public/images/android-chrome-512x512.png">
+
+    <!-- Preload Critical Images -->
+    <link rel="preload" as="image" href="public/images/logo.png" fetchpriority="high">
+    <link rel="preload" as="image" href="public/images/slider/Frame 7.jpg" fetchpriority="high">
+
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -137,17 +151,35 @@
     <!-- Temporarily disabled: <link href="css/cookie-consent.css" rel="stylesheet"> -->
 
     <!-- Note: Google Analytics and AdSense are loaded conditionally after cookie consent -->
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Poppins Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- Bootstrap 5 CSS - Preloaded for critical rendering -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </noscript>
+
+    <!-- Font Awesome - Deferred loading -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </noscript>
+
+    <!-- Poppins Font - Optimized with font-display:swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Custom CSS - Critical -->
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/advertisements.css" rel="stylesheet">
-    <script src="public/games-data.js?v=3"></script>
+    <link href="css/advertisements.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="css/advertisements.css" rel="stylesheet">
+    </noscript>
+    <script src="public/games-data.js?v=3" defer></script>
     <script>
         // Verify gamesData loaded correctly with error handling
         (function () {
@@ -521,7 +553,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="z-index: 100;">
         <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
             <a class="navbar-brand" href="/">
-                <img src="public/images/logo.png" alt="Gamely Hub" style="height: 58px;">
+                <img src="public/images/logo.png" alt="Gamely Hub" width="58" height="58">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 title="Toggle navigation">
@@ -597,7 +629,8 @@
                     <div class="carousel-inner rounded">
                         <div class="carousel-item active">
                             <a href="pages/game_detail_play.html?game=gemcandycrush">
-                                <img src="public/images/slider/Frame 7.jpg" class="d-block w-100" alt="Subway Surfers">
+                                <img src="public/images/slider/Frame 7.jpg" class="d-block w-100" alt="Gem Candy Crush"
+                                    width="1200" height="400" fetchpriority="high">
                                 <div class="carousel-caption">
                                     <!-- <div class="btn btn-primary mt-4">Play Now</div> -->
                                 </div>
@@ -606,7 +639,8 @@
                         </div>
                         <div class="carousel-item ">
                             <a href="pages/game_detail_play.html?game=8ballbilliards">
-                                <img src="public/images/slider/Frame 13.jpg" class="d-block w-100" alt="Cookie Clicker">
+                                <img src="public/images/slider/Frame 13.jpg" class="d-block w-100"
+                                    alt="8 Ball Billiards" width="1200" height="400" loading="lazy">
                                 <div class="carousel-caption">
                                     <!-- <div class="btn btn-primary mt-4">Play Now</div> -->
                                 </div>
@@ -615,7 +649,8 @@
                         </div>
                         <div class="carousel-item">
                             <a href="pages/game_detail_play.html?game=vikingway">
-                                <img src="public/images/slider/Frame 12.jpg" class="d-block w-100" alt="2048">
+                                <img src="public/images/slider/Frame 12.jpg" class="d-block w-100" alt="Viking Way"
+                                    width="1200" height="400" loading="lazy">
                                 <div class="carousel-caption">
                                     <!-- <div class="btn btn-primary mt-4">Play Now</div> -->
                                 </div>
@@ -624,7 +659,8 @@
                         </div>
                         <div class="carousel-item">
                             <a href="pages/game_detail_play.html?game=unparkjam">
-                                <img src="public/images/slider/Frame 11.jpg" class="d-block w-100" alt="Pacman">
+                                <img src="public/images/slider/Frame 11.jpg" class="d-block w-100" alt="Unpark Jam"
+                                    width="1200" height="400" loading="lazy">
                                 <div class="carousel-caption">
                                     <!-- <div class="btn btn-primary mt-4">Play Now</div> -->
                                 </div>
@@ -719,7 +755,7 @@
                 <!-- Brand Column -->
                 <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <h5 class="mb-3">
-                        <img src="public/images/logo.png" alt="Gamely Hub" style="height: 90px;">
+                        <img src="public/images/logo.png" alt="Gamely Hub" width="90" height="90">
                     </h5>
                     <p class="footer-text mb-3">
                         Your ultimate gaming destination. Play the best free online games anytime, anywhere.
@@ -801,8 +837,8 @@
         </div>
     </footer>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Bundle with Popper - Deferred -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <!-- Search Modal -->
     <div id="searchModal" class="search-modal">
@@ -831,7 +867,7 @@
         </div>
     </div>
 
-    <script src="public/search.js"></script>
+    <script src="public/search.js" defer></script>
 
     <!-- Game Loader Script -->
     <script>
@@ -859,7 +895,7 @@
             }
         });
     </script>
-    <script src="public/game-loader.js"></script>
+    <script src="public/game-loader.js" defer></script>
 
     <!-- Temporarily hidden: Casino Games Data for Home Page
     <script src="public/casino-games-data.js"></script>
@@ -987,9 +1023,9 @@
             });
         });
     </script>
-    <script id="dhws-dataInjector" src="public/dhws-data-injector.js"></script>
+    <script id="dhws-dataInjector" src="public/dhws-data-injector.js" defer></script>
     <!-- Navigation Highlight Script -->
-    <script src="public/nav-highlight.js"></script>
+    <script src="public/nav-highlight.js" defer></script>
     <!-- Cookie Consent Banner - Must be loaded last -->
     <!-- Temporarily disabled: <script src="public/cookie-consent.js"></script> -->
 </body>
