@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Cookie Preferences - Gamely Hub | Manage Your Cookie Settings</title>
     <meta name="title" content="Cookie Preferences - Gamely Hub | Manage Your Cookie Settings">
-    <meta name="description" content="Manage your cookie preferences and control how Gamely Hub uses cookies to enhance your browsing experience.">
+    <meta name="description"
+        content="Manage your cookie preferences and control how Gamely Hub uses cookies to enhance your browsing experience.">
     <meta name="keywords" content="cookie preferences, cookie settings, manage cookies, privacy settings, GDPR">
     <meta name="author" content="Gamely Hub">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#6366f1">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://gamelyhub.com/pages/cookie-preferences.html">
-    
+
     <!-- Favicon and Icons -->
     <link rel="icon" type="image/x-icon" href="../public/images/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="../public/images/favicon-16x16.png">
@@ -24,19 +25,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../public/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../public/images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../public/images/android-chrome-512x512.png">
-    
+
     <!-- Cookie Consent CSS -->
     <!-- Temporarily disabled: <link href="../css/cookie-consent.css" rel="stylesheet"> -->
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet">
-    
+
     <style>
         /* Container larger width - consistent for header, main, and footer */
         .container-fluid {
@@ -73,7 +75,8 @@
             margin-top: 4rem;
         }
 
-        .footer h5, .footer h6 {
+        .footer h5,
+        .footer h6 {
             color: var(--text-primary);
             font-weight: 600;
             margin-bottom: 1rem;
@@ -138,25 +141,25 @@
             padding: 1.5rem;
             margin-bottom: 1rem;
         }
-        
+
         .cookie-toggle {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        
+
         .form-switch .form-check-input {
             width: 3rem;
             height: 1.5rem;
             cursor: pointer;
         }
-        
+
         .cookie-description {
             color: var(--text-secondary);
             font-size: 0.9rem;
             margin-top: 0.5rem;
         }
-        
+
         .alert {
             border-radius: 0.5rem;
         }
@@ -192,7 +195,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="search_discovery.html">
+                        <a class="nav-link" href="#" onclick="openSearchModal(event)">
                             <i class="fas fa-search me-1"></i>Search
                         </a>
                     </li>
@@ -210,7 +213,8 @@
                         <i class="fas fa-cookie-bite me-2"></i>Cookie Preferences
                     </h1>
                     <p class="text-center text-text-secondary mb-5">
-                        Manage your cookie preferences and control how we use cookies to enhance your browsing experience.
+                        Manage your cookie preferences and control how we use cookies to enhance your browsing
+                        experience.
                     </p>
 
                     <!-- Alert Messages -->
@@ -291,8 +295,6 @@
                     <h6 class="mb-3">Pages</h6>
                     <ul class="list-unstyled footer-links-list">
                         <li><a href="../" class="footer-link">Home</a></li>
-                        <li><a href="game_categories.html" class="footer-link">Categories</a></li>
-                        <li><a href="search_discovery.html" class="footer-link">Search & Discovery</a></li>
                         <li><a href="about.html" class="footer-link">About Us</a></li>
                         <li><a href="contact.html" class="footer-link">Contact</a></li>
                     </ul>
@@ -302,8 +304,10 @@
                 <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
                     <h6 class="mb-3">Recent Games</h6>
                     <ul class="list-unstyled footer-links-list">
-                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway Surfers</a></li>
-                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a>
+                        </li>
                         <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
                         <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
                         <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
@@ -315,8 +319,10 @@
                 <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
                     <h6 class="mb-3">Popular Games</h6>
                     <ul class="list-unstyled footer-links-list">
-                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway Surfers</a></li>
-                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a>
+                        </li>
                         <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
                         <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
                         <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
@@ -330,9 +336,11 @@
                     <ul class="list-unstyled footer-links-list">
                         <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
                         <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                        <!-- Temporarily hidden: Cookie-related pages
                         <li><a href="cookie-policy.html" class="footer-link">Cookie Policy</a></li>
                         <li><a href="cookie-preferences.html" class="footer-link">Cookie Settings</a></li>
                         <li><a href="data-rights-request.html" class="footer-link">Data Rights</a></li>
+                        -->
                         <li><a href="contact.html" class="footer-link">Support</a></li>
                     </ul>
                 </div>
@@ -354,22 +362,22 @@
     <!-- Navigation Highlight Script -->
     <script src="../public/nav-highlight.js"></script>
     <!-- Temporarily disabled: <script src="../public/cookie-consent.js"></script> -->
-    
+
     <script>
         // Load current preferences
         function loadPreferences() {
             const consentData = window.getCookieConsentData();
             const categories = window.COOKIE_CATEGORIES;
             const container = document.getElementById('cookieCategories');
-            
+
             container.innerHTML = '';
-            
+
             Object.keys(categories).forEach(categoryKey => {
                 const category = categories[categoryKey];
-                const isEnabled = consentData ? 
-                    (categoryKey === 'necessary' ? true : (consentData.categories && consentData.categories[categoryKey])) : 
+                const isEnabled = consentData ?
+                    (categoryKey === 'necessary' ? true : (consentData.categories && consentData.categories[categoryKey])) :
                     category.enabled;
-                
+
                 const categoryDiv = document.createElement('div');
                 categoryDiv.className = 'cookie-category';
                 categoryDiv.innerHTML = `
@@ -400,33 +408,33 @@
                 analytics: document.getElementById('cookie-analytics').checked,
                 marketing: document.getElementById('cookie-marketing').checked
             };
-            
+
             window.saveCookieConsent(categories);
-            
+
             // Reload page to apply changes
             setTimeout(() => {
                 window.location.reload();
             }, 1000);
-            
+
             showAlert('successAlert');
         }
 
         // Accept all
-        document.getElementById('acceptAll').addEventListener('click', function() {
+        document.getElementById('acceptAll').addEventListener('click', function () {
             document.getElementById('cookie-analytics').checked = true;
             document.getElementById('cookie-marketing').checked = true;
             savePreferences();
         });
 
         // Reject all (necessary only)
-        document.getElementById('rejectAll').addEventListener('click', function() {
+        document.getElementById('rejectAll').addEventListener('click', function () {
             document.getElementById('cookie-analytics').checked = false;
             document.getElementById('cookie-marketing').checked = false;
             savePreferences();
         });
 
         // Withdraw all consent
-        document.getElementById('withdrawConsent').addEventListener('click', function() {
+        document.getElementById('withdrawConsent').addEventListener('click', function () {
             if (confirm('Are you sure you want to withdraw all consent? This will disable all non-necessary cookies.')) {
                 window.withdrawCookieConsent();
                 setTimeout(() => {
@@ -451,7 +459,149 @@
         // Initialize on load
         document.addEventListener('DOMContentLoaded', loadPreferences);
     </script>
+    <!-- Games Data -->
+    <script src="../public/games-data.js?v=3"></script>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="search-modal">
+        <div class="search-modal-backdrop" onclick="closeSearchModal()"></div>
+        <div class="search-modal-content">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <i class="fas fa-search search-icon-input"></i>
+                    <input type="text" id="searchInput" placeholder="Search for games..." autocomplete="off">
+                    <button class="close-search-btn" onclick="closeSearchModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search-body custom-scrollbar">
+                <div id="searchResults" class="search-results">
+                    <div class="search-initial-state">
+                        <i class="fas fa-gamepad fa-3x mb-3 text-muted"></i>
+                        <p>Type to find your favorite games</p>
+                        <div class="search-tags mt-3">
+                            <!-- Categories removed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Define isInPages for the search modal script
+        const isInPages = true;
+
+        function openSearchModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('searchModal').classList.add('active');
+            setTimeout(() => document.getElementById('searchInput').focus(), 100);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSearchModal() {
+            document.getElementById('searchModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function setSearch(term) {
+            const input = document.getElementById('searchInput');
+            input.value = term;
+            input.dispatchEvent(new Event('input'));
+            input.focus();
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeSearchModal();
+        });
+
+        document.getElementById('searchInput').addEventListener('input', function (e) {
+            const query = e.target.value.toLowerCase().trim();
+            const resultsContainer = document.getElementById('searchResults');
+
+            if (query.length < 1) {
+                resultsContainer.innerHTML = `
+                    <div class="search-initial-state">
+                        <i class="fas fa-gamepad fa-3x mb-3 text-muted"></i>
+                        <p>Type to find your favorite games</p>
+                        <div class="search-tags mt-3">
+                            <!-- Categories removed -->
+                        </div>
+                    </div>`;
+                return;
+            }
+
+            let results = [];
+            if (typeof gamesData !== 'undefined') {
+                results = Object.values(gamesData).filter(game => {
+                    if (!game || typeof game !== 'object' || Array.isArray(game)) return false;
+                    if (!game.title) return false;
+
+                    const titleMatch = game.title.toLowerCase().includes(query);
+                    const descMatch = game.description && game.description.toLowerCase().includes(query);
+                    const catMatch = game.categories && game.categories.some(cat => cat.toLowerCase().includes(query));
+
+                    return titleMatch || descMatch || catMatch;
+                });
+            }
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="search-no-results">
+                        <i class="fas fa-ghost fa-3x mb-3 text-muted"></i>
+                        <p>No games found matching "${e.target.value}"</p>
+                    </div>`;
+                return;
+            }
+
+            let html = '<div class="search-results-list">';
+            results.forEach(game => {
+                let thumb = game.thumbnail;
+                // Adjust thumbnail path for search results in pages/
+                if (!thumb || thumb.trim() === "") {
+                    thumb = '../public/images/gam-thumb.png';
+                } else {
+                    if (thumb.startsWith('../public/')) {
+                        thumb = thumb;
+                    } else if (thumb.startsWith('public/')) {
+                        thumb = '../' + thumb;
+                    } else {
+                        if (!thumb.includes('public/')) {
+                            thumb = '../public/' + thumb;
+                        } else if (!thumb.startsWith('../')) {
+                            thumb = '../' + thumb;
+                        }
+                    }
+                }
+
+                html += `
+                    <a href="game_detail_play.html?game=${game.id}" class="search-result-item" onclick="closeSearchModal()">
+                        <div class="search-result-thumb">
+                            <img src="${thumb}" alt="${game.title}" onerror="this.src='../public/images/logo.png'">
+                        </div>
+                        <div class="search-result-info">
+                            <div class="search-result-title">
+                                ${game.title}
+                                ${game.rating ? `<span class="search-result-rating"><i class="fas fa-star text-warning"></i> ${game.rating}</span>` : ''}
+                            </div>
+                            <div class="search-result-desc">${game.description || ''}</div>
+                            <!-- Categories removed from search results
+                            <div class="search-result-meta">
+                                ${game.categories ? game.categories.map(c => `<span class="search-result-tag">${c}</span>`).join('') : ''}
+                            </div>
+                            -->
+                        </div>
+                        <div class="search-result-action">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </a>
+                `;
+            });
+            html += '</div>';
+            resultsContainer.innerHTML = html;
+        });
+    </script>
 </body>
 
 </html>
-

@@ -4,41 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Contact Us - Gamely Hub | Get in Touch</title>
     <meta name="title" content="Contact Us - Gamely Hub | Get in Touch">
-    <meta name="description" content="Contact Gamely Hub for support, game suggestions, bug reports, or general inquiries. We're here to help! Email us at app@gamelyhub.com or use our contact form.">
-    <meta name="keywords" content="contact Gamely Hub, gaming support, game suggestions, bug reports, customer service, gaming help, contact form">
+    <meta name="description"
+        content="Contact Gamely Hub for support, game suggestions, bug reports, or general inquiries. We're here to help! Email us at app@gamelyhub.com or use our contact form.">
+    <meta name="keywords"
+        content="contact Gamely Hub, gaming support, game suggestions, bug reports, customer service, gaming help, contact form">
     <meta name="author" content="Gamely Hub">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     <meta name="theme-color" content="#6366f1">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://gamelyhub.com/pages/contact.html">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gamelyhub.com/pages/contact.html">
     <meta property="og:title" content="Contact Us - Gamely Hub | Get in Touch">
-    <meta property="og:description" content="Contact Gamely Hub for support, game suggestions, bug reports, or general inquiries. We're here to help!">
+    <meta property="og:description"
+        content="Contact Gamely Hub for support, game suggestions, bug reports, or general inquiries. We're here to help!">
     <meta property="og:image" content="https://gamelyhub.com/public/images/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Contact Gamely Hub">
     <meta property="og:site_name" content="Gamely Hub">
     <meta property="og:locale" content="en_US">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gamelyhub.com/pages/contact.html">
     <meta name="twitter:title" content="Contact Us - Gamely Hub | Get in Touch">
-    <meta name="twitter:description" content="Contact Gamely Hub for support, game suggestions, bug reports, or general inquiries. We're here to help!">
+    <meta name="twitter:description"
+        content="Contact Gamely Hub for support, game suggestions, bug reports, or general inquiries. We're here to help!">
     <meta name="twitter:image" content="https://gamelyhub.com/public/images/og-image.jpg">
     <meta name="twitter:image:alt" content="Contact Gamely Hub">
-    
+
     <!-- Additional SEO Tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -46,7 +50,7 @@
     <meta name="application-name" content="Gamely Hub">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    
+
     <!-- Favicon and Icons -->
     <link rel="icon" type="image/x-icon" href="../public/images/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="../public/images/favicon-16x16.png">
@@ -54,7 +58,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../public/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../public/images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../public/images/android-chrome-512x512.png">
-    
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -73,7 +77,7 @@
     </script>
     <!-- Cookie Consent CSS (loads before other styles) -->
     <!-- Temporarily disabled: <link href="../css/cookie-consent.css" rel="stylesheet"> -->
-    
+
     <!-- Note: Google Analytics and AdSense are loaded conditionally after cookie consent -->
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -89,18 +93,22 @@
         .form-control {
             color: var(--light-color) !important;
         }
+
         .form-control:focus {
             background-color: var(--surface-light);
             border-color: var(--primary-color);
             box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
         }
+
         .form-control::placeholder {
             color: var(--gray-400);
         }
+
         .accordion-button:not(.collapsed) {
             background-color: var(--surface-light);
             color: var(--light-color);
         }
+
         .accordion-button:focus {
             border-color: var(--primary-color);
             box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
@@ -141,7 +149,8 @@
             margin-top: 4rem;
         }
 
-        .footer h5, .footer h6 {
+        .footer h5,
+        .footer h6 {
             color: var(--text-primary);
             font-weight: 600;
             margin-bottom: 1rem;
@@ -230,7 +239,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="search_discovery.html">
+                        <a class="nav-link" href="#" onclick="openSearchModal(event)">
                             <i class="fas fa-search me-1"></i>Search
                         </a>
                     </li>
@@ -280,37 +289,37 @@
                     <form>
                         <div class="mb-3">
                             <label for="name" class="form-label">Your Name</label>
-                            <input type="text" class="form-control bg-surface text-text-primary border-border" 
-                                   id="name" placeholder="Enter your name" required>
+                            <input type="text" class="form-control bg-surface text-text-primary border-border" id="name"
+                                placeholder="Enter your name" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Your Email</label>
-                            <input type="email" class="form-control bg-surface text-text-primary border-border" 
-                                   id="email" placeholder="Enter your email" required>
+                            <input type="email" class="form-control bg-surface text-text-primary border-border"
+                                id="email" placeholder="Enter your email" required>
                         </div>
                         <div class="mb-3">
                             <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control bg-surface text-text-primary border-border" 
-                                   id="subject" placeholder="What's this about?" required>
+                            <input type="text" class="form-control bg-surface text-text-primary border-border"
+                                id="subject" placeholder="What's this about?" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Your Message</label>
-                            <textarea class="form-control bg-surface text-text-primary border-border" 
-                                      id="message" rows="5" placeholder="Tell us what's on your mind..." 
-                                      required></textarea>
+                            <textarea class="form-control bg-surface text-text-primary border-border" id="message"
+                                rows="5" placeholder="Tell us what's on your mind..." required></textarea>
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="dataConsent" required>
                             <label class="form-check-label" for="dataConsent">
-                                I agree to the processing of my personal data (name, email, message) as described in the 
-                                <a href="privacy.html" target="_blank">Privacy Policy</a>. 
+                                I agree to the processing of my personal data (name, email, message) as described in the
+                                <a href="privacy.html" target="_blank">Privacy Policy</a>.
                                 <span class="text-danger">*</span>
                             </label>
                         </div>
                         <div class="alert alert-info small mb-3">
                             <i class="fas fa-info-circle me-2"></i>
-                            <strong>Data Processing:</strong> Your personal data will be processed to respond to your inquiry. 
-                            We will retain this data for up to 2 years unless you request deletion earlier. 
+                            <strong>Data Processing:</strong> Your personal data will be processed to respond to your
+                            inquiry.
+                            We will retain this data for up to 2 years unless you request deletion earlier.
                             For more information, see our <a href="privacy.html" target="_blank">Privacy Policy</a>.
                         </div>
                         <button type="submit" class="btn btn-primary w-100">
@@ -377,28 +386,44 @@
                     </h4>
                     <div class="text-text-secondary" style="line-height: 1.8;">
                         <p class="mb-3">
-                            We hold the Intellectual Property Rights (IPR) for many games on Gamely Hub's sites. For certain games, we have obtained licences from known copyright holders. However, for some games, we could not locate copyright information, or it is no longer available due to widespread internet use.
+                            We hold the Intellectual Property Rights (IPR) for many games on Gamely Hub's sites. For
+                            certain games, we have obtained licences from known copyright holders. However, for some
+                            games, we could not locate copyright information, or it is no longer available due to
+                            widespread internet use.
                         </p>
                         <p class="mb-3">
-                            Some games are used under specific conditions, which Gamely Hub has met to the best of our knowledge.
+                            Some games are used under specific conditions, which Gamely Hub has met to the best of our
+                            knowledge.
                         </p>
                         <p class="mb-4">
-                            We do not alter the source code of the games, ensuring that credits, brand names, and website references remain intact. If you believe your copyright or other IPR is being infringed on Gamely Hub's sites, please notify us immediately with the following information:
+                            We do not alter the source code of the games, ensuring that credits, brand names, and
+                            website references remain intact. If you believe your copyright or other IPR is being
+                            infringed on Gamely Hub's sites, please notify us immediately with the following
+                            information:
                         </p>
-                        
-                        <div class="bg-surface-light p-3 rounded mb-4" style="border-left: 4px solid var(--primary-color);">
+
+                        <div class="bg-surface-light p-3 rounded mb-4"
+                            style="border-left: 4px solid var(--primary-color);">
                             <ol class="mb-0 ps-3" style="line-height: 1.8;">
-                                <li class="mb-2">The electronic or physical signature of the IPR owner or an authorised representative.</li>
-                                <li class="mb-2">A description of the IPR that has been infringed and the infringing activity.</li>
-                                <li class="mb-2">The location of the unauthorised copy (e.g., the URL on Gamely Hub's website).</li>
-                                <li class="mb-2">A copy of the licence granting you the right to use and protect the IPR (if you are not the owner).</li>
+                                <li class="mb-2">The electronic or physical signature of the IPR owner or an authorised
+                                    representative.</li>
+                                <li class="mb-2">A description of the IPR that has been infringed and the infringing
+                                    activity.</li>
+                                <li class="mb-2">The location of the unauthorised copy (e.g., the URL on Gamely Hub's
+                                    website).</li>
+                                <li class="mb-2">A copy of the licence granting you the right to use and protect the IPR
+                                    (if you are not the owner).</li>
                                 <li class="mb-2">Your name and full contact details.</li>
-                                <li>A statement affirming your sincere belief that the disputed use is unauthorised.</li>
+                                <li>A statement affirming your sincere belief that the disputed use is unauthorised.
+                                </li>
                             </ol>
                         </div>
-                        
+
                         <p class="mb-0">
-                            Send the above details to <strong><a href="mailto:app@gamelyhub.com" class="text-primary text-decoration-none">app@gamelyhub.com</a></strong>. We will review your submission and take action as soon as possible, responding to any queries within <strong>7 days</strong>.
+                            Send the above details to <strong><a href="mailto:app@gamelyhub.com"
+                                    class="text-primary text-decoration-none">app@gamelyhub.com</a></strong>. We will
+                            review your submission and take action as soon as possible, responding to any queries within
+                            <strong>7 days</strong>.
                         </p>
                     </div>
                 </div>
@@ -439,8 +464,6 @@
                     <h6 class="mb-3">Pages</h6>
                     <ul class="list-unstyled footer-links-list">
                         <li><a href="../" class="footer-link">Home</a></li>
-                        <li><a href="game_categories.html" class="footer-link">Categories</a></li>
-                        <li><a href="search_discovery.html" class="footer-link">Search & Discovery</a></li>
                         <li><a href="about.html" class="footer-link">About Us</a></li>
                         <li><a href="contact.html" class="footer-link">Contact</a></li>
                     </ul>
@@ -450,8 +473,10 @@
                 <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
                     <h6 class="mb-3">Recent Games</h6>
                     <ul class="list-unstyled footer-links-list">
-                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway Surfers</a></li>
-                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a>
+                        </li>
                         <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
                         <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
                         <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
@@ -463,8 +488,10 @@
                 <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
                     <h6 class="mb-3">Popular Games</h6>
                     <ul class="list-unstyled footer-links-list">
-                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway Surfers</a></li>
-                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a>
+                        </li>
                         <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
                         <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
                         <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
@@ -472,18 +499,20 @@
                     </ul>
                 </div>
 
-                    <!-- Legal & Support Column -->
-                    <div class="col-6 col-md-3 col-lg-3 mb-4 mb-lg-0">
-                        <h6 class="mb-3">Legal & Support</h6>
-                        <ul class="list-unstyled footer-links-list">
-                            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
-                            <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
-                            <li><a href="cookie-policy.html" class="footer-link">Cookie Policy</a></li>
-                            <li><a href="cookie-preferences.html" class="footer-link">Cookie Settings</a></li>
-                            <li><a href="data-rights-request.html" class="footer-link">Data Rights</a></li>
-                            <li><a href="contact.html" class="footer-link">Support</a></li>
-                        </ul>
-                    </div>
+                <!-- Legal & Support Column -->
+                <div class="col-6 col-md-3 col-lg-3 mb-4 mb-lg-0">
+                    <h6 class="mb-3">Legal & Support</h6>
+                    <ul class="list-unstyled footer-links-list">
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                        <!-- Temporarily hidden: Cookie-related pages
+                        <li><a href="cookie-policy.html" class="footer-link">Cookie Policy</a></li>
+                        <li><a href="cookie-preferences.html" class="footer-link">Cookie Settings</a></li>
+                        <li><a href="data-rights-request.html" class="footer-link">Data Rights</a></li>
+                        -->
+                        <li><a href="contact.html" class="footer-link">Support</a></li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Footer Bottom -->
@@ -501,24 +530,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
+        document.querySelector('form').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
+
             // Clear the form first
             this.reset();
-            
+
             // Create mailto link
             const mailtoLink = `mailto:app@gamelyhub.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
-            
+
             // Show success message
             alert('Thank you for contacting us! Your email client should open automatically. We will get back to you soon.');
-            
+
             // Open email client
             window.location.href = mailtoLink;
         });
@@ -528,7 +557,149 @@
     <script src="../public/nav-highlight.js"></script>
     <!-- Cookie Consent Banner - Must be loaded last -->
     <!-- Temporarily disabled: <script src="../public/cookie-consent.js"></script> -->
+    <!-- Games Data -->
+    <script src="../public/games-data.js?v=3"></script>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="search-modal">
+        <div class="search-modal-backdrop" onclick="closeSearchModal()"></div>
+        <div class="search-modal-content">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <i class="fas fa-search search-icon-input"></i>
+                    <input type="text" id="searchInput" placeholder="Search for games..." autocomplete="off">
+                    <button class="close-search-btn" onclick="closeSearchModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search-body custom-scrollbar">
+                <div id="searchResults" class="search-results">
+                    <div class="search-initial-state">
+                        <i class="fas fa-gamepad fa-3x mb-3 text-muted"></i>
+                        <p>Type to find your favorite games</p>
+                        <div class="search-tags mt-3">
+                            <!-- Categories removed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Define isInPages for the search modal script
+        const isInPages = true;
+
+        function openSearchModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('searchModal').classList.add('active');
+            setTimeout(() => document.getElementById('searchInput').focus(), 100);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSearchModal() {
+            document.getElementById('searchModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function setSearch(term) {
+            const input = document.getElementById('searchInput');
+            input.value = term;
+            input.dispatchEvent(new Event('input'));
+            input.focus();
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeSearchModal();
+        });
+
+        document.getElementById('searchInput').addEventListener('input', function (e) {
+            const query = e.target.value.toLowerCase().trim();
+            const resultsContainer = document.getElementById('searchResults');
+
+            if (query.length < 1) {
+                resultsContainer.innerHTML = `
+                    <div class="search-initial-state">
+                        <i class="fas fa-gamepad fa-3x mb-3 text-muted"></i>
+                        <p>Type to find your favorite games</p>
+                        <div class="search-tags mt-3">
+                            <!-- Categories removed -->
+                        </div>
+                    </div>`;
+                return;
+            }
+
+            let results = [];
+            if (typeof gamesData !== 'undefined') {
+                results = Object.values(gamesData).filter(game => {
+                    if (!game || typeof game !== 'object' || Array.isArray(game)) return false;
+                    if (!game.title) return false;
+
+                    const titleMatch = game.title.toLowerCase().includes(query);
+                    const descMatch = game.description && game.description.toLowerCase().includes(query);
+                    const catMatch = game.categories && game.categories.some(cat => cat.toLowerCase().includes(query));
+
+                    return titleMatch || descMatch || catMatch;
+                });
+            }
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="search-no-results">
+                        <i class="fas fa-ghost fa-3x mb-3 text-muted"></i>
+                        <p>No games found matching "${e.target.value}"</p>
+                    </div>`;
+                return;
+            }
+
+            let html = '<div class="search-results-list">';
+            results.forEach(game => {
+                let thumb = game.thumbnail;
+                // Adjust thumbnail path for search results in pages/
+                if (!thumb || thumb.trim() === "") {
+                    thumb = '../public/images/gam-thumb.png';
+                } else {
+                    if (thumb.startsWith('../public/')) {
+                        thumb = thumb;
+                    } else if (thumb.startsWith('public/')) {
+                        thumb = '../' + thumb;
+                    } else {
+                        if (!thumb.includes('public/')) {
+                            thumb = '../public/' + thumb;
+                        } else if (!thumb.startsWith('../')) {
+                            thumb = '../' + thumb;
+                        }
+                    }
+                }
+
+                html += `
+                    <a href="game_detail_play.html?game=${game.id}" class="search-result-item" onclick="closeSearchModal()">
+                        <div class="search-result-thumb">
+                            <img src="${thumb}" alt="${game.title}" onerror="this.src='../public/images/logo.png'">
+                        </div>
+                        <div class="search-result-info">
+                            <div class="search-result-title">
+                                ${game.title}
+                                ${game.rating ? `<span class="search-result-rating"><i class="fas fa-star text-warning"></i> ${game.rating}</span>` : ''}
+                            </div>
+                            <div class="search-result-desc">${game.description || ''}</div>
+                            <!-- Categories removed from search results
+                            <div class="search-result-meta">
+                                ${game.categories ? game.categories.map(c => `<span class="search-result-tag">${c}</span>`).join('') : ''}
+                            </div>
+                            -->
+                        </div>
+                        <div class="search-result-action">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </a>
+                `;
+            });
+            html += '</div>';
+            resultsContainer.innerHTML = html;
+        });
+    </script>
 </body>
 
 </html>
-

@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Data Rights Request - Gamely Hub | Exercise Your GDPR Rights</title>
     <meta name="title" content="Data Rights Request - Gamely Hub | Exercise Your GDPR Rights">
-    <meta name="description" content="Exercise your data protection rights under GDPR. Request access, correction, deletion, or portability of your personal data.">
+    <meta name="description"
+        content="Exercise your data protection rights under GDPR. Request access, correction, deletion, or portability of your personal data.">
     <meta name="keywords" content="data rights, GDPR, data access, data deletion, privacy rights, data portability">
     <meta name="author" content="Gamely Hub">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#6366f1">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://gamelyhub.com/pages/data-rights-request.html">
-    
+
     <!-- Favicon and Icons -->
     <link rel="icon" type="image/x-icon" href="../public/images/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="../public/images/favicon-16x16.png">
@@ -24,19 +25,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../public/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../public/images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../public/images/android-chrome-512x512.png">
-    
+
     <!-- Cookie Consent CSS -->
     <!-- Temporarily disabled: <link href="../css/cookie-consent.css" rel="stylesheet"> -->
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet">
-    
+
     <style>
         /* Container larger width - consistent for header, main, and footer */
         .container-fluid {
@@ -73,7 +75,8 @@
             margin-top: 4rem;
         }
 
-        .footer h5, .footer h6 {
+        .footer h5,
+        .footer h6 {
             color: var(--text-primary);
             font-weight: 600;
             margin-bottom: 1rem;
@@ -139,16 +142,16 @@
             margin-bottom: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .right-card:hover {
             border-color: var(--primary-color);
             box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
         }
-        
+
         .form-control {
             color: var(--light-color) !important;
         }
-        
+
         .form-control:focus {
             background-color: var(--surface-light);
             border-color: var(--primary-color);
@@ -186,7 +189,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="search_discovery.html">
+                        <a class="nav-link" href="#" onclick="openSearchModal(event)">
                             <i class="fas fa-search me-1"></i>Search
                         </a>
                     </li>
@@ -204,7 +207,8 @@
                         <i class="fas fa-user-shield me-2"></i>Data Rights Request
                     </h1>
                     <p class="text-center text-text-secondary mb-5">
-                        Under the General Data Protection Regulation (GDPR), you have several rights regarding your personal data. 
+                        Under the General Data Protection Regulation (GDPR), you have several rights regarding your
+                        personal data.
                         Use this form to exercise your rights.
                     </p>
 
@@ -227,25 +231,29 @@
                             <div class="col-12 col-md-6">
                                 <div class="right-card">
                                     <h5><i class="fas fa-trash text-primary me-2"></i>Right to Erasure</h5>
-                                    <p class="small mb-0">Request deletion of your personal data ("right to be forgotten").</p>
+                                    <p class="small mb-0">Request deletion of your personal data ("right to be
+                                        forgotten").</p>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="right-card">
                                     <h5><i class="fas fa-ban text-primary me-2"></i>Right to Object</h5>
-                                    <p class="small mb-0">Object to processing of your personal data for specific purposes.</p>
+                                    <p class="small mb-0">Object to processing of your personal data for specific
+                                        purposes.</p>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="right-card">
                                     <h5><i class="fas fa-pause text-primary me-2"></i>Right to Restriction</h5>
-                                    <p class="small mb-0">Request restriction of processing in certain circumstances.</p>
+                                    <p class="small mb-0">Request restriction of processing in certain circumstances.
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="right-card">
                                     <h5><i class="fas fa-download text-primary me-2"></i>Right to Portability</h5>
-                                    <p class="small mb-0">Receive your data in a structured, machine-readable format.</p>
+                                    <p class="small mb-0">Receive your data in a structured, machine-readable format.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -256,8 +264,10 @@
                         <h3 class="mb-4">Submit a Data Rights Request</h3>
                         <form id="dataRightsForm">
                             <div class="mb-3">
-                                <label for="requestType" class="form-label">Request Type <span class="text-danger">*</span></label>
-                                <select class="form-control bg-surface text-text-primary border-border" id="requestType" required>
+                                <label for="requestType" class="form-label">Request Type <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-control bg-surface text-text-primary border-border" id="requestType"
+                                    required>
                                     <option value="">Select a request type...</option>
                                     <option value="access">Right of Access - Request my data</option>
                                     <option value="rectification">Right to Rectification - Correct my data</option>
@@ -269,30 +279,33 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control bg-surface text-text-primary border-border" 
-                                       id="name" placeholder="Enter your full name" required>
+                                <label for="name" class="form-label">Full Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control bg-surface text-text-primary border-border"
+                                    id="name" placeholder="Enter your full name" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control bg-surface text-text-primary border-border" 
-                                       id="email" placeholder="Enter your email address" required>
+                                <label for="email" class="form-label">Email Address <span
+                                        class="text-danger">*</span></label>
+                                <input type="email" class="form-control bg-surface text-text-primary border-border"
+                                    id="email" placeholder="Enter your email address" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="details" class="form-label">Request Details <span class="text-danger">*</span></label>
-                                <textarea class="form-control bg-surface text-text-primary border-border" 
-                                          id="details" rows="5" 
-                                          placeholder="Please provide details about your request. For data access requests, specify what information you need. For correction requests, indicate what data needs to be corrected and provide the correct information." 
-                                          required></textarea>
+                                <label for="details" class="form-label">Request Details <span
+                                        class="text-danger">*</span></label>
+                                <textarea class="form-control bg-surface text-text-primary border-border" id="details"
+                                    rows="5"
+                                    placeholder="Please provide details about your request. For data access requests, specify what information you need. For correction requests, indicate what data needs to be corrected and provide the correct information."
+                                    required></textarea>
                             </div>
 
                             <div class="mb-3">
                                 <label for="verification" class="form-label">Verification Information</label>
-                                <textarea class="form-control bg-surface text-text-primary border-border" 
-                                          id="verification" rows="3" 
-                                          placeholder="To help us verify your identity, please provide any additional information that may help us confirm you are the data subject (e.g., approximate date of account creation, last activity, etc.)."></textarea>
+                                <textarea class="form-control bg-surface text-text-primary border-border"
+                                    id="verification" rows="3"
+                                    placeholder="To help us verify your identity, please provide any additional information that may help us confirm you are the data subject (e.g., approximate date of account creation, last activity, etc.)."></textarea>
                                 <small class="form-text text-muted">
                                     This information helps us verify your identity and process your request securely.
                                 </small>
@@ -301,9 +314,11 @@
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="privacyConsent" required>
                                 <label class="form-check-label" for="privacyConsent">
-                                    I confirm that I am the data subject or have legal authority to make this request on their behalf. 
-                                    I understand that this request will be processed in accordance with the 
-                                    <a href="privacy.html" target="_blank">Privacy Policy</a>. <span class="text-danger">*</span>
+                                    I confirm that I am the data subject or have legal authority to make this request on
+                                    their behalf.
+                                    I understand that this request will be processed in accordance with the
+                                    <a href="privacy.html" target="_blank">Privacy Policy</a>. <span
+                                        class="text-danger">*</span>
                                 </label>
                             </div>
 
@@ -317,10 +332,12 @@
                     <div class="alert alert-info">
                         <h5 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Important Information</h5>
                         <ul class="mb-0">
-                            <li>We will respond to your request within <strong>30 days</strong> as required by GDPR.</li>
+                            <li>We will respond to your request within <strong>30 days</strong> as required by GDPR.
+                            </li>
                             <li>We may need to verify your identity before processing your request.</li>
                             <li>Some requests may be subject to legal exceptions or limitations.</li>
-                            <li>For urgent requests, please contact us directly at <a href="mailto:app@gamelyhub.com">app@gamelyhub.com</a>.</li>
+                            <li>For urgent requests, please contact us directly at <a
+                                    href="mailto:app@gamelyhub.com">app@gamelyhub.com</a>.</li>
                         </ul>
                     </div>
 
@@ -375,8 +392,6 @@
                     <h6 class="mb-3">Pages</h6>
                     <ul class="list-unstyled footer-links-list">
                         <li><a href="../" class="footer-link">Home</a></li>
-                        <li><a href="game_categories.html" class="footer-link">Categories</a></li>
-                        <li><a href="search_discovery.html" class="footer-link">Search & Discovery</a></li>
                         <li><a href="about.html" class="footer-link">About Us</a></li>
                         <li><a href="contact.html" class="footer-link">Contact</a></li>
                     </ul>
@@ -386,8 +401,10 @@
                 <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
                     <h6 class="mb-3">Recent Games</h6>
                     <ul class="list-unstyled footer-links-list">
-                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway Surfers</a></li>
-                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a>
+                        </li>
                         <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
                         <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
                         <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
@@ -399,8 +416,10 @@
                 <div class="col-6 col-md-3 col-lg-2 mb-4 mb-lg-0">
                     <h6 class="mb-3">Popular Games</h6>
                     <ul class="list-unstyled footer-links-list">
-                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway Surfers</a></li>
-                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a></li>
+                        <li><a href="game_detail_play.html?game=subwaysurferssingapore" class="footer-link">Subway
+                                Surfers</a></li>
+                        <li><a href="game_detail_play.html?game=cookieclicker" class="footer-link">Cookie Clicker</a>
+                        </li>
                         <li><a href="game_detail_play.html?game=2048" class="footer-link">2048</a></li>
                         <li><a href="game_detail_play.html?game=pacman" class="footer-link">Pacman</a></li>
                         <li><a href="game_detail_play.html?game=hextris" class="footer-link">Hextris</a></li>
@@ -414,9 +433,11 @@
                     <ul class="list-unstyled footer-links-list">
                         <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
                         <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                        <!-- Temporarily hidden: Cookie-related pages
                         <li><a href="cookie-policy.html" class="footer-link">Cookie Policy</a></li>
                         <li><a href="cookie-preferences.html" class="footer-link">Cookie Settings</a></li>
                         <li><a href="data-rights-request.html" class="footer-link">Data Rights</a></li>
+                        -->
                         <li><a href="contact.html" class="footer-link">Support</a></li>
                     </ul>
                 </div>
@@ -438,18 +459,18 @@
     <!-- Navigation Highlight Script -->
     <script src="../public/nav-highlight.js"></script>
     <!-- Temporarily disabled: <script src="../public/cookie-consent.js"></script> -->
-    
+
     <script>
         // Form submission handler
-        document.getElementById('dataRightsForm').addEventListener('submit', function(e) {
+        document.getElementById('dataRightsForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const requestType = document.getElementById('requestType').value;
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const details = document.getElementById('details').value;
             const verification = document.getElementById('verification').value;
-            
+
             // Create email subject and body
             const requestTypeNames = {
                 'access': 'Right of Access - Data Request',
@@ -459,7 +480,7 @@
                 'restriction': 'Right to Restriction - Processing Restriction',
                 'portability': 'Right to Portability - Data Export'
             };
-            
+
             const subject = `GDPR Data Rights Request: ${requestTypeNames[requestType]}`;
             const body = `Dear Gamely Hub Data Protection Team,
 
@@ -481,21 +502,163 @@ Thank you for your prompt attention to this matter.
 
 Best regards,
 ${name}`;
-            
+
             // Create mailto link
             const mailtoLink = `mailto:app@gamelyhub.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
+
             // Show confirmation
             alert('Thank you for your data rights request. Your email client will open with a pre-filled message. Please review and send the email to complete your request. We will respond within 30 days as required by GDPR.');
-            
+
             // Open email client
             window.location.href = mailtoLink;
-            
+
             // Reset form
             this.reset();
+        });
+    </script>
+    <!-- Games Data -->
+    <script src="../public/games-data.js?v=3"></script>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="search-modal">
+        <div class="search-modal-backdrop" onclick="closeSearchModal()"></div>
+        <div class="search-modal-content">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <i class="fas fa-search search-icon-input"></i>
+                    <input type="text" id="searchInput" placeholder="Search for games..." autocomplete="off">
+                    <button class="close-search-btn" onclick="closeSearchModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search-body custom-scrollbar">
+                <div id="searchResults" class="search-results">
+                    <div class="search-initial-state">
+                        <i class="fas fa-gamepad fa-3x mb-3 text-muted"></i>
+                        <p>Type to find your favorite games</p>
+                        <div class="search-tags mt-3">
+                            <!-- Categories removed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Define isInPages for the search modal script
+        const isInPages = true;
+
+        function openSearchModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('searchModal').classList.add('active');
+            setTimeout(() => document.getElementById('searchInput').focus(), 100);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSearchModal() {
+            document.getElementById('searchModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function setSearch(term) {
+            const input = document.getElementById('searchInput');
+            input.value = term;
+            input.dispatchEvent(new Event('input'));
+            input.focus();
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeSearchModal();
+        });
+
+        document.getElementById('searchInput').addEventListener('input', function (e) {
+            const query = e.target.value.toLowerCase().trim();
+            const resultsContainer = document.getElementById('searchResults');
+
+            if (query.length < 1) {
+                resultsContainer.innerHTML = `
+                    <div class="search-initial-state">
+                        <i class="fas fa-gamepad fa-3x mb-3 text-muted"></i>
+                        <p>Type to find your favorite games</p>
+                        <div class="search-tags mt-3">
+                            <!-- Categories removed -->
+                        </div>
+                    </div>`;
+                return;
+            }
+
+            let results = [];
+            if (typeof gamesData !== 'undefined') {
+                results = Object.values(gamesData).filter(game => {
+                    if (!game || typeof game !== 'object' || Array.isArray(game)) return false;
+                    if (!game.title) return false;
+
+                    const titleMatch = game.title.toLowerCase().includes(query);
+                    const descMatch = game.description && game.description.toLowerCase().includes(query);
+                    const catMatch = game.categories && game.categories.some(cat => cat.toLowerCase().includes(query));
+
+                    return titleMatch || descMatch || catMatch;
+                });
+            }
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="search-no-results">
+                        <i class="fas fa-ghost fa-3x mb-3 text-muted"></i>
+                        <p>No games found matching "${e.target.value}"</p>
+                    </div>`;
+                return;
+            }
+
+            let html = '<div class="search-results-list">';
+            results.forEach(game => {
+                let thumb = game.thumbnail;
+                // Adjust thumbnail path for search results in pages/
+                if (!thumb || thumb.trim() === "") {
+                    thumb = '../public/images/gam-thumb.png';
+                } else {
+                    if (thumb.startsWith('../public/')) {
+                        thumb = thumb;
+                    } else if (thumb.startsWith('public/')) {
+                        thumb = '../' + thumb;
+                    } else {
+                        if (!thumb.includes('public/')) {
+                            thumb = '../public/' + thumb;
+                        } else if (!thumb.startsWith('../')) {
+                            thumb = '../' + thumb;
+                        }
+                    }
+                }
+
+                html += `
+                    <a href="game_detail_play.html?game=${game.id}" class="search-result-item" onclick="closeSearchModal()">
+                        <div class="search-result-thumb">
+                            <img src="${thumb}" alt="${game.title}" onerror="this.src='../public/images/logo.png'">
+                        </div>
+                        <div class="search-result-info">
+                            <div class="search-result-title">
+                                ${game.title}
+                                ${game.rating ? `<span class="search-result-rating"><i class="fas fa-star text-warning"></i> ${game.rating}</span>` : ''}
+                            </div>
+                            <div class="search-result-desc">${game.description || ''}</div>
+                            <!-- Categories removed from search results
+                            <div class="search-result-meta">
+                                ${game.categories ? game.categories.map(c => `<span class="search-result-tag">${c}</span>`).join('') : ''}
+                            </div>
+                            -->
+                        </div>
+                        <div class="search-result-action">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </a>
+                `;
+            });
+            html += '</div>';
+            resultsContainer.innerHTML = html;
         });
     </script>
 </body>
 
 </html>
-
